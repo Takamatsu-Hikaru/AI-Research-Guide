@@ -1,4 +1,4 @@
-# Lookout: widen your view
+# Lookout: what are researchers and labs working on?
 
 Sometimes you do not know what you could do because you have not seen it yet. Looking at other labs, companies, and researchers gives you new reference points and changes your understanding of a direction.
 
@@ -37,7 +37,7 @@ Personal blogs show process as well as outcomes. [Jianlin Su](https://kexue.fm/c
 
 OpenEnvision's [ScholarTube](https://openenvision.github.io/ScholarTube/) organizes long-form researcher interviews, video podcasts, courses, and research talks across agents, world models, vision, robotics, and more. Interviews can reveal how a project began, which tradeoffs its authors made, and how they judge what to work on next. For related technical writing, explore the community's [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html).
 
-## Keep something of your own
+## What questions should you note after reading new work?
 
 Write a few sentences: what problem does this work address, how does it differ from what you knew, and what would you like to explore? Share an article with your question when it seems worth discussing.
 

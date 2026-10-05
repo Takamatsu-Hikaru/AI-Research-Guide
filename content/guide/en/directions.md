@@ -1,4 +1,4 @@
-# What different research areas are trying to do
+# What do different AI research areas study?
 
 When a demo makes you curious, ask what goes in, what should come out, how success is judged, and what is still difficult. These pages start with concrete tasks.
 

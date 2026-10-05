@@ -2,13 +2,13 @@
 
 读一篇论文之前，先想这次为什么读：了解方向，解决代码里的一个问题，还是准备复现。这个目的会影响你在哪里停下来、往哪里深入。
 
-## 从一篇文章找到附近的工作
+## 找到一篇论文后，怎么继续查相关工作？
 
 有标题就先找原文、项目页和代码。用 [Google Scholar](https://scholar.google.com/)看参考文献与后续引用，再对照作者主页。需要检索帮助，可以看 [Scholar 官方说明](https://scholar.google.com/intl/en/scholar/help.html)，或尝试 [AMiner](https://docs.aminer.cn/user-guide/platform-overview/) 的检索与阅读功能。
 
 存资料时，用 [Zotero](https://www.zotero.org/support/quick_start_guide)保存题目、作者、链接、版本和附件。自己的疑问放在同一个条目附近，过段时间回来容易接上。
 
-## 第一遍先把整件事讲清楚
+## 第一遍读论文，重点看什么？
 
 从摘要、引言、关键图和结论开始，再去实验里核对。你可以先写几句：
 

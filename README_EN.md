@@ -4,7 +4,7 @@
 <p align="center">University choices, your first research project, and lessons along the way</p>
 <p align="center"><a href="README.md">中文</a> · <b>English</b> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/en/">Read online</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/en/ama.html">Discussions</a></p>
 
-A guide from the UESTC AI Club for university students exploring AI and research. It brings together personal experience, research practices, starter projects, and resources across AI fields: why to learn, what to learn, how to begin, and the small questions that often go unexplained.
+This guide is for students starting university who want to explore AI and research. It brings together our answers to questions about university choices and getting started in research, alongside beginner projects, key papers across research areas, courses, and tools. It also covers contacting faculty, joining a lab for the first time, failed experiments, and the anxiety of comparing yourself with your peers.
 
 ## Start here
 
@@ -12,13 +12,13 @@ A guide from the UESTC AI Club for university students exploring AI and research
 | --- | --- |
 | The choices university offers and where you want to go | [A letter to new university students](content/guide/en/welcome.md) |
 | Why try research? How do you begin, find a direction, or contact a supervisor? | [Getting started in research: 60 questions](content/guide/en/research.md) |
-| Making a small project work | [Kaggle MNIST, YOLO, and other starter projects](content/guide/en/start.md) |
+| Making a small project work | [Your first AI project: where to begin?](content/guide/en/start.md) |
 
 ## Explore the guide
 
 | Section | Topics |
 | --- | --- |
-| Foundations and learning | [Fill gaps as you go](content/guide/en/basics.md) · [Pick a paper](content/guide/en/papers.md) |
+| Foundations and learning | [Which foundations do you need, and how much?](content/guide/en/basics.md) · [Pick a paper](content/guide/en/papers.md) |
 | Research directions | [Overview](content/guide/en/directions.md) · [Language models](content/guide/en/llm.md) · [Agents](content/guide/en/agent.md) · [Vision](content/guide/en/vision.md) · [Multimodal learning](content/guide/en/multimodal.md) · [Generation](content/guide/en/generation.md) · [Reinforcement learning](content/guide/en/rl.md) · [World models](content/guide/en/world-model.md) · [Embodied AI](content/guide/en/embodied.md) · [Efficiency and systems](content/guide/en/systems.md) · [Interdisciplinary AI](content/guide/en/ai4x.md) |
 | Doing research | [Finding and reading papers](content/guide/en/reading.md) · [Experiments](content/guide/en/experiments.md) · [Writing, figures, and presentations](content/guide/en/writing.md) · [Contact and collaboration](content/guide/en/contact.md) · [Working with AI](content/guide/en/ai.md) · [Publication](content/guide/en/publishing.md) |
 | Experience and life | [Lessons and reflection](content/guide/en/experience.md) · [My freshman year](content/guide/en/timeline.md) · [Living well](content/guide/en/life.md) |

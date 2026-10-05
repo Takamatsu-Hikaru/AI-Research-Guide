@@ -8,7 +8,7 @@ Suppose an agent fails on long tasks. Ask where failure begins: did it forget ea
 
 Read complete traces for a small set of tasks and group the observed failures before deciding whether memory or recovery mechanisms would help. This is a way to formulate an investigation, not a report of an experiment already done.
 
-## Keep a comparable reference
+## Run the baseline before changing the model
 
 Run a baseline and record data and model versions, configuration, seed, code version, and evaluation method. What a seed controls depends on implementation; also record repeated runs.
 
@@ -16,7 +16,7 @@ Save separate results for important changes. Match comparisons to claims: comput
 
 [Karpathy's training recipe](https://karpathy.github.io/2019/04/25/recipe/) helps with basic diagnosis. The [Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook) helps organize tuning and experiments. [Scikit-learn's common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) explains leakage, preprocessing, and randomness concretely.
 
-## What to keep from a run
+## What should you record for each experiment?
 
 Record the question, configuration, expectation, actual result, location of raw outputs, and next judgment. Record failures too. Writing, debugging, and collaboration later depend on this material.
 

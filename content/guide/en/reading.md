@@ -2,13 +2,13 @@
 
 Decide why you are reading: to explore a direction, solve a code problem, or reproduce a result. That purpose changes where you pause and how deeply you go.
 
-## Find neighboring work
+## How do you find related work from one paper?
 
 With a title, find the original, project page, and code. Use [Google Scholar](https://scholar.google.com/) for references and later citations, then compare author pages. Consult [Scholar help](https://scholar.google.com/intl/en/scholar/help.html) or try [AMiner's search and reading tools](https://docs.aminer.cn/user-guide/platform-overview/).
 
 Use [Zotero](https://www.zotero.org/support/quick_start_guide) to save titles, authors, links, versions, and attachments. Keep your questions nearby so you can resume later.
 
-## Explain the whole story on a first pass
+## What should you focus on in a first reading?
 
 Start with the abstract, introduction, key figures, and conclusion, then check experiments. Write a few sentences:
 

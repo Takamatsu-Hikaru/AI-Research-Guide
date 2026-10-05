@@ -25,7 +25,7 @@
   },
   {
     "id": "start",
-    "title": "先跑通一个小东西",
+    "title": "第一个 AI 项目，从哪里开始？",
     "group": "开始学习",
     "kind": "学习路线",
     "desc": "MNIST、YOLO，以及 Agent 和机器人的动手入口",
@@ -33,7 +33,7 @@
   },
   {
     "id": "basics",
-    "title": "基础：带着问题回来学",
+    "title": "基础怎么学，需要学到哪里？",
     "group": "开始学习",
     "kind": "学习资料",
     "desc": "计算机、数学、ML 与 DL"
@@ -48,7 +48,7 @@
   },
   {
     "id": "directions",
-    "title": "看看不同方向",
+    "title": "AI 的不同方向，都在研究什么？",
     "group": "研究方向",
     "kind": "方向导航",
     "desc": "找到让自己好奇的问题"
@@ -197,7 +197,7 @@
   },
   {
     "id": "lookout",
-    "title": "Lookout",
+    "title": "Lookout：研究者和实验室最近在做什么？",
     "group": "看看外面",
     "kind": "信息与研究社区",
     "desc": "认识工作、研究者与实验室",

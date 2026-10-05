@@ -1,4 +1,4 @@
-# Start with a small project
+# Your first AI project: where to begin?
 
 If you have not chosen a direction, begin with a visible result: recognizing a handwritten digit or drawing boxes around people and cars in your own photo. Data, code, and tutorials already exist. Start there and learn through the questions that arise.
 

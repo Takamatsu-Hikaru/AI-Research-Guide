@@ -4,36 +4,36 @@ When you first arrive at university, you may not yet know what you want from the
 
 Or perhaps you already want to begin. We asked these questions too: how has everyone already joined a lab when I have never learned C? I have watched courses—what can I actually do next? I want to contact a professor, but what happens after I send the message?
 
-Here are paths I have taken, resources I have used, and things I only understood later. Start with the two opening essays, then pick something you want to do now.
+This guide is for students starting university who want to explore AI and research. It brings together our answers to questions about university choices and getting started in research, alongside beginner projects, key papers across research areas, courses, and tools. It also covers contacting faculty, joining a lab for the first time, failed experiments, and the anxiety of comparing yourself with your peers.
 
 ## Before you begin
 
 **[A letter to new university students](welcome.md)**  
-The choices university offers, where you want to go, and life beyond research. A student only a year ahead shares his uncertainty and experience.
+What choices does university offer, and where do you want to go? I begin with my own uncertainty as a new student, then talk about grades, research, the people I met, and life outside research.
 
 **[How to get started in research](research.md)**  
-Why try research, and how does it relate to further study, work, and your interests? Then, how to begin, find a direction, meet people, and move a project forward.
+What does research involve, and why try it? From choosing a direction and contacting faculty to reading papers, running experiments, and submitting your work, with questions about gaps in your knowledge, falling behind, and failed experiments.
 
-## Make something work
+## Getting started with AI
 
-**[Start with a small project](start.md)**  
-Try Kaggle MNIST digit recognition or YOLO object detection. Run code, inspect results, and change something. There are also entries for agents and robotics.
+**[Your first AI project: where to begin?](start.md)**  
+Train a model to recognize handwritten digits, or detect people and cars in your own photos. Start with MNIST or YOLO and work through running, training, and modifying the code. There are also beginner projects for agents and robotics.
 
-**[Explore research directions](directions.md)**  
+**[What do different AI research areas study?](directions.md)**  
 Language models, agents, vision, multimodal learning, generation, RL, world models, embodied AI, and systems. Each starts with a question, then connects papers, explanations, and projects.
 
-**[Return to the foundations when you need them](basics.md)**  
+**[Which foundations do you need, and how much?](basics.md)**  
 Python, mathematics, ML/DL, computing, and architectures. Learn the concept blocking you, then return to see how it works in your project.
 
-## While doing research
+## Questions that come up during research
 
 [Finding and reading papers](reading.md) · [Understanding experiments](experiments.md) · [Writing, figures, and talks](writing.md)
 
 [Contact and collaboration](contact.md) · [Working with AI](ai.md) · [Publication](publishing.md)
 
-These are things you may return to while working: which experiment records to keep, what to explain in a first message, and how to make an introduction communicate the question.
+How do you read your first paper, interpret experiment results, or write your first message to a professor? Methods and tools are organized around the research process, so you can return when a specific question comes up.
 
-## Other people's paths and the world outside
+## Experience, life, and perspectives
 
 **[Experience, practical lessons, and wrong turns](experience.md)**  
 From my first year to a first rejection, alongside other people's experiences and judgments.
@@ -41,7 +41,7 @@ From my first year to a first rejection, alongside other people's experiences an
 **[Living well](life.md)**  
 Grades, research, friends, and hobbies all belong in university life. These notes begin with personal experience.
 
-**[Lookout: widen your view](lookout.md)**  
+**[Lookout: what are researchers and labs working on?](lookout.md)**  
 Start with work that makes you curious. Meet the people and labs behind it, then follow papers, code, and discussions.
 
 [Choose a paper](papers.md) · [About this guide](about.md)
@@ -55,6 +55,6 @@ Start with work that makes you curious. Meet the people and labs behind it, then
 
 You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
 
-## Find a resource
+## Resource index
 
 The [resource index](resources.md) collects courses, paper lists, author blogs, LessWrong, research teams, and Q&A. If you already have a question, search for Mu Li, RoPE, Scaling Ladder, or contacting a supervisor.

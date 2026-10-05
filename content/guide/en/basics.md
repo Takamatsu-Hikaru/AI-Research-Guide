@@ -1,4 +1,4 @@
-# Foundations: return with a question
+# Which foundations do you need, and how much?
 
 ML, deep learning, mathematics, and computing are worth building gradually. Filling a gap during a project and studying a course systematically can happen together.
 

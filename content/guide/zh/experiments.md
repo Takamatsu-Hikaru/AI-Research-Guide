@@ -8,7 +8,7 @@
 
 拿一小组任务读完整轨迹，按实际现象分类，再决定是否值得添加记忆或恢复机制。这个例子是一个研究思路示范，不是已经完成的实验结论。
 
-## 留住一个能比较的参照
+## 改模型之前，先跑通 baseline
 
 先跑通基线，保留数据版本、模型版本、配置、随机种子、代码版本和评测方法。随机种子控制的范围与具体实现有关，记录它之外也要说明重复运行情况。
 
@@ -16,7 +16,7 @@
 
 [Karpathy 的训练经验](https://karpathy.github.io/2019/04/25/recipe/)适合排查基本问题；[Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook)适合进一步安排调参与实验。[scikit-learn 的常见错误](https://scikit-learn.org/stable/common_pitfalls.html)则把泄漏、预处理和随机性讲得很具体。
 
-## 一次实验留下什么
+## 一次实验要记录什么？
 
 记录问题、配置、预期、实际结果、原始输出的位置，以及下一步判断。失败也记录。以后写文章、查异常、与别人合作，都依赖这些东西。
 
