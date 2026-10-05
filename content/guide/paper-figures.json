@@ -1,0 +1,443 @@
+{
+  "react-2023": {
+    "file": "react-2023.png",
+    "credit": "Yao et al. · Fig. 1",
+    "source": "https://arxiv.org/pdf/2210.03629",
+    "page": 2,
+    "figure": 1,
+    "width": 1176,
+    "height": 975,
+    "cropPoints": [
+      110,
+      80,
+      502,
+      405
+    ]
+  },
+  "transformer-2017": {
+    "file": "transformer-2017.png",
+    "credit": "Vaswani et al. · Fig. 1",
+    "source": "https://arxiv.org/pdf/1706.03762",
+    "page": 3,
+    "figure": 1,
+    "width": 669,
+    "height": 1002,
+    "cropPoints": [
+      192,
+      65,
+      415,
+      399
+    ]
+  },
+  "resnet-2016": {
+    "file": "resnet-2016.png",
+    "credit": "He et al. · Fig. 5",
+    "source": "https://arxiv.org/pdf/1512.03385",
+    "page": 6,
+    "figure": 5,
+    "width": 645,
+    "height": 243,
+    "cropPoints": [
+      326,
+      66,
+      541,
+      147
+    ]
+  },
+  "alexnet-2012": {
+    "file": "alexnet-2012.png",
+    "credit": "Krizhevsky et al. · Fig. 2",
+    "source": "https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+    "page": 5,
+    "figure": 2,
+    "width": 1206,
+    "height": 396,
+    "cropPoints": [
+      105,
+      75,
+      507,
+      207
+    ]
+  },
+  "ddpm-2020": {
+    "file": "ddpm-2020.png",
+    "credit": "Ho et al. · Fig. 1",
+    "source": "https://arxiv.org/pdf/2006.11239",
+    "page": 1,
+    "figure": 1,
+    "width": 1200,
+    "height": 723,
+    "cropPoints": [
+      106,
+      465,
+      506,
+      706
+    ]
+  },
+  "rl-dqn": {
+    "file": "rl-dqn.png",
+    "credit": "Mnih et al. · Fig. 1",
+    "source": "https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf",
+    "page": 2,
+    "figure": 1,
+    "width": 1137,
+    "height": 669,
+    "cropPoints": [
+      108,
+      53,
+      487,
+      276
+    ]
+  },
+  "instructgpt-2022": {
+    "file": "instructgpt-2022.png",
+    "credit": "Ouyang et al. · Fig. 2",
+    "source": "https://arxiv.org/pdf/2203.02155",
+    "page": 3,
+    "figure": 2,
+    "width": 1188,
+    "height": 705,
+    "cropPoints": [
+      108,
+      64,
+      504,
+      299
+    ]
+  },
+  "clip-2021": {
+    "file": "clip-2021.png",
+    "credit": "Radford et al. · Fig. 1",
+    "source": "https://arxiv.org/pdf/2103.00020",
+    "page": 2,
+    "figure": 1,
+    "width": 1464,
+    "height": 543,
+    "cropPoints": [
+      54,
+      64,
+      542,
+      245
+    ]
+  },
+  "vit-2021": {
+    "file": "vit-2021.png",
+    "credit": "Dosovitskiy et al. · Fig. 1",
+    "source": "https://arxiv.org/pdf/2010.11929",
+    "page": 3,
+    "figure": 1,
+    "width": 1029,
+    "height": 540,
+    "cropPoints": [
+      135,
+      75,
+      478,
+      255
+    ]
+  },
+  "embodied-rt2": {
+    "file": "embodied-rt2.png",
+    "credit": "Zitkovich et al. · Fig. 1",
+    "source": "https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf",
+    "page": 2,
+    "figure": 1,
+    "width": 1188,
+    "height": 453,
+    "cropPoints": [
+      108,
+      66,
+      504,
+      217
+    ]
+  },
+  "embodied-diffusion-policy": {
+    "file": "embodied-diffusion-policy.png",
+    "credit": "Chi et al. · Fig. 3",
+    "source": "https://arxiv.org/pdf/2303.04137v4",
+    "page": 3,
+    "figure": 3,
+    "width": 1554,
+    "height": 525,
+    "cropPoints": [
+      48,
+      20,
+      566,
+      195
+    ]
+  },
+  "ldm-2022": {
+    "file": "ldm-2022.png",
+    "credit": "Rombach et al. · Fig. 3",
+    "source": "https://arxiv.org/pdf/2112.10752",
+    "page": 4,
+    "figure": 3,
+    "width": 723,
+    "height": 465,
+    "cropPoints": [
+      307,
+      39,
+      548,
+      194
+    ]
+  },
+  "dit-2023": {
+    "file": "dit-2023.png",
+    "credit": "Peebles & Xie · Fig. 3",
+    "source": "https://arxiv.org/pdf/2212.09748",
+    "page": 3,
+    "figure": 3,
+    "width": 1500,
+    "height": 651,
+    "cropPoints": [
+      48,
+      64,
+      548,
+      281
+    ]
+  },
+  "flashattention-2022": {
+    "file": "flashattention-2022.png",
+    "credit": "Dao et al. · Fig. 1",
+    "source": "https://arxiv.org/pdf/2205.14135",
+    "page": 2,
+    "figure": 1,
+    "width": 1197,
+    "height": 486,
+    "cropPoints": [
+      104,
+      68,
+      503,
+      230
+    ]
+  },
+  "wm-world-models": {
+    "file": "wm-world-models.png",
+    "credit": "Ha & Schmidhuber · Fig. 4",
+    "source": "https://arxiv.org/pdf/1803.10122",
+    "page": 2,
+    "figure": 4,
+    "width": 723,
+    "height": 507,
+    "cropPoints": [
+      305,
+      438,
+      546,
+      607
+    ]
+  },
+  "ai4x-mpnn": {
+    "file": "ai4x-mpnn.png",
+    "credit": "Gilmer et al. · Fig. 1",
+    "source": "https://proceedings.mlr.press/v70/gilmer17a/gilmer17a.pdf",
+    "page": 1,
+    "figure": 1,
+    "width": 705,
+    "height": 435,
+    "cropPoints": [
+      306,
+      174,
+      541,
+      319
+    ]
+  },
+  "toolformer-2023": {
+    "file": "toolformer-2023.png",
+    "credit": "Schick et al., 2023 · Figure 2",
+    "source": "https://arxiv.org/pdf/2302.04761",
+    "page": 2,
+    "figure": "Figure 2",
+    "width": 1373,
+    "height": 300
+  },
+  "reflexion-2023": {
+    "file": "reflexion-2023.png",
+    "credit": "Shinn et al., 2023 · Figure 2(a)",
+    "source": "https://arxiv.org/pdf/2303.11366",
+    "page": 4,
+    "figure": "Figure 2(a)",
+    "width": 576,
+    "height": 511
+  },
+  "swebench-2024": {
+    "file": "swebench-2024.png",
+    "credit": "Jimenez et al., 2024 · Figure 1",
+    "source": "https://arxiv.org/pdf/2310.06770",
+    "page": 1,
+    "figure": "Figure 1",
+    "width": 1202,
+    "height": 300
+  },
+  "gpt-2018": {
+    "file": "gpt-2018.png",
+    "credit": "Radford et al., 2018 · Figure 1",
+    "source": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+    "page": 4,
+    "figure": "Figure 1",
+    "width": 1160,
+    "height": 475
+  },
+  "gpt3-2020": {
+    "file": "gpt3-2020.png",
+    "credit": "Brown et al., 2020 · Figure 2.1",
+    "source": "https://arxiv.org/pdf/2005.14165",
+    "page": 7,
+    "figure": "Figure 2.1",
+    "width": 1144,
+    "height": 1013
+  },
+  "gan-2014": {
+    "file": "gan-2014.png",
+    "credit": "Goodfellow et al., 2014 · Figure 1",
+    "source": "https://proceedings.neurips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf",
+    "page": 4,
+    "figure": "Figure 1",
+    "width": 1157,
+    "height": 372
+  },
+  "embodied-rt1": {
+    "file": "embodied-rt1.png",
+    "credit": "Brohan et al., RT-1, Figure 1(a)",
+    "source": "https://arxiv.org/pdf/2212.06817",
+    "page": 2,
+    "figure": "1(a)",
+    "width": 1602,
+    "height": 412
+  },
+  "blip2-2023": {
+    "file": "blip2-2023.png",
+    "credit": "Li et al., BLIP-2, Figure 1",
+    "source": "https://arxiv.org/pdf/2301.12597",
+    "page": 1,
+    "figure": "1",
+    "width": 962,
+    "height": 440
+  },
+  "llava-2023": {
+    "file": "llava-2023.png",
+    "credit": "Liu et al., Visual Instruction Tuning, Figure 1",
+    "source": "https://arxiv.org/pdf/2304.08485",
+    "page": 4,
+    "figure": "1",
+    "width": 1150,
+    "height": 390
+  },
+  "yolo-2016": {
+    "file": "yolo-2016.png",
+    "credit": "Redmon et al., YOLO, Figure 2",
+    "source": "https://arxiv.org/pdf/1506.02640",
+    "page": 2,
+    "figure": "2",
+    "width": 966,
+    "height": 616
+  },
+  "ai4x-deep-potential": {
+    "file": "ai4x-deep-potential.png",
+    "credit": "Zhang et al., Deep Potential Molecular Dynamics, Figure 1",
+    "source": "https://arxiv.org/pdf/1707.09571",
+    "page": 5,
+    "figure": "1",
+    "width": 680,
+    "height": 514
+  },
+  "ai4x-alphafold2": {
+    "file": "ai4x-alphafold2.png",
+    "credit": "Jumper et al., AlphaFold, Figure 1(e) · CC BY 4.0",
+    "source": "https://www.nature.com/articles/s41586-021-03819-2/figures/1",
+    "page": null,
+    "figure": "1(e)",
+    "width": 2157,
+    "height": 727
+  },
+  "rl-ppo": {
+    "file": "rl-ppo.png",
+    "credit": "Schulman et al. (2017), Fig. 1",
+    "source": "https://arxiv.org/pdf/1707.06347",
+    "page": 3,
+    "figure": "Figure 1",
+    "width": 974,
+    "height": 454
+  },
+  "rl-sac": {
+    "file": "rl-sac.png",
+    "credit": "Haarnoja et al. (2018), Fig. 1",
+    "source": "https://proceedings.mlr.press/v80/haarnoja18b/haarnoja18b.pdf",
+    "page": 6,
+    "figure": "Figure 1",
+    "width": 1392,
+    "height": 774
+  },
+  "zero-2020": {
+    "file": "zero-2020.png",
+    "credit": "Rajbhandari et al. (2020), Fig. 1",
+    "source": "https://arxiv.org/pdf/1910.02054",
+    "page": 3,
+    "figure": "Figure 1",
+    "width": 1208,
+    "height": 522
+  },
+  "smoothquant-2023": {
+    "file": "smoothquant-2023.png",
+    "credit": "Xiao et al. (2023), Fig. 2",
+    "source": "https://arxiv.org/pdf/2211.10438",
+    "page": 2,
+    "figure": "Figure 2",
+    "width": 644,
+    "height": 534
+  },
+  "pagedattention-2023": {
+    "file": "pagedattention-2023.png",
+    "credit": "Kwon et al. (2023), Fig. 6",
+    "source": "https://arxiv.org/pdf/2309.06180",
+    "page": 6,
+    "figure": "Figure 6",
+    "width": 726,
+    "height": 354
+  },
+  "wm-muzero": {
+    "file": "wm-muzero.png",
+    "credit": "Schrittwieser et al. (2020), Fig. 1",
+    "source": "https://www.nature.com/articles/s41586-020-03051-4",
+    "page": null,
+    "figure": "Figure 1",
+    "width": 1407,
+    "height": 631
+  },
+  "wm-dreamerv3": {
+    "file": "wm-dreamerv3.png",
+    "credit": "Hafner et al. (2025), Fig. 1 (CC BY 4.0)",
+    "source": "https://www.nature.com/articles/s41586-025-08744-2",
+    "page": null,
+    "figure": "Figure 1",
+    "width": 2166,
+    "height": 775
+  },
+  "embodied-pi0": {
+    "file": "embodied-pi0.png",
+    "credit": "Physical Intelligence · Fig. 1",
+    "source": "https://arxiv.org/pdf/2410.24164v4",
+    "page": 1,
+    "figure": 1,
+    "width": 1485,
+    "height": 795,
+    "cropPoints": [
+      57,
+      228,
+      552,
+      493
+    ]
+  },
+  "embodied-pi05": {
+    "file": "embodied-pi05.png",
+    "credit": "Physical Intelligence · Fig. 1",
+    "source": "https://arxiv.org/pdf/2504.16054v1",
+    "page": 1,
+    "figure": 1,
+    "width": 1554,
+    "height": 867,
+    "cropPoints": [
+      47,
+      211,
+      565,
+      500
+    ]
+  }
+}

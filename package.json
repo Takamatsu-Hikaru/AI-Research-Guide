@@ -1,0 +1,15 @@
+{
+  "name": "uestc-ai-research-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-guide.mjs"
+  },
+  "dependencies": {
+    "marked": "18.0.14"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

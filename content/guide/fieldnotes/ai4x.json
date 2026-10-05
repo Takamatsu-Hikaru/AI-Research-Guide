@@ -1,0 +1,220 @@
+{
+  "id": "ai4x",
+  "zh": {
+    "overview": [
+      "AI 交叉学科从原学科的问题出发：分子的性质是什么，原子会怎样运动，蛋白质可能折成什么结构。模型可以替代部分昂贵计算、从数据里预测难以直接测量的量，或者帮助筛选下一步值得实验的候选。问题定义与验证方式仍然来自具体学科。",
+      "这里用分子与蛋白质的三个例子看清不同用法：图网络学习结构与性质的关系，神经网络势能模型加速模拟，AlphaFold 预测三维结构。它们涉及不同数据与知识约束。入门时先弄懂目标量、标签来源和测试条件，再决定需要什么模型。"
+    ],
+    "solves": [
+      "根据分子或材料的结构预测性质，为候选筛选提供线索。",
+      "近似昂贵的能量与力计算，让分子动力学模拟覆盖更多时间或更大系统。",
+      "根据序列等信息预测蛋白质结构，为后续分析与实验提供结构假设。"
+    ],
+    "stance": "模型分数回答的是一个定义好的预测问题；要把它变成学科结论，还要检查数据来源、适用条件和独立验证。",
+    "roadmap": [
+      {
+        "year": "2017",
+        "title": "把学科结构放进表示",
+        "text": "MPNN 用消息传递统一分子图上的学习方法，让原子与关系参与性质预测。",
+        "papers": [
+          "ai4x-mpnn"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "用模型加速计算过程",
+        "text": "Deep Potential 从第一性原理数据学习能量与力，让学习模型进入分子动力学的计算链。",
+        "papers": [
+          "ai4x-deep-potential"
+        ]
+      },
+      {
+        "year": "2021",
+        "title": "围绕具体难题设计系统",
+        "text": "AlphaFold2 将序列、进化信息与几何结构结合来预测蛋白质三维结构。",
+        "papers": [
+          "ai4x-alphafold2"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "归纳偏置 · Inductive bias",
+        "text": "模型设计里预先放入的假设，例如分子旋转后某些预测性质应保持不变。"
+      },
+      {
+        "term": "消息传递 · Message passing",
+        "text": "图里的节点从相邻节点和边接收信息，再更新自己的表示，逐层整合局部结构。"
+      },
+      {
+        "term": "代理模型 · Surrogate model",
+        "text": "用较便宜的模型近似昂贵计算。需要比较误差是否会影响后续模拟或决策。"
+      },
+      {
+        "term": "分布外评估 · Out-of-distribution",
+        "text": "测试与训练不同的条件，例如新分子骨架或新温度范围，以检查模型在目标用途下是否可靠。"
+      }
+    ],
+    "checklist": [
+      "选一个数据集，写清一个样本代表什么、标签怎样得到、量的单位是什么。",
+      "做一个简单预测参照，并检查训练与测试是否共享过于相似的样本或同一来源的重复记录。",
+      "为一个模型结果写出下一步验证：换哪些条件测试，或用什么计算、实验支持它。"
+    ],
+    "figure": {
+      "title": "从学科问题到可以检验的结果",
+      "nodes": [
+        "学科问题",
+        "数据与目标量",
+        "表示和模型",
+        "独立评估",
+        "计算或实验验证"
+      ]
+    },
+    "paperIntro": "先选最接近自己学科的一篇，沿输入、目标量、数据来源、验证方式读；另外两篇用来对照模型在研究中承担的不同角色。"
+  },
+  "en": {
+    "overview": [
+      "Interdisciplinary AI starts with a disciplinary question: a molecule's properties, atomic motion, or a protein's structure. Models can approximate expensive calculations, predict quantities that are difficult to measure, and shortlist candidates for experiments. The discipline still supplies the question and the standards of verification.",
+      "Three molecular examples illustrate different roles: graph networks relate structure to properties, learned potentials accelerate simulation, and AlphaFold predicts three-dimensional structures. They require different data and constraints. Understand the target quantity, label source, and test conditions before choosing a model."
+    ],
+    "solves": [
+      "Predict properties from molecular or material structure to help shortlist candidates.",
+      "Approximate expensive energy and force calculations for molecular dynamics.",
+      "Predict protein structures from sequences and related information, providing hypotheses for further analysis and experiments."
+    ],
+    "stance": "A model score answers a defined prediction question. A disciplinary conclusion also needs scrutiny of data sources, operating conditions, and independent validation.",
+    "roadmap": [
+      {
+        "year": "2017",
+        "title": "Put disciplinary structure into representations",
+        "text": "MPNN unifies message-passing approaches to molecular property prediction, representing atoms and their relationships.",
+        "papers": [
+          "ai4x-mpnn"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "Accelerate a computational process",
+        "text": "Deep Potential learns energies and forces from first-principles data and enters the molecular-dynamics calculation loop.",
+        "papers": [
+          "ai4x-deep-potential"
+        ]
+      },
+      {
+        "year": "2021",
+        "title": "Build a system around a specific hard problem",
+        "text": "AlphaFold2 combines sequences, evolutionary information, and geometry for structure prediction.",
+        "papers": [
+          "ai4x-alphafold2"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Inductive bias",
+        "text": "An assumption built into model design, such as a predicted molecular property remaining unchanged after rotation."
+      },
+      {
+        "term": "Message passing",
+        "text": "Graph nodes receive information from neighboring nodes and edges, then update their representations."
+      },
+      {
+        "term": "Surrogate model",
+        "text": "A cheaper approximation to an expensive computation. Its errors must be checked in the subsequent simulation or decision."
+      },
+      {
+        "term": "Out-of-distribution evaluation",
+        "text": "Testing conditions unlike training, such as new molecular scaffolds or temperature ranges, to assess the intended use."
+      }
+    ],
+    "checklist": [
+      "Choose a dataset and explain what one sample represents, how its label was obtained, and the units of the target.",
+      "Build a simple predictive baseline and check for overly similar samples or duplicated source records across the train/test split.",
+      "For one model result, specify the next validation: changed test conditions, an independent calculation, or an experiment."
+    ],
+    "figure": {
+      "title": "From a disciplinary question to a testable result",
+      "nodes": [
+        "Disciplinary question",
+        "Data and target",
+        "Representation and model",
+        "Independent evaluation",
+        "Computational or experimental test"
+      ]
+    },
+    "paperIntro": "Start with the paper closest to your discipline. Trace inputs, targets, data sources, and validation; use the other two to compare the roles models can play."
+  },
+  "papers": [
+    {
+      "id": "ai4x-mpnn",
+      "title": "Neural Message Passing for Quantum Chemistry",
+      "year": 2017,
+      "venue": "ICML",
+      "url": "https://proceedings.mlr.press/v70/gilmer17a.html",
+      "zh": {
+        "tag": "MPNN · 分子图学习",
+        "question": "怎样从原子与它们的关系预测分子性质？",
+        "idea": "节点通过消息传递更新表示，再把节点信息汇总为整个分子的预测。",
+        "why": "它把图网络的抽象操作落在具体的量子化学预测任务上。",
+        "read": "先看 message passing 与 readout，再看目标性质和数据设置。",
+        "limit": ""
+      },
+      "en": {
+        "tag": "MPNN · Molecular graphs",
+        "question": "How can atoms and their relationships predict molecular properties?",
+        "idea": "Update node representations through messages, then aggregate them for a molecular prediction.",
+        "why": "It grounds graph learning in a concrete chemistry task.",
+        "read": "Start with message passing, readout, targets, and data.",
+        "limit": ""
+      }
+    },
+    {
+      "id": "ai4x-deep-potential",
+      "title": "Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics",
+      "year": 2018,
+      "venue": "Physical Review Letters",
+      "url": "https://arxiv.org/abs/1707.09571",
+      "code": "https://github.com/deepmodeling/deepmd-kit",
+      "zh": {
+        "tag": "Deep Potential · 模拟加速",
+        "question": "怎样降低分子动力学中精确计算能量与力的成本？",
+        "idea": "从第一性原理数据学习原子局部环境与能量的关系，同时把问题的对称性纳入模型。",
+        "why": "它展示 AI 怎样替代计算链中的一个昂贵环节。",
+        "read": "先看能量与力怎样进入模拟，再看训练数据与物理量对照。",
+        "limit": "模型准确性依赖训练覆盖的构型与参考计算，外推到新条件需要检验。"
+      },
+      "en": {
+        "tag": "Deep Potential · Faster simulation",
+        "question": "How can accurate energy and force calculations become cheaper?",
+        "idea": "Learn local atomic contributions from first-principles data while preserving problem symmetries.",
+        "why": "An example of replacing an expensive step in a scientific computation.",
+        "read": "Trace energies and forces into simulation, then inspect physical comparisons.",
+        "limit": "Accuracy depends on covered configurations and reference calculations; new conditions need testing."
+      }
+    },
+    {
+      "id": "ai4x-alphafold2",
+      "title": "Highly accurate protein structure prediction with AlphaFold",
+      "year": 2021,
+      "venue": "Nature",
+      "url": "https://www.nature.com/articles/s41586-021-03819-2",
+      "code": "https://github.com/google-deepmind/alphafold",
+      "zh": {
+        "tag": "AlphaFold2 · 蛋白质结构",
+        "question": "怎样从氨基酸序列等信息预测蛋白质的三维结构？",
+        "idea": "整合进化相关序列与残基间关系，反复更新表示并生成三维结构。",
+        "why": "它展示数据、几何与系统设计围绕一个学科难题怎样配合。",
+        "read": "先看整体结构与 CASP14 评价，再看置信度的含义。",
+        "limit": ""
+      },
+      "en": {
+        "tag": "AlphaFold2 · Protein structure",
+        "question": "How can sequence information support three-dimensional structure prediction?",
+        "idea": "Combine evolutionary sequence information and residue relationships, iteratively refining representations and structure.",
+        "why": "It connects data, geometry, and system design around a disciplinary problem.",
+        "read": "Start with the architecture, CASP14 evaluation, and confidence estimates.",
+        "limit": ""
+      }
+    }
+  ]
+}

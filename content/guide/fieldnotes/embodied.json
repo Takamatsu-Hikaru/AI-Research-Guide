@@ -1,0 +1,301 @@
+{
+  "id": "embodied",
+  "zh": {
+    "overview": [
+      "具身智能研究一个有身体、能行动的系统怎样理解环境并完成任务。机器人拿杯子时，识别出杯子只是开始：它还要决定从哪抓、移动多远、接触后怎样调整。感知、规划、控制和学习在这里接到一起，最终要落实到身体与环境的真实互动。",
+      "这页先从机器人操作认识问题，再向导航、移动和更复杂的身体扩展。示范学习让模型模仿人做过的动作；VLA 把视觉、语言与动作接起来；强化学习通过交互反馈改进策略。它们可以组合，数据覆盖、动作接口和评估条件往往和模型同样关键。"
+    ],
+    "solves": [
+      "根据相机和身体状态执行抓取、放置等操作任务。",
+      "把人的指令转成适合具体机器人执行的动作。",
+      "在物体位置、背景或任务变化时继续行动，并用反馈修正偏差。"
+    ],
+    "stance": "看机器人演示时，先问它看见了什么、执行什么动作、在哪些初始条件下测过，再讨论泛化。",
+    "roadmap": [
+      {
+        "year": "2022",
+        "title": "用多任务示范训练动作模型",
+        "text": "RT-1 把语言指令、相机观察与机器人动作连接起来，研究真实机器人数据的规模与多样性。",
+        "papers": [
+          "embodied-rt1"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "把动作序列作为生成对象",
+        "text": "Diffusion Policy 用去噪过程生成连续动作序列，让多种合理动作的分布有更合适的表达。",
+        "papers": [
+          "embodied-diffusion-policy"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "把视觉语言知识带进控制",
+        "text": "RT-2 把动作编码成 token，与视觉语言任务一起训练，探索语义知识怎样帮助机器人选动作。它与动作生成方法可以交叉。",
+        "papers": [
+          "embodied-rt2"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "用视觉语言模型生成连续动作",
+        "text": "π0 将预训练视觉语言模型与 flow matching 动作专家结合，用跨机器人数据学习通用策略，再针对任务微调。",
+        "papers": [
+          "embodied-pi0"
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "把任务带到新的家庭环境",
+        "text": "π0.5 联合训练多种数据与任务，研究机器人在未见过的家庭环境中完成多阶段操作。",
+        "papers": [
+          "embodied-pi05"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "模仿学习 · Imitation learning",
+        "text": "从示范中的观察与动作配对学习策略。示范没覆盖到的处境，往往也是部署时容易出问题的地方。"
+      },
+      {
+        "term": "VLA · Vision–Language–Action",
+        "text": "接收视觉与语言条件、输出动作的模型类别；动作可以是离散 token，也可以用连续数值表示。"
+      },
+      {
+        "term": "动作序列 · Action chunk",
+        "text": "一次预测接下来若干步动作，再执行其中一部分并重新观察。长度会影响平滑性与反馈频率。"
+      },
+      {
+        "term": "闭环控制 · Closed loop",
+        "text": "执行后再次观察，根据环境的新状态调整动作；不同系统的反馈速度与接口并不一样。"
+      }
+    ],
+    "checklist": [
+      "选一段抓取视频，写出指令、相机输入、动作表示和成功判据。",
+      "打开一个机器人数据样本，找到对应时刻的图像、身体状态与动作，说明它们是否同步。",
+      "比较同一个任务在新物体、新背景和新位置下的结果，把失败按感知、动作或接触阶段归类。"
+    ],
+    "figure": {
+      "title": "机器人任务的一次闭环",
+      "nodes": [
+        "指令与观察",
+        "生成动作",
+        "身体执行",
+        "环境发生变化",
+        "再次观察"
+      ]
+    },
+    "paperIntro": "先看项目的任务视频，再读方法图；把相同任务的输入、动作输出和训练数据列在一起。"
+  },
+  "en": {
+    "overview": [
+      "Embodied AI studies how systems with bodies understand and act in their environments. Recognizing a cup is only the beginning: a robot must choose a grasp, move its body, and adjust after contact. Perception, planning, control, and learning meet in physical interaction.",
+      "Start here with manipulation, then branch into navigation, locomotion, and other bodies. Imitation learns from demonstrated actions; VLA models connect vision, language, and action; reinforcement learning improves behavior through feedback. These approaches can be combined. Data coverage, action interfaces, and evaluation conditions often matter as much as the model."
+    ],
+    "solves": [
+      "Execute manipulation tasks from camera observations and body state.",
+      "Turn human instructions into actions a particular robot can execute.",
+      "Continue acting under changed objects or scenes, using feedback to correct errors."
+    ],
+    "stance": "For any robot demo, identify observations, action outputs, and evaluated starting conditions before discussing generalization.",
+    "roadmap": [
+      {
+        "year": "2022",
+        "title": "Learn actions from multitask demonstrations",
+        "text": "RT-1 connects language, camera observations, and robot actions while studying the scale and diversity of real robot data.",
+        "papers": [
+          "embodied-rt1"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Generate action sequences",
+        "text": "Diffusion Policy denoises continuous action sequences, offering a way to represent several valid action choices.",
+        "papers": [
+          "embodied-diffusion-policy"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Bring vision-language knowledge into control",
+        "text": "RT-2 encodes actions as tokens and co-trains with vision-language tasks. Semantic transfer and action-generation methods are intersecting directions.",
+        "papers": [
+          "embodied-rt2"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "Generate continuous actions with a VLM",
+        "text": "π0 combines a pretrained VLM with a flow-matching action expert, learning from cross-robot data before task-specific fine-tuning.",
+        "papers": [
+          "embodied-pi0"
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "Take tasks into new homes",
+        "text": "π0.5 co-trains on heterogeneous data and tasks to study multi-stage manipulation in previously unseen homes.",
+        "papers": [
+          "embodied-pi05"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Imitation learning",
+        "text": "Learning a policy from paired observations and demonstrated actions. Gaps in demonstration coverage often become deployment failures."
+      },
+      {
+        "term": "Vision–Language–Action (VLA)",
+        "text": "Models conditioned on vision and language that output actions, represented as discrete tokens or continuous values."
+      },
+      {
+        "term": "Action chunk",
+        "text": "Several future actions predicted together. A system can execute part of the sequence, observe again, and replan."
+      },
+      {
+        "term": "Closed-loop control",
+        "text": "Observe after acting and adjust to the updated environment. Feedback rates and control interfaces differ across systems."
+      }
+    ],
+    "checklist": [
+      "For one grasping video, write down the instruction, camera inputs, action representation, and success criterion.",
+      "Inspect a robot dataset sample. Locate images, body state, and actions, and explain their timing alignment.",
+      "Compare the same task under new objects, backgrounds, and positions; classify failures by perception, motion, or contact."
+    ],
+    "figure": {
+      "title": "One robot control loop",
+      "nodes": [
+        "Instruction and observation",
+        "Generate actions",
+        "Execute with the body",
+        "Environment changes",
+        "Observe again"
+      ]
+    },
+    "paperIntro": "Watch the task videos before reading the method diagrams. Compare inputs, action outputs, and training data across the projects."
+  },
+  "papers": [
+    {
+      "id": "embodied-rt1",
+      "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+      "year": 2022,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2212.06817",
+      "code": "https://robotics-transformer1.github.io/",
+      "zh": {
+        "tag": "RT-1 · 多任务控制",
+        "question": "一个模型能否从多任务机器人数据学习按指令行动？",
+        "idea": "把图像特征与语言条件送入 Transformer，预测离散化后的机器人动作。",
+        "why": "它让数据规模、任务多样性与机器人泛化之间的关系变得具体。",
+        "read": "先看输入输出和数据采集，再看新任务、干扰与新环境的评估设置。",
+        "limit": "结果依赖特定机器人与动作接口。"
+      },
+      "en": {
+        "tag": "RT-1 · Multitask control",
+        "question": "Can one model learn instruction-following from multitask robot data?",
+        "idea": "Condition a Transformer on images and language to predict discretized actions.",
+        "why": "It makes data scale and diversity concrete in robotics.",
+        "read": "Inspect inputs, outputs, data collection, and generalization evaluations.",
+        "limit": "Its results depend on a particular robot body and action interface."
+      }
+    },
+    {
+      "id": "embodied-diffusion-policy",
+      "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+      "year": 2023,
+      "venue": "Robotics: Science and Systems",
+      "url": "https://arxiv.org/abs/2303.04137v4",
+      "code": "https://diffusion-policy.cs.columbia.edu/",
+      "zh": {
+        "tag": "Diffusion Policy · 动作生成",
+        "question": "同一场景有多种可行动作时，怎样学出连贯的动作序列？",
+        "idea": "以观察为条件，逐步去噪生成动作序列，执行一部分后再观察与预测。",
+        "why": "它是理解生成模型怎样进入机器人控制的直观案例。",
+        "read": "先看动作去噪与滚动执行，再看 Push-T 的成功和失败视频。",
+        "limit": "多步去噪带来推理开销；示范覆盖与控制频率仍会限制部署。"
+      },
+      "en": {
+        "tag": "Diffusion Policy · Action generation",
+        "question": "How can a policy represent several valid, coherent action sequences?",
+        "idea": "Denoise an observation-conditioned action sequence, execute part, then observe and predict again.",
+        "why": "A tangible bridge from generative models to control.",
+        "read": "Follow denoising and receding-horizon execution, then Push-T videos.",
+        "limit": "Iterative denoising costs time; demonstration coverage and control frequency constrain deployment."
+      }
+    },
+    {
+      "id": "embodied-rt2",
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "year": 2023,
+      "venue": "CoRL",
+      "url": "https://proceedings.mlr.press/v229/zitkovich23a.html",
+      "code": "https://robotics-transformer2.github.io/",
+      "zh": {
+        "tag": "RT-2 · 视觉语言动作",
+        "question": "互联网上学到的视觉语言知识能否帮助机器人理解新指令？",
+        "idea": "把机器人动作写成 token，与视觉语言数据联合微调，让模型直接输出动作。",
+        "why": "它帮助理解 VLA 的出发点：语义知识怎样接到已有动作能力。",
+        "read": "先看动作编码，再看语义泛化的任务与失败边界。",
+        "limit": "语义泛化不自动带来新的底层运动技能，机器人示范仍然重要。"
+      },
+      "en": {
+        "tag": "RT-2 · Vision-language-action",
+        "question": "Can web-trained knowledge help robots interpret new instructions?",
+        "idea": "Encode actions as tokens and co-fine-tune with vision-language data.",
+        "why": "It connects semantic knowledge to existing action capabilities.",
+        "read": "Read action encoding, then semantic-generalization tasks.",
+        "limit": "Semantic transfer does not automatically create new low-level motor skills; robot demonstrations remain important."
+      }
+    },
+    {
+      "id": "embodied-pi0",
+      "title": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+      "year": 2024,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2410.24164",
+      "code": "https://github.com/Physical-Intelligence/openpi",
+      "zh": {
+        "tag": "π0 · 通用机器人策略",
+        "question": "怎样把视觉语言模型接到连续动作，让同一个策略学习多种机器人的任务？",
+        "idea": "在预训练视觉语言模型上接入动作专家，用 flow matching 生成连续动作序列；先用多种机器人的示范预训练，再用任务数据微调。",
+        "why": "它把视觉语言预训练、动作生成和跨机器人数据放进同一套方案，接上了前面的 RT-2 与 Diffusion Policy。",
+        "read": "从第一页总览图看数据和任务，再读动作专家的结构；对照预训练后直接执行与任务微调后的实验。",
+        "limit": ""
+      },
+      "en": {
+        "tag": "π0 · Generalist robot policy",
+        "question": "How can a vision-language model produce continuous actions across robot tasks and platforms?",
+        "idea": "An action expert uses flow matching to generate continuous action sequences alongside a pretrained VLM. The policy is pretrained on demonstrations from multiple robots, then fine-tuned on task data.",
+        "why": "It brings VLM pretraining, action generation, and cross-robot data together, connecting RT-2 and Diffusion Policy.",
+        "read": "Start with the first-page overview, then the action-expert architecture. Compare direct use after pretraining with task-specific fine-tuning.",
+        "limit": ""
+      }
+    },
+    {
+      "id": "embodied-pi05",
+      "title": "π0.5: a Vision-Language-Action Model with Open-World Generalization",
+      "year": 2025,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2504.16054",
+      "code": "https://github.com/Physical-Intelligence/openpi",
+      "zh": {
+        "tag": "π0.5 · 新环境泛化",
+        "question": "机器人到了训练时没去过的家里，还能完成整理房间这样的长任务吗？",
+        "idea": "在 π0 基础上联合训练机器人动作、子任务预测、物体检测和网络视觉语言数据，把高层子任务与连续动作连接起来。",
+        "why": "它把问题推进到新家庭环境中的多阶段操作，适合看训练数据的组成怎样影响泛化。",
+        "read": "先看第一页的数据来源与部署场景，再看新家庭环境的测试设置，以及不同数据来源的消融实验。",
+        "limit": ""
+      },
+      "en": {
+        "tag": "π0.5 · New-environment generalization",
+        "question": "Can a robot carry out long tasks in homes it did not visit during training?",
+        "idea": "Building on π0, the model co-trains on robot actions, subtask prediction, object detection, and web vision-language data, connecting high-level subtasks to continuous actions.",
+        "why": "It studies multi-stage manipulation in new homes and how the mix of training data affects generalization.",
+        "read": "Start with the first-page data and deployment overview, then inspect the new-home evaluation and data-source ablations.",
+        "limit": ""
+      }
+    }
+  ]
+}

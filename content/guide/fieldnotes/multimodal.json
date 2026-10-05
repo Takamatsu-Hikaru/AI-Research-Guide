@@ -1,0 +1,89 @@
+{
+  "id": "multimodal",
+  "zh": {
+    "overview": [
+      "多模态学习把图像、文字、声音或视频等不同形式的信息联系起来。同一只猫可以出现在照片里，也可以被一句话描述；模型要学会这些信息哪里对应、哪里互补。这页先从图像与文字进入，理解图文检索、看图回答和视觉对话如何实现。",
+      "最先要分清的是匹配与生成。CLIP 把图片和文字变成可比较的向量，适合判断哪段描述更匹配；视觉语言模型还要把图像信息接到语言模型，让它输出回答。接上之后，数据怎样教它遵循问题、答案是否真的依赖图片，都是独立的研究问题。"
+    ],
+    "solves": [
+      "跨模态检索：用一句话找图片，或为图片寻找匹配的描述。",
+      "视觉问答：围绕照片、图表或文档提问，让模型结合可见信息回答。",
+      "多种信息协作：结合画面、声音和文字理解事件，或为后续决策提供信息。"
+    ],
+    "stance": "会流畅回答只是一个现象；把图改掉以后答案会不会跟着变，才开始检验模型有没有用上视觉证据。",
+    "roadmap": [
+      { "year": "2021", "title": "先让图像和文字能够比较", "text": "CLIP 学习图文配对关系，把两种输入映射到可以比较相似度的表示空间。输出匹配分数即可做检索或候选类别判断。", "papers": ["clip-2021"] },
+      { "year": "2023", "title": "把现成视觉模型接到语言模型", "text": "BLIP-2 冻结两侧的大模型，训练一个中间模块提取并转换视觉信息。重点是怎样跨过两种表示之间的差异。", "papers": ["blip2-2023"] },
+      { "year": "2023", "title": "让连接后的模型学会按问题回答", "text": "LLaVA 用视觉指令数据训练图像编码器与语言模型之间的连接及语言回答能力。它与 BLIP-2 的连接设计不同。", "papers": ["llava-2023"] }
+    ],
+    "terms": [
+      { "term": "模态 / modality", "text": "信息的形式，例如文字、图像、声音。模态不同，数据的结构与信息密度也不同。" },
+      { "term": "编码器 / encoder", "text": "把原始输入转换成数值特征的模型。图像编码器输出的是表示，后面还需要匹配、问答等具体用途。" },
+      { "term": "对比学习 / contrastive learning", "text": "在一组例子中提高正确图文对的相似度，相对压低不匹配组合的相似度。学会匹配本身不会自动产生一句回答。" },
+      { "term": "连接模块与指令微调", "text": "连接模块把视觉特征变成语言模型能接收的输入；指令微调用问题与回答等示例训练模型怎样响应。两者分别涉及结构和训练数据。" }
+    ],
+    "checklist": [
+      "用 CLIP 给一张图片和四条候选描述打分，只改其中一个词，再观察排序是否符合图片。",
+      "给同一视觉语言模型准备至少 5 对只改变一个细节的图片，固定问题，记录物体、数量或位置回答有没有随图变化。",
+      "沿一份 LLaVA 示例找到图像编码、连接模块和语言输出，画出输入经过哪些模块，并标出训练时哪些参数更新。"
+    ],
+    "figure": {
+      "title": "看图回答时，信息怎样进入语言模型",
+      "nodes": ["图像", "视觉编码器", "连接模块", "语言模型 + 问题", "文字回答"]
+    },
+    "paperIntro": "先用 CLIP 理解对齐，再对照 BLIP-2 与 LLaVA：中间怎么接、哪些参数训练、用了什么数据。"
+  },
+  "en": {
+    "overview": [
+      "Multimodal learning connects information expressed as images, text, sound, or video. The same cat can appear in a photograph and in a sentence; a model must learn what corresponds and what complements other information. This page starts with images and text to explain retrieval, visual question answering, and visual conversation.",
+      "First distinguish matching from generation. CLIP converts images and text into comparable vectors, making it useful for selecting a matching description. A vision-language model must also pass visual information to a language model that produces an answer. Teaching it to follow questions and checking whether answers depend on the image are separate research problems."
+    ],
+    "solves": [
+      "Cross-modal retrieval: find images from a sentence or match an image with a description.",
+      "Visual question answering: answer questions about photos, charts, or documents using visible information.",
+      "Combining evidence: connect video, audio, and text to interpret events or inform later decisions."
+    ],
+    "stance": "Fluent answers are only an observation. Changing the image and checking whether the answer changes begins to test whether visual evidence matters.",
+    "roadmap": [
+      { "year": "2021", "title": "Making images and text comparable", "text": "CLIP learns image–text pairings and maps both inputs into representations with comparable similarities. Matching scores support retrieval or candidate-label selection.", "papers": ["clip-2021"] },
+      { "year": "2023", "title": "Connecting existing vision and language models", "text": "BLIP-2 freezes both large models and trains an intermediate module to extract and translate visual information across their representation gap.", "papers": ["blip2-2023"] },
+      { "year": "2023", "title": "Learning to answer visual instructions", "text": "LLaVA uses visual instruction data to train the connection and language responses. Its connector differs from BLIP-2.", "papers": ["llava-2023"] }
+    ],
+    "terms": [
+      { "term": "Modality", "text": "A form of information, such as text, images, or sound. Modalities differ in structure and information density." },
+      { "term": "Encoder", "text": "A model that transforms raw input into numerical features. An image encoder produces representations that still need a task such as matching or question answering." },
+      { "term": "Contrastive learning", "text": "Increase similarity for matched image–text pairs relative to mismatched pairs in a group of examples. Learning to match does not by itself generate an answer." },
+      { "term": "Connector and instruction tuning", "text": "A connector turns visual features into inputs a language model can receive. Instruction tuning uses examples such as questions and answers to teach responses. One concerns architecture, the other training." }
+    ],
+    "checklist": [
+      "Use CLIP to score one image against four descriptions. Change one word and check whether the new ranking matches the image.",
+      "Prepare at least five image pairs differing in one detail. Keep the model and question fixed, and record whether answers about objects, counts, or positions change accordingly.",
+      "Find the image encoder, connector, and language output in a LLaVA example. Draw the input path and mark which parameters are updated during training."
+    ],
+    "figure": {
+      "title": "How visual information reaches a language model",
+      "nodes": ["Image", "Vision encoder", "Connector", "Language model + question", "Text answer"]
+    },
+    "paperIntro": "Use CLIP to understand alignment, then compare BLIP-2 with LLaVA: the connection, the trained parameters, and the data."
+  },
+  "papers": [
+    {
+      "id": "clip-2021", "title": "Learning Transferable Visual Models From Natural Language Supervision", "year": 2021, "venue": "ICML 2021",
+      "url": "https://proceedings.mlr.press/v139/radford21a.html", "code": "https://github.com/openai/CLIP",
+      "zh": { "tag": "CLIP · 图文对齐", "question": "能否用图片配文学习视觉概念，而不只依赖固定类别标签？", "idea": "同时训练图像与文字编码器，让正确配对比错误配对更相似；预测时可比较图片与不同文字描述。", "why": "它把图文检索和零样本分类统一到一个容易观察的匹配问题。", "read": "先看图文训练与零样本预测的流程，再改官方示例中的候选文字。", "limit": "CLIP 输出表示或匹配分数，本身不是聊天模型；匹配正确也不等于理解复杂关系。" },
+      "en": { "tag": "CLIP · alignment", "question": "Can captions teach visual concepts beyond fixed category labels?", "idea": "Train image and text encoders so matched pairs are more similar than mismatches. Compare an image with candidate descriptions at inference.", "why": "Retrieval and zero-shot classification become an observable matching problem.", "read": "Follow pretraining and zero-shot prediction, then change the official example's candidate text.", "limit": "CLIP produces representations or scores, not conversation. Correct matching need not imply relational understanding." }
+    },
+    {
+      "id": "blip2-2023", "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models", "year": 2023, "venue": "ICML 2023",
+      "url": "https://proceedings.mlr.press/v202/li23q.html", "code": "https://github.com/salesforce/LAVIS/tree/main/projects/blip2",
+      "zh": { "tag": "BLIP-2 · 连接模块", "question": "能否复用已经训练好的视觉模型和语言模型，减少重新训练的成本？", "idea": "冻结两侧模型，用可训练的 Q-Former 提取少量视觉特征，再学习把这些特征接到语言模型上。", "why": "它让“给语言模型接上眼睛”落到具体模块和训练阶段。", "read": "先看两阶段框架，标出冻结和训练的部分，再追踪视觉信息怎样变成语言输入。", "limit": "冻结模型仍带有原模型的能力边界；错误视觉信息可能伴随流畅但不准确的回答。" },
+      "en": { "tag": "BLIP-2 · connector", "question": "Can existing vision and language models be reused with less retraining?", "idea": "Freeze both models and train a Q-Former to extract a compact set of visual features and connect them to the language model.", "why": "It turns the idea of giving a language model vision into modules and training stages.", "read": "Mark frozen and trainable parts in the two-stage framework, then trace visual features into language inputs.", "limit": "Frozen components retain their limitations, and visual errors can accompany fluent but inaccurate answers." }
+    },
+    {
+      "id": "llava-2023", "title": "Visual Instruction Tuning", "year": 2023, "venue": "NeurIPS 2023",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/6dcf277ea32ce3288914faf369fe6de0-Abstract-Conference.html", "code": "https://github.com/haotian-liu/LLaVA",
+      "zh": { "tag": "LLaVA · 视觉指令", "question": "怎样让接收图像的模型按自然语言要求回答问题？", "idea": "用投影连接图像编码器与语言模型，再用视觉指令数据训练。原作利用图片的文字描述与框信息，请纯文本 GPT-4 生成部分训练对话。", "why": "它说明架构连接之外，训练数据的组织也能改变模型的交互方式。", "read": "先看指令数据如何构造，再看连接结构和分阶段训练。", "limit": "回答可能出现图片中不存在的细节。" },
+      "en": { "tag": "LLaVA · visual instructions", "question": "How can a model answer natural-language instructions about an image?", "idea": "Connect an image encoder to a language model with a projection and train on visual instructions. The original uses captions and box information with text-only GPT-4 to create part of its dialogue data.", "why": "Data organization can change interaction as much as the connection itself.", "read": "Start with instruction-data construction, then the connector and staged training.", "limit": "Answers can invent visual details." }
+    }
+  ]
+}

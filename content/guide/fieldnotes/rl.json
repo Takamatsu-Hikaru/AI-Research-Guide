@@ -1,0 +1,218 @@
+{
+  "id": "rl",
+  "zh": {
+    "overview": [
+      "强化学习关心一串行动怎样得到好的结果。模型每次看到环境给出的观察，选一个动作，再收到新的观察和奖励；眼前得分高，未必最后做得好。它适合游戏决策、机器人控制等需要反复交互的问题，也被用于语言模型的后训练。",
+      "入门时先分清两件事：怎样判断一个动作值得做，怎样根据这个判断改变行动。价值学习、策略优化和两者结合的 Actor–Critic 是几种常见思路。再去看数据从哪里来、能否重复利用、奖励怎样定义，就能理解算法差异落在哪里。"
+    ],
+    "solves": [
+      "在当前收益与未来机会之间做选择，例如游戏中是否先收集资源。",
+      "在连续动作空间里学控制，例如给关节施加多大的力。",
+      "用任务反馈改进已有策略，例如根据答案是否通过验证来调整生成行为。"
+    ],
+    "stance": "先把状态、动作、奖励和数据来源写清楚，再选算法；训练曲线升高之后，还要看策略到底学会了什么。",
+    "roadmap": [
+      {
+        "year": "2015",
+        "title": "估计行动的长期价值",
+        "text": "DQN 用神经网络估计每个离散动作的未来回报，把从像素学习与价值更新接在一起。",
+        "papers": [
+          "rl-dqn"
+        ]
+      },
+      {
+        "year": "2017",
+        "title": "直接改进选动作的策略",
+        "text": "PPO 用新采集的交互数据更新策略，并抑制一次更新中的过大变化。",
+        "papers": [
+          "rl-ppo"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "重复利用经验，同时保留探索",
+        "text": "SAC 结合策略与价值网络，用回放数据学习连续控制，并在目标中加入策略熵。三条路按数据与动作条件选择。",
+        "papers": [
+          "rl-sac"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "策略 · Policy",
+        "text": "根据观察选择动作的规则，可以输出一个确定动作，也可以输出动作的概率分布。"
+      },
+      {
+        "term": "奖励与回报 · Reward / Return",
+        "text": "奖励是某一步的反馈；回报把后续奖励累积起来，常用折扣降低远期奖励的权重。"
+      },
+      {
+        "term": "价值 · Value",
+        "text": "在某个状态，或先做某个动作之后，按一定策略继续行动能获得多少预期回报。"
+      },
+      {
+        "term": "On-policy / Off-policy",
+        "text": "前者主要用当前策略附近采集的数据更新；后者能学习来自其他策略或旧策略的经验。"
+      }
+    ],
+    "checklist": [
+      "在 CartPole 等小环境里记录一次完整轨迹，标出观察、动作、奖励和结束条件。",
+      "跑一个现成实现，用至少三个随机种子画出回报曲线，并保存成功与失败各一段轨迹。",
+      "改一个奖励条件，写下原本期望的行为，再对照策略实际发生了什么变化。"
+    ],
+    "figure": {
+      "title": "一次交互，怎样成为训练数据",
+      "nodes": [
+        "观察环境",
+        "策略选动作",
+        "环境变化与奖励",
+        "记录轨迹",
+        "更新策略或价值"
+      ]
+    },
+    "paperIntro": "先读 DQN 的交互与更新过程，再比较 PPO、SAC 如何用数据；第一遍能说清各自学什么、用什么数据就很有收获。"
+  },
+  "en": {
+    "overview": [
+      "Reinforcement learning studies sequences of actions and their consequences. A model observes an environment, acts, and receives another observation and a reward. A good immediate score may lead to a poor eventual outcome. Games, robot control, and language-model post-training provide different settings for learning from such feedback.",
+      "Begin with two questions: how is an action judged, and how does that judgment change behavior? Value learning, policy optimization, and their combination in actor–critic methods offer different answers. Then examine where data comes from, whether it can be reused, and how rewards are defined."
+    ],
+    "solves": [
+      "Trade immediate gains against future opportunities, such as collecting resources before fighting in a game.",
+      "Learn continuous control, such as choosing the force applied at a joint.",
+      "Improve an existing policy using task feedback, such as whether a generated answer passes a verifier."
+    ],
+    "stance": "Write down observations, actions, rewards, and data sources before choosing an algorithm. After scores improve, inspect what the policy actually does.",
+    "roadmap": [
+      {
+        "year": "2015",
+        "title": "Estimate the long-term value of actions",
+        "text": "DQN combines pixel inputs with a neural estimate of future return for each discrete action.",
+        "papers": [
+          "rl-dqn"
+        ]
+      },
+      {
+        "year": "2017",
+        "title": "Improve the action-selection policy directly",
+        "text": "PPO updates policies with newly collected experience while discouraging overly large changes in an update.",
+        "papers": [
+          "rl-ppo"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "Reuse experience while retaining exploration",
+        "text": "SAC combines actor and critic networks, replayed data, and an entropy objective for continuous control. These routes suit different data and action settings.",
+        "papers": [
+          "rl-sac"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Policy",
+        "text": "A rule for selecting an action from observations. It can return a fixed action or a distribution over actions."
+      },
+      {
+        "term": "Reward / Return",
+        "text": "A reward is feedback at one step. Return accumulates later rewards, often discounting more distant ones."
+      },
+      {
+        "term": "Value",
+        "text": "Expected future return from a state, or after taking an action, under a specified subsequent policy."
+      },
+      {
+        "term": "On-policy / Off-policy",
+        "text": "On-policy updates mainly use experience from the current or nearby policy; off-policy learning can use experience from other or older policies."
+      }
+    ],
+    "checklist": [
+      "Record a complete trajectory in a small environment such as CartPole; label observations, actions, rewards, and termination.",
+      "Run an existing implementation with at least three random seeds. Plot returns and save one successful and one failed trajectory.",
+      "Change a reward condition, write down the behavior you expect, and compare it with the behavior actually learned."
+    ],
+    "figure": {
+      "title": "From one interaction to training data",
+      "nodes": [
+        "Observe",
+        "Choose an action",
+        "Transition and reward",
+        "Record experience",
+        "Update policy or value"
+      ]
+    },
+    "paperIntro": "Start with interaction and updates in DQN, then compare how PPO and SAC use data. Explaining what each learns and which data it needs is a useful first reading."
+  },
+  "papers": [
+    {
+      "id": "rl-dqn",
+      "title": "Human-level control through deep reinforcement learning",
+      "year": 2015,
+      "venue": "Nature",
+      "url": "https://www.nature.com/articles/nature14236",
+      "zh": {
+        "tag": "DQN · 价值学习",
+        "question": "怎样从游戏画面学会选择离散动作？",
+        "idea": "网络预测动作价值；经验回放与延迟更新的目标网络帮助稳定学习。",
+        "why": "它把观察、动作价值和训练目标接得很清楚，是理解深度 RL 的入口。",
+        "read": "先看智能体与环境的交互，再追踪 Q 值更新与 Atari 评估。",
+        "limit": "原方法按离散动作估值；连续控制通常需要不同处理。"
+      },
+      "en": {
+        "tag": "DQN · Value learning",
+        "question": "How can pixels guide discrete actions?",
+        "idea": "Predict action values; replay experience and use a delayed target network to stabilize learning.",
+        "why": "A clear entry to observations, values, and deep RL training targets.",
+        "read": "Trace the interaction loop, Q updates, and Atari evaluation.",
+        "limit": "The original method enumerates discrete actions; continuous control needs other machinery."
+      }
+    },
+    {
+      "id": "rl-ppo",
+      "title": "Proximal Policy Optimization Algorithms",
+      "year": 2017,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/1707.06347",
+      "zh": {
+        "tag": "PPO · 策略优化",
+        "question": "怎样让策略更新容易实现，又不轻易跨得太大？",
+        "idea": "常用版本对新旧动作概率的比值做裁剪，让过度改变策略不再获得额外的目标收益。",
+        "why": "它是读策略梯度与理解许多 RL 实现的实用起点。",
+        "read": "先看 clipped surrogate objective，再看采样与多轮小批次更新。",
+        "limit": "裁剪不是性能单调提升的保证；数据采集和实现细节仍影响结果。"
+      },
+      "en": {
+        "tag": "PPO · Policy optimization",
+        "question": "How can simple policy updates avoid overly large changes?",
+        "idea": "The clipped objective removes incentives for excessive changes in action-probability ratios.",
+        "why": "A practical entry to policy gradients and many RL implementations.",
+        "read": "Inspect the clipped objective and the sampling/minibatch-update loop.",
+        "limit": "Clipping does not guarantee monotonic improvement; collection and implementation choices still matter."
+      }
+    },
+    {
+      "id": "rl-sac",
+      "title": "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor",
+      "year": 2018,
+      "venue": "ICML",
+      "url": "https://proceedings.mlr.press/v80/haarnoja18b.html",
+      "zh": {
+        "tag": "SAC · 连续控制",
+        "question": "怎样反复利用交互数据，并避免策略太早只选一种动作？",
+        "idea": "策略追求回报，也保留一定随机性；价值网络评价动作，回放缓冲区提供旧经验。",
+        "why": "用它比较 PPO，容易看清数据复用和探索目标的区别。",
+        "read": "先看最大熵目标，再追踪 actor、critic 与 replay buffer 的关系。",
+        "limit": "该论文主要研究连续控制；熵与奖励的尺度会影响行为。"
+      },
+      "en": {
+        "tag": "SAC · Continuous control",
+        "question": "How can experience be reused without committing too early to one action?",
+        "idea": "Optimize reward and policy entropy, using a critic and replayed experience.",
+        "why": "Compare with PPO to understand data reuse and exploration objectives.",
+        "read": "Connect the maximum-entropy objective, actor, critic, and replay buffer.",
+        "limit": "This paper focuses on continuous control; reward and entropy scales affect behavior."
+      }
+    }
+  ]
+}

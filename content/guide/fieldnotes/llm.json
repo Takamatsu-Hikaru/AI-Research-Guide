@@ -1,0 +1,255 @@
+{
+  "id": "llm",
+  "zh": {
+    "overview": [
+      "大语言模型把文字转成 token 序列，从大量文本中学习词句之间的关系，再根据上下文生成后续内容。同一个模型因此可以被用于问答、摘要、代码和翻译；任务不再总是对应一个单独训练的分类器，而常常通过指令、示例和上下文来表达。",
+      "这个方向既研究能力怎样从数据和训练中形成，也研究怎样把能力用到具体任务。预训练、指令微调、偏好学习与推理时的搜索，是不同环节；读一篇工作时，先问它改了哪里、用什么任务验证，才能理解“回答更好”到底好在什么地方。"
+    ],
+    "solves": [
+      "把分散的文本整理成摘要、结构化信息或可继续查询的回答。",
+      "根据自然语言要求生成、修改和解释文字与代码。",
+      "把不同任务放进同一种语言接口，研究模型能否迁移到新的要求。"
+    ],
+    "stance": "先分清模型结构、训练目标和使用方式；会写长答案、会按指令回答和推理正确，是三个需要分别检验的现象。",
+    "roadmap": [
+      {
+        "year": "2017",
+        "title": "结构：让序列里的位置相互交换信息",
+        "text": "Transformer 用注意力组织序列计算，为后来的不同预训练模型提供了重要结构。它原本研究机器翻译。",
+        "papers": [
+          "transformer-2017"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "迁移：先从文本学习，再适配任务",
+        "text": "GPT 把生成式语言预训练与有标签任务微调接起来。重点是复用学习到的表示。",
+        "papers": [
+          "gpt-2018"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "提示：把任务示例放进上下文",
+        "text": "GPT-3 系统考察规模和少样本提示：使用阶段可以给示例，而不为每个任务更新参数。",
+        "papers": [
+          "gpt3-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "行为：让输出更贴近人的要求",
+        "text": "InstructGPT 将示范、偏好比较与强化学习结合。模型如何回答，成为单独的训练问题。",
+        "papers": [
+          "instructgpt-2022"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Token / 分词单元",
+        "text": "模型处理的离散片段，可以是一个词、一个字或词的一部分。相同文字在不同 tokenizer 下可能有不同长度。"
+      },
+      {
+        "term": "自回归",
+        "text": "每次根据已有上下文预测后续 token，再把新 token 接回上下文继续生成。训练时可以并行计算多个位置的预测。"
+      },
+      {
+        "term": "预训练与后训练",
+        "text": "预训练建立基础能力；后训练在此基础上调整任务能力或行为。指令微调和偏好学习是常见后训练方法。"
+      },
+      {
+        "term": "上下文学习",
+        "text": "把说明和示例放进输入来改变表现，这次使用不更新模型权重。它不同于用这些示例微调参数。"
+      }
+    ],
+    "checklist": [
+      "把一句中文和一句代码送进 tokenizer，保存 token 与编号，并解释它们为什么不等于按空格分词。",
+      "在同一模型上比较无示例与两个示例的提示，用五道自己能核对答案的题记录变化。",
+      "选一篇本页的论文，用三句话分别写出它的训练输入、训练目标和测试任务。"
+    ],
+    "figure": {
+      "title": "一段文本怎样变成下一步输出",
+      "nodes": [
+        "文字 → tokens",
+        "表示与注意力",
+        "下一个 token 的分布",
+        "选择 token 并接回输入"
+      ]
+    },
+    "paperIntro": "按结构、预训练、上下文学习、后训练读这四篇，每篇先抓住它改变的环节。"
+  },
+  "en": {
+    "overview": [
+      "A large language model turns text into tokens, learns relationships from large text collections, and generates continuations from context. One model can support questions, summaries, code, and translation. Tasks are often expressed through instructions and examples instead of a separately trained classifier.",
+      "The field studies both how capabilities emerge from data and training and how to use them for particular tasks. Pretraining, instruction tuning, preference learning, and search at inference time affect different stages. Ask what a paper changes and how it tests that change before interpreting a claim of better answers."
+    ],
+    "solves": [
+      "Turn scattered text into summaries, structured information, or answers that can be queried further.",
+      "Generate, revise, and explain text and code from natural-language requests.",
+      "Express different tasks through one language interface and study transfer to new requirements."
+    ],
+    "stance": "Separate architecture, training objectives, and usage: long answers, instruction following, and correct reasoning require different tests.",
+    "roadmap": [
+      {
+        "year": "2017",
+        "title": "Architecture: exchange information across positions",
+        "text": "Transformer organizes sequence computation through attention. Originally studied for translation, it became an important building block for later pretrained models.",
+        "papers": [
+          "transformer-2017"
+        ]
+      },
+      {
+        "year": "2018",
+        "title": "Transfer: learn from text, then adapt to tasks",
+        "text": "GPT connects generative language pretraining with supervised task adaptation, reusing learned representations.",
+        "papers": [
+          "gpt-2018"
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "Prompting: put task examples in context",
+        "text": "GPT-3 studies scale and few-shot prompting without updating parameters for each evaluation task.",
+        "papers": [
+          "gpt3-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "Behavior: train answers toward human intent",
+        "text": "InstructGPT combines demonstrations, preference comparisons, and reinforcement learning. How a model answers becomes a training problem of its own.",
+        "papers": [
+          "instructgpt-2022"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Token",
+        "text": "A discrete piece of input: a word, character, or part of a word. Different tokenizers can assign different lengths to the same text."
+      },
+      {
+        "term": "Autoregressive generation",
+        "text": "Predict a token from preceding context, append it, and continue. During training, predictions at multiple positions can be computed in parallel."
+      },
+      {
+        "term": "Pretraining and post-training",
+        "text": "Pretraining establishes broad capabilities; post-training adjusts task skills or behavior. Instruction tuning and preference learning are common post-training methods."
+      },
+      {
+        "term": "In-context learning",
+        "text": "Instructions and examples in the input alter performance without updating weights during that use. This differs from fine-tuning on the examples."
+      }
+    ],
+    "checklist": [
+      "Tokenize a Chinese sentence and a code snippet, save the pieces and IDs, and explain why tokenization differs from splitting on spaces.",
+      "Compare zero-example and two-example prompts on the same model using five questions whose answers you can verify.",
+      "For one paper on this page, write three sentences naming its training input, training objective, and evaluation task."
+    ],
+    "figure": {
+      "title": "From text to the next output",
+      "nodes": [
+        "Text → tokens",
+        "Representations and attention",
+        "Next-token distribution",
+        "Select and append a token"
+      ]
+    },
+    "paperIntro": "Read these four papers for architecture, pretraining, in-context learning, and post-training. Identify the stage each changes."
+  },
+  "papers": [
+    {
+      "id": "transformer-2017",
+      "title": "Attention Is All You Need",
+      "year": 2017,
+      "venue": "NIPS 2017",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "zh": {
+        "tag": "Transformer",
+        "question": "序列模型能否摆脱逐步递归，仍然处理词句之间的依赖？",
+        "idea": "让每个位置通过注意力读取其他位置，再结合前馈网络与位置信息处理序列。",
+        "why": "后面的 GPT 等模型会复用其中的结构，先认识输入怎样流动。",
+        "read": "先看模型结构和注意力的解释，再对照机器翻译实验。",
+        "limit": "原文是编码器—解码器翻译模型。"
+      },
+      "en": {
+        "tag": "Transformer",
+        "question": "Can a sequence model handle dependencies without recurrent computation?",
+        "idea": "Each position reads other positions through attention, combined with feed-forward layers and positional information.",
+        "why": "Later models reuse these components. It is a useful first map of information flow.",
+        "read": "Start with the architecture and attention explanation, then the translation experiments.",
+        "limit": "The original is an encoder–decoder translation model."
+      }
+    },
+    {
+      "id": "gpt-2018",
+      "title": "Improving Language Understanding by Generative Pre-Training",
+      "year": 2018,
+      "venue": "OpenAI technical report · 2018",
+      "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+      "zh": {
+        "tag": "GPT · 预训练",
+        "question": "大量没有任务标签的文本，怎样帮助有标签的语言理解任务？",
+        "idea": "先训练模型预测文本后续，再用任务数据微调；把不同任务整理成可输入的序列。",
+        "why": "它把“先学通用表示，再迁移”的做法讲得很具体。",
+        "read": "看 Figure 1 的两阶段训练和右侧任务输入转换。",
+        "limit": "这里仍需要下游任务微调。"
+      },
+      "en": {
+        "tag": "GPT · pretraining",
+        "question": "How can unlabeled text help supervised language-understanding tasks?",
+        "idea": "Pretrain by predicting text, then fine-tune on task data arranged as input sequences.",
+        "why": "It makes the transfer from general representations to particular tasks concrete.",
+        "read": "Figure 1 shows the training stages and task-specific input transformations.",
+        "limit": "Downstream task fine-tuning is still required."
+      }
+    },
+    {
+      "id": "gpt3-2020",
+      "title": "Language Models are Few-Shot Learners",
+      "year": 2020,
+      "venue": "NeurIPS 2020",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "zh": {
+        "tag": "GPT-3 · 上下文学习",
+        "question": "能否给模型几个例子，就让它完成新任务而不更新权重？",
+        "idea": "扩大自回归语言模型，在提示里放任务说明与示例，分别评测零样本、单样本和少样本表现。",
+        "why": "它帮助你区分上下文学习与参数微调，也能接到 scaling 问题。",
+        "read": "先看三种评测设置，再选一个自己懂的任务读结果。",
+        "limit": "少样本效果依赖任务和提示；网络训练语料与测试数据的重合也影响评估。"
+      },
+      "en": {
+        "tag": "GPT-3 · in-context learning",
+        "question": "Can a few examples specify a new task without weight updates?",
+        "idea": "Scale an autoregressive model and evaluate instructions and demonstrations under zero-, one-, and few-shot settings.",
+        "why": "It distinguishes in-context learning from fine-tuning and connects to questions about scale.",
+        "read": "Start with the three evaluation settings, then inspect a familiar task.",
+        "limit": "Results depend on the task and prompt; overlap between web training data and tests complicates evaluation."
+      }
+    },
+    {
+      "id": "instructgpt-2022",
+      "title": "Training language models to follow instructions with human feedback",
+      "year": 2022,
+      "venue": "NeurIPS 2022",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "zh": {
+        "tag": "InstructGPT · 人类反馈",
+        "question": "模型会续写文字后，怎样让它更按用户的要求回答？",
+        "idea": "用示范答案微调，再从回答排序学习奖励模型，通过强化学习调整输出行为。",
+        "why": "它把预训练能力和回答方式分开，便于理解后训练的作用。",
+        "read": "先沿训练流程理解示范、排序和策略更新各自需要什么数据。",
+        "limit": "标注者偏好受人群和任务分布影响；更受偏好的回答仍可能有事实错误。"
+      },
+      "en": {
+        "tag": "InstructGPT · human feedback",
+        "question": "How can a text-completion model better follow a user's request?",
+        "idea": "Fine-tune on demonstrations, learn a reward model from ranked answers, and use reinforcement learning to adjust behavior.",
+        "why": "It separates pretrained capability from the way answers are produced.",
+        "read": "Follow the training pipeline and identify the data needed for demonstrations, ranking, and policy updates.",
+        "limit": "Preferences depend on labelers and prompt distributions; preferred answers can still be factually wrong."
+      }
+    }
+  ]
+}

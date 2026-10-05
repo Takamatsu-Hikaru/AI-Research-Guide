@@ -1,0 +1,97 @@
+{
+  "id": "generation",
+  "zh": {
+    "overview": [
+      "生成模型学习一批数据中反复出现的规律，再据此产生新的样本。对图像来说，它既可以从随机数出发画图，也可以根据文字、草图或已有图片补全内容。研究关心的不只是画面好不好看，还包括结果是否听从条件、多次生成是否丰富、需要多少计算。",
+      "这页用图像生成认识几种重要做法：GAN 通过生成器与判别器的对抗学习，扩散模型学习在不同噪声程度下去噪，潜空间方法把主要计算移到压缩表示中。它们回答的问题有交集，也可以组合。"
+    ],
+    "solves": [
+      "内容生成：从文字或其他条件得到图像，为设计、创作和数据研究提供样本。",
+      "图像编辑与恢复：补全缺失区域、按要求修改内容，或恢复低质量图像。",
+      "复杂输出建模：把生成方法用于音频、视频或动作序列，表达可能存在的多种结果。"
+    ],
+    "stance": "看生成模型时同时问三件事：学的是什么目标，生成一次要做多少步，结果怎样衡量；挑一张漂亮图片回答不了这些问题。",
+    "roadmap": [
+      { "year": "2014", "title": "让生成与辨别相互推动", "text": "GAN 用判别器的反馈训练生成器。它提供了一条通过对抗目标学习数据分布的路线。", "papers": ["gan-2014"] },
+      { "year": "2020", "title": "把生成拆成一串去噪步骤", "text": "DDPM 在不同噪声水平训练预测，再从随机噪声逐步采样。它是与 GAN 并行的重要生成路线。", "papers": ["ddpm-2020"] },
+      { "year": "2022", "title": "在哪里去噪更省计算", "text": "LDM 先压缩图像，在较小的潜表示中做扩散，最后解码回像素；文本等条件可在去噪时参与。", "papers": ["ldm-2022"] },
+      { "year": "2023", "title": "去噪网络也可以用 Transformer", "text": "DiT 研究用 Transformer 处理潜空间中的小块，以及模型计算量与生成质量的关系。", "papers": ["dit-2023"] }
+    ],
+    "terms": [
+      { "term": "噪声 / noise", "text": "这里通常是按给定概率分布抽取的随机扰动。训练时知道加了什么噪声，便能构造有答案的学习任务。" },
+      { "term": "去噪目标 / denoising", "text": "根据带噪输入和当前噪声程度预测噪声、干净样本或相关量。DDPM 的常用形式是预测所加噪声，再据此计算采样更新。" },
+      { "term": "潜空间 / latent space", "text": "编码器把图片压成较小的数字表示，解码器将其还原。计算量会下降，但压缩丢失的细节也会影响最终图像。" },
+      { "term": "采样器 / sampler", "text": "规定怎样用模型的预测从初始随机状态得到样本。步数、更新公式和随机性都会影响速度与结果，不能只比较步数。" }
+    ],
+    "checklist": [
+      "给同一张小图加入三种强度的高斯噪声，保存并排结果，说明哪些信息逐渐变得难以辨认。",
+      "在小型扩散示例中分别找到训练目标和采样循环，记录一次模型调用的输入形状、时间步与输出形状。",
+      "固定模型、提示词和一组随机种子，比较同一采样器的两档步数；一起保存所有图片、耗时和观察到的失败。"
+    ],
+    "figure": {
+      "title": "一次扩散采样在做什么",
+      "nodes": ["初始随机噪声", "模型预测去噪方向", "采样器更新状态", "重复若干步", "输出样本"]
+    },
+    "paperIntro": "先对照 GAN 和 DDPM 理解两种训练思路，再读 LDM 的计算取舍，最后用 DiT 连接 Transformer 与扩散。"
+  },
+  "en": {
+    "overview": [
+      "Generative models learn recurring patterns in data and use them to produce new samples. An image model can start from random numbers or fill in content using text, a sketch, or another image. Research concerns visual quality, but also whether conditions are followed, how diverse repeated samples are, and how much computation is required.",
+      "Image generation offers a way into several ideas: GANs train a generator against a discriminator, diffusion models learn denoising at different noise levels, and latent methods move much of the computation into a compressed representation. These ideas overlap and can be combined."
+    ],
+    "solves": [
+      "Content generation: produce images from text or other conditions for design, creation, and data research.",
+      "Editing and restoration: fill missing regions, modify content, or restore degraded images.",
+      "Modeling complex outputs: generate audio, video, or action sequences while representing multiple possible outcomes."
+    ],
+    "stance": "Ask what objective is learned, how many computations sampling requires, and how results are evaluated. One attractive image cannot answer those questions.",
+    "roadmap": [
+      { "year": "2014", "title": "Learning through an adversary", "text": "GANs train a generator using feedback from a discriminator, offering an adversarial route to learning a data distribution.", "papers": ["gan-2014"] },
+      { "year": "2020", "title": "Generation as repeated denoising", "text": "DDPM learns predictions at different noise levels and samples progressively from random noise. It is an important route alongside GANs.", "papers": ["ddpm-2020"] },
+      { "year": "2022", "title": "Doing the expensive work in a smaller space", "text": "LDM compresses images, runs diffusion on compact latent representations, and decodes them into pixels. Text and other conditions can guide denoising.", "papers": ["ldm-2022"] },
+      { "year": "2023", "title": "A Transformer can be the denoising network", "text": "DiT processes latent patches with a Transformer and studies compute versus generation quality.", "papers": ["dit-2023"] }
+    ],
+    "terms": [
+      { "term": "Noise", "text": "Random perturbations drawn from a chosen distribution. Knowing the noise added during training lets us construct a task with a known target." },
+      { "term": "Denoising objective", "text": "Predict noise, a clean sample, or a related quantity from a noisy input and its noise level. A common DDPM formulation predicts added noise, which is used to compute sampling updates." },
+      { "term": "Latent space", "text": "An encoder compresses an image into a smaller numerical representation, and a decoder reconstructs it. Lower compute comes with a tradeoff in retained detail." },
+      { "term": "Sampler", "text": "The rule that uses model predictions to move from an initial random state to a sample. Steps, update equations, and randomness all affect speed and quality." }
+    ],
+    "checklist": [
+      "Add three levels of Gaussian noise to the same small image. Save them side by side and describe which information becomes hard to recognize.",
+      "In a small diffusion example, locate the training target and sampling loop separately. Record the input shape, time step, and output shape for one model call.",
+      "Keep the model, prompt, and a set of seeds fixed. Compare two step counts with one sampler, saving every image, runtime, and observed failure."
+    ],
+    "figure": {
+      "title": "Following diffusion sampling",
+      "nodes": ["Initial random noise", "Model prediction", "Sampler update", "Repeat steps", "Output sample"]
+    },
+    "paperIntro": "Compare GAN and DDPM training first, examine LDM's compute tradeoff next, and use DiT to connect Transformers with diffusion."
+  },
+  "papers": [
+    {
+      "id": "gan-2014", "title": "Generative Adversarial Nets", "year": 2014, "venue": "NIPS 2014",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html",
+      "zh": { "tag": "GAN · 对抗学习", "question": "怎样在不直接写出复杂图像概率的情况下学会生成？", "idea": "生成器把随机输入变成样本；判别器学习区分训练数据和生成样本，其反馈再推动生成器改进。", "why": "它把生成模型的训练写成两个模型之间的博弈，核心想法很适合画图理解。", "read": "先看两者的目标和交替更新算法，再看实验样本。", "limit": "两边的训练需要配合，可能不稳定，也可能只覆盖数据中的部分模式。" },
+      "en": { "tag": "GAN · adversarial learning", "question": "How can a model learn to generate without directly specifying a complex image probability?", "idea": "A generator turns random inputs into samples; a discriminator learns to distinguish them from training examples and supplies feedback.", "why": "The two-model game gives a clear alternative training principle.", "read": "Start with both objectives and alternating updates, then the samples.", "limit": "Training can be unstable or cover only some patterns in the data." }
+    },
+    {
+      "id": "ddpm-2020", "title": "Denoising Diffusion Probabilistic Models", "year": 2020, "venue": "NeurIPS 2020",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html", "code": "https://github.com/hojonathanho/diffusion",
+      "zh": { "tag": "DDPM · 扩散", "question": "能否通过学习一系列去噪任务来生成清晰图像？", "idea": "训练时给真实图像加入已知噪声，模型学习预测噪声；采样时反复调用模型，从随机状态逐渐形成样本。", "why": "训练与采样的对应关系清楚，是理解后续扩散工作的好入口。", "read": "把训练和采样两个算法并排看，先弄懂模型每次收到什么、预测什么。", "limit": "原始采样需要许多次顺序计算。" },
+      "en": { "tag": "DDPM · diffusion", "question": "Can learning denoising tasks produce clear images?", "idea": "Train on known noise added to real images; repeatedly use the learned predictions to sample from an initial random state.", "why": "Its training and sampling algorithms provide a useful foundation for later diffusion work.", "read": "Compare the two algorithms, tracing model inputs and predictions.", "limit": "Original sampling uses many sequential model calls." }
+    },
+    {
+      "id": "ldm-2022", "title": "High-Resolution Image Synthesis with Latent Diffusion Models", "year": 2022, "venue": "CVPR 2022",
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html", "code": "https://github.com/CompVis/latent-diffusion",
+      "zh": { "tag": "LDM · 潜空间", "question": "扩散能否少处理一些像素，同时保留生成图像的关键细节？", "idea": "先用自编码器压缩图片，在潜表示上训练扩散，再解码；交叉注意力让文字等条件参与去噪。", "why": "它把图像压缩、生成质量和计算成本放在同一个设计里，也是理解 Stable Diffusion 的基础。", "read": "先沿编码、扩散、解码走一遍，再看压缩程度的比较。", "limit": "压缩会损失信息；会按文字生成，不代表能稳定满足复杂数量与空间关系。" },
+      "en": { "tag": "LDM · latent space", "question": "Can diffusion process less information while retaining useful image detail?", "idea": "Compress images with an autoencoder, diffuse in latent space, and decode. Cross-attention introduces conditions such as text.", "why": "It links compression, quality, and compute, and underpins Stable Diffusion.", "read": "Trace encoding, diffusion, and decoding; then compare compression levels.", "limit": "Compression loses information. Text conditioning does not guarantee accurate counts or spatial relations." }
+    },
+    {
+      "id": "dit-2023", "title": "Scalable Diffusion Models with Transformers", "year": 2023, "venue": "ICCV 2023",
+      "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.html", "code": "https://github.com/facebookresearch/DiT",
+      "zh": { "tag": "DiT · 扩散 Transformer", "question": "扩散模型中的去噪网络能否改用适合扩大规模的 Transformer？", "idea": "把潜表示切成小块，用 Transformer 预测扩散所需的量，并比较深度、宽度和块大小。", "why": "它让你分清生成目标与网络结构，也能读到围绕计算量的系统比较。", "read": "先看模型结构，再把各规模的计算量与生成指标对照起来。", "limit": "原论文主要研究类别条件的 ImageNet 图像生成，不能直接当作文本生成视频能力的证据。" },
+      "en": { "tag": "DiT · diffusion Transformer", "question": "Can a scalable Transformer serve as the diffusion network?", "idea": "Process latent patches with a Transformer and compare depth, width, and patch size.", "why": "It separates the generation objective from architecture and examines scaling through compute.", "read": "Read the architecture, then compare compute and generation metrics across sizes.", "limit": "The original studies class-conditioned ImageNet images, not text-to-video generation." }
+    }
+  ]
+}

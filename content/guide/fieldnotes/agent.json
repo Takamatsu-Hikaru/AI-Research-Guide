@@ -1,0 +1,258 @@
+{
+  "id": "agent",
+  "zh": {
+    "overview": [
+      "Agent 把模型放进一个持续执行的过程：拿到任务，读取当前信息，决定动作，调用工具，再根据结果决定下一步。做完一次搜索就回答、反复修改代码直到测试通过，都可以用这个视角观察；关键是环境反馈是否真的改变了后续行为。",
+      "这类系统的研究对象不只有模型本身，还包括工具接口、记忆、任务拆分、失败恢复和评测。把执行记录留下，区分模型选错了、工具返回错了、还是评价方式错了，往往是进入这个方向的第一步。"
+    ],
+    "solves": [
+      "连接检索、计算和代码执行，让模型获得参数之外的信息与能力。",
+      "完成需要多步操作的任务，例如定位报错、改代码并验证结果。",
+      "利用任务反馈修正后续行动，研究长期任务中的可靠性和成本。"
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2023",
+        "title": "ReAct：把思考、行动和观察接成循环",
+        "text": "模型根据当前信息选动作，读取环境结果后继续推理；这是理解执行轨迹的起点。",
+        "papers": [
+          "react-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Toolformer：学习什么时候调用工具",
+        "text": "工具使用也可以成为训练数据的一部分，而不只是写在提示里的规则。",
+        "papers": [
+          "toolformer-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Reflexion：让下一次尝试利用失败反馈",
+        "text": "把反馈整理为文字记忆，放进后续尝试的上下文；这里的改进不依赖更新模型权重。",
+        "papers": [
+          "reflexion-2023"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "SWE-bench：把演示变成可以比较的任务",
+        "text": "给定真实仓库和 issue，检查提交的修改是否解决问题。方法之外，还需要可信的任务和评价。",
+        "papers": [
+          "swebench-2024"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "工具调用",
+        "text": "模型输出工具名称和参数，外部程序执行后返回结果。"
+      },
+      {
+        "term": "执行轨迹 / Trajectory",
+        "text": "一次任务中的观察、动作和结果序列。它帮助你定位首次出错的地方，而不只看最终答案。"
+      },
+      {
+        "term": "上下文与记忆",
+        "text": "上下文是模型当次可见的信息；记忆是跨步骤或跨尝试保存的内容，需要被取回才会影响当次决策。"
+      },
+      {
+        "term": "Scaffold / 执行框架",
+        "text": "围绕模型的程序：管理工具、提示、循环、终止条件和反馈。同一模型换一套框架，表现可能不同。"
+      }
+    ],
+    "checklist": [
+      "找一个 ReAct 执行示例，逐行标出模型写的内容、实际工具调用和环境返回的内容。",
+      "用五个可核对的问题跑一次简单工具流程，记录成功率、调用次数和耗时，并留下一条失败轨迹。",
+      "删掉一次工具返回或返回空结果，观察系统是否改变下一步动作；写下你能复现的一个失败原因。"
+    ],
+    "figure": {
+      "title": "一次行动之后，模型得到了什么",
+      "nodes": [
+        "任务与当前上下文",
+        "模型选择动作",
+        "工具或环境执行",
+        "返回观察并继续"
+      ]
+    },
+    "paperIntro": "先用 ReAct 看懂一条轨迹，再分别看工具训练、跨尝试反馈和任务评测；它们回答的是不同问题。"
+  },
+  "en": {
+    "overview": [
+      "An agent places a model inside an ongoing process: receive a task, inspect available information, choose an action, call a tool, and use the result to decide what happens next. A search followed by an answer and a coding loop ending in passing tests can both be studied this way. The key question is whether observations actually change later behavior.",
+      "Research covers more than the model: tool interfaces, memory, task decomposition, recovery, and evaluation all matter. Keep execution traces and distinguish a bad model decision from a tool failure or an incorrect evaluator."
+    ],
+    "solves": [
+      "Connect retrieval, calculation, and code execution to information and capabilities outside model parameters.",
+      "Complete tasks requiring several operations, such as locating a bug, editing code, and verifying the change.",
+      "Use feedback to revise actions and study reliability and cost on longer tasks."
+    ],
+    "stance": "",
+    "roadmap": [
+      {
+        "year": "2023",
+        "title": "ReAct: connect reasoning, actions, and observations",
+        "text": "Choose actions from current information and continue reasoning after observing their results. Start here to understand a trajectory.",
+        "papers": [
+          "react-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Toolformer: learn when to call tools",
+        "text": "Tool use can be part of training data, rather than only instructions in a prompt.",
+        "papers": [
+          "toolformer-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Reflexion: reuse feedback in another attempt",
+        "text": "Turn feedback into written memory for subsequent attempts. This improvement does not require weight updates.",
+        "papers": [
+          "reflexion-2023"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "SWE-bench: turn demonstrations into comparable tasks",
+        "text": "Given a real repository and issue, test whether an edit solves the problem. Methods need credible tasks and evaluation.",
+        "papers": [
+          "swebench-2024"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Tool call",
+        "text": "The model emits a tool name and arguments; an external program executes them and returns a result."
+      },
+      {
+        "term": "Trajectory",
+        "text": "The sequence of observations, actions, and results in a task. It helps locate the first error instead of judging only the final answer."
+      },
+      {
+        "term": "Context and memory",
+        "text": "Context is what the model currently sees. Memory persists across steps or attempts and must be retrieved to affect the current decision."
+      },
+      {
+        "term": "Scaffold",
+        "text": "The surrounding program manages tools, prompts, loops, stopping conditions, and feedback. The same model can behave differently in different scaffolds."
+      }
+    ],
+    "checklist": [
+      "Annotate a ReAct example line by line, separating model text, actual tool calls, and observations.",
+      "Run a simple tool workflow on five verifiable questions; record success, calls, time, and one failed trajectory.",
+      "Remove a tool response or return an empty result and inspect whether the next action changes. Describe one reproducible failure."
+    ],
+    "figure": {
+      "title": "What changes after an action?",
+      "nodes": [
+        "Task and current context",
+        "Model chooses an action",
+        "Tool or environment executes",
+        "Observation returns to the loop"
+      ]
+    },
+    "paperIntro": "Start with a ReAct trajectory, then study tool training, feedback across attempts, and evaluation as distinct questions."
+  },
+  "papers": [
+    {
+      "id": "react-2023",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "year": 2023,
+      "venue": "ICLR 2023",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "code": "https://react-lm.github.io/",
+      "zh": {
+        "tag": "行动循环",
+        "question": "模型能否边获取外部信息，边调整解题过程？",
+        "idea": "在一条轨迹中交替生成推理文本与行动，并把环境观察接回上下文。",
+        "why": "它让“模型去做事”变成一段能逐步检查的执行过程。",
+        "read": "先看项目页的 HotpotQA 示例，再看 ALFWorld 的失败轨迹。",
+        "limit": "工具反馈会提供新证据，但模型仍可能忽略它或反复做错；显式推理文本也不等于完整的内部计算。"
+      },
+      "en": {
+        "tag": "Action loop",
+        "question": "Can a model gather external information while adjusting its approach?",
+        "idea": "Interleave reasoning text and actions, then add environmental observations to context.",
+        "why": "It makes task execution visible as a sequence you can inspect.",
+        "read": "Start with the project's HotpotQA example and then its ALFWorld failure.",
+        "limit": "Models can ignore feedback or repeat mistakes. Written reasoning is not a complete account of internal computation."
+      }
+    },
+    {
+      "id": "toolformer-2023",
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "year": 2023,
+      "venue": "NeurIPS 2023",
+      "url": "https://arxiv.org/abs/2302.04761",
+      "zh": {
+        "tag": "工具使用训练",
+        "question": "怎样获得教模型调用工具的数据，而不逐条人工标注？",
+        "idea": "生成候选调用，实际执行，保留让后续文本更容易预测的调用，再用这些数据微调模型。",
+        "why": "与 ReAct 对照读，可以分清执行时的组织方式和训练时学到的能力。",
+        "read": "看 Figure 2 的采样、执行、筛选流程，再看工具使用实例。",
+        "limit": "原方法对多次调用串联和交互式工具有局限；预测后续文本的收益不等同于完成长任务的收益。"
+      },
+      "en": {
+        "tag": "Learning tool use",
+        "question": "How can tool-use training data be obtained without labeling every call?",
+        "idea": "Generate candidate calls, execute them, retain those that improve subsequent text prediction, and fine-tune on the resulting data.",
+        "why": "Contrast it with ReAct to separate execution design from trained capability.",
+        "read": "Figure 2 shows sampling, execution, and filtering; then inspect tool examples.",
+        "limit": "The original method has limitations with chained calls and interactive tools. Better text prediction is not the same as long-task success."
+      }
+    },
+    {
+      "id": "reflexion-2023",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "year": 2023,
+      "venue": "NeurIPS 2023",
+      "url": "https://arxiv.org/abs/2303.11366",
+      "code": "https://github.com/noahshinn/reflexion",
+      "zh": {
+        "tag": "反馈与记忆",
+        "question": "一次尝试失败后，怎样让下一次用上这次的教训？",
+        "idea": "把任务反馈整理成文字反思，保存到记忆，再作为下一次尝试的输入。",
+        "why": "它是理解“改上下文”和“更新参数”差别的具体例子。",
+        "read": "顺着方法中的执行、评估、反思和再次尝试读一遍。",
+        "limit": "反馈质量决定反思有没有依据；它不是通过梯度更新权重的传统强化学习训练。"
+      },
+      "en": {
+        "tag": "Feedback and memory",
+        "question": "How can another attempt use lessons from a failure?",
+        "idea": "Turn task feedback into written reflections, store them, and supply them to subsequent attempts.",
+        "why": "It provides a concrete contrast between changing context and changing parameters.",
+        "read": "Follow execution, evaluation, reflection, and the next attempt through the method.",
+        "limit": "Reflections need useful feedback. This is not traditional reinforcement-learning training through gradient updates."
+      }
+    },
+    {
+      "id": "swebench-2024",
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "year": 2024,
+      "venue": "ICLR 2024",
+      "url": "https://arxiv.org/abs/2310.06770",
+      "code": "https://www.swebench.com/",
+      "zh": {
+        "tag": "真实代码任务评测",
+        "question": "模型能否读懂仓库和 issue，提交真正解决问题的代码修改？",
+        "idea": "从真实项目收集 issue 与修复，给模型仓库和问题，再通过测试评价补丁。",
+        "why": "它把读代码、定位、修改和验证放到一个完整任务里。",
+        "read": "先读任务构建与评价方式，再看一种失败案例。",
+        "limit": "原始数据来自 Python 仓库；测试通过不能覆盖全部软件质量，也不能直接代表其他语言和工作流。"
+      },
+      "en": {
+        "tag": "Repository-level evaluation",
+        "question": "Can a model turn a repository and issue into a working fix?",
+        "idea": "Collect real issues and fixes, provide the repository and problem, and evaluate proposed patches with tests.",
+        "why": "It joins reading, localization, editing, and verification in one task.",
+        "read": "Start with task construction and evaluation, then a failure case.",
+        "limit": "The original data comes from Python repositories. Passing tests does not cover all software quality or establish transfer to other languages."
+      }
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "id": "systems",
+  "zh": {
+    "overview": [
+      "效率与系统研究怎样在有限硬件、时间和成本里完成训练或推理。一个模型的公式没有变，运行速度也可能差很多：数据搬运、算子实现、显存分配、请求调度和多卡通信，都会决定 GPU 能不能持续干活，以及用户要等多久。",
+      "这条线与模型方法紧密相连。更长的上下文会增加缓存，更多并发请求会改变内存压力，降低精度可能影响任务质量。读系统论文时，把优化对象和测试负载一起看：它省的是哪块内存、减少了什么等待，换一种任务时收益又会怎样变化。"
+    ],
+    "solves": [
+      "让原本显存装不下的模型或训练状态能够分布到多张卡上。",
+      "减少计算中的内存搬运与重复工作，提高已有硬件的利用率。",
+      "在模型质量、响应速度、并发量和服务成本之间找到可测量的取舍。"
+    ],
+    "stance": "先测清瓶颈，再选优化；显存更省、吞吐更高和单个用户等得更少，分别是不同的结果。",
+    "roadmap": [
+      {
+        "year": "2020",
+        "title": "ZeRO：分担训练时重复保存的状态",
+        "text": "从多卡数据并行中的冗余入手，分片存储优化器状态、梯度和参数。",
+        "papers": [
+          "zero-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "FlashAttention：改变计算的搬运方式",
+        "text": "保持精确注意力的数学目标，用分块计算减少 GPU 不同内存层级间的读写。",
+        "papers": [
+          "flashattention-2022"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "SmoothQuant：让低精度计算更可用",
+        "text": "处理难量化的激活异常值，为权重与激活的 INT8 推理创造条件。",
+        "papers": [
+          "smoothquant-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "PagedAttention：管理动态增长的 KV cache",
+        "text": "将缓存按块组织，减少服务中的碎片和重复，容纳更多并发请求。",
+        "papers": [
+          "pagedattention-2023"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "吞吐与延迟",
+        "text": "吞吐是在一段时间内完成多少工作；延迟是一个请求等待多久。增大 batch 可能改善前者，却让排队更久。"
+      },
+      {
+        "term": "Prefill / Decode",
+        "text": "Prefill 处理输入上下文；decode 逐步生成输出。两阶段的计算与访存特点不同，不能只报一个笼统速度。"
+      },
+      {
+        "term": "KV cache",
+        "text": "保存已处理 token 在各层注意力中的 key 和 value，避免生成时重复计算；它随上下文和并发请求占用显存。"
+      },
+      {
+        "term": "量化",
+        "text": "用较低精度表示权重或激活，减少存储与某些计算成本。能否加速还取决于硬件和实际算子的支持。"
+      }
+    ],
+    "checklist": [
+      "固定模型、输入和输出长度，对两个 batch size 各测三次耗时与峰值显存，写下硬件和精度。",
+      "分别记录首个 token 的等待时间和后续生成速度，解释它们为何不能互相替代。",
+      "从四篇论文选一种优化，画出它处理的对象，并指出哪一项性能指标能直接检验它。"
+    ],
+    "figure": {
+      "title": "一次请求在哪些地方花时间",
+      "nodes": [
+        "请求排队",
+        "处理输入 · prefill",
+        "逐步生成 · decode",
+        "返回结果"
+      ]
+    },
+    "paperIntro": "四篇对应训练状态、算子访存、数值精度和在线缓存。先辨认各自的瓶颈，再读性能图中的负载条件。"
+  },
+  "en": {
+    "overview": [
+      "Efficiency and systems research asks how to train and serve models within hardware, time, and cost limits. An unchanged formula can run at very different speeds: data movement, kernel implementation, memory allocation, request scheduling, and communication determine whether GPUs stay busy and how long users wait.",
+      "This field is closely tied to model design. Longer contexts increase cache requirements, concurrent requests change memory pressure, and lower precision may affect quality. Read an optimization together with its workload: which memory does it save, which wait does it reduce, and how would another task change the result?"
+    ],
+    "solves": [
+      "Distribute model and training states that do not fit on one device.",
+      "Reduce data movement and redundant work to use existing hardware more effectively.",
+      "Measure tradeoffs among model quality, response time, concurrency, and service cost."
+    ],
+    "stance": "Measure the bottleneck before choosing an optimization. Lower memory use, higher throughput, and shorter user waits are different outcomes.",
+    "roadmap": [
+      {
+        "year": "2020",
+        "title": "ZeRO: partition redundant training state",
+        "text": "Shard optimizer states, gradients, and parameters that would otherwise be replicated in data-parallel training.",
+        "papers": [
+          "zero-2020"
+        ]
+      },
+      {
+        "year": "2022",
+        "title": "FlashAttention: change data movement",
+        "text": "Preserve exact attention while tiling computation to reduce transfers between GPU memory levels.",
+        "papers": [
+          "flashattention-2022"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "SmoothQuant: make low precision practical",
+        "text": "Handle activation outliers to support INT8 weights and activations during inference.",
+        "papers": [
+          "smoothquant-2023"
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "PagedAttention: manage a growing KV cache",
+        "text": "Organize caches in blocks to reduce fragmentation and duplication and support more concurrent requests.",
+        "papers": [
+          "pagedattention-2023"
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "term": "Throughput and latency",
+        "text": "Throughput measures work completed per unit time; latency measures how long one request waits. Larger batches can improve throughput while increasing queues."
+      },
+      {
+        "term": "Prefill / decode",
+        "text": "Prefill processes the input context; decode generates output step by step. Their compute and memory-access patterns differ, so one speed number is insufficient."
+      },
+      {
+        "term": "KV cache",
+        "text": "Stored attention keys and values for processed tokens avoid repeated computation during generation. Context length and concurrent requests consume cache memory."
+      },
+      {
+        "term": "Quantization",
+        "text": "Lower-precision representations reduce storage and some computation costs. Speedups depend on hardware and kernel support."
+      }
+    ],
+    "checklist": [
+      "Fix the model and input/output lengths; measure time and peak memory three times at two batch sizes, recording hardware and precision.",
+      "Measure time to the first token separately from subsequent generation speed and explain why they are not interchangeable.",
+      "Choose one of the optimizations on this page, draw the object it changes, and identify a metric that directly tests its effect."
+    ],
+    "figure": {
+      "title": "Where one request spends its time",
+      "nodes": [
+        "Request queue",
+        "Input processing · prefill",
+        "Token generation · decode",
+        "Return result"
+      ]
+    },
+    "paperIntro": "These papers cover training state, kernel memory traffic, numerical precision, and serving caches. Identify each bottleneck before reading performance plots."
+  },
+  "papers": [
+    {
+      "id": "zero-2020",
+      "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+      "year": 2020,
+      "venue": "SC 2020",
+      "url": "https://arxiv.org/abs/1910.02054",
+      "code": "https://www.deepspeed.ai/tutorials/zero/",
+      "zh": {
+        "tag": "分布式训练",
+        "question": "多卡训练中，每张卡都保存相同状态，会浪费多少显存？",
+        "idea": "按阶段分片优化器状态、梯度和参数，需要时再通信取回，让多张卡分担存储。",
+        "why": "它能帮助你读懂训练显存的组成，而不只盯着模型参数量。",
+        "read": "先看三阶段各自分片的对象，再比较内存和通信分析。",
+        "limit": "减少冗余存储会改变通信模式；网络带宽与卡数会影响收益。"
+      },
+      "en": {
+        "tag": "Distributed training",
+        "question": "How much memory is wasted by replicating training state on every GPU?",
+        "idea": "Progressively partition optimizer states, gradients, and parameters, communicating required pieces when needed.",
+        "why": "It explains training memory beyond parameter count.",
+        "read": "Identify what each of the three stages partitions, then compare memory and communication costs.",
+        "limit": "Sharding changes communication. Benefits depend on bandwidth and device count."
+      }
+    },
+    {
+      "id": "flashattention-2022",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "year": 2022,
+      "venue": "NeurIPS 2022",
+      "url": "https://arxiv.org/abs/2205.14135",
+      "code": "https://github.com/Dao-AILab/flash-attention",
+      "zh": {
+        "tag": "注意力算子",
+        "question": "注意力很慢时，瓶颈是否在搬数据，而不只在乘法次数？",
+        "idea": "把计算分块放进更快的片上内存，避免把完整注意力矩阵反复写入显存。",
+        "why": "它说明相同数学计算可以有很不一样的执行效率。",
+        "read": "先看 GPU 内存层级和分块示意，再读 IO 分析与运行时间。",
+        "limit": "精确版本没有消除稠密注意力的二次计算量；加速幅度取决于形状、硬件和实现。"
+      },
+      "en": {
+        "tag": "Attention kernel",
+        "question": "Can attention be limited by data movement rather than multiplication count?",
+        "idea": "Tile work into fast on-chip memory instead of repeatedly materializing the full attention matrix in device memory.",
+        "why": "It shows how the same mathematical operation can have very different execution costs.",
+        "read": "Start with GPU memory levels and tiling, then IO analysis and runtime.",
+        "limit": "Exact dense attention still has quadratic arithmetic complexity. Speedup depends on shapes, hardware, and implementation."
+      }
+    },
+    {
+      "id": "smoothquant-2023",
+      "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+      "year": 2023,
+      "venue": "ICML 2023",
+      "url": "https://arxiv.org/abs/2211.10438",
+      "code": "https://github.com/mit-han-lab/smoothquant",
+      "zh": {
+        "tag": "量化",
+        "question": "激活中少量特别大的数，为什么会让 INT8 量化困难？",
+        "idea": "在权重与激活之间重新分配尺度，先做等价变换，再量化为低精度数值。",
+        "why": "它把异常值、数值误差与硬件执行连在一个具体例子中。",
+        "read": "先看激活异常值和尺度迁移的示意，再看精度与速度的对比。",
+        "limit": "等价的是量化前的尺度变换，量化后仍有误差；需要代表性的校准数据及合适的 INT8 算子。"
+      },
+      "en": {
+        "tag": "Quantization",
+        "question": "Why do a few very large activations make INT8 quantization difficult?",
+        "idea": "Redistribute scale between weights and activations with an equivalent transformation, then quantize.",
+        "why": "It connects outliers, numerical error, and hardware execution in one example.",
+        "read": "Start with activation outliers and scale migration, then accuracy and speed comparisons.",
+        "limit": "The pre-quantization transformation is equivalent; quantization still introduces error. Representative calibration data and suitable INT8 kernels matter."
+      }
+    },
+    {
+      "id": "pagedattention-2023",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "year": 2023,
+      "venue": "SOSP 2023",
+      "url": "https://arxiv.org/abs/2309.06180",
+      "code": "https://github.com/vllm-project/vllm",
+      "zh": {
+        "tag": "vLLM · 服务缓存",
+        "question": "不同长度的请求不断进入和结束，怎样少浪费 KV cache 显存？",
+        "idea": "把缓存切成块，用映射表组织不连续的物理存储，并支持必要的缓存共享。",
+        "why": "它把操作系统中的分页思路带到模型服务，解释了并发能力从哪里来。",
+        "read": "先看缓存碎片问题和块映射，再看固定延迟条件下的吞吐比较。",
+        "limit": "它优化缓存管理；更多并发的收益仍要结合延迟目标和请求长度衡量。"
+      },
+      "en": {
+        "tag": "vLLM · serving cache",
+        "question": "How can changing request lengths avoid wasting KV-cache memory?",
+        "idea": "Split the cache into blocks, map logical sequences to noncontiguous storage, and support cache sharing.",
+        "why": "It connects operating-system paging to the capacity of a model-serving system.",
+        "read": "Start with fragmentation and block mapping, then throughput under matched latency conditions.",
+        "limit": "It optimizes cache management. Concurrency gains must be assessed with latency targets and request lengths."
+      }
+    }
+  ]
+}

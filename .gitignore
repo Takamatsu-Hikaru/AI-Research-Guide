@@ -1,0 +1,6 @@
+node_modules/
+work/
+public/blog/guide/zh/
+public/blog/guide/en/
+public/blog/guide/index.html
+public/blog/guide/search-data.js
