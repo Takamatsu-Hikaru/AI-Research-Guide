@@ -46,6 +46,15 @@ Start with work that makes you curious. Meet the people and labs behind it, then
 
 [Choose a paper](papers.md) · [About this guide](about.md)
 
+## Community knowledge sharing · OpenEnvision
+
+[OpenEnvision (OE)](https://openenvision.github.io/) is an open AI research community connecting academia and industry, with interests in world models, multimodal intelligence, vision, and embodied AI. It also shares research knowledge through curated writing, interviews, and courses.
+
+- **[BlogrXiv: AI research blogs and technical writing](https://openenvision.github.io/BlogrXiv/site/index.html)** brings together research blogs, lab essays, and technical notes. Browse by field for explanations, engineering experience, and research methods, then follow links to the original articles.
+- **[ScholarTube: AI interviews, podcasts, and courses](https://openenvision.github.io/ScholarTube/)** collects long-form researcher interviews, video podcasts, complete courses, and research talks across agents, world models, vision, robotics, and research practice, with links to the original videos.
+
+You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
+
 ## Find a resource
 
 The [resource index](resources.md) collects courses, paper lists, author blogs, LessWrong, research teams, and Q&A. If you already have a question, search for Mu Li, RoPE, Scaling Ladder, or contacting a supervisor.

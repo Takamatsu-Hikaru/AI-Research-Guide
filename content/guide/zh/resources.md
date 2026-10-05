@@ -19,3 +19,5 @@
 - **[LessWrong 选读](lesswrong.md)**：经验适用条件、成长、实验判断、选择与 AI 使用。可以从自己的困惑选一篇。
 - **[认识课题组与研究团队](labs.md)**：看什么、沿哪条线找论文与作者，以及联系前了解哪些信息。
 - **[博客、访谈与信息渠道](catalog-channels.md)**：个人作者、媒体、原始发布和此前找到的观点文章。怎样跟进研究动态，见 [Lookout](lookout.md)。
+- **[BlogrXiv · OpenEnvision](https://openenvision.github.io/BlogrXiv/site/index.html)**：按研究方向整理 AI 博客、实验室文章和技术笔记，保留作者原文入口。
+- **[ScholarTube · OpenEnvision](https://openenvision.github.io/ScholarTube/)**：研究者访谈、视频播客、完整课程与学术报告，可以按方向查找并前往原始视频。

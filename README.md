@@ -27,6 +27,15 @@
 
 [在线阅读](https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/)包含全文搜索、可展开的科研问答，以及 10 个方向的简介、发展路线、术语和 37 张带原图的论文卡片。每张卡片都附论文原文及相关项目链接。
 
+## 社区知识分享 · OpenEnvision
+
+[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能，也通过整理博客、访谈和课程，为社区分享研究知识。
+
+- **[BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)**：汇集研究博客、实验室文章和技术笔记，可以按方向找机制解释、工程经验与科研方法，再进入作者原文。
+- **[ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)**：收集研究者长访谈、视频播客、完整课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法，链接到原始视频。
+
+也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
+
 ## 交流与参与
 
 欢迎在[讨论区](https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html)聊学习、项目和科研中的问题。错别字、失效链接和内容补充可以[提 Issue](https://github.com/Takamatsu-Hikaru/AI-Research-Guide/issues)或提交 PR。觉得有用，也欢迎 Star 收藏、分享给身边的同学。

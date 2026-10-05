@@ -19,3 +19,5 @@ To begin doing something, follow the [learning routes](start.md). To find a part
 - **[LessWrong selections](lesswrong.md)**: when advice applies, growth, experimental judgment, choices, and AI use. Choose from a question of your own.
 - **[Research groups and teams](labs.md)**: what to look for, how to follow papers to people, and what to check before contact.
 - **[Blogs, interviews, and information channels](catalog-channels.md)**: authors, media, original releases, and perspective essays. See [Lookout](lookout.md) for following research.
+- **[BlogrXiv · OpenEnvision](https://openenvision.github.io/BlogrXiv/site/index.html)**: AI research blogs, lab essays, and technical notes organized by field, with links to the original writing.
+- **[ScholarTube · OpenEnvision](https://openenvision.github.io/ScholarTube/)**: Researcher interviews, video podcasts, complete courses, and research talks, searchable by field and linked to the original videos.

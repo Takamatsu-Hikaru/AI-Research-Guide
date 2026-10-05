@@ -33,6 +33,10 @@ Jiqizhixin, QbitAI, Xinzhiyuan, Xiaohongshu, Zhihu, Bilibili, X, and YouTube can
 
 Personal blogs show process as well as outcomes. [Jianlin Su](https://kexue.fm/content.html) is useful for mathematics and model questions, [Simon Willison](https://simonwillison.net/) records tool experiments, and [Karpathy](https://karpathy.ai/) shares courses, projects, and essays. See also [experience](experience.md).
 
+## Hear researchers explain their work
+
+OpenEnvision's [ScholarTube](https://openenvision.github.io/ScholarTube/) organizes long-form researcher interviews, video podcasts, courses, and research talks across agents, world models, vision, robotics, and more. Interviews can reveal how a project began, which tradeoffs its authors made, and how they judge what to work on next. For related technical writing, explore the community's [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html).
+
 ## Keep something of your own
 
 Write a few sentences: what problem does this work address, how does it differ from what you knew, and what would you like to explore? Share an article with your question when it seems worth discussing.

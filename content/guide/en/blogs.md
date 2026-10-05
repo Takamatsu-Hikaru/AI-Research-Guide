@@ -4,6 +4,8 @@ Blogs often restore the process papers omit: why a method was tried, what disapp
 
 For experience, start with Zou's Cognitive Compound Interest or Chai's FAQ. For experiments, read LoopDiT and AutomationBench. For mechanisms, consult Su and Purshow.
 
+For more authors and topics, explore OpenEnvision's [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html), which organizes research blogs, lab essays, and technical notes by field.
+
 [Back to the resource index](resources.md)
 
 <a id="purshow"></a>

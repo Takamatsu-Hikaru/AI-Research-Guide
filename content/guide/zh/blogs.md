@@ -4,6 +4,8 @@
 
 想看经历，先读邹嘉轩的《认知复利》或 Chai 的 FAQ；正在做实验，可以看 LoopDiT 和 AutomationBench；正在补机制，可以查苏剑林与 Purshow 的笔记。
 
+想继续找更多作者和主题，可以逛逛 OpenEnvision 的 [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html)，按研究方向查博客、实验室文章和技术笔记。
+
 [返回资料总索引](resources.md)
 
 <a id="purshow"></a>

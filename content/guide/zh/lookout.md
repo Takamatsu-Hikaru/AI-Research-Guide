@@ -33,6 +33,10 @@
 
 个人博客里还会有结果之外的过程。[苏剑林](https://kexue.fm/content.html)适合按数学与模型问题查，[Simon Willison](https://simonwillison.net/)有工具实践记录，[Karpathy](https://karpathy.ai/)有课程、项目和个人文章。具体经验另见[经验栏目](experience.md)。
 
+## 听研究者讲自己的工作
+
+OpenEnvision 的 [ScholarTube](https://openenvision.github.io/ScholarTube/) 把研究者长访谈、视频播客、课程和学术报告整理在一起，可以按 Agent、世界模型、视觉、机器人等方向找内容。访谈里可以听听一个项目是怎么开始的、做过哪些取舍，以及研究者怎样判断下一步。想接着读技术文章，可以去同一社区的 [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html)。
+
 ## 看过之后，给自己留一点东西
 
 可以只写几句：这项工作在解决什么，和我原来知道的有什么差别，我想进一步看哪里。遇到值得讨论的，把文章和自己的问题一起发给同学。
