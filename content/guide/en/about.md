@@ -22,4 +22,3 @@ The [Lumina Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide
 
 Courses, papers, blogs, and research groups are collected in the [resource index](resources.md).
 
-Cat image in the mechanism illustrations: [Fir0002 / Flagstaffotos](https://commons.wikimedia.org/wiki/File:Cat03.jpg) · [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)

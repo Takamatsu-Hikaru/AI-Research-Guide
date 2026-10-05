@@ -11,3 +11,13 @@
 .lineage-branches{position:relative}.lineage-branches:before{content:'';position:absolute;top:0;left:25%;right:25%;height:1px;background:var(--blue)}.lineage-branches>div{border-top:0}.lineage-next{border-left:0;padding-left:0;gap:24px}.lineage-next>a{position:relative}.lineage-next>a:before{content:'';position:absolute;left:50%;top:-25px;height:24px;width:1px;background:var(--blue)}.lineage-next.encoder{grid-column:1}
 
 .research-motion[data-motion="embodied"] .motion-stage,.research-motion[data-motion="agent"] .motion-stage{aspect-ratio:16/9}
+
+/* Tighter stages follow the architecture's actual content bounds. */
+.research-motion{padding-top:20px}.research-motion figcaption{margin-bottom:14px}.motion-steps{margin-bottom:12px!important}.motion-steps li{padding:8px 10px}.motion-steps li span{margin-bottom:4px}.motion-progress{margin-top:10px}
+.research-motion[data-motion="vision"] .motion-stage{aspect-ratio:880/350}
+.research-motion[data-motion="multimodal"] .motion-stage{aspect-ratio:886/414}
+.research-motion[data-motion="generation"] .motion-stage{aspect-ratio:884/426}
+.research-motion[data-motion="rl"] .motion-stage{aspect-ratio:883/345}
+.research-motion[data-motion="world-model"] .motion-stage{aspect-ratio:912/378}
+.research-motion[data-motion="systems"] .motion-stage{aspect-ratio:880/340}
+.research-motion[data-motion="ai4x"] .motion-stage{aspect-ratio:800/402}

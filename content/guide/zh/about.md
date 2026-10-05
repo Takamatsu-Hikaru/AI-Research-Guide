@@ -22,4 +22,3 @@
 
 课程、论文、博客与研究团队可以在[资料总索引](resources.md)中查找。
 
-机制演示中的猫图：[Fir0002 / Flagstaffotos](https://commons.wikimedia.org/wiki/File:Cat03.jpg) · [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)
