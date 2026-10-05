@@ -9,3 +9,5 @@
 @media(max-width:600px){.company-grid{grid-template-columns:1fr;gap:14px}.company-card{padding:20px}.report-family li>div{display:block}.report-family li>div>span{display:block;margin-top:6px}}
 .community-logo{width:160px;height:auto;max-height:90px;object-fit:contain}html[data-theme=dark] .community-logo{filter:invert(1)}#nav>a.nav-collapsed{border-width:0}.research-timeline:before{transform:scaleX(0);transform-origin:left;transition:transform 1.5s ease}.research-timeline.is-visible:before{transform:scaleX(1)}
 .lineage-branches{position:relative}.lineage-branches:before{content:'';position:absolute;top:0;left:25%;right:25%;height:1px;background:var(--blue)}.lineage-branches>div{border-top:0}.lineage-next{border-left:0;padding-left:0;gap:24px}.lineage-next>a{position:relative}.lineage-next>a:before{content:'';position:absolute;left:50%;top:-25px;height:24px;width:1px;background:var(--blue)}.lineage-next.encoder{grid-column:1}
+
+.research-motion[data-motion="embodied"] .motion-stage,.research-motion[data-motion="agent"] .motion-stage{aspect-ratio:16/9}
