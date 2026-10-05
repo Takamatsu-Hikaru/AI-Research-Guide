@@ -62,5 +62,25 @@
   {
     "id": "lumina",
     "source": "https://lumina-embodied.ai/Lumina.webp"
+  },
+  {
+    "id": "physical-intelligence",
+    "source": "https://github.com/Physical-Intelligence.png?size=128",
+    "bytes": 1084
+  },
+  {
+    "id": "agibot",
+    "source": "https://github.com/AgibotTech.png?size=128",
+    "bytes": 2242
+  },
+  {
+    "id": "unitree",
+    "source": "https://github.com/unitreerobotics.png?size=128",
+    "bytes": 3552
+  },
+  {
+    "id": "galbot",
+    "source": "https://www.galbot.com/favicon.ico",
+    "bytes": 2165
   }
 ]
