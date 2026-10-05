@@ -43,6 +43,11 @@ Write a few sentences: what problem does this work address, how does it differ f
 
 If you keep stopping at the same topic, it may be a clue to explore through the [directions pages](directions.md).
 
+## Embodied AI community · Lumina
+
+[Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
+
+
 ## Follow material to people and teams
 
 [Research groups](labs.md) offers problem-based entry points; [author blogs](blogs.md) adds process and personal judgment; the [information-channel catalog](catalog-channels.md) retains other sources from the earlier research rounds.

@@ -55,6 +55,12 @@ Python、数学、ML/DL、计算机和模型架构。把卡住的概念补上，
 
 也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
 
+## 具身智能社区 · Lumina
+
+[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
+
+
+
 ## 资料索引
 
 [资料总索引](resources.md)收齐课程、paper list、作者博客、LessWrong、研究团队与问答。已经有具体问题时，可以直接搜索李沐、RoPE、Scaling Ladder、联系老师等关键词。

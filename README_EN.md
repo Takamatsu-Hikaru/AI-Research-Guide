@@ -36,6 +36,12 @@ The [website](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/) includes
 
 You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
 
+## Embodied AI community · Lumina
+
+[Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
+
+
+
 ## Discuss and contribute
 
 Bring questions about learning, projects, and research to the [discussion board](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/ama.html). Report typos, broken links, or suggested additions through [Issues](https://github.com/Takamatsu-Hikaru/AI-Research-Guide/issues) or a pull request. If the guide helps, star it for later or share it with other students.

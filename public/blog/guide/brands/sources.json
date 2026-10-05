@@ -1,0 +1,66 @@
+[
+  {
+    "id": "tencent",
+    "source": "https://github.com/Tencent-Hunyuan.png?size=128",
+    "bytes": 6686
+  },
+  {
+    "id": "xiaomi",
+    "source": "https://github.com/XiaomiMiMo.png?size=128",
+    "bytes": 1795
+  },
+  {
+    "id": "bytedance",
+    "source": "https://github.com/ByteDance-Seed.png?size=128",
+    "bytes": 3008
+  },
+  {
+    "id": "kimi",
+    "source": "https://github.com/MoonshotAI.png?size=128",
+    "bytes": 3997
+  },
+  {
+    "id": "deepseek",
+    "source": "https://github.com/deepseek-ai.png?size=128",
+    "bytes": 3827
+  },
+  {
+    "id": "qwen",
+    "source": "https://github.com/QwenLM.png?size=128",
+    "bytes": 4612
+  },
+  {
+    "id": "minimax",
+    "source": "https://github.com/MiniMax-AI.png?size=128",
+    "bytes": 3238
+  },
+  {
+    "id": "glm",
+    "source": "https://github.com/zai-org.png?size=128",
+    "bytes": 3223
+  },
+  {
+    "id": "google",
+    "source": "https://github.com/google-deepmind.png?size=128",
+    "bytes": 5318
+  },
+  {
+    "id": "openai",
+    "source": "https://github.com/openai.png?size=128",
+    "bytes": 3558
+  },
+  {
+    "id": "anthropic",
+    "source": "https://github.com/anthropics.png?size=128",
+    "bytes": 2740
+  },
+  {
+    "id": "meta",
+    "source": "https://github.com/facebookresearch.png?size=128",
+    "bytes": 4498
+  },
+  {
+    "id": "lumina",
+    "source": "https://lumina-embodied.ai/Lumina.webp"
+  }
+]

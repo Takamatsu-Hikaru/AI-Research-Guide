@@ -2,6 +2,24 @@
 
 看课题组，是为了知道一个问题有哪些人在做、他们怎样连续推进。挑一个项目，从论文、代码和作者主页来回看，比记一串实验室名字更容易形成印象。
 
+## 从国内高校找到老师与课题组
+
+从学院官网进入教师名录，看研究方向、最近论文和学生主页；再沿项目找到你想进一步了解的团队。
+
+- **[电子科技大学 · 计算机科学与工程学院](https://www.scse.uestc.edu.cn/)** · [教师主页](https://faculty.uestc.edu.cn/index.jsp)
+- **[清华大学 · 计算机科学与技术系](https://www.cs.tsinghua.edu.cn/)** · [教职工名录](https://www.cs.tsinghua.edu.cn/szzk/jzgml.htm)
+- **[北京大学 · 计算机学院](https://cs.pku.edu.cn/)** · [研究机构](https://cs.pku.edu.cn/xkjs/yjjg.htm)
+- **[复旦大学 · 计算与智能创新学院](https://cs.fudan.edu.cn/)** · [科研机构](https://cs.fudan.edu.cn/24281/list.htm)
+- **[上海交通大学 · 计算机学院](https://www.cs.sjtu.edu.cn/)** · [教师名录](https://www.cs.sjtu.edu.cn/jiaoshiml.html)
+- **[浙江大学 · 计算机科学与技术学院](http://www.cs.zju.edu.cn/)** · [教师个人主页](https://person.zju.edu.cn/)
+- **[南京大学 · 计算机学院](https://cs.nju.edu.cn/)** · [师资队伍](https://cs.nju.edu.cn/1651/list.htm)
+- **[中国科学技术大学 · 计算机科学与技术学院](https://cs.ustc.edu.cn/)** · [师资队伍](https://cs.ustc.edu.cn/zgj_23225/list.htm)
+- **[哈尔滨工业大学 · 计算学部](https://computing.hit.edu.cn/)** · [教师名录](https://computing.hit.edu.cn/jsml/list.htm)
+- **[西安交通大学 · 计算机科学与技术学院](http://www.cs.xjtu.edu.cn/)** · [教师名录](http://www.cs.xjtu.edu.cn/szdw/jsml/js.htm)
+- **[中国人民大学 · 高瓴人工智能学院](https://ai.ruc.edu.cn/)** · [专任教师](https://ai.ruc.edu.cn/szdw/zrjs/index.htm)
+- **[香港大学 · 计算与数据科学学院](https://www.cds.hku.hk/)** · [教师名录](https://www.cds.hku.hk/about/academic-staff/)
+- **[香港中文大学 · 计算机科学与工程学系](https://www.cse.cuhk.edu.hk/)** · [教师名录](https://www.cse.cuhk.edu.hk/people/faculty/)
+
 ## 视觉、机器人与具身
 
 - **[Stanford Vision and Learning Lab（SVL）](https://svl.stanford.edu/)**：视觉理解与学习，主页有 BEHAVIOR、ObjectFolder 等项目。可以先看机器人要完成什么任务，再看数据、感知和评价怎样设计。

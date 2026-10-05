@@ -55,6 +55,12 @@ Start with work that makes you curious. Meet the people and labs behind it, then
 
 You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
 
+## Embodied AI community · Lumina
+
+[Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
+
+
+
 ## Resource index
 
 The [resource index](resources.md) collects courses, paper lists, author blogs, LessWrong, research teams, and Q&A. If you already have a question, search for Mu Li, RoPE, Scaling Ladder, or contacting a supervisor.

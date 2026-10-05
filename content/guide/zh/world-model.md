@@ -2,13 +2,13 @@
 
 如果系统能预测“我这样做之后会发生什么”，就有机会在真正行动前比较不同选择。世界模型研究怎样表示环境变化，以及这种预测能怎样服务学习和决策。
 
-## 从一个具体系统看起
+## World Models 与 Dreamer
 
 [World Models](https://worldmodels.github.io/) 把观察的压缩、变化预测与控制放在一起，是很直观的入门案例。先沿页面的图和演示，分清每个模块接收什么、输出什么。
 
 接着看 [DreamerV3](https://danijar.com/project/dreamerv3/)，追踪学到的模型怎样参与行为学习。需要补的主要是表示学习、序列预测，以及 [RL](rl.md) 中的策略和回报。
 
-## 两个可以继续追的问题
+## 预测什么，用预测做什么
 
 **预测的东西是什么？** 可以是图像、压缩后的状态或其他表示。选择不同表示，会影响训练难度，也会影响它保留了哪些信息。
 
@@ -16,12 +16,12 @@
 
 图像或视频生成可以接[生成模型](generation.md)，机器人应用可以接[具身](embodied.md)。
 
-## 第一遍可以做到哪里
+## 拆解一个世界模型系统
 
 画出 World Models 中数据与模块的关系，找一段预测失败的现象，想想它会怎样影响后面的决策。接下来再按原项目的条件尝试运行或训练。长时间训练不必成为第一次接触的起点。
 
 [Awesome World Models](https://github.com/JiahuaDong/Awesome-World-Models)可以继续按主题找文章。选一条用途深入，比把所有带 world model 名字的系统混在一起更容易形成自己的理解。
 
-## 接着看研究笔记和项目
+## 世界模型论文与研究笔记
 
 [World Model 资料目录](catalog-directions.md#topic-17)保留经典项目和论文索引；[Purshow Notes](blogs.md#purshow)还有 WAM 等技术笔记入口，按当前问题查阅。

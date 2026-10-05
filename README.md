@@ -36,6 +36,12 @@
 
 也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
 
+## 具身智能社区 · Lumina
+
+[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
+
+
+
 ## 交流与参与
 
 欢迎在[讨论区](https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html)聊学习、项目和科研中的问题。错别字、失效链接和内容补充可以[提 Issue](https://github.com/Takamatsu-Hikaru/AI-Research-Guide/issues)或提交 PR。觉得有用，也欢迎 Star 收藏、分享给身边的同学。

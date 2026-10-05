@@ -43,6 +43,11 @@ OpenEnvision 的 [ScholarTube](https://openenvision.github.io/ScholarTube/) 把�
 
 如果一段时间总在同一个主题上停下来，也许它就是值得去[方向页](directions.md)继续探索的线索。
 
+## 具身智能社区 · Lumina
+
+[Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
+
+
 ## 顺着材料找到人和团队
 
 [课题组与研究团队](labs.md)提供按研究问题找团队的入口；[作者博客](blogs.md)补上工作过程与个人判断；[信息渠道目录](catalog-channels.md)保留前几轮找到的其他来源。
