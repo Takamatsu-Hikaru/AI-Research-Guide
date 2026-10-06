@@ -58,7 +58,9 @@ Start with work that makes you curious. Meet the people and labs behind it, then
 
 [Choose a paper](papers.md) · [About this guide](about.md)
 
-## Community knowledge sharing · OpenEnvision
+## Research communities and knowledge sharing
+
+### OpenEnvision
 
 [OpenEnvision (OE)](https://openenvision.github.io/) is an open AI research community connecting academia and industry, with interests in world models, multimodal intelligence, vision, and embodied AI. It also shares research knowledge through curated writing, interviews, and courses.
 
@@ -67,10 +69,9 @@ Start with work that makes you curious. Meet the people and labs behind it, then
 
 You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
 
-## Embodied AI community · Lumina
+### Lumina
 
 [Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
-
 
 
 ## Resource index

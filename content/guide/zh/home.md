@@ -58,7 +58,9 @@ Python、数学、ML/DL、计算机和模型架构。把卡住的概念补上，
 
 [挑一篇论文读](papers.md) · [关于 AI 社与这份指南](about.md)
 
-## 社区知识分享 · OpenEnvision
+## 研究社区与知识分享
+
+### OpenEnvision
 
 [OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能，也通过整理博客、访谈和课程，为社区分享研究知识。
 
@@ -67,10 +69,9 @@ Python、数学、ML/DL、计算机和模型架构。把卡住的概念补上，
 
 也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
 
-## 具身智能社区 · Lumina
+### Lumina
 
 [Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
-
 
 
 ## 资料索引

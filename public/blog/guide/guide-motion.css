@@ -22,3 +22,13 @@
 .research-motion[data-motion="world-model"] .motion-stage{aspect-ratio:912/378}
 .research-motion[data-motion="systems"] .motion-stage{aspect-ratio:880/340}
 .research-motion[data-motion="ai4x"] .motion-stage{aspect-ratio:800/402}
+
+/* Company and community directories share the guide's card treatment. */
+.company-card h4{display:flex;align-items:center;gap:14px;margin:0 0 16px!important;font-size:20px!important;line-height:1.4}
+.company-grid{align-items:start}
+.community-grid{display:grid;grid-template-columns:1fr;align-items:start;gap:20px;margin:28px 0}
+.community-card{min-width:0;border:1px solid var(--soft);border-radius:10px;padding:22px;background:var(--paper-2)}
+.community-card h3{display:flex;align-items:center;gap:14px;margin:0 0 18px!important;font-size:22px!important;line-height:1.4}
+.community-card h3 img{width:64px;height:44px;object-fit:contain;flex:none;background:#fff;border-radius:8px;padding:4px}
+.community-card p,.community-card li{font-size:16px;line-height:1.8}.community-card p:last-child{margin-bottom:0}.community-card ul{padding-left:20px}
+@media(max-width:700px){.community-grid{grid-template-columns:1fr;gap:14px}.community-card{padding:20px}}

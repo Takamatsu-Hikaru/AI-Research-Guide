@@ -82,5 +82,40 @@
     "id": "galbot",
     "source": "https://www.galbot.com/favicon.ico",
     "bytes": 2165
+  },
+  {
+    "id": "galaxea",
+    "source": "https://github.com/OpenGalaxea.png?size=128",
+    "bytes": 2559
+  },
+  {
+    "id": "sudo",
+    "source": "https://www.sudo.ai/icon.svg",
+    "bytes": 3027
+  },
+  {
+    "id": "tars",
+    "source": "https://github.com/tars-robotics.png?size=128",
+    "bytes": 3127
+  },
+  {
+    "id": "xsquare",
+    "source": "https://x2robot.com/api/images/file/logo.svg",
+    "bytes": 1142
+  },
+  {
+    "id": "noematrix",
+    "source": "https://www.noematrix.ai/favicon/android-icon-192x192.png",
+    "bytes": 16126
+  },
+  {
+    "id": "pokebot",
+    "source": "https://www.pokebot.com/favicon.svg",
+    "bytes": 760
+  },
+  {
+    "id": "openenvision",
+    "source": "https://openenvision.github.io/assets/img/brand/openenvision_mark.png",
+    "bytes": 212268
   }
 ]

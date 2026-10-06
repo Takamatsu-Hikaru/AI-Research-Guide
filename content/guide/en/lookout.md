@@ -52,15 +52,24 @@ Researcher interviews and personal accounts of university and research life, cov
 - [My first two years of a robotics PhD — 任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/): Tairan He looks back on his first two years at CMU, connecting research on legged locomotion, humanoid teleoperation, and control with the collaborators behind the projects.
 - [Jiayi Weng interview](https://www.bilibili.com/video/BV1darmBcE4A/): Undergraduate encounters with reinforcement learning, open-source projects, university applications, and work on post-training and infrastructure at OpenAI.
 
-OpenEnvision's [ScholarTube](https://openenvision.github.io/ScholarTube/) organizes long-form researcher interviews, video podcasts, courses, and research talks across agents, world models, vision, robotics, and more. Interviews can reveal how a project began, which tradeoffs its authors made, and how they judge what to work on next. For related technical writing, explore the community's [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html).
-
 ## What questions should you note after reading new work?
 
 Write a few sentences: what problem does this work address, how does it differ from what you knew, and what would you like to explore? Share an article with your question when it seems worth discussing.
 
 If you keep stopping at the same topic, it may be a clue to explore through the [directions pages](directions.md).
 
-## Embodied AI community · Lumina
+## Research communities and knowledge sharing
+
+### OpenEnvision
+
+[OpenEnvision (OE)](https://openenvision.github.io/) is an open AI research community connecting academia and industry, with interests in world models, multimodal intelligence, vision, and embodied AI. It also shares research knowledge through curated writing, interviews, and courses.
+
+- **[BlogrXiv: AI research blogs and technical writing](https://openenvision.github.io/BlogrXiv/site/index.html)** brings together research blogs, lab essays, and technical notes. Browse by field for explanations, engineering experience, and research methods, then follow links to the original articles.
+- **[ScholarTube: AI interviews, podcasts, and courses](https://openenvision.github.io/ScholarTube/)** collects long-form researcher interviews, video podcasts, complete courses, and research talks across agents, world models, vision, robotics, and research practice, with links to the original videos.
+
+You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
+
+### Lumina
 
 [Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
 

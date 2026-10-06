@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.4 78.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #adc5e6;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #f6b379;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x="0" y="0" width="78.4" height="78.4" rx="39.2" ry="39.2"/>
+    <g>
+      <circle class="cls-2" cx="35.5" cy="54.93" r="15.73"/>
+      <circle class="cls-3" cx="54.93" cy="23.47" r="3.71"/>
+      <path class="cls-2" d="M43.35,27.18c-2.04,0-3.71-1.67-3.71-3.71h0c0-2.04,1.67-3.71,3.71-3.71h15.29c-1.67-6.9-7.88-12.02-15.29-12.02-8.69,0-15.73,7.04-15.73,15.73s7.04,15.73,15.73,15.73c7.41,0,13.62-5.12,15.29-12.02h-15.29Z"/>
+    </g>
+  </g>
+</svg>

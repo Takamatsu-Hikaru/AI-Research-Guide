@@ -52,15 +52,24 @@ AI 产品体验和行业评论，表达直接、个人观点鲜明。可以从�
 - [机器人博士前两年总结——任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/)：何泰然回顾在 CMU 读机器人博士的前两年，串起足式运动、人形机器人遥操作与控制等研究，以及一起完成这些工作的合作者。
 - [翁家翌访谈](https://www.bilibili.com/video/BV1darmBcE4A/)：聊本科接触强化学习、开源项目、申请经历，以及在 OpenAI 做后训练和基础设施的工作。
 
-OpenEnvision 的 [ScholarTube](https://openenvision.github.io/ScholarTube/) 把研究者长访谈、视频播客、课程和学术报告整理在一起，可以按 Agent、世界模型、视觉、机器人等方向找内容。访谈里可以听听一个项目是怎么开始的、做过哪些取舍，以及研究者怎样判断下一步。想接着读技术文章，可以去同一社区的 [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html)。
-
 ## 看完一项新工作，记下哪些问题？
 
 可以只写几句：这项工作在解决什么，和我原来知道的有什么差别，我想进一步看哪里。遇到值得讨论的，把文章和自己的问题一起发给同学。
 
 如果一段时间总在同一个主题上停下来，也许它就是值得去[方向页](directions.md)继续探索的线索。
 
-## 具身智能社区 · Lumina
+## 研究社区与知识分享
+
+### OpenEnvision
+
+[OpenEnvision（OE）](https://openenvision.github.io/)是连接学术界与产业界的开放 AI 研究社区，关注世界模型、多模态、视觉与具身智能，也通过整理博客、访谈和课程，为社区分享研究知识。
+
+- **[BlogrXiv：AI 研究博客与技术文章](https://openenvision.github.io/BlogrXiv/site/index.html)**：汇集研究博客、实验室文章和技术笔记，可以按方向找机制解释、工程经验与科研方法，再进入作者原文。
+- **[ScholarTube：AI 访谈、播客与课程](https://openenvision.github.io/ScholarTube/)**：收集研究者长访谈、视频播客、完整课程与学术报告，覆盖 Agent、世界模型、视觉、机器人及科研方法，链接到原始视频。
+
+也欢迎向 [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) 和 [ScholarTube](https://github.com/OpenEnvision/ScholarTube) 推荐值得分享的文章与视频。
+
+### Lumina
 
 [Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
 

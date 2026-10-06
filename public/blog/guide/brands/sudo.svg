@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(7.8125,0,0,7.8125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M53.2 20.8C53.2 26.7647 58.0353 31.6 64 31.6C69.9647 31.6 74.8 26.7647 74.8 20.8V10H96.4V31.6H118V53.2H107.2C101.235 53.2 96.4 58.0353 96.4 64C96.4 69.9647 101.235 74.8 107.2 74.8H118V96.4H96.4V118H74.8V107.2C74.8 101.235 69.9647 96.4 64 96.4C58.0353 96.4 53.2 101.235 53.2 107.2V118H31.6V96.4H10V74.8H20.8C26.7647 74.8 31.6 69.9647 31.6 64C31.6 58.0353 26.7647 53.2 20.8 53.2H10V31.6H31.6V10H53.2V20.8ZM47.6951 53.2C40.7253 53.2 37 57.8801 37 64.0601C37 70.3001 40.6051 74.8 47.6951 74.8C54.8451 74.8 58.33 70.2401 58.33 64.0601C58.33 57.7001 54.6048 53.2 47.6951 53.2ZM80.3651 53.2C73.3953 53.2 69.67 57.8801 69.67 64.0601C69.67 70.3001 73.2751 74.8 80.3651 74.8C87.5151 74.8 91 70.2401 91 64.0601C91 57.7001 87.2748 53.2 80.3651 53.2Z" fill="#223A66" style="fill:#223A66;fill:color(display-p3 0.1333 0.2275 0.4000);fill-opacity:1;"></path></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(7.8125,0,0,7.8125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M53.2 20.8C53.2 26.7647 58.0353 31.6 64 31.6C69.9647 31.6 74.8 26.7647 74.8 20.8V10H96.4V31.6H118V53.2H107.2C101.235 53.2 96.4 58.0353 96.4 64C96.4 69.9647 101.235 74.8 107.2 74.8H118V96.4H96.4V118H74.8V107.2C74.8 101.235 69.9647 96.4 64 96.4C58.0353 96.4 53.2 101.235 53.2 107.2V118H31.6V96.4H10V74.8H20.8C26.7647 74.8 31.6 69.9647 31.6 64C31.6 58.0353 26.7647 53.2 20.8 53.2H10V31.6H31.6V10H53.2V20.8ZM47.6951 53.2C40.7253 53.2 37 57.8801 37 64.0601C37 70.3001 40.6051 74.8 47.6951 74.8C54.8451 74.8 58.33 70.2401 58.33 64.0601C58.33 57.7001 54.6048 53.2 47.6951 53.2ZM80.3651 53.2C73.3953 53.2 69.67 57.8801 69.67 64.0601C69.67 70.3001 73.2751 74.8 80.3651 74.8C87.5151 74.8 91 70.2401 91 64.0601C91 57.7001 87.2748 53.2 80.3651 53.2Z" fill="white" style="fill:white;fill-opacity:1;"></path></svg></g></g></svg></g></svg>
