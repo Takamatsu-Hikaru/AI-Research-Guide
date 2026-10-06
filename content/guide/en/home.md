@@ -73,6 +73,9 @@ You can also recommend articles and videos to [BlogrXiv](https://github.com/Open
 
 [Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
 
+### AgentHub
+
+[AgentHub](https://hqhq1025.github.io/agent_hub/) collects discussions from the Agent community into daily and weekly digests, covering agent research, tools, engineering practice and industry developments. Browse by date, discussion group or external news to see what people are working through, how they compare technical approaches and where their views differ.
 
 ## Resource index
 

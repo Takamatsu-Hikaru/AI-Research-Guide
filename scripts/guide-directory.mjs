@@ -60,8 +60,8 @@ export function enrichDirectory(id,lang,html){
  if(id==='lookout'){const at=html.indexOf('<h2');html=html.slice(0,at)+companyDirectory(lang)+html.slice(at)}
  if(id==='home'||id==='lookout')html=html.replace(/(<h2[^>]*>(?:研究社区与知识分享|Research communities and knowledge sharing)<\/h2>)([\s\S]*?)(?=<h2|$)/,(_,heading,body)=>{
   const cards=body.trim().split(/(?=<h3)/).filter(Boolean).map(card=>{
-   const oe=card.includes('OpenEnvision');
-   card=card.replace(/(<h3[^>]*>)/,`$1<img src="../brands/${oe?'openenvision.png':'lumina.webp'}" alt="" width="64" height="44">`);
+   const logo=card.includes('OpenEnvision')?'openenvision.png':card.includes('AgentHub')?'agenthub.svg':'lumina.webp';
+   card=card.replace(/(<h3[^>]*>)/,`$1<img src="../brands/${logo}" alt="" width="64" height="44">`);
    return `<section class="community-card">${card}</section>`;
   }).join('');
   return `<section class="community-directory">${heading}<div class="community-grid">${cards}</div></section>`;

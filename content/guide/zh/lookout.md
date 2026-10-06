@@ -73,6 +73,9 @@ AI 产品体验和行业评论，表达直接、个人观点鲜明。可以从�
 
 [Lumina](https://lumina-embodied.ai/)关注具身智能的研究、开源项目与社区交流。想系统了解这个方向，可以读[具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)；想听研究者讲正在做的工作，可以从官网的 Talks、具身观察和社区活动进入。
 
+### AgentHub
+
+[AgentHub（群谈）](https://hqhq1025.github.io/agent_hub/)把 Agent 社区里的讨论整理成日报和周报，涉及智能体研究、工具使用、工程实践与行业动态。可以按日期翻阅，也可以看不同群组的讨论与外部资讯，了解大家最近遇到什么问题、怎样比较技术方案，以及同一个问题有哪些不同判断。
 
 ## 顺着材料找到人和团队
 

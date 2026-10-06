@@ -117,5 +117,10 @@
     "id": "openenvision",
     "source": "https://openenvision.github.io/assets/img/brand/openenvision_mark.png",
     "bytes": 212268
+  },
+  {
+    "id": "agenthub",
+    "source": "https://hqhq1025.github.io/agent_hub/ (official favicon)",
+    "bytes": 215
   }
 ]
