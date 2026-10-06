@@ -1,5 +1,11 @@
 # What do different AI research areas study?
 
+<video class="chronicle-video" controls preload="none" playsinline poster="../chronicle/poster.jpg" aria-label="AI, a history">
+<source src="../chronicle/ai-chronicle.mp4" type="video/mp4">
+<track kind="subtitles" src="../chronicle/zh.vtt" srclang="zh" label="中文" >
+<track kind="subtitles" src="../chronicle/en.vtt" srclang="en" label="English" default>
+</video>
+
 When a demo makes you curious, ask what goes in, what should come out, how success is judged, and what is still difficult. These pages start with concrete tasks.
 
 ## Understanding and generating

@@ -1,5 +1,11 @@
 # AI 的不同方向，都在研究什么？
 
+<video class="chronicle-video" controls preload="none" playsinline poster="../chronicle/poster.jpg" aria-label="AI 编年史">
+<source src="../chronicle/ai-chronicle.mp4" type="video/mp4">
+<track kind="subtitles" src="../chronicle/zh.vtt" srclang="zh" label="中文" default>
+<track kind="subtitles" src="../chronicle/en.vtt" srclang="en" label="English" >
+</video>
+
 如果一个演示让你好奇，就顺着它问：输入是什么，想得到什么，怎样判断做得好，现在还卡在哪里。下面这些入口从具体事情讲起。
 
 ## 模型怎样理解与生成
