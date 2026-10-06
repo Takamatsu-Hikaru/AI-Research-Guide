@@ -2,11 +2,15 @@
 
 Joining a lab and working at the frontier of research, development, and deployment can sound romantic—and distant. Or perhaps you are considering graduate study, studying abroad, or work, and want to understand where research experience fits.
 
-If you are still figuring out your options, start with [where these choices can lead](welcome.md#choices). Here, I will discuss what research involves, why it attracts me, and how you can try it.
+Getting started in research may be closer than you think. While reading papers, building projects, or talking with others, we often come across a question that makes us curious, or an idea for improving something. We follow that thread through related work, try things, analyse the results, and write up what we find. A research project gradually takes shape.
+
+As you investigate, you also get to know the wider field. Start with the area that interests you most. Surveys, talks, and courses can give you an overview; classic papers and researchers’ blogs can help you connect its development. What was happening when each work appeared? Why did the authors take that approach? What problem did it solve, and how did it change people’s understanding? Following these changes reveals different research paths and the many subfields within a broad area.
+
+Some questions will especially interest you. Other work will offer methods, data, or a new way to understand your current project. Keep reading and trying things along these threads, and you gradually develop your own judgement: what is worth investigating, what remains unclear, and what you could try next. Research taste, ideas, and an understanding of the field grow through reading, discussion, and experiments.
 
 We asked these questions too. Do I know enough? How do I find a supervisor? How does a paper actually come together? What if it goes badly? With so much AI available, what can I contribute? Read straight through, or start with whatever is on your mind.
 
-To get your hands on something, try a [small project](start.md). For my own experience, read my [freshman-year review](timeline.md). Relevant resources follow the answers below.
+Still considering your options? Read [where these choices can lead](welcome.md#choices). To get your hands on something, try a [small project](start.md). For my own experience, read my [freshman-year review](timeline.md).
 
 ## What research involves
 

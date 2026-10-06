@@ -1,6 +1,16 @@
 # Finding and reading papers
 
-Decide why you are reading: to explore a direction, solve a code problem, or reproduce a result. That purpose changes where you pause and how deeply you go.
+<h2 id="reading-overview">Start with how the field developed</h2>
+
+When entering a field, start with a good survey, a talk, or a course to see what people study and the main approaches they take. With that overview, reading classic papers and related blogs makes it easier to understand why a paper appeared and where it belongs in the field.
+
+As you read, connect the papers. What did an earlier work leave unresolved? Why did later researchers try a different approach? Did they discover a new phenomenon, gain access to better data, or run into a limitation of the previous method? Some papers develop an existing line of work, others offer a different explanation, and some connect previously separate areas. Following these changes helps you understand both the field’s development and its subfields.
+
+Follow authors and research groups, too. When you enjoy a paper, look at the authors’ earlier and later work, homepages, blogs, and talks. Why do they keep returning to this problem? How do their papers connect, and which judgements have changed? Following a researcher’s line of work can reveal a thought process that is harder to see in a single paper.
+
+As you learn more, you will find threads you want to follow: a subfield that interests you, a paper with a method you need, or something you have not yet understood about the conclusions of several studies. Keep a record of these connections and questions. They give your next literature search a more specific direction.
+
+With these threads in mind, decide how deeply to read the paper in front of you. Are you exploring a field, solving a problem in your project, or preparing to reproduce a result? Different purposes call for attention to different details.
 
 ## How do you find related work from one paper?
 
