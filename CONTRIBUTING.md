@@ -26,6 +26,8 @@
 | 全站 HTML 布局 | [scripts/build-guide.mjs](scripts/build-guide.mjs) |
 | 论文小卡与方向页布局 | [scripts/fieldnotes.mjs](scripts/fieldnotes.mjs) |
 | 颜色、间距和移动端排版 | [guide.css](public/blog/guide/guide.css) · [fieldnotes.css](public/blog/guide/fieldnotes.css) · [guide-motion.css](public/blog/guide/guide-motion.css) |
+| AI4X 各细分方向正文与论文卡位置 | [中文](content/guide/zh/ai4x.md) · [英文](content/guide/en/ai4x.md)；`data-ai4x-papers` 引用 `fieldnotes/ai4x.json` 中的小卡 ID |
+| AI4X 循环示意图与英文标签 | [ai4x](public/blog/guide/ai4x)：`motion-physical.js`、`motion-bio.js`、`motion-research.js` 定义画面，`motion-en.js` 提供英文标签 |
 | 方向演示动画 | [scripts/guide-motion.mjs](scripts/guide-motion.mjs) · [guide-motion.js](public/blog/guide/guide-motion.js) |
 | 仓库首页介绍与导航 | [README.md](README.md) · [README_EN.md](README_EN.md) |
 

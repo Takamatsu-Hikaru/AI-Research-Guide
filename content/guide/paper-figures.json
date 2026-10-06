@@ -453,5 +453,104 @@
     "source": "https://voyager.minedojo.org/assets/images/exploration_performance.png",
     "width": 3200,
     "height": 1974
+  },
+  "alphageometry": {
+    "file": "ai4x-alphageometry.png",
+    "source": "https://lh3.googleusercontent.com/nihKc4w8ggrUy7JMo24eF1Hdt_bnHuCIhI_zqubWxY98QWmcV7qYc8iZHPD6VNM6nsvCWjOYqIKSkqNeo0gPvcaCJZc9jcoZvItr9v8Yd6kGOfEPkZo=w1440",
+    "credit": "Google DeepMind · AlphaGeometry 官方方法示意图",
+    "paper": "https://www.nature.com/articles/s41586-023-06747-5",
+    "width": 1440,
+    "height": 455
+  },
+  "fno": {
+    "file": "ai4x-fno.png",
+    "source": "https://arxiv.org/html/2010.08895v3/figs/FourierNN_NV2.png",
+    "paper": "https://arxiv.org/abs/2010.08895",
+    "credit": "Figure 1",
+    "caption": "Zero-shot super-resolution: Navier-Stokes Equation with viscosity ν = 1 ​ e − 4 \\nu=1\\mathrm{e}{-4} ; Ground truth on top and prediction on bottom; trained on 64 × 64 × 20 64\\times 64\\times 20 dataset; evaluated on 256 × 256 × 80 256\\times 256\\times 80 (see Section 5.4 ). Figure 1: top: The architecture of the Fourier layer; bottom: Example flow from Navier-Stokes.",
+    "width": 2101,
+    "height": 770
+  },
+  "qlib": {
+    "file": "ai4x-qlib.svg",
+    "source": "https://arxiv.org/html/2009.11189v1/FrameworkPaper.svg",
+    "paper": "https://arxiv.org/abs/2009.11189",
+    "credit": "Figure 1",
+    "caption": "Figure 1: modules and a typical workflow built with Qlib",
+    "width": 652,
+    "height": 463
+  },
+  "optuna": {
+    "file": "ai4x-optuna.png",
+    "source": "https://arxiv.org/pdf/1907.10902",
+    "credit": "Akiba et al. · Figure 6",
+    "page": 5,
+    "crop": [
+      326,
+      69,
+      545,
+      188
+    ],
+    "width": 657,
+    "height": 357
+  },
+  "dgm": {
+    "file": "ai4x-dgm.png",
+    "source": "https://arxiv.org/html/2505.22954v3/conceptual.png",
+    "paper": "https://arxiv.org/abs/2505.22954v3",
+    "credit": "Figure 1",
+    "caption": "Figure 1: Darwin Gödel Machine. The DGM iteratively builds a growing archive of agents by interleaving self-modification with downstream task evaluation. Agents in the archive are selected for self-modification through open-ended exploration.",
+    "width": 1382,
+    "height": 384
+  },
+  "ai-scientist": {
+    "file": "ai4x-ai-scientist.png",
+    "source": "https://arxiv.org/pdf/2504.08066",
+    "credit": "Yamada et al. · Figure 1",
+    "page": 3,
+    "crop": [
+      75,
+      82,
+      521,
+      278
+    ],
+    "width": 1338,
+    "height": 588
+  },
+  "amix": {
+    "file": "ai4x-amix.png",
+    "source": "https://arxiv.org/html/2507.08920v4/fig_main.png",
+    "paper": "https://arxiv.org/abs/2507.08920",
+    "credit": "Figure 1",
+    "caption": "Figure 1 : An overview of AMix-1 . AMix-1 is built upon a pathway methodology of scaling law, emergent ability, in-context learning, and test-time scaling, and is validated on both in silico evaluation and wet-lab assay.",
+    "width": 541,
+    "height": 346
+  },
+  "flag": {
+    "file": "ai4x-flag.svg",
+    "source": "https://arxiv.org/html/2605.18055v1/edge_attr_ablation.svg",
+    "paper": "https://arxiv.org/abs/2605.18055",
+    "credit": "Figure 1",
+    "caption": "Figure 1 : Ablation study on edge attributes (HEST-1K ( Jaume et al., 2024 ) HER2ST Dataset). Comparison of PCC performance using different edge construction strategies: Image Similarity only, Image Similarity + Distance, and with additional Spot-Spot Gene PCC.",
+    "width": 234,
+    "height": 180
+  },
+  "dreamdiffusion": {
+    "file": "ai4x-dreamdiffusion.png",
+    "source": "https://arxiv.org/html/2306.16934v2/figures/eeg_pipeline.png",
+    "paper": "https://arxiv.org/abs/2306.16934",
+    "credit": "Figure 1",
+    "caption": "Figure 2: Overview of DreamDiffusion . Our method comprises three main components: 1) masked signal pre-training for an effective and robust EEG encoder, 2) fine-tuning with limited EEG-image pairs with pre-trained Stable Diffusion, and 3) aligning the EEG, text, and image spaces using CLIP encoders.",
+    "width": 1516,
+    "height": 721
+  },
+  "cmrinet": {
+    "file": "ai4x-cmrinet.png",
+    "source": "https://arxiv.org/html/2505.16452v2/Figures/workflow.png",
+    "paper": "https://arxiv.org/abs/2505.16452",
+    "credit": "Figure 1",
+    "caption": "Figure 1 : The workflow for the proposed CMRINet network.",
+    "width": 3302,
+    "height": 931
   }
 }

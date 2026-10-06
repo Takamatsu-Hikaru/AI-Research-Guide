@@ -1,0 +1,38 @@
+(()=>{
+const registry=window.AI4X_MOTION;
+const TAU=Math.PI*2;
+function sphere(c,x,y,r,color){const g=c.createRadialGradient(x-r*.33,y-r*.4,1,x,y,r);g.addColorStop(0,'#f4faf2');g.addColorStop(.24,color);g.addColorStop(1,'#29493e');c.save();c.shadowColor='#23443824';c.shadowBlur=10;c.shadowOffsetY=6;c.fillStyle=g;c.beginPath();c.arc(x,y,r,0,TAU);c.fill();c.restore()}
+function arrow(c,x,y,dx,dy,color,a=1){const L=Math.hypot(dx,dy);if(L<1)return;c.save();c.globalAlpha*=a;c.strokeStyle=color;c.fillStyle=color;c.lineWidth=2.5;c.beginPath();c.moveTo(x,y);c.lineTo(x+dx,y+dy);c.stroke();c.translate(x+dx,y+dy);c.rotate(Math.atan2(dy,dx));c.beginPath();c.moveTo(0,0);c.lineTo(-9,-4);c.lineTo(-9,4);c.closePath();c.fill();c.restore()}
+const atomBase=Array.from({length:6},(_,i)=>[Math.cos(i*TAU/6)*104,Math.sin(i*TAU/6)*104,Math.sin(i*TAU/3)*30]).concat([[178,-30,40],[212,-103,55],[-175,33,-33],[-202,112,-12]]);
+const bonds=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,0],[0,6],[6,7],[3,8],[8,9]];
+registry.molecule={duration:20,steps:['原子与结构','局部原子环境','预测能量与力','推进分子运动'],draw(c,t,k){
+ const {C,smooth,mix,line,circle,text}=k;
+ const phase=Math.floor(t*4),local=t*4-phase;
+ const side=smooth(.2,.32,t)*(1-smooth(.7,.8,t));
+ const cx=mix(450,287,side),cy=222;
+ const ang=.38+Math.sin(t*TAU)*.35;
+ const evolve=smooth(.73,.82,t)*(1-smooth(.94,1,t));
+ const points=atomBase.map(([x,y,z],i)=>{x+=Math.sin(t*TAU*4+i)*13*evolve;y+=Math.cos(t*TAU*3+i)*8*evolve;const xx=x*Math.cos(ang)+z*Math.sin(ang),zz=-x*Math.sin(ang)+z*Math.cos(ang);return [cx+xx,cy+y*.8,zz]});
+ c.save();const fade=smooth(0,.025,t)*(1-smooth(.97,1,t));c.globalAlpha=fade;
+ const floor=c.createRadialGradient(cx,352,3,cx,352,230);floor.addColorStop(0,'#7e9e7b1f');floor.addColorStop(1,'#7e9e7b00');c.fillStyle=floor;c.beginPath();c.ellipse(cx,352,245,38,0,0,TAU);c.fill();
+ bonds.forEach(([i,j],n)=>{const a=points[i],b=points[j],p=smooth(n*.006,.10+n*.006,t);line(c,[a,[mix(a[0],b[0],p),mix(a[1],b[1],p)]],C.line,9);line(c,[a,[mix(a[0],b[0],p),mix(a[1],b[1],p)]],'#8fa596',3)});
+ if(phase===1){const focus=points[0];c.save();c.globalAlpha=smooth(.0,.2,local);c.setLineDash([5,7]);c.strokeStyle='#9eb7a2';c.lineWidth=1.5;c.beginPath();c.ellipse(focus[0],focus[1],145,122,0,0,TAU);c.stroke();c.setLineDash([]);[1,5,6].forEach((i,j)=>{const p=(local*2+j*.3)%1;line(c,[points[i],focus],C.green,2,.3);circle(c,mix(points[i][0],focus[0],p),mix(points[i][1],focus[1],p),5,C.copper)});c.restore()}
+ points.map((a,i)=>({a,i})).sort((a,b)=>a.a[2]-b.a[2]).forEach(({a,i})=>{const r=(i>=6?17:23)*(1+a[2]*.001);sphere(c,a[0],a[1],r,i===6?C.copper:i===2?C.blue:C.green);text(c,i===6?'O':i===2?'N':'C',a[0],a[1],18,'#fff','center')});
+ if(side>.01){c.save();c.globalAlpha=side;const x0=560,y0=120;
+ if(t<.48){text(c,'局部环境',640,79,23,C.ink,'center');for(let i=0;i<6;i++){const v=.35+.5*Math.abs(Math.sin(i*1.37+t*13));c.fillStyle=i===2?C.copper:C.green;c.globalAlpha=side*(.25+.75*v);c.fillRect(x0+i*29,y0+115-v*100,17,v*100)}c.globalAlpha=side;text(c,'元素 · 距离 · 几何',641,289,20,C.muted,'center');for(let i=0;i<3;i++){const p=(t*5+i/3)%1;circle(c,430+p*93,220+Math.sin(p*Math.PI)*12,4,C.green)}}
+ else{ text(c,'势能',646,69,23,C.ink,'center');const ss=smooth(.47,.58,t);c.globalAlpha=side*ss;for(let j=0;j<17;j++){let pts=[];for(let i=0;i<30;i++){let x=(i-14.5)/9,y=(j-8)/7;const e=.35*(x*x+y*y)+.18*Math.sin(3*x);pts.push([638+x*68-y*29,246+y*20-e*36])}line(c,pts,j%3===0?C.green:'#adc4b2',1.5,.85)}for(let i=0;i<17;i++){let pts=[];for(let j=0;j<22;j++){const x=(i-8)/5,y=(j-10.5)/9;const e=.35*(x*x+y*y)+.18*Math.sin(3*x);pts.push([638+x*68-y*29,246+y*20-e*36])}line(c,pts,'#a5c1ad',1,.6)}const u=Math.sin(local*3)*.75;const energy=.35*u*u+.18*Math.sin(3*u);sphere(c,638+u*68,246-energy*36,8,C.copper);text(c,'E → F = −∇E',647,326,24,C.green,'center');}
+ c.restore()}
+ if(phase===3){const a=smooth(0,.22,local)*(1-smooth(.8,1,local));points.forEach((p,i)=>{if(i%2===0)arrow(c,p[0]+28,p[1],Math.sin(i+t*18)*29,-Math.cos(i+t*14)*24,C.copper,a)});c.save();c.globalAlpha=a;line(c,Array.from({length:70},(_,i)=>[110+i*9.6,380+Math.sin(i*.13+t*8)*5]),C.green,2,.45);text(c,'模型提供每一步的能量与力',450,47,24,C.ink,'center');c.restore()}
+ else if(phase===0)text(c,'分子结构',450,48,24,C.ink,'center');
+ c.restore();
+}};
+const flowBuffer=document.createElement('canvas');flowBuffer.width=126;flowBuffer.height=64;const fc=flowBuffer.getContext('2d');
+function field(c,x,y,w,h,time,alpha=1){fc.clearRect(0,0,126,64);const im=fc.createImageData(126,64);for(let j=0;j<64;j++)for(let i=0;i<126;i++){const xx=i/126,yy=j/64;const center=.35+time*.12;const dx=xx-center,dy=yy-.45;const a=Math.exp(-(dx*dx*12+dy*dy*16));const b=Math.exp(-((xx-.7+time*.07)**2*25+(yy-.58)**2*24));const swirl=.5+.5*Math.sin(Math.atan2(dy,dx)*2+Math.sqrt(dx*dx+dy*dy)*24-time*4);const v=a*swirl*.8-b*.6;const d=(j*126+i)*4;const col=v>0?[52,119,106]:[188,124,72],q=Math.min(.88,Math.abs(v)*1.3);for(let n=0;n<3;n++)im.data[d+n]=248*(1-q)+col[n]*q;im.data[d+3]=255}fc.putImageData(im,0,0);c.save();c.globalAlpha=alpha;c.beginPath();c.roundRect(x,y,w,h,12);c.clip();c.drawImage(flowBuffer,x,y,w,h);c.strokeStyle='#759e8630';c.lineWidth=1;for(let i=0;i<12;i++){c.beginPath();c.moveTo(x+i*w/11,y);c.lineTo(x+i*w/11,y+h);c.stroke()}for(let j=0;j<7;j++){c.beginPath();c.moveTo(x,y+j*h/6);c.lineTo(x+w,y+j*h/6);c.stroke()}for(let i=0;i<60;i++){const r=.08+(i%10)*.035;const angle=i*2.399+time*(.55+.3*(i%3));const px=.45+Math.cos(angle)*r*1.3,py=.49+Math.sin(angle)*r;c.fillStyle=i%5===0?'#bc7c48':'#34776a';c.globalAlpha=alpha*.65;c.beginPath();c.arc(x+px*w,y+py*h,1.8,0,TAU);c.fill()}c.restore()}
+registry.physics={duration:20,steps:['初始物理场','学习空间关系','预测后续状态','比较数值解'],draw(c,t,k){const {C,smooth,mix,text,line}=k;const phase=Math.floor(t*4),local=t*4-phase;const split=smooth(.2,.3,t)*(1-smooth(.46,.57,t));const x=mix(120,62,split),y=mix(90,128,split),w=mix(660,346,split),h=mix(278,224,split);const evolution=smooth(.5,.91,t)*1.5;c.save();c.globalAlpha=smooth(0,.025,t)*(1-smooth(.97,1,t));field(c,x,y,w,h,evolution,c.globalAlpha);
+ if(split>.01){c.save();c.globalAlpha=split;text(c,'频域表示',640,83,24,C.ink,'center');for(let j=0;j<4;j++){const yy=135+j*53;line(c,[[476,yy],[814,yy]],C.line,1);let pts=[];for(let i=0;i<160;i++){let xx=i/159;pts.push([476+xx*338,yy+Math.sin(xx*TAU*(j+1)+t*8)*18*(1-j*.12)])}line(c,pts,j===1?C.copper:C.green,2.5);const xx=476+((local*1.3+j*.22)%1)*338;c.fillStyle=C.green;c.beginPath();c.arc(xx,yy+Math.sin((xx-476)/338*TAU*(j+1)+t*8)*18*(1-j*.12),4,0,TAU);c.fill()}text(c,'Fourier operator',640,366,22,C.muted,'center');arrow(c,421,237,39,0,C.copper);c.restore()}
+ if(phase===0){text(c,'初始条件',450,46,25,C.ink,'center');const a=smooth(.02,.12,t);for(let i=0;i<7;i++)for(let j=0;j<3;j++){const xx=190+i*84,yy=142+j*80;const dx=(xx-450)/270,dy=(yy-230)/160;arrow(c,xx,yy,-dy*18,dx*18,C.green,a*.7)}}
+ if(phase===2){text(c,'预测流场的演化',450,45,25,C.ink,'center');text(c,'t',136,393,21,C.muted);line(c,[[165,393],[750,393]],C.line,3);line(c,[[165,393],[165+585*local,393]],C.green,3);k.circle(c,165+585*local,393,6,C.copper)}
+ if(phase===3){text(c,'与数值计算对照',450,45,25,C.ink,'center');const a=smooth(0,.2,local);c.save();c.globalAlpha=a;for(let j=0;j<4;j++){const pts=Array.from({length:90},(_,i)=>{let q=i/89;return [x+q*w,y+h*(.2+j*.18)+Math.sin(q*TAU*1.8+evolution*2+j)*17]});line(c,pts,C.green,2,.8);c.setLineDash([5,7]);line(c,pts.map(([xx,yy],i)=>[xx,yy+3*Math.sin(i*.14+j)]),C.copper,1.7,.85);c.setLineDash([])}line(c,[[270,397],[302,397]],C.green,3);text(c,'预测',318,397,20,C.green);c.setLineDash([5,5]);line(c,[[473,397],[505,397]],C.copper,2);c.setLineDash([]);text(c,'数值解',521,397,20,C.copper);c.restore()}
+c.restore();
+}};
+})();
