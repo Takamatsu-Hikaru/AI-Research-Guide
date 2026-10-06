@@ -31,9 +31,26 @@ Discover papers and discussions, then return to the original, code, and author p
 
 Jiqizhixin, QbitAI, Xinzhiyuan, Xiaohongshu, Zhihu, Bilibili, X, and YouTube can introduce new things. Follow interesting news to the original paper or release.
 
+**[Z Potentials](https://zpotentials.substack.com/)**  
+Interviews with AI teams, founders, and technical practitioners. See what different teams are working on, why they chose a problem, and how their technology becomes a product.
+
+**[葬AI / Funeral AI](https://funeralai.substack.com/)**  
+AI product experiences and industry commentary with a direct, personal voice. Explore how new products work and what people are debating.
+
 Personal blogs show process as well as outcomes. [Jianlin Su](https://kexue.fm/content.html) is useful for mathematics and model questions, [Simon Willison](https://simonwillison.net/) records tool experiments, and [Karpathy](https://karpathy.ai/) shares courses, projects, and essays. See also [experience](experience.md).
 
 ## Hear researchers explain their work
+
+**[张小珺 Jùn — Business Interviews](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**  
+Long conversations with researchers and founders about technology, their careers, and important choices.
+
+Start with the [Saining Xie episode](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837), covering his education and research career, representation learning, research taste, world models, and starting a company. You can begin with his experiences and research choices, then pick the technical sections that interest you.
+
+**[WhyNotTV](https://space.bilibili.com/14145636/)**  
+Researcher interviews and personal accounts of university and research life, covering both the work and the choices along the way.
+
+- [My first two years of a robotics PhD — 任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/): Tairan He looks back on his first two years at CMU, connecting research on legged locomotion, humanoid teleoperation, and control with the collaborators behind the projects.
+- [Jiayi Weng interview](https://www.bilibili.com/video/BV1darmBcE4A/): Undergraduate encounters with reinforcement learning, open-source projects, university applications, and work on post-training and infrastructure at OpenAI.
 
 OpenEnvision's [ScholarTube](https://openenvision.github.io/ScholarTube/) organizes long-form researcher interviews, video podcasts, courses, and research talks across agents, world models, vision, robotics, and more. Interviews can reveal how a project began, which tradeoffs its authors made, and how they judge what to work on next. For related technical writing, explore the community's [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html).
 

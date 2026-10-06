@@ -27,3 +27,12 @@ Find author blogs, interviews, and research news here. Specific articles appear 
 - **[Tianwei Lin: VLA in 2025—the Distance from Demos to Generality](https://zhuanlan.zhihu.com/p/1989799567177307432)** — A Chinese annual perspective on embodied VLA, linked from Lumina's year-in-review section.
 
 - **[Interview with Jianming Wang: Data as a Core Robotics Problem](https://www.leiphone.com/category/ai/SJMi7xhrknuVadzq.html)** — A Chinese interview about robot data, offering the interviewee's observations of industry and research.
+
+- **[Z Potentials](https://zpotentials.substack.com/)** — Interviews with AI teams, founders, and technical practitioners about research, products, and startup decisions.
+
+- **[葬AI / Funeral AI](https://funeralai.substack.com/)** — AI product experiences and industry commentary with a direct, personal voice.
+
+- **[张小珺 Jùn — Business Interviews](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)** — Long conversations with researchers and founders about technology, careers, and important choices.
+
+- **[WhyNotTV](https://space.bilibili.com/14145636/)** — Researcher interviews and personal accounts of university and research life. See [Lookout](lookout.md) for recommended episodes.
+

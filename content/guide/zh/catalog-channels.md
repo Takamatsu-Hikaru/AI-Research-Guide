@@ -27,3 +27,12 @@
 - **[林天威：具身 VLA 的 2025——从 Demo 到通用的距离](https://zhuanlan.zhihu.com/p/1989799567177307432)**｜中文具身 VLA 年度观点文章，链接来自 Lumina 指南的年度总结区。
 
 - **[对话英诺王建明：机器人目前面临的核心问题是数据](https://www.leiphone.com/category/ai/SJMi7xhrknuVadzq.html)**｜围绕机器人数据问题的中文访谈，可以了解受访者对产业与研究的观察。
+
+- **[Z Potentials](https://zpotentials.substack.com/)**｜AI 团队、创业者与技术访谈，关注研究、产品与创业选择。
+
+- **[葬AI](https://funeralai.substack.com/)**｜AI 产品体验与行业评论，表达直接、个人观点鲜明。
+
+- **[张小珺 Jùn｜商业访谈录](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**｜与研究者、创业者长时间对谈，聊技术、经历与重要选择。
+
+- **[WhyNotTV](https://space.bilibili.com/14145636/)**｜研究者访谈与求学、科研经历分享，具体单集推荐见 [Lookout](lookout.md)。
+

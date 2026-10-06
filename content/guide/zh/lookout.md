@@ -31,9 +31,26 @@
 
 机器之心、量子位、新智元、小红书、知乎、B 站、X 和 YouTube 都能让你碰到新东西。对一条消息产生兴趣后，顺着出处读原论文或发布页。
 
+**[Z Potentials](https://zpotentials.substack.com/)**  
+AI 团队、创业者和技术访谈。看看不同团队在做什么，为什么选择这个问题，技术怎样变成产品。
+
+**[葬AI](https://funeralai.substack.com/)**  
+AI 产品体验和行业评论，表达直接、个人观点鲜明。可以从这里看看新产品怎么用，以及大家在争论什么。
+
 个人博客里还会有结果之外的过程。[苏剑林](https://kexue.fm/content.html)适合按数学与模型问题查，[Simon Willison](https://simonwillison.net/)有工具实践记录，[Karpathy](https://karpathy.ai/)有课程、项目和个人文章。具体经验另见[经验栏目](experience.md)。
 
 ## 听研究者讲自己的工作
+
+**[张小珺 Jùn｜商业访谈录](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)**  
+与研究者、创业者长时间对谈，聊技术、工作经历和重要选择。
+
+推荐[谢赛宁这一期](https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837)：从求学、研究经历聊到表征学习、research taste、世界模型和创业。可以先听经历与研究选择，再挑感兴趣的技术部分。
+
+**[WhyNotTV](https://space.bilibili.com/14145636/)**  
+研究者访谈与求学经历分享，聊具体做过的工作，也聊一路上的选择。
+
+- [机器人博士前两年总结——任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/)：何泰然回顾在 CMU 读机器人博士的前两年，串起足式运动、人形机器人遥操作与控制等研究，以及一起完成这些工作的合作者。
+- [翁家翌访谈](https://www.bilibili.com/video/BV1darmBcE4A/)：聊本科接触强化学习、开源项目、申请经历，以及在 OpenAI 做后训练和基础设施的工作。
 
 OpenEnvision 的 [ScholarTube](https://openenvision.github.io/ScholarTube/) 把研究者长访谈、视频播客、课程和学术报告整理在一起，可以按 Agent、世界模型、视觉、机器人等方向找内容。访谈里可以听听一个项目是怎么开始的、做过哪些取舍，以及研究者怎样判断下一步。想接着读技术文章，可以去同一社区的 [BlogrXiv](https://openenvision.github.io/BlogrXiv/site/index.html)。
 
