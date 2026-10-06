@@ -2,7 +2,7 @@
 
 <h1 align="center">AI 科研入门指南</h1>
 <p align="center">大学选择、第一项研究与一路上的经验</p>
-<p align="center"><b>中文</b> · <a href="README_EN.md">English</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/">在线阅读</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html">讨论区</a></p>
+<p align="center"><b>中文</b> · <a href="README_EN.md">English</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/">在线阅读</a> · <a href="https://takamatsu-hikaru.github.io/blog/guide/zh/index.html">个人主页版</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html">讨论区</a></p>
 
 这份指南面向刚进入大学、想了解 AI 和科研的同学。这里有我们对大学选择与科研入门的回答，也整理了入门项目、各方向的代表论文、课程和工具。联系老师、第一次进组、实验失败，以及和同龄人比较时的焦虑，也在其中。
 
