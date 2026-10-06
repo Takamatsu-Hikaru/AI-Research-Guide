@@ -25,9 +25,13 @@ This guide is for students starting university who want to explore AI and resear
 | Looking outside | [Lookout](content/guide/en/lookout.md) · [Blogs](content/guide/en/blogs.md) · [LessWrong](content/guide/en/lesswrong.md) · [Mu Li](content/guide/en/limu.md) · [Research groups](content/guide/en/labs.md) |
 | Resources | [Resource index](content/guide/en/resources.md) · [Research conversations and Q&A](content/guide/en/research-conversations.md) |
 
-The [website](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/) includes full-text search, expandable research Q&A, and introductions, roadmaps, terminology, and 37 illustrated paper cards across 10 fields. Cards link to the original papers and related projects.
+The [website](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/) includes full-text search, expandable research Q&A, and introductions, roadmaps, terminology, and illustrated paper cards across 10 fields. Cards link to the original papers and related projects.
 
-## Community knowledge sharing · OpenEnvision
+The [AI chronicle and research overview](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/directions.html) connect major research paths. [Lookout](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/lookout.html) collects AI and robotics company research. The Agent section includes Generative Agents in Smallville and Voyager’s Minecraft skill exploration.
+
+## Research communities and knowledge sharing
+
+### OpenEnvision
 
 [OpenEnvision (OE)](https://openenvision.github.io/) is an open AI research community connecting academia and industry, with interests in world models, multimodal intelligence, vision, and embodied AI. It also shares research knowledge through curated writing, interviews, and courses.
 
@@ -36,11 +40,13 @@ The [website](https://takamatsu-hikaru.github.io/AI-Research-Guide/en/) includes
 
 You can also recommend articles and videos to [BlogrXiv](https://github.com/OpenEnvision/BlogrXiv) and [ScholarTube](https://github.com/OpenEnvision/ScholarTube).
 
-## Embodied AI community · Lumina
+### Lumina
 
 [Lumina](https://lumina-embodied.ai/) brings together embodied AI research, open projects and community events. Its [Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) organizes the field’s learning resources; Talks, research coverage and events on the website introduce the people and projects behind the work.
 
+### AgentHub
 
+[AgentHub](https://hqhq1025.github.io/agent_hub/) collects discussions from the Agent community into daily and weekly digests, covering agent research, tools, engineering practice and industry developments. Browse by date, discussion group or external news to see what people are working through, how they compare technical approaches and where their views differ.
 
 ## Discuss and contribute
 
@@ -53,6 +59,10 @@ Articles are in [content/guide/zh](content/guide/zh) and [content/guide/en](cont
 [About the UESTC AI Club and this guide](content/guide/en/about.md). Club members wrote the opening essays, research Q&A, and personal accounts. Courses, papers, and blogs link to their original authors.
 
 This guide continues the work of the [UESTC AI Club Guide](https://my.feishu.cn/docx/HQYodz7thohS1Nxo6KAcoeNtnbb) and AI4UESTC_Beginners. We thank their authors and contributors. The [Lumina Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide) informed the organization and resource selection for embodied AI. Figure attribution is recorded in the [figure index](content/guide/paper-figures.json).
+
+## Update the guide
+
+Edit [English Markdown](content/guide/en) or [Chinese Markdown](content/guide/zh) directly on GitHub. Changes to the main branch automatically generate HTML and publish the website. See the [editing and contribution guide](CONTRIBUTING.md#editing-in-english) for paper cards, company directories and page styling.
 
 ## Build locally
 
