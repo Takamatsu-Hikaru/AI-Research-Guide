@@ -77,7 +77,7 @@
         "返回观察并继续"
       ]
     },
-    "paperIntro": "先用 ReAct 看懂一条轨迹，再分别看工具训练、跨尝试反馈和任务评测；它们回答的是不同问题。"
+    "paperIntro": "从 ReAct 看行动循环，再看工具使用、反馈与评测；Generative Agents 和 Voyager 则把记忆与技能积累放进小镇和 Minecraft 的持续环境。"
   },
   "en": {
     "overview": [
@@ -156,7 +156,7 @@
         "Observation returns to the loop"
       ]
     },
-    "paperIntro": "Start with a ReAct trajectory, then study tool training, feedback across attempts, and evaluation as distinct questions."
+    "paperIntro": "Start with ReAct, tool use, feedback, and evaluation. Generative Agents and Voyager explore memory and accumulating skills in a town and in Minecraft."
   },
   "papers": [
     {
@@ -252,6 +252,50 @@
         "why": "It joins reading, localization, editing, and verification in one task.",
         "read": "Start with task construction and evaluation, then a failure case.",
         "limit": "The original data comes from Python repositories. Passing tests does not cover all software quality or establish transfer to other languages."
+      }
+    },
+    {
+      "id": "generative-agents-2023",
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "year": 2023,
+      "venue": "UIST 2023",
+      "url": "https://arxiv.org/abs/2304.03442",
+      "code": "https://github.com/joonspk-research/generative_agents",
+      "zh": {
+        "tag": "小镇、记忆与社会互动",
+        "question": "让 25 个角色住在一座小镇里，怎样让他们记住经历、安排生活并彼此交往？",
+        "idea": "用自然语言记录观察，按相关性、重要性和时间检索记忆，再通过反思提炼经验、制定和调整计划。",
+        "why": "聚会邀请怎样在人际网络中传播，可以沿着每个角色的记忆、对话与行动追踪。",
+        "read": "先看 Smallville 小镇图和情人节聚会案例，再读记忆检索、反思和规划的架构。"
+      },
+      "en": {
+        "tag": "Memory and social interaction",
+        "question": "How can 25 town residents remember experiences, plan their days, and interact?",
+        "idea": "Record observations in language, retrieve memories by relevance, importance, and recency, then reflect and plan.",
+        "why": "Follow how a party invitation spreads through individual memories, conversations, and actions.",
+        "read": "Start with Smallville and the Valentine’s Day party, then study memory retrieval, reflection, and planning."
+      }
+    },
+    {
+      "id": "voyager-2023",
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "year": 2023,
+      "venue": "arXiv 2023",
+      "url": "https://arxiv.org/abs/2305.16291",
+      "code": "https://voyager.minedojo.org/",
+      "zh": {
+        "tag": "Minecraft 与技能积累",
+        "question": "从砍树到挖钻石，Agent 怎样把会做的事积累下来，继续探索？",
+        "idea": "自动课程提出任务，GPT-4 根据环境反馈生成和修正可执行代码；成功技能存入技能库，供后续任务检索、组合和复用。",
+        "why": "科技树把长期能力积累呈现得很直观：后续技能建立在采集、合成与工具使用之上。",
+        "read": "先看科技树与物品探索主图，再看自动课程、技能库和代码调试循环。"
+      },
+      "en": {
+        "tag": "Minecraft and reusable skills",
+        "question": "How can an agent build on what it knows, from chopping wood to mining diamonds?",
+        "idea": "An automatic curriculum proposes tasks. GPT-4 writes and revises executable code using feedback; successful skills are stored for retrieval and reuse.",
+        "why": "The tech tree makes cumulative progress tangible: gathering, crafting, and tool use support later skills.",
+        "read": "Start with the tech-tree exploration figure, then study the curriculum, skill library, and code-refinement loop."
       }
     }
   ]

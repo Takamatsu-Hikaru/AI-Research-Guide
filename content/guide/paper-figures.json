@@ -439,5 +439,19 @@
       565,
       500
     ]
+  },
+  "generative-agents-2023": {
+    "file": "generative-agents-2023.png",
+    "credit": "Park et al. · Smallville",
+    "source": "https://raw.githubusercontent.com/joonspk-research/generative_agents/main/cover.png",
+    "width": 2922,
+    "height": 1570
+  },
+  "voyager-2023": {
+    "file": "voyager-2023.png",
+    "credit": "Wang et al. · Fig. 1",
+    "source": "https://voyager.minedojo.org/assets/images/exploration_performance.png",
+    "width": 3200,
+    "height": 1974
   }
 }
