@@ -12,6 +12,10 @@
 
 关于科研怎么开始，我把一些具体回答放在[科研问答](research.md)里；读到某个问题时，也可以回来对照这段经历。
 
+**[搭建自己的科研工作流 — irene](irene-workflow.md)**
+
+从 Zotero、Obsidian 的论文与笔记管理，到科研简报、阅读深度和 AI 追问。分享怎样筛选论文、检查证据，并沿自己的问题继续找资料，附原文 PDF、提示词和工具入口。
+
 ## 也读读别人的路
 
 [邹嘉轩：本科两年，我最深的感悟——认知复利](https://jiaxuanzou0714.github.io/blog/2026/cognitive-compound-interest/)  

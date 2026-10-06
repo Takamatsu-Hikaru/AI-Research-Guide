@@ -2,7 +2,7 @@
 
 Some advice only makes sense after you have lived through it. Here are personal accounts, working methods, and things that did not work out. Before taking a lesson away, look at the situation the person was in.
 
-## My own experience
+## Experiences shared here
 
 **[My Freshman-Year Review: The World Suddenly Opens Wide](timeline.md)**  
 From learning to code and trying CV demos to the first deadline, internships, and rejection. The full timeline includes how I thought about learning, comparison, and life at the time.
@@ -11,6 +11,10 @@ From learning to code and trying CV demos to the first deadline, internships, an
 Retelling that year's uncertainty for people just arriving: what you want, how you see yourself, and ordinary life outside research.
 
 Specific answers about starting research are in the [research Q&A](research.md). Return to the experience when a question reminds you of it.
+
+**[Building your research workflow — irene](irene-workflow.md)**
+
+From organizing papers and notes with Zotero and Obsidian to research briefs, reading depth, and questions from AI. Includes selecting papers, examining evidence, and following your own questions, with the original PDF, prompts, and tools.
 
 ## Other people's paths
 

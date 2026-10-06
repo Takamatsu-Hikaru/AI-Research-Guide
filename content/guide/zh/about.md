@@ -22,3 +22,5 @@
 
 课程、论文、博客与研究团队可以在[资料总索引](resources.md)中查找。
 
+
+[irene](https://github.com/tseirene6) 分享了[《搭建自己的科研工作流》](irene-workflow.md)，提供了论文与笔记管理、科研简报、阅读深度和 AI 追问的实践经验。相关文章中的对应方法由这份分享整理。

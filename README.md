@@ -21,7 +21,7 @@
 | 基础与学习 | [基础怎么学，需要学到哪里？](content/guide/zh/basics.md) · [挑一篇论文读](content/guide/zh/papers.md) |
 | 认识研究方向 | [方向总览](content/guide/zh/directions.md) · [大语言模型](content/guide/zh/llm.md) · [Agent](content/guide/zh/agent.md) · [视觉](content/guide/zh/vision.md) · [多模态](content/guide/zh/multimodal.md) · [生成](content/guide/zh/generation.md) · [强化学习](content/guide/zh/rl.md) · [世界模型](content/guide/zh/world-model.md) · [具身智能](content/guide/zh/embodied.md) · [效率与系统](content/guide/zh/systems.md) · [AI 交叉学科](content/guide/zh/ai4x.md) |
 | 推进一项研究 | [找资料、读论文](content/guide/zh/reading.md) · [做实验](content/guide/zh/experiments.md) · [写作、画图与汇报](content/guide/zh/writing.md) · [联系与合作](content/guide/zh/contact.md) · [使用 AI](content/guide/zh/ai.md) · [投稿](content/guide/zh/publishing.md) |
-| 经历与生活 | [经验与复盘](content/guide/zh/experience.md) · [大一回忆](content/guide/zh/timeline.md) · [怎么好好生活](content/guide/zh/life.md) |
+| 经历与生活 | [经验与复盘](content/guide/zh/experience.md) · [irene：科研工作流](content/guide/zh/irene-workflow.md) · [大一回忆](content/guide/zh/timeline.md) · [怎么好好生活](content/guide/zh/life.md) |
 | 看看外面 | [Lookout](content/guide/zh/lookout.md) · [作者博客](content/guide/zh/blogs.md) · [LessWrong](content/guide/zh/lesswrong.md) · [李沐](content/guide/zh/limu.md) · [研究团队](content/guide/zh/labs.md) |
 | 找具体资料 | [资料总索引](content/guide/zh/resources.md) · [科研经验与问答](content/guide/zh/research-conversations.md) |
 
@@ -59,6 +59,8 @@
 [关于 UESTC AI 社与这份指南](content/guide/zh/about.md)。大学开篇、科研问答和个人经历由社团成员撰写，课程、论文和博客链接到原作者页面。
 
 这份指南承接[《UESTC AI 社指南》](https://my.feishu.cn/docx/HQYodz7thohS1Nxo6KAcoeNtnbb)及 AI4UESTC_Beginners 的整理工作，感谢旧库作者与贡献者。[Lumina 具身智能指南](https://github.com/TianxingChen/Embodied-AI-Guide)为具身方向的组织与资料选取提供了参考。论文插图的来源记录在[配图索引](content/guide/paper-figures.json)。
+
+[irene](https://github.com/tseirene6) 分享了[《搭建自己的科研工作流》](content/guide/zh/irene-workflow.md)，提供了论文与笔记管理、科研简报、阅读深度和 AI 追问的实践经验。相关文章中的对应方法由这份分享整理。
 
 ## 更新内容
 

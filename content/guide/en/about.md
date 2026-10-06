@@ -22,3 +22,5 @@ The [Lumina Embodied AI Guide](https://github.com/TianxingChen/Embodied-AI-Guide
 
 Courses, papers, blogs, and research groups are collected in the [resource index](resources.md).
 
+
+[irene](https://github.com/tseirene6) contributed the experience behind [Building your research workflow](irene-workflow.md): paper and note management, research briefs, reading depth, and questions from AI. Related methods throughout the guide are adapted from this account.

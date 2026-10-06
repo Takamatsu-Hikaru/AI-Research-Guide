@@ -312,6 +312,8 @@ For agents, one route runs from the capabilities of LLMs through chain-of-though
 
 These routes intersect; they are not successive generations replacing one another. Connect the problems, reasons for the methods, and relationships to earlier work. That is how an overview develops. Continue with [paper entry points](papers.md) and the [agents page](agent.md).
 
+For choosing reading depth, see [how deeply to read a paper](reading.md#reading-depth).
+
 <a id="q32"></a>
 
 ### 32. Where should I start inside a paper? What should I be able to answer afterward?
@@ -319,6 +321,8 @@ These routes intersect; they are not successive generations replacing one anothe
 See [Mu Li's paper readings](https://github.com/mli/paper-reading). Begin with the abstract, introduction, key figures, and conclusion. Establish what was done, why, and how, then check how the experiments support it.
 
 This also introduces the task, data, baselines, and metrics.
+
+For locating evidence, see [matching claims to figures](reading.md#claims-evidence).
 
 <a id="q33"></a>
 
@@ -336,6 +340,8 @@ Explaining the question, method, and main evidence is already a useful first rea
 
 Your purpose determines the depth of this pass. Keep important questions to verify later.
 
+To practice explaining a method, try [having AI question you](ai.md#grill-me).
+
 <a id="q35"></a>
 
 ### 35. How do I keep useful notes and connect papers instead of collecting separate summaries?
@@ -343,6 +349,8 @@ Your purpose determines the depth of this pass. Keep important questions to veri
 Feishu, Notion, Zotero, and Obsidian can all work. Pick a comfortable tool and record your own questions and connections.
 
 Organize papers around a shared question: what changed, how comparison conditions differ, and how one conclusion affects another. A few sentences of your own understanding are more useful than merely saving abstracts.
+
+In [Building your research workflow](irene-workflow.md#notes), irene shares how she uses Zotero and Obsidian, then compares and questions the notes with AI.
 
 ## Finding questions and ideas
 
@@ -381,6 +389,8 @@ Survey related work. Compare settings, motivations, and methodological details; 
 You are part of the community. Your curiosity is a reason to explore. If the work also produces more general knowledge that helps others understand the problem, it is more valuable still.
 
 Feasibility depends on motivation and resources: what data, tools, compute, time, and collaboration would verification require? A small experiment can help establish the conditions.
+
+For searching from a specific question, see [irene's targeted search process](irene-workflow.md#search).
 
 <a id="q40"></a>
 

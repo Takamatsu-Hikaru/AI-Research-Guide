@@ -8,6 +8,8 @@ Suppose an agent fails on long tasks. Ask where failure begins: did it forget ea
 
 Read complete traces for a small set of tasks and group the observed failures before deciding whether memory or recovery mechanisms would help. This is a way to formulate an investigation, not a report of an experiment already done.
 
+Bring a question from reading into the experiment record: which paper and figure it comes from, the conditions of the conclusion, the factor you will change, and the observation you expect. Write these down before choosing what to run. [irene's reading and evidence notes](irene-workflow.md#depth) offer a way to organize the question.
+
 ## Run the baseline before changing the model
 
 Run a baseline and record data and model versions, configuration, seed, code version, and evaluation method. What a seed controls depends on implementation; also record repeated runs.

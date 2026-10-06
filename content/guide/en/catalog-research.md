@@ -44,6 +44,16 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 - **[Hugging Face Daily Papers](https://huggingface.co/papers)** — An entry to daily papers and discussion. Follow interesting work to the original paper, code, and project.
 
+- **[Obsidian](https://obsidian.md/)**｜Local Markdown notes and links between papers, questions, and projects.
+
+- **[Zotero Integration](https://github.com/community-archive/obsidian-zotero-integration)**｜Import Zotero citations, notes, and PDF annotations into Obsidian; setup is documented in the repository.
+
+- **[Zotero Connector](https://www.zotero.org/download/connectors)**｜Save bibliographic information and available attachments from your browser.
+
+- **[Scholaread 靠岸学术](https://www.scholaread.cn/help)**｜Paper reading, translation, and notes; irene uses it alongside Obsidian.
+
+- **[切问 / Qiewen](https://qiewenpaper.com/zh/home)**｜Search for papers from a research question, then read and compare related work.
+
 <a id="topic-9"></a>
 
 ## Reading a first paper and understanding publication
@@ -68,6 +78,10 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 - **[Task-Specific LLM Evals that Do & Don't Work — Eugene Yan](https://eugeneyan.com/writing/evals/)** — An English practical blog on choosing what and how to evaluate for a specific LLM task. Useful when an application already exists and needs evaluation.
 
+- **[Jupyter](https://jupyter.org/)**｜Keep code, analysis, tables, and figures together in a notebook.
+
+- **[Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)**｜Distinguish CSV/TSV columns and check column consistency in VS Code.
+
 <a id="topic-11"></a>
 
 ## Writing, LaTeX, Markdown, and presentation
@@ -86,6 +100,10 @@ From understanding research to finding papers, experimenting, writing, and commu
 
 - **[AstraDraw](https://github.com/AstraDraw/astradraw)** — A collaborative whiteboard and presentation project marked Alpha in its repository. Try it for organizing diagrams and presentations.
 
+- **[LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop)**｜Build and preview LaTeX and complete citations in VS Code with a local TeX installation.
+
+- **[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)**｜Check English spelling in notes, READMEs, and code comments.
+
 <a id="topic-12"></a>
 
 ## AI in research: tasks, checks, and reuse
@@ -97,3 +115,7 @@ From understanding research to finding papers, experimenting, writing, and commu
 - **[Building A Generative AI Platform — Chip Huyen](https://huyenchip.com/2024/07/25/genai-platform.html)** — An English engineering blog connecting data, models, retrieval, and evaluation from a systems perspective. Read after building a simple generative-AI application.
 
 - **[Full Stack Deep Learning](https://fullstackdeeplearning.com/)** — Courses, talks, and engineering resources covering data, development, and deployment beyond the model. Choose by your current project stage.
+
+- **[irene · Paper-reading toolkit](https://github.com/tseirene6/paper-tools-marketplace)**｜Paper-reading tools from irene, whose workflow uses Grill Me to question understanding.
+
+[irene's setup and experience](irene-workflow.md#tools).

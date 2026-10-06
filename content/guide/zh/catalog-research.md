@@ -44,6 +44,16 @@
 
 - **[Hugging Face Daily Papers](https://huggingface.co/papers)**｜每日论文与讨论入口。发现感兴趣的研究后，可以继续追原论文、代码与项目。
 
+- **[Obsidian](https://obsidian.md/)**｜本地 Markdown 笔记与双向链接，用来连接文献、问题和项目。
+
+- **[Zotero Integration](https://github.com/community-archive/obsidian-zotero-integration)**｜将 Zotero 的引用、笔记与 PDF 批注导入 Obsidian，配置入口在项目说明中。
+
+- **[Zotero Connector](https://www.zotero.org/download/connectors)**｜从浏览器保存文献信息和可获取的附件。
+
+- **[Scholaread 靠岸学术](https://www.scholaread.cn/help)**｜论文阅读、翻译与笔记工具；irene 用它配合 Obsidian 读论文。
+
+- **[切问 / Qiewen](https://qiewenpaper.com/zh/home)**｜从具体研究问题检索论文，继续阅读与比较相关工作。
+
 <a id="topic-9"></a>
 
 ## 第一次读论文，以及认识学术发表
@@ -68,6 +78,10 @@
 
 - **[Task-Specific LLM Evals that Do & Don’t Work — Eugene Yan](https://eugeneyan.com/writing/evals/)**｜英文实践博客。讨论如何为具体 LLM 任务选择评价对象和评价方法，适合已经有应用、正在设计评测时读。
 
+- **[Jupyter](https://jupyter.org/)**｜把代码、分析文字、表格和图放在 notebook 中，便于记录数据分析过程。
+
+- **[Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)**｜在 VS Code 中区分 CSV／TSV 各列，并检查列数。
+
 <a id="topic-11"></a>
 
 ## 写作、LaTeX、Markdown 与 presentation
@@ -86,6 +100,10 @@
 
 - **[AstraDraw](https://github.com/AstraDraw/astradraw)**｜协作白板与演示项目，仓库标注 Alpha。可用于尝试组织图示和演示内容。
 
+- **[LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop)**｜在 VS Code 中编译、预览 LaTeX 和补全引用，配合本地 TeX 环境使用。
+
+- **[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)**｜检查英文拼写，可用于笔记、README 和代码注释。
+
 <a id="topic-12"></a>
 
 ## AI 参与科研 workflow：任务、检查与复用
@@ -97,3 +115,7 @@
 - **[Building A Generative AI Platform — Chip Huyen](https://huyenchip.com/2024/07/25/genai-platform.html)**｜英文工程博客。从系统角度连接数据、模型、检索和评估，适合做过简单生成式 AI 应用后读。
 
 - **[Full Stack Deep Learning](https://fullstackdeeplearning.com/)**｜课程、讲座与工程资源，覆盖模型之外的数据、开发和落地。可以按项目里遇到的环节选课。
+
+- **[irene · Paper-reading toolkit](https://github.com/tseirene6/paper-tools-marketplace)**｜论文阅读工具仓库。作者用 Grill Me 追问理解，完整过程见《搭建自己的科研工作流》。
+
+[irene 的配置与使用经验](irene-workflow.md#tools)。

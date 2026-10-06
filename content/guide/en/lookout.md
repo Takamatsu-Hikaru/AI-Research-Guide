@@ -52,6 +52,18 @@ Researcher interviews and personal accounts of university and research life, cov
 - [My first two years of a robotics PhD — 任尔东西南北风](https://www.bilibili.com/video/BV1neM1zKEmE/): Tairan He looks back on his first two years at CMU, connecting research on legged locomotion, humanoid teleoperation, and control with the collaborators behind the projects.
 - [Jiayi Weng interview](https://www.bilibili.com/video/BV1darmBcE4A/): Undergraduate encounters with reinforcement learning, open-source projects, university applications, and work on post-training and infrastructure at OpenAI.
 
+<a id="research-brief"></a>
+
+## Make a research brief for yourself
+
+Once you have found relevant sources, a recurring brief can select work related to your questions. [irene's approach](irene-workflow.md#brief) is to read one issue, adjust the selection, and then choose a schedule.
+
+> I am investigating [specific question]. Select about five items from the past week's papers, code releases, technical blogs, and lab announcements. Include dates and original links. For each, explain the work, its relation to my question, and a figure to read, project to try, or question to pursue.
+>
+> Use the last seven days of briefs and my reading log to remove duplicates. If an older project has new results, explain what changed.
+
+Keep titles, links, issue dates, and reading status in a list, and provide it for the next brief. See the [full workflow](irene-workflow.md#brief) for interest weights, prompts, and scheduling. Then use your [reading purpose](reading.md#reading-depth) to decide how deeply to read each paper.
+
 ## What questions should you note after reading new work?
 
 Write a few sentences: what problem does this work address, how does it differ from what you knew, and what would you like to explore? Share an article with your question when it seems worth discussing.

@@ -21,6 +21,7 @@ for(const lang of ['zh','en'])for(const p of manifest){
  const raw=fs.readFileSync(path.join(content,lang,p.id+'.md'),'utf8');
  const title=raw.match(/^# (.+)$/m)?.[1];if(!title)throw Error('Missing title '+lang+'/'+p.id);
  let n=0;let html=marked.parse(raw,{gfm:true}).replace(/<h([23])>([\s\S]*?)<\/h\1>/g,(_,level,text)=>`<h${level} id="sec-${++n}">${text}</h${level}>`);
+ html=html.replaceAll('../../../public/blog/guide/sources/','../sources/');
  html=html.replace(/<p>(<a id="[^"]+"><\/a>)<\/p>/g,'$1');
  let resource=0;html=html.replace(/<li>(?=\s*(?:<p>)?\s*<strong><a href="https?:)/g,()=>`<li id="resource-${++resource}">`);
  html=html.replace(/href="(?!https?:)([^"]+)\.md(?:#([^"]+))?"/g,(_,id,anchor)=>`href="${filename(id)}${anchor?'#'+anchor:''}"`);

@@ -21,6 +21,8 @@ The introduction establishes the question and contribution; methods explain the 
 
 State important conditions directly and remove unsupported adjectives. For a disputed choice, explain reasons and results; you do not need a preemptive defense against every imaginable objection.
 
+If you already have reading notes, group your judgments with supporting papers and experiments around the question you want to answer, then outline the paragraphs. When AI helps organize them, ask it to attach note locations and original sources to each paragraph, and add your own analysis. See [irene's note setup and example requests](irene-workflow.md#notes).
+
 ## Decide what a figure should show
 
 In a method figure, show where inputs come from, what happens, and what comes out. In a results figure, make comparisons, metrics, and changes readable. Arrows, colors, and legends need clear purposes.
