@@ -16,3 +16,6 @@ dialog{border:1px solid var(--ink);padding:0;background:var(--card);color:var(--
 :root{--paper:#f7f9f5;--paper-2:#edf2e9;--ink:#26382c;--muted:#657367;--line:#456049;--blue:#416d46;--orange:#81955d;--card:#fff;--serif:Georgia,"Songti SC",SimSun,serif}
 html[data-theme=dark]{--paper:#171e18;--paper-2:#202c22;--ink:#e3ecdf;--muted:#a4b49f;--line:#a5b99c;--blue:#a8cc95;--orange:#c1cc95;--card:#1c271e}
 body{background:var(--paper)}.club-logo{width:48px;height:48px;object-fit:contain}.wordmark-copy small{font-size:11px;letter-spacing:.02em}.home-logo{float:right;width:132px;height:auto;margin:0 0 20px 24px}article h1{color:var(--ink)}.paper-card{box-shadow:0 2px 7px #26382c0b;border-radius:6px}.paper-card:hover{box-shadow:0 5px 14px #26382c15}.concept-figure{box-shadow:none;border-radius:6px}.home-section{clear:both}html[data-theme=dark] .ama-primary{color:#172018!important}@media(max-width:600px){.home-logo{width:90px;margin-left:14px}.club-logo{width:38px;height:38px}.wordmark-copy small{font-size:10px}}
+
+/* AI chronicle film */
+.chronicle-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#f5f1e8;border:1px solid #c8c3b9;border-radius:12px;margin:1.2rem 0}.chronicle-video::cue{background:rgba(245,241,232,.94);color:#171713}

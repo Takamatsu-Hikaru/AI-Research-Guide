@@ -14,6 +14,18 @@ What choices does university offer, and where do you want to go? I begin with my
 **[How to get started in research](research.md)**  
 What does research involve, and why try it? From choosing a direction and contacting faculty to reading papers, running experiments, and submitting your work, with questions about gaps in your knowledge, falling behind, and failed experiments.
 
+## AI, a history
+
+From Dartmouth to language models, generation, robotics, and scientific discovery: the ideas that changed AI, and how their paths meet.
+
+<video class="chronicle-video" controls preload="none" playsinline poster="../chronicle/poster.jpg" aria-label="AI, a history">
+<source src="../chronicle/ai-chronicle.mp4" type="video/mp4">
+<track kind="subtitles" src="../chronicle/zh.vtt" srclang="zh" label="中文" >
+<track kind="subtitles" src="../chronicle/en.vtt" srclang="en" label="English" default>
+</video>
+
+[Explore AI research directions →](directions.md)
+
 ## Getting started with AI
 
 **[Your first AI project: where to begin?](start.md)**  

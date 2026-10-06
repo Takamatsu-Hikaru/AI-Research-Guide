@@ -1,0 +1,388 @@
+WEBVTT
+
+00:00:02.700 --> 00:00:06.207
+In 1950, Alan Turing asked: can machines think?
+
+00:00:06.207 --> 00:00:09.714
+He turned that question toward an imitation game.
+
+00:00:09.714 --> 00:00:15.852
+Through written questions and replies, could an interrogator distinguish a machine from a person?
+
+00:00:18.650 --> 00:00:25.423
+Five years later, a proposal gave a research ambition a name: artificial intelligence.
+
+00:00:25.423 --> 00:00:31.154
+McCarthy, Minsky, Rochester and Shannon proposed a summer project at Dartmouth.
+
+00:00:33.150 --> 00:00:42.889
+In the summer of 1956, researchers met to explore how machines might use language, form concepts, solve problems and improve themselves.
+
+00:00:42.889 --> 00:00:47.526
+A shared research field was taking shape around those questions.
+
+00:00:49.650 --> 00:00:51.664
+One approach made knowledge explicit.
+
+00:00:51.664 --> 00:00:57.706
+Represent objects and goals with symbols, then use rules to find a sequence of actions.
+
+00:00:57.706 --> 00:01:04.554
+In a small, orderly world, the machine could reason its way from a problem to a plan.
+
+00:01:06.650 --> 00:01:10.810
+Connectionist approaches took another route: adjust connections through experience.
+
+00:01:10.810 --> 00:01:13.583
+Rosenblatt's perceptron learned to separate patterns.
+
+00:01:13.583 --> 00:01:19.129
+An error changed its weights, moving the boundary for the next example.
+
+00:01:19.129 --> 00:01:22.826
+Learning could replace some rules written by hand.
+
+00:01:24.650 --> 00:01:27.382
+But larger problems multiplied the possibilities.
+
+00:01:27.382 --> 00:01:34.211
+Computing resources were limited, and early demonstrations did not deliver all that had been promised.
+
+00:01:34.211 --> 00:01:40.130
+In the nineteen seventies, funding and confidence fell in parts of the field.
+
+00:01:42.150 --> 00:01:48.396
+In the nineteen eighties, expert systems brought specialist knowledge into practical software.
+
+00:01:48.396 --> 00:01:52.040
+Facts activated rules and led to recommendations.
+
+00:01:52.040 --> 00:01:58.806
+But expanding and maintaining those rules could become expensive, especially when conditions changed.
+
+00:02:00.650 --> 00:02:07.389
+Behavior-based robotics emphasized a different question: how can a machine act in the world?
+
+00:02:07.389 --> 00:02:12.202
+Rodney Brooks built layered controllers that connected sensing to action.
+
+00:02:12.202 --> 00:02:17.978
+Avoid an obstacle, keep moving, and respond again as the situation changes.
+
+00:02:20.150 --> 00:02:23.948
+A network could learn more than a final decision.
+
+00:02:23.948 --> 00:02:29.433
+Backpropagation carried the output error through its layers, showing how each parameter contributed.
+
+00:02:29.433 --> 00:02:33.652
+By adjusting those parameters, hidden layers could learn useful representations.
+
+00:02:33.652 --> 00:02:38.294
+Work in the nineteen eighties helped bring this approach to prominence.
+
+00:02:40.150 --> 00:02:46.058
+Commercial enthusiasm cooled again in the late nineteen eighties and early nineties.
+
+00:02:46.058 --> 00:02:49.012
+Expert systems faced costs and limits.
+
+00:02:49.012 --> 00:02:56.398
+Yet neural networks, statistical learning and robotics continued developing, even as the spotlight moved away.
+
+00:02:58.150 --> 00:03:03.245
+For images, convolutional networks learn patterns that repeat across space.
+
+00:03:03.245 --> 00:03:08.850
+A small filter moves across the pixels, producing a feature map.
+
+00:03:08.850 --> 00:03:12.417
+Layers combine local features into richer representations.
+
+00:03:12.417 --> 00:03:18.022
+Networks such as LeNet used this approach to recognize handwritten digits.
+
+00:03:20.150 --> 00:03:22.161
+Language unfolds in a sequence.
+
+00:03:22.161 --> 00:03:30.204
+A recurrent network reads one step at a time, combining the new input with a state carried from the past.
+
+00:03:30.204 --> 00:03:35.030
+The same computation repeats, but its state changes as the sentence grows.
+
+00:03:37.150 --> 00:03:40.510
+Long sequences made learning distant dependencies difficult.
+
+00:03:40.510 --> 00:03:43.870
+LSTM introduced a memory cell with gates.
+
+00:03:43.870 --> 00:03:50.110
+Later, a forget gate gave it a way to control what to retain.
+
+00:03:50.110 --> 00:03:55.870
+Information can be preserved, updated, and selectively exposed as the sequence continues.
+
+00:03:57.500 --> 00:04:06.356
+Meanwhile, computer graphics was building a different kind of engine: processors that handled many calculations in parallel.
+
+00:04:06.596 --> 00:04:16.724
+CUDA, introduced in 2006 with its first full toolkit release in 2007, made that power easier to program for other tasks.
+
+00:04:16.964 --> 00:04:20.372
+Neural network training had a powerful new platform.
+
+00:04:21.572 --> 00:04:29.420
+The pieces came together: a large labeled dataset, fast GPU computation, and a deep convolutional network.
+
+00:04:29.660 --> 00:04:37.484
+In 2012, AlexNet won the ImageNet competition by a striking margin, training on two GPUs.
+
+00:04:37.724 --> 00:04:46.340
+The result drew widespread attention to what deep learning could do when data, architecture, and computation worked together.
+
+00:04:49.650 --> 00:04:53.559
+Attention changed how a translation model used its input.
+
+00:04:53.559 --> 00:05:00.943
+Instead of relying on one fixed summary, the decoder could combine source representations differently at each step.
+
+00:05:00.943 --> 00:05:07.458
+As each output word formed, attention shifted toward the input positions that helped predict it.
+
+00:05:09.650 --> 00:05:14.113
+In 2014, generative adversarial networks paired two learners.
+
+00:05:14.113 --> 00:05:17.460
+A generator creates samples from noise.
+
+00:05:17.460 --> 00:05:21.922
+A discriminator compares generated samples with real data.
+
+00:05:21.922 --> 00:05:25.270
+Its feedback helps train the generator.
+
+00:05:25.270 --> 00:05:30.290
+Across training, the competition can produce increasingly convincing images.
+
+00:05:32.150 --> 00:05:36.068
+DQN learned to play Atari games from pixels.
+
+00:05:36.068 --> 00:05:40.476
+A neural network estimated the value of available actions.
+
+00:05:40.476 --> 00:05:45.374
+Acting, receiving rewards, and replaying experience gradually improved its decisions.
+
+00:05:47.150 --> 00:05:51.426
+In 2016, AlphaGo brought learning and search together.
+
+00:05:51.426 --> 00:05:57.304
+A policy network suggested promising moves; a value network assessed positions.
+
+00:05:57.304 --> 00:05:59.976
+Guided search explored possible continuations.
+
+00:05:59.976 --> 00:06:09.062
+Training on expert games and through self-play turned experience into better decisions, one position at a time.
+
+00:06:11.150 --> 00:06:16.036
+In 2017, the Transformer placed attention at the center.
+
+00:06:16.036 --> 00:06:22.552
+Multiple heads mixed information across positions, alongside feed-forward layers and residual connections.
+
+00:06:22.552 --> 00:06:24.723
+Positional information preserved order.
+
+00:06:24.723 --> 00:06:30.696
+Removing recurrence allowed positions to be processed in parallel during training.
+
+00:06:30.696 --> 00:06:35.582
+The original model joined an encoder to a decoder.
+
+00:06:37.650 --> 00:06:41.663
+In 2018, BERT and GPT developed different branches.
+
+00:06:41.663 --> 00:06:47.182
+BERT used encoder layers and surrounding context to predict masked tokens.
+
+00:06:47.182 --> 00:06:53.703
+GPT used decoder-style layers to predict the next token from the preceding context.
+
+00:06:53.703 --> 00:06:58.218
+Their training objectives shaped how they learned from text.
+
+00:07:00.150 --> 00:07:04.100
+Pretraining repeats this process across large collections of text.
+
+00:07:04.100 --> 00:07:12.438
+The model makes a prediction, compares it with the training target, and updates its parameters to reduce the loss.
+
+00:07:12.438 --> 00:07:18.582
+The resulting representations can then support many tasks, often with further training or adaptation.
+
+00:07:20.650 --> 00:07:27.095
+During generation, the model turns the current context into a distribution over possible next tokens.
+
+00:07:27.095 --> 00:07:30.962
+A token is selected and appended to the input.
+
+00:07:30.962 --> 00:07:33.110
+Then the model runs again.
+
+00:07:33.110 --> 00:07:38.266
+Its parameters stay fixed while the context grows, one token after another.
+
+00:07:40.650 --> 00:07:44.593
+Larger language models changed what a prompt could do.
+
+00:07:44.593 --> 00:07:49.851
+In 2020, GPT-3 demonstrated tasks specified through instructions and a few examples.
+
+00:07:49.851 --> 00:07:54.670
+A pattern shown in the context could guide the next response.
+
+00:07:54.670 --> 00:07:59.490
+The same pretrained model could be prompted to attempt different tasks.
+
+00:08:01.650 --> 00:08:03.504
+Diffusion takes another route.
+
+00:08:03.504 --> 00:08:07.677
+A network learns to remove noise from corrupted examples.
+
+00:08:07.677 --> 00:08:14.167
+To generate, it starts with random noise and refines a sample over many steps.
+
+00:08:14.167 --> 00:08:19.266
+Broad structure emerges, details settle, and a new image takes shape.
+
+00:08:25.650 --> 00:08:28.881
+Vision Transformers split images into patches.
+
+00:08:28.881 --> 00:08:33.190
+Each patch becomes an embedding, with position information.
+
+00:08:33.190 --> 00:08:39.114
+Attention connects the sequence, building representations for image recognition and beyond.
+
+00:08:41.150 --> 00:08:45.567
+In 2021, CLIP learned from images paired with text.
+
+00:08:45.567 --> 00:08:49.494
+Separate encoders map both into a shared representation.
+
+00:08:49.494 --> 00:08:53.420
+Training pulls matching pairs together and separates mismatches.
+
+00:08:53.420 --> 00:09:00.782
+A phrase can then retrieve an image, linking visual recognition with the flexibility of language.
+
+00:09:02.650 --> 00:09:07.057
+AI also began changing the tools of science.
+
+00:09:07.057 --> 00:09:15.320
+AlphaFold 2 used evolutionary relationships and learned interactions between amino acids to predict protein structures.
+
+00:09:15.320 --> 00:09:25.786
+Its architecture exchanged information across sequences and residue pairs, then refined three-dimensional geometry, opening new possibilities for studying biology.
+
+00:09:27.650 --> 00:09:34.691
+To make a model follow instructions, researchers trained on demonstrations of useful answers.
+
+00:09:34.691 --> 00:09:40.649
+Human comparisons then helped train a reward model, guiding further optimization.
+
+00:09:40.649 --> 00:09:43.358
+InstructGPT brought these steps together.
+
+00:09:43.358 --> 00:09:51.482
+Later in 2022, ChatGPT put conversation at the center of how millions encountered this technology.
+
+00:09:53.650 --> 00:09:56.242
+A language model can also act.
+
+00:09:56.242 --> 00:09:59.698
+ReAct interleaves reasoning with tool use and observations.
+
+00:09:59.698 --> 00:10:07.474
+Here, the model searches for a paper, reads the result, then opens the source to verify its venue.
+
+00:10:07.474 --> 00:10:11.794
+Each observation informs the next action before the final answer.
+
+00:10:17.650 --> 00:10:21.167
+A world model learns how an environment changes.
+
+00:10:21.167 --> 00:10:25.124
+From observations, it predicts possible future states and rewards.
+
+00:10:25.124 --> 00:10:35.236
+An agent can improve its policy inside these imagined trajectories, then act in the real environment and learn again from what actually happens.
+
+00:10:35.236 --> 00:10:36.994
+Imagination becomes useful experience.
+
+00:10:39.650 --> 00:10:42.580
+Genie learned controllable environments from video.
+
+00:10:42.580 --> 00:10:47.463
+Starting from an image, actions steer the next generated frames.
+
+00:10:47.463 --> 00:10:52.346
+Walk, or jump: the same scene unfolds into different futures.
+
+00:10:54.150 --> 00:10:57.412
+Robots connect language to the physical world.
+
+00:10:57.412 --> 00:11:03.471
+A vision-language-action model receives camera images and an instruction, then predicts robot actions.
+
+00:11:03.471 --> 00:11:08.131
+The arm reaches, closes its gripper, and places the object.
+
+00:11:08.131 --> 00:11:14.190
+New observations close the loop, grounding the next action in a changing scene.
+
+00:11:18.150 --> 00:11:23.652
+Reinforcement learning also became a way to improve language model reasoning.
+
+00:11:23.652 --> 00:11:30.154
+On problems with checkable answers, rewards could guide training toward more successful solutions.
+
+00:11:30.154 --> 00:11:33.656
+DeepSeek-R1 explored this at scale in 2025.
+
+00:11:33.656 --> 00:11:40.158
+Trying, evaluating, and improving now shaped how a language model approached difficult problems.
+
+00:11:42.150 --> 00:11:44.346
+These paths keep crossing.
+
+00:11:44.346 --> 00:11:45.993
+Attention connects information.
+
+00:11:45.993 --> 00:11:48.737
+Generative models construct possible outputs.
+
+00:11:48.737 --> 00:11:52.031
+Reinforcement learning improves decisions through feedback.
+
+00:11:52.031 --> 00:11:58.069
+Together, these ideas support assistants, robots, world models, and scientific tools.
+
+00:11:58.069 --> 00:12:03.558
+Each new system carries pieces of a much longer history.
+
+00:12:05.650 --> 00:12:12.239
+The pursuit of general intelligence asks how these abilities might extend to unfamiliar problems, new environments, and continued learning.
+
+00:12:12.239 --> 00:12:18.481
+The next chapter will be shaped by the questions people ask, and the things they choose to build.
+
+00:12:18.481 --> 00:12:20.561
+You can be part of it.
+
+00:12:20.561 --> 00:12:22.642
+The future is in your hands.

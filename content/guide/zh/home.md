@@ -14,6 +14,18 @@
 **[How to 入门科研](research.md)**  
 科研具体在做什么，为什么值得尝试？从找方向、联系老师，到读论文、做实验和投稿，也聊基础不够、进度落后和实验失败时怎么办。
 
+## AI 编年史
+
+从达特茅斯会议到语言模型、生成、机器人与科学发现，看关键论文如何改变研究，又如何走到一起。
+
+<video class="chronicle-video" controls preload="none" playsinline poster="../chronicle/poster.jpg" aria-label="AI 编年史">
+<source src="../chronicle/ai-chronicle.mp4" type="video/mp4">
+<track kind="subtitles" src="../chronicle/zh.vtt" srclang="zh" label="中文" default>
+<track kind="subtitles" src="../chronicle/en.vtt" srclang="en" label="English" >
+</video>
+
+[继续看：AI 的研究方向 →](directions.md)
+
 ## 开始学习 AI
 
 **[第一个 AI 项目，从哪里开始？](start.md)**  
