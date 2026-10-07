@@ -21,15 +21,35 @@
 | OE、Lumina、AgentHub 等社区介绍 | 两种语言的 [home.md](content/guide/zh/home.md) 和 [lookout.md](content/guide/zh/lookout.md) |
 | 论文插图及来源 | [public/blog/guide/figures](public/blog/guide/figures) · [paper-figures.json](content/guide/paper-figures.json) |
 | 公司、社区图标及来源 | [public/blog/guide/brands](public/blog/guide/brands)；社区图标由 [guide-directory.mjs](scripts/guide-directory.mjs) 选择 |
+| 站点图标与社徽 | `favicon.png`（64px，用于 `<link rel="icon">`）· `logo-mark.png`（384px，用于页面上的小尺寸社徽）。`logo.png` 是 2048px 原图，不要直接放进页面——每页会多下载 3MB |
 | 编年史视频、封面和字幕 | [public/blog/guide/chronicle](public/blog/guide/chronicle)；视频位置写在 `home.md` 和 `directions.md` |
 | 导航里的页面与顺序 | [content/guide/manifest.json](content/guide/manifest.json) |
 | 全站 HTML 布局 | [scripts/build-guide.mjs](scripts/build-guide.mjs) |
 | 论文小卡与方向页布局 | [scripts/fieldnotes.mjs](scripts/fieldnotes.mjs) |
 | 颜色、间距和移动端排版 | [guide.css](public/blog/guide/guide.css) · [fieldnotes.css](public/blog/guide/fieldnotes.css) · [guide-motion.css](public/blog/guide/guide-motion.css) |
+| 两套版式共用的内容管线与校验 | [guide-model.mjs](scripts/guide-model.mjs) · [guide-verify.mjs](scripts/guide-verify.mjs) |
+| uestc 版的外壳与样式 | [guide-shell-uestc.mjs](scripts/guide-shell-uestc.mjs) · [guide-uestc.css](public/blog/guide/guide-uestc.css) |
 | 方向演示动画 | [scripts/guide-motion.mjs](scripts/guide-motion.mjs) · [guide-motion.js](public/blog/guide/guide-motion.js) |
 | 仓库首页介绍与导航 | [README.md](README.md) · [README_EN.md](README_EN.md) |
 
 网站的方向页会把 Markdown 正文与 JSON 中的简介、论文卡片拼在一起；Lookout 的公司目录由共享模块插入。查看这些页的全部内容时，可以同时看对应的在线页面和上表中的源文件。
+
+## 两套版式
+
+同一份内容渲染成两套版式，共用 `content/guide` 下的 Markdown、`fieldnotes` 数据和所有图片视频：
+
+| 命令 | 产物 | 版式 |
+| --- | --- | --- |
+| `npm run build` | `public/blog/guide/{zh,en}/` | 默认版式（暖色纸底、固定顶栏、右侧本页目录） |
+| `npm run build:uestc` | `public/blog/guide/guide-uestc/{zh,en}/` | [uestc_ai](https://github.com/Takamatsu-Hikaru) 平台版式（侧栏 + 顶栏、coral 强调色、Georgia 标题） |
+
+两套都用 [guide-model.mjs](scripts/guide-model.mjs) 生成内容，所以锚点、60 个问答、资料条目编号和搜索索引不会各自漂移。文章改 Markdown 时两边一起变；只有外壳和样式分别维护。
+
+uestc 版位于 `guide/guide-uestc/`，比默认版深一层，因此共享资源用 `../../` 引用。这个前缀由 [guide-model.mjs](scripts/guide-model.mjs) 的 `assets` 参数统一处理（默认 `'../'`，即默认版式的深度）——新增会输出图片链接的组件时，记得把 `assets` 透传下去，漏传会得到能通过肉眼检查但实际 404 的路径。构建会用 [guide-verify.mjs](scripts/guide-verify.mjs) 逐个解析并拦住这种错误。
+
+uestc 版目前只能通过 URL 直接访问（`guide-uestc/zh/`），默认版的首页没有指向它的链接——加上会改动现有页面，需要单独确认。
+
+改动 uestc 版样式时注意三点：它排在 `guide.css`、`fieldnotes.css`、`guide-motion.css` 之后加载，靠顺序赢下同优先级的规则；`#nav`、`#toc` 等 id 选择器需要在 [guide-uestc.css](public/blog/guide/guide-uestc.css) 里以同样的 id 优先级重新声明；断点必须保持 800px，因为 [guide.js](public/blog/guide/guide.js) 的移动端抽屉逻辑写死了这个宽度。
 
 ## 本地预览
 
@@ -37,12 +57,13 @@
 
 ```bash
 npm ci
-npm run build
+npm run build          # 或 npm run build:uestc
+npm test               # 两套版式的回归检查（node --test，无额外依赖）
 ```
 
-构建会检查页面链接、论文配图和科研问答数量。然后打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/en/index.html`。需要播放视频字幕时，可以通过本地 HTTP 服务预览。
+构建会检查页面链接、论文配图、科研问答数量，以及（uestc 版）全部本地资源引用能否解析。然后打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/guide-uestc/zh/index.html`。需要播放视频字幕时，可以通过本地 HTTP 服务预览。
 
-`public/blog/guide/zh/` 和 `en/` 是生成的 HTML，构建时会重建。文章改 Markdown；布局改生成模板；图片、视频、CSS 和浏览器脚本直接改 `public/blog/guide/` 内对应文件。
+`public/blog/guide/{zh,en}/` 和 `public/blog/guide/guide-uestc/{zh,en}/` 是生成的 HTML，构建时会重建。文章改 Markdown；布局改生成模板；图片、视频、CSS 和浏览器脚本直接改 `public/blog/guide/` 内对应文件。
 
 ## 补充内容
 
@@ -60,5 +81,7 @@ Articles live in [content/guide/en](content/guide/en), paired by filename with [
 - **Figures and attribution:** [figures](public/blog/guide/figures) and [paper-figures.json](content/guide/paper-figures.json).
 - **Video and subtitles:** [chronicle](public/blog/guide/chronicle), embedded in `home.md` and `directions.md`.
 - **HTML layout:** [build-guide.mjs](scripts/build-guide.mjs) and [fieldnotes.mjs](scripts/fieldnotes.mjs). Styling and browser scripts are in [public/blog/guide](public/blog/guide).
+- **Shared content pipeline:** [guide-model.mjs](scripts/guide-model.mjs) feeds both editions; [guide-verify.mjs](scripts/guide-verify.mjs) resolves every asset reference at build time.
+- **Second edition (uestc_ai skin):** [guide-shell-uestc.mjs](scripts/guide-shell-uestc.mjs) and [guide-uestc.css](public/blog/guide/guide-uestc.css).
 
-Use Node.js 22+, run `npm ci` and `npm run build`, then open the generated guide. Generated language folders are rebuilt from source; edit Markdown for articles and templates for layout. Keep resource descriptions concrete and link to original sources. Contributions in either language are welcome.
+Use Node.js 22+, run `npm ci` and `npm run build` (or `npm run build:uestc` for the second edition), then open the generated guide. `npm test` runs the regression checks over both editions. Generated language folders are rebuilt from source; edit Markdown for articles and templates for layout. Keep resource descriptions concrete and link to original sources. Contributions in either language are welcome.

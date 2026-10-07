@@ -1,4 +1,4 @@
-<p align="center"><img src="public/blog/guide/logo.png" width="190" alt="UESTC AI Club"></p>
+<p align="center"><img src="public/blog/guide/logo-mark.png" width="190" alt="UESTC AI Club"></p>
 
 <h1 align="center">AI Research Guide</h1>
 <p align="center">University choices, your first research project, and lessons along the way</p>

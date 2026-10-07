@@ -1,6 +1,11 @@
 node_modules/
 work/
+dist/
 public/blog/guide/zh/
 public/blog/guide/en/
 public/blog/guide/index.html
 public/blog/guide/search-data.js
+public/blog/guide/guide-uestc/zh/
+public/blog/guide/guide-uestc/en/
+public/blog/guide/guide-uestc/index.html
+public/blog/guide/guide-uestc/search-data.js

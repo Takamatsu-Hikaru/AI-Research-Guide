@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-guide.mjs"
+    "build": "node scripts/build-guide.mjs",
+    "build:uestc": "node scripts/build-guide-uestc.mjs",
+    "build:uestc:standalone": "node scripts/build-guide-uestc.mjs --standalone",
+    "test": "node --test"
   },
   "dependencies": {
     "marked": "18.0.14"

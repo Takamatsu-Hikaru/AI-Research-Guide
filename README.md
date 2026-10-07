@@ -1,4 +1,4 @@
-<p align="center"><img src="public/blog/guide/logo.png" width="190" alt="UESTC AI 社"></p>
+<p align="center"><img src="public/blog/guide/logo-mark.png" width="190" alt="UESTC AI 社"></p>
 
 <h1 align="center">AI 科研入门指南</h1>
 <p align="center">大学选择、第一项研究与一路上的经验</p>
@@ -72,7 +72,11 @@
 
 ```bash
 npm ci
-npm run build
+npm run build          # 默认版式
+npm run build:uestc    # 第二套版式（uestc_ai 风格）
+npm test               # 两套版式的回归检查
 ```
 
-打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/en/index.html`。GitHub Pages 会在主分支更新后自动构建发布。
+打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/en/index.html`；第二套版式在 `public/blog/guide/guide-uestc/zh/index.html`。GitHub Pages 会在主分支更新后自动构建发布。
+
+同一份 Markdown、方向数据、图片和视频渲染成两套版式，内容不会各自漂移；改动与分工见[更新与贡献说明](CONTRIBUTING.md)。
