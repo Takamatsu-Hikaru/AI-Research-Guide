@@ -2,7 +2,7 @@
 
 <h1 align="center">AI 科研入门指南</h1>
 <p align="center">大学选择、第一项研究与一路上的经验</p>
-<p align="center"><b>中文</b> · <a href="README_EN.md">English</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/">在线阅读</a> · <a href="https://takamatsu-hikaru.github.io/blog/guide/zh/index.html">个人主页版</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html">讨论区</a></p>
+<p align="center"><b>中文</b> · <a href="README_EN.md">English</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/">在线阅读</a> · <a href="https://wiki.uestcai.top/zh/">社团平台版</a> · <a href="https://takamatsu-hikaru.github.io/blog/guide/zh/index.html">个人主页版</a> · <a href="https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/ama.html">讨论区</a></p>
 
 这份指南面向刚进入大学、想了解 AI 和科研的同学。这里有我们对大学选择与科研入门的回答，也整理了入门项目、各方向的代表论文、课程和工具。联系老师、第一次进组、实验失败，以及和同龄人比较时的焦虑，也在其中。
 
@@ -77,6 +77,8 @@ npm run build:uestc    # 第二套版式（uestc_ai 风格）
 npm test               # 两套版式的回归检查
 ```
 
-打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/en/index.html`；第二套版式在 `public/blog/guide/guide-uestc/zh/index.html`。GitHub Pages 会在主分支更新后自动构建发布。
+打开 `public/blog/guide/zh/index.html` 或 `public/blog/guide/en/index.html`；第二套版式在 `public/blog/guide/guide-uestc/zh/index.html`。
+
+默认版式发布到 [GitHub Pages](https://takamatsu-hikaru.github.io/AI-Research-Guide/zh/)，第二套版式发布到 [wiki.uestcai.top](https://wiki.uestcai.top/zh/)，都由 GitHub Actions 在主分支更新后自动构建发布。
 
 同一份 Markdown、方向数据、图片和视频渲染成两套版式，内容不会各自漂移；改动与分工见[更新与贡献说明](CONTRIBUTING.md)。
