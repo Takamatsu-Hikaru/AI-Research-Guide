@@ -245,6 +245,24 @@ test('home pages do not emit an orphaned community-directory wrapper', () => {
   }
 });
 
+test('the mobile menu sits at the start of the topbar, as uestc_ai does', () => {
+  // uestc_ai's AppShell puts the drawer trigger first in .app-topbar, before
+  // .topbar-context, and lets justify-content:space-between form
+  // "menu | context | actions". The drawer slides in from the left, so the
+  // trigger belongs on that side; the right is for actions. This started out
+  // inside .topbar-actions and read wrong on a phone.
+  for (const lang of LANGS) {
+    const html = fs.readFileSync(path.join(uestc, lang, 'index.html'), 'utf8');
+    const bar = html.match(/<header class="app-topbar">([\s\S]*?)<\/header>/)?.[1];
+    assert.ok(bar, `${lang}: no .app-topbar`);
+    assert.match(bar.trimStart(), /^<button id="menu"/,
+      `${lang}: the menu button is no longer the first child of .app-topbar`);
+    const actions = bar.match(/<div class="topbar-actions">([\s\S]*?)<\/div>/)?.[1];
+    assert.ok(actions, `${lang}: no .topbar-actions`);
+    assert.doesNotMatch(actions, /id="menu"/, `${lang}: the menu button drifted back into .topbar-actions`);
+  }
+});
+
 test('image assets are sized for the role they are used in', () => {
   // The original logo.png was 2048x2048 / 3.1MB and served as both the favicon
   // and a 40px header mark on every page — 3.1MB per page view. These ceilings
