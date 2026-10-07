@@ -34,7 +34,13 @@ const skin=assets+'guide-uestc.css';
 const {manifest,all}=loadGuide(root,assets);
 const report=validateGuide(all,manifest);
 
-if(STANDALONE)fs.rmSync(out,{recursive:true,force:true});
+// Clear stale output, but keep .vercel/ — the Vercel CLI writes its project
+// link there, and wiping it would force a re-link on every local deploy.
+if(STANDALONE&&fs.existsSync(out))
+ for(const entry of fs.readdirSync(out)){
+  if(entry==='.vercel')continue;
+  fs.rmSync(path.join(out,entry),{recursive:true,force:true});
+ }
 for(const lang of ['zh','en']){
  fs.mkdirSync(path.join(out,lang),{recursive:true});
  for(const [index,p] of all[lang].entries())
@@ -55,6 +61,10 @@ if(STANDALONE){
  fs.writeFileSync(path.join(out,'.nojekyll'),'');
  // Edge redirect for "/" so the root never renders the meta-refresh page.
  fs.writeFileSync(path.join(out,'vercel.json'),vercelConfig);
+ // Vercel does serve dotfiles (/.nojekyll comes back 200), so the local state
+ // the CLI drops in here — .env.local carries a VERCEL_OIDC_TOKEN — must be
+ // excluded explicitly rather than left to the CLI's default ignore list.
+ fs.writeFileSync(path.join(out,'.vercelignore'),['# Local Vercel state and CLI scratch, never part of the deployment.','.vercel','.env.local','.gitignore',''].join('\n'));
  fs.writeFileSync(path.join(out,'README.md'),`# AI 科研入门指南 · uestc 版\n\n自包含的静态站点包,直接以本目录为根发布即可。入口:\`zh/index.html\`(\`en/index.html\` 为英文)。\n\n没有任何构建步骤或服务端依赖;所有资源都已在包内。唯一的外部请求是 \`zh/ama.html\` / \`en/ama.html\` 运行时从 GitHub 拉取讨论区数据。\n\n内容由 \`scripts/build-guide-uestc.mjs --standalone\` 从仓库的 \`content/guide\` 生成,不要直接改这里的 HTML。\n`);
 }
 

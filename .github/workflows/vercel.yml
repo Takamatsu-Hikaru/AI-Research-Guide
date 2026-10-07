@@ -1,0 +1,55 @@
+name: Deploy guide to Vercel
+
+# Publishes the uestc-skinned edition to Vercel production (wiki.uestcai.top)
+# on every push to main, including merged pull requests.
+#
+# Requires one repository secret: VERCEL_TOKEN.
+#   GitHub → Settings → Secrets and variables → Actions → New repository secret
+#   Name: VERCEL_TOKEN   Value: <token from https://vercel.com/account/tokens>
+#
+# VERCEL_ORG_ID / VERCEL_PROJECT_ID below are identifiers, not credentials — they
+# are the same values the Vercel CLI writes to .vercel/project.json, and they are
+# what lets the CLI link the project without an interactive prompt. Keeping them
+# here means only one secret has to be configured.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      VERCEL_ORG_ID: team_ogbPPwsazLMAPC84CKtZwlti
+      VERCEL_PROJECT_ID: prj_y2dDlf53KWKbVfyyVSWw2MejqsQP
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      # Builds both editions and runs the 16 regression invariants, so a broken
+      # build — or one edition drifting from the other — never reaches
+      # production. This is the same gate that runs locally.
+      - run: npm test
+
+      # Self-contained package: pages at the root's zh/ and en/, every asset
+      # copied in, plus vercel.json (307 "/" → "/zh/") and .vercelignore.
+      - run: npm run build:uestc:standalone
+
+      # The CLI reads VERCEL_TOKEN from the environment, so the token never
+      # appears on the command line.
+      - name: Deploy to Vercel production
+        run: npx --yes vercel@latest deploy dist/guide-uestc-guide --prod
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
