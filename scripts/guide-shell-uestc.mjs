@@ -23,7 +23,7 @@ export const SKIN=ASSETS+'guide-uestc.css';
 export function pageShell({p,pages,index,lang,assets=ASSETS,skin=SKIN}){
  const t=STRINGS[lang],other=lang==='zh'?'en':'zh';
  let group='';
- const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup" role="button" tabindex="0" aria-expanded="true">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`}).join('');
+ const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup" role="button" tabindex="0" aria-expanded="true">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`+(x.id==='basics'?`<a href="${assets}wiki/index.html">${lang==='zh'?'术语与会议速查':'Terminology & conferences · 中文'}</a>`:'')}).join('');
  const neighbors=[pages[index-1],pages[index+1]].map((x,i)=>x?`<a href="${filename(x.id)}"><small>${i?t.next:t.prev} ${i?'→':'←'}</small><span>${escape(x.id==='home'?t.home:x.title)}</span></a>`:'<span></span>').join('');
  // The article's <h1> moves into the title band, where uestc_ai sets its
  // Georgia display heading. `plain` already fed the search index during

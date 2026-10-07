@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "pre-training",
+    "term": "Pre-training",
+    "zh": "预训练",
+    "aliases": [
+      "pretraining",
+      "pretrain"
+    ],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "预训练是在较广泛的数据上学习通用表示或预测能力的初始训练阶段。",
+    "detail": [
+      "语言模型通常通过预测文本中的 token 学习语言和知识模式；预训练结束后的模型可以继续做领域适配或指令训练。"
+    ],
+    "related": [
+      "self-supervised-learning",
+      "base-model",
+      "post-training"
+    ],
+    "sources": [
+      {
+        "title": "Language Models are Unsupervised Multitask Learners",
+        "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "continued-pre-training",
+    "term": "Continued Pre-training",
+    "zh": "继续预训练",
+    "aliases": [
+      "CPT",
+      "continual pretraining"
+    ],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "继续预训练是在已有模型上延续预训练目标，继续使用新数据更新参数。",
+    "detail": [
+      "例如给通用语言模型加入更多法律文书并继续做下一词预测，使其更熟悉法律语言；数据混合比例会影响通用能力的保留。"
+    ],
+    "related": [
+      "pre-training",
+      "data-mixture",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "title": "Don't Stop Pretraining: Adapt Language Models to Domains and Tasks",
+        "url": "https://arxiv.org/abs/2004.10964"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "mid-training",
+    "term": "Mid-training",
+    "zh": "中期训练",
+    "aliases": [
+      "midtraining",
+      "midtrain"
+    ],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "中期训练是在通用预训练后，用更有针对性的数据继续培养模型能力的一段训练。",
+    "detail": [
+      "例如，先用大规模通用文本训练模型，再提高数学、代码或长文本在训练数据中的比例。模型由此接触更多目标任务所需的内容，随后可以继续做指令微调或强化学习。"
+    ],
+    "related": [
+      "continued-pre-training",
+      "post-training",
+      "long-context"
+    ],
+    "sources": [
+      {
+        "title": "SmolLM3: Smol, multilingual, long-context reasoner",
+        "url": "https://huggingface.co/blog/smollm3"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "post-training",
+    "term": "Post-training",
+    "zh": "后训练",
+    "aliases": [
+      "posttraining",
+      "posttrain"
+    ],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "后训练是在预训练之后，让模型更符合任务要求和交互方式的一系列训练。",
+    "detail": [
+      "常见流程包括监督微调、偏好优化和强化学习；不同模型可能只采用其中一部分，或分多轮交替进行。"
+    ],
+    "related": [
+      "sft",
+      "dpo",
+      "rlhf"
+    ],
+    "sources": [
+      {
+        "title": "Training language models to follow instructions with human feedback",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "fine-tuning",
+    "term": "Fine-tuning",
+    "zh": "微调",
+    "aliases": [
+      "finetuning",
+      "FT"
+    ],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "微调从已有模型参数出发，使用目标数据继续训练以适应特定用途。",
+    "detail": [
+      "可以调整全部参数，也可以只训练少量新增参数；用客服对话微调模型时，训练样本会直接影响它的回答方式。"
+    ],
+    "related": [
+      "transfer-learning",
+      "sft",
+      "continued-pre-training"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face TRL：SFT Trainer",
+        "url": "https://huggingface.co/docs/trl/sft_trainer"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "sft",
+    "term": "SFT",
+    "zh": "监督微调",
+    "aliases": [
+      "Supervised Fine-Tuning"
+    ],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "监督微调用输入与期望输出成对的数据继续训练已有模型。",
+    "detail": [
+      "给出用户问题和高质量回答，让模型提高生成这些回答的概率；对话微调还需要明确哪些角色的 token 参与损失计算。"
+    ],
+    "related": [
+      "fine-tuning",
+      "instruction-tuning",
+      "chat-template"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face TRL：SFT Trainer",
+        "url": "https://huggingface.co/docs/trl/sft_trainer"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "instruction-tuning",
+    "term": "Instruction Tuning",
+    "zh": "指令微调",
+    "aliases": [],
+    "category": "llm",
+    "group": "训练阶段",
+    "kind": "term",
+    "summary": "指令微调通过多种指令及相应答案，训练模型根据要求完成任务。",
+    "detail": [
+      "训练样本可以包括“总结这段话”“翻译成英文”“提取日期”等任务；它常用 SFT 实现，重点在于数据以任务指令组织。"
+    ],
+    "related": [
+      "sft",
+      "instruct-model",
+      "zero-shot"
+    ],
+    "sources": [
+      {
+        "title": "Finetuned Language Models Are Zero-Shot Learners",
+        "url": "https://arxiv.org/abs/2109.01652"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "alignment",
+    "term": "Alignment",
+    "zh": "对齐",
+    "aliases": [],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "对齐是使模型的行为更符合人的意图、偏好和使用要求的过程。",
+    "detail": [
+      "可通过示范回答、偏好比较或规则反馈训练模型，并用专门测试检查它是否遵循指令、保持事实性或满足应用约束。"
+    ],
+    "related": [
+      "rlhf",
+      "rlaif",
+      "instruction-tuning"
+    ],
+    "sources": [
+      {
+        "title": "Training language models to follow instructions with human feedback",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "rlhf",
+    "term": "RLHF",
+    "zh": "人类反馈强化学习",
+    "aliases": [
+      "Reinforcement Learning from Human Feedback"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "RLHF 利用人类对模型输出的反馈构造学习信号，并通过强化学习改进模型。",
+    "detail": [
+      "一种常见流程是收集两个回答的人工偏好，训练奖励模型，再用该模型的评分优化生成模型。"
+    ],
+    "related": [
+      "reward-model",
+      "alignment",
+      "dpo"
+    ],
+    "sources": [
+      {
+        "title": "Training language models to follow instructions with human feedback",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "rlaif",
+    "term": "RLAIF",
+    "zh": "AI 反馈强化学习",
+    "aliases": [
+      "Reinforcement Learning from AI Feedback"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "RLAIF 使用 AI 产生的评价或偏好作为强化学习的重要反馈来源。",
+    "detail": [
+      "评价模型可以依据一组原则比较两个回答，再把偏好用于训练奖励模型；评价规则和评价模型本身会影响训练方向。"
+    ],
+    "related": [
+      "rlhf",
+      "alignment",
+      "reward-model"
+    ],
+    "sources": [
+      {
+        "title": "Constitutional AI: Harmlessness from AI Feedback",
+        "url": "https://arxiv.org/abs/2212.08073"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "rlvr",
+    "term": "RLVR",
+    "zh": "可验证奖励强化学习",
+    "aliases": [
+      "Reinforcement Learning with Verifiable Rewards"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "RLVR 用能通过程序或规则检查的结果构造奖励来训练模型。",
+    "detail": [
+      "数学题可核对最终答案，代码题可运行测试；训练信号的可靠性取决于检查规则能否覆盖真正的任务要求。"
+    ],
+    "related": [
+      "verifier",
+      "reasoning-model",
+      "reward-hacking"
+    ],
+    "sources": [
+      {
+        "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2501.12948"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "dpo",
+    "term": "DPO",
+    "zh": "直接偏好优化",
+    "aliases": [
+      "Direct Preference Optimization"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "DPO 直接使用成对偏好数据训练模型，让偏好回答相对不偏好回答的概率提高。",
+    "detail": [
+      "典型数据包含同一个问题、被选中的回答和被拒绝的回答；训练目标还会利用参考模型来约束概率变化。"
+    ],
+    "related": [
+      "rlhf",
+      "sft",
+      "alignment"
+    ],
+    "sources": [
+      {
+        "title": "Direct Preference Optimization",
+        "url": "https://arxiv.org/abs/2305.18290"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "reward-model",
+    "term": "Reward Model",
+    "zh": "奖励模型",
+    "aliases": [
+      "RM"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "奖励模型是给候选输出或行为打分、提供训练或筛选信号的模型。",
+    "detail": [
+      "它可以根据人工偏好学习哪种回答更好，也可以用于从多个候选中选答案；高分所代表的标准来自其训练数据和目标。"
+    ],
+    "related": [
+      "rlhf",
+      "process-reward-model",
+      "outcome-reward-model"
+    ],
+    "sources": [
+      {
+        "title": "Training language models to follow instructions with human feedback",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "process-reward-model",
+    "term": "PRM",
+    "zh": "过程奖励模型",
+    "aliases": [
+      "Process Reward Model"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "过程奖励模型评估推理或任务执行过程中的中间步骤。",
+    "detail": [
+      "数学解题的 PRM 可以逐步检查每次变形是否合理，为搜索和候选筛选提供比最终答案更细的信号。"
+    ],
+    "related": [
+      "reward-model",
+      "outcome-reward-model",
+      "verifier"
+    ],
+    "sources": [
+      {
+        "title": "Let's Verify Step by Step",
+        "url": "https://arxiv.org/abs/2305.20050"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "outcome-reward-model",
+    "term": "ORM",
+    "zh": "结果奖励模型",
+    "aliases": [
+      "Outcome Reward Model"
+    ],
+    "category": "llm",
+    "group": "偏好与反馈训练",
+    "kind": "term",
+    "summary": "结果奖励模型主要根据完整回答或最终结果给出评分。",
+    "detail": [
+      "它可以判断一道题最终是否答对，而不给每个中间步骤单独标分；这种结果信号更容易收集，但较难指出错在何处。"
+    ],
+    "related": [
+      "reward-model",
+      "process-reward-model",
+      "rlvr"
+    ],
+    "sources": [
+      {
+        "title": "Let's Verify Step by Step",
+        "url": "https://arxiv.org/abs/2305.20050"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "transformer",
+    "term": "Transformer",
+    "zh": "Transformer 架构",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "Transformer 是以注意力机制和前馈网络为核心构建的神经网络架构。",
+    "detail": [
+      "文本会先变成 token 表示，再通过多层注意力和前馈计算；编码器、解码器及两者组合都可以基于 Transformer 构建。"
+    ],
+    "related": [
+      "attention",
+      "ffn",
+      "decoder"
+    ],
+    "sources": [
+      {
+        "title": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "attention",
+    "term": "Attention",
+    "zh": "注意力机制",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "注意力机制让模型根据相关程度，从一组表示中加权汇总信息。",
+    "detail": [
+      "处理“它”这个词时，模型可以给前文中相关对象更高的权重；不同注意力头可以学习不同的信息关联。"
+    ],
+    "related": [
+      "qkv",
+      "self-attention",
+      "cross-attention"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：MultiheadAttention",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "self-attention",
+    "term": "Self-Attention",
+    "zh": "自注意力",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "自注意力让同一序列中的位置互相读取信息。",
+    "detail": [
+      "句子中的每个 token 都可以基于允许访问的位置更新自己的表示；因果语言模型会屏蔽未来位置。"
+    ],
+    "related": [
+      "attention",
+      "causal-mask",
+      "qkv"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：MultiheadAttention",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "cross-attention",
+    "term": "Cross-Attention",
+    "zh": "交叉注意力",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "交叉注意力让一个序列从另一个序列的表示中读取信息。",
+    "detail": [
+      "在编码器—解码器翻译模型中，正在生成的译文可以通过交叉注意力读取原文编码结果。"
+    ],
+    "related": [
+      "attention",
+      "encoder",
+      "decoder"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：TransformerDecoderLayer",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerDecoderLayer.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "qkv",
+    "term": "Q / K / V",
+    "zh": "查询、键和值",
+    "aliases": [
+      "Query",
+      "Key",
+      "Value"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "Q、K、V 是注意力计算中分别用于发起查询、匹配相关性和提供内容的表示。",
+    "detail": [
+      "Q 与各个 K 计算匹配分数，分数归一化后用于加权汇总 V；它们通常由输入经过可学习的线性变换得到。"
+    ],
+    "related": [
+      "attention",
+      "self-attention",
+      "rope"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：scaled_dot_product_attention",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "ffn",
+    "term": "FFN",
+    "zh": "前馈网络",
+    "aliases": [
+      "Feed-Forward Network",
+      "MLP"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "Transformer 中的前馈网络通常对每个位置的表示分别做非线性变换。",
+    "detail": [
+      "常见结构先把表示扩展到更高维度，经过激活函数，再映射回原维度；MoE 通常把这一部分换成多个可选择的专家。"
+    ],
+    "related": [
+      "transformer",
+      "activation",
+      "moe"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：TransformerEncoderLayer",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "encoder",
+    "term": "Encoder",
+    "zh": "编码器",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "编码器把输入转换成便于后续处理的内部表示。",
+    "detail": [
+      "文本编码器可以输出每个词的上下文表示，用于分类、检索或供解码器读取；原始 Transformer 编码器使用双向自注意力。"
+    ],
+    "related": [
+      "decoder",
+      "embedding",
+      "self-attention"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：TransformerEncoderLayer",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "decoder",
+    "term": "Decoder",
+    "zh": "解码器",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "解码器把内部表示转换成目标形式的输出。",
+    "detail": [
+      "在文本生成中，Transformer 解码器可以根据已有文本逐个预测后续 token。在 VAE 中，解码器则把潜在向量还原成图像等数据。它接收什么表示、输出什么内容，由模型的任务和结构决定。"
+    ],
+    "related": [
+      "encoder",
+      "autoregressive",
+      "causal-mask"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：TransformerDecoderLayer",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerDecoderLayer.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "causal-mask",
+    "term": "Causal Mask",
+    "zh": "因果掩码",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "因果掩码限制每个位置只能读取当前及之前允许访问的位置。",
+    "detail": [
+      "预测句子下一个 token 时，训练过程会遮住后面的真实答案，避免模型提前看到未来信息。"
+    ],
+    "related": [
+      "self-attention",
+      "autoregressive",
+      "decoder"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：scaled_dot_product_attention",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "positional-encoding",
+    "term": "Positional Encoding",
+    "zh": "位置编码",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "位置编码向模型提供 token 在序列中的位置或相对次序信息。",
+    "detail": [
+      "同样的词换一个顺序可能改变意思；位置编码可通过向量相加或改变注意力计算等方式表达这种顺序。"
+    ],
+    "related": [
+      "rope",
+      "self-attention",
+      "token"
+    ],
+    "sources": [
+      {
+        "title": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "rope",
+    "term": "RoPE",
+    "zh": "旋转位置编码",
+    "aliases": [
+      "Rotary Position Embedding"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "旋转位置编码通过按位置旋转查询和键的向量，为注意力注入位置信息。",
+    "detail": [
+      "不同位置使用不同旋转角度，使注意力分数与相对位置建立联系；长上下文扩展常会调整这些位置相关的频率设置。"
+    ],
+    "related": [
+      "positional-encoding",
+      "qkv",
+      "long-context"
+    ],
+    "sources": [
+      {
+        "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+        "url": "https://arxiv.org/abs/2104.09864"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "normalization",
+    "term": "Normalization",
+    "zh": "归一化",
+    "aliases": [
+      "norm",
+      "LayerNorm",
+      "RMSNorm"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "神经网络中的归一化层通过调整表示的数值尺度来帮助稳定计算和训练。",
+    "detail": [
+      "LayerNorm 根据每个样本内部特征的均值和方差做处理；RMSNorm 使用均方根尺度，具体公式与放置位置随架构而变。"
+    ],
+    "related": [
+      "activation",
+      "transformer",
+      "residual-connection"
+    ],
+    "sources": [
+      {
+        "title": "Layer Normalization",
+        "url": "https://arxiv.org/abs/1607.06450"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "residual-connection",
+    "term": "Residual Connection",
+    "zh": "残差连接",
+    "aliases": [
+      "skip connection"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "残差连接把一层的输入直接与该层变换后的输出相加。",
+    "detail": [
+      "写成 y=x+F(x) 时，网络只需学习对已有表示的修正；这种连接有助于深层网络传递信息和梯度。"
+    ],
+    "related": [
+      "transformer",
+      "gradient",
+      "normalization"
+    ],
+    "sources": [
+      {
+        "title": "Deep Residual Learning for Image Recognition",
+        "url": "https://arxiv.org/abs/1512.03385"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "moe",
+    "term": "MoE",
+    "zh": "混合专家",
+    "aliases": [
+      "Mixture of Experts"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "混合专家把部分网络划分为多个专家，并为每个输入选择其中一部分参与计算。",
+    "detail": [
+      "模型可能拥有大量总参数，但每个 token 只激活少量专家；比较模型时要同时看总参数量和每次激活的参数量。"
+    ],
+    "related": [
+      "expert",
+      "moe-router",
+      "dense-model"
+    ],
+    "sources": [
+      {
+        "title": "Switch Transformers",
+        "url": "https://arxiv.org/abs/2101.03961"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "moe-router",
+    "term": "Router",
+    "zh": "专家路由器",
+    "aliases": [
+      "MoE router",
+      "gating network"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "专家路由器为每个输入计算应该交给哪些专家及其组合权重。",
+    "detail": [
+      "路由器可为一个 token 选择分数最高的两个专家；训练还可能加入负载均衡目标，避免少数专家过忙而其他专家闲置。"
+    ],
+    "related": [
+      "moe",
+      "expert",
+      "ffn"
+    ],
+    "sources": [
+      {
+        "title": "Switch Transformers",
+        "url": "https://arxiv.org/abs/2101.03961"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "expert",
+    "term": "Expert",
+    "zh": "专家网络",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "专家网络是 MoE 中可被路由器选择调用的子网络。",
+    "detail": [
+      "专家通常是独立的前馈模块；“专家”是结构名称，其学到的分工未必能对应数学、代码等清晰的人类学科。"
+    ],
+    "related": [
+      "moe",
+      "moe-router",
+      "ffn"
+    ],
+    "sources": [
+      {
+        "title": "Switch Transformers",
+        "url": "https://arxiv.org/abs/2101.03961"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "dense-model",
+    "term": "Dense Model",
+    "zh": "稠密模型",
+    "aliases": [
+      "dense"
+    ],
+    "category": "llm",
+    "group": "模型结构",
+    "kind": "term",
+    "summary": "稠密模型通常在每个 token 的前向计算中使用各层的同一套主要参数。",
+    "detail": [
+      "与稀疏 MoE 相比，稠密模型没有按 token 只挑选少量专家的步骤；“稠密”在其他上下文中也可用来描述矩阵存储或连接方式。"
+    ],
+    "related": [
+      "moe",
+      "parameter",
+      "ffn"
+    ],
+    "sources": [
+      {
+        "title": "Switch Transformers",
+        "url": "https://arxiv.org/abs/2101.03961"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "tokenizer",
+    "term": "Tokenizer",
+    "zh": "分词器",
+    "aliases": [],
+    "category": "llm",
+    "group": "输入与上下文",
+    "kind": "term",
+    "summary": "分词器把文本转换成模型能处理的 token 序列及编号。",
+    "detail": [
+      "一个汉字、单词、词片段或标点都可能成为 token；不同模型使用不同词表和切分规则，因此同一段文字的 token 数可能不同。"
+    ],
+    "related": [
+      "token",
+      "embedding",
+      "chat-template"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Tokenizers",
+        "url": "https://huggingface.co/docs/transformers/tokenizer_summary"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "token",
+    "term": "Token",
+    "zh": "词元",
+    "aliases": [],
+    "category": "llm",
+    "group": "输入与上下文",
+    "kind": "term",
+    "summary": "Token 是模型处理文本序列时使用的基本单位。",
+    "detail": [
+      "“unbelievable”可能被切成几个片段，某些特殊 token 则表示消息边界或结束；上下文长度和生成用量通常按 token 计算。"
+    ],
+    "related": [
+      "tokenizer",
+      "context-window",
+      "autoregressive"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Tokenizers",
+        "url": "https://huggingface.co/docs/transformers/tokenizer_summary"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "context-window",
+    "term": "Context Window",
+    "zh": "上下文窗口",
+    "aliases": [],
+    "category": "llm",
+    "group": "输入与上下文",
+    "kind": "term",
+    "summary": "上下文窗口是一次模型处理所能容纳的 token 范围或上限。",
+    "detail": [
+      "系统指令、用户输入、历史消息和工具结果都会占用上下文；具体接口还可能另设最大输出长度，需要分别查看。"
+    ],
+    "related": [
+      "token",
+      "long-context",
+      "context-engineering"
+    ],
+    "sources": [
+      {
+        "title": "Lost in the Middle: How Language Models Use Long Contexts",
+        "url": "https://arxiv.org/abs/2307.03172"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "prompt",
+    "term": "Prompt",
+    "zh": "提示词",
+    "aliases": [
+      "提示"
+    ],
+    "category": "llm",
+    "group": "输入与上下文",
+    "kind": "term",
+    "summary": "提示词是提供给模型、用于说明任务及相关信息的输入内容。",
+    "detail": [
+      "一个实用提示可以包含任务、必要背景、示例和输出格式；把原始材料与操作指令分清楚，有助于模型正确理解要求。"
+    ],
+    "related": [
+      "system-prompt",
+      "few-shot",
+      "context-engineering"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Prompting",
+        "url": "https://huggingface.co/docs/transformers/tasks/prompting"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "system-prompt",
+    "term": "System Prompt",
+    "zh": "系统提示词",
+    "aliases": [
+      "system message"
+    ],
+    "category": "llm",
+    "group": "输入与上下文",
+    "kind": "term",
+    "summary": "系统提示词是应用在较高指令层设置的角色、行为规则和任务边界。",
+    "detail": [
+      "例如应用可以在系统消息中规定客服语气和可调用工具；模型如何表达和处理这类消息，取决于接口及聊天模板。"
+    ],
+    "related": [
+      "prompt",
+      "chat-template",
+      "prompt-injection"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Chat templates",
+        "url": "https://huggingface.co/docs/transformers/main/en/chat_templating"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "chat-template",
+    "term": "Chat Template",
+    "zh": "聊天模板",
+    "aliases": [],
+    "category": "llm",
+    "group": "输入与上下文",
+    "kind": "term",
+    "summary": "聊天模板把带角色的多轮消息转换成模型训练和生成所需的具体序列格式。",
+    "detail": [
+      "模板会添加角色标记、分隔符及生成起始标记；同一组消息使用错误模板，可能让模型误认说话者或错误续写。"
+    ],
+    "related": [
+      "tokenizer",
+      "system-prompt",
+      "instruct-model"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Chat templates",
+        "url": "https://huggingface.co/docs/transformers/main/en/chat_templating"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "autoregressive",
+    "term": "Autoregressive",
+    "zh": "自回归生成",
+    "aliases": [
+      "AR"
+    ],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "自回归生成根据已有输入和已生成内容，依次预测后续 token。",
+    "detail": [
+      "模型先预测第一个新 token，再把它加入上下文预测下一个；每一步选出的内容都会影响后面的生成。"
+    ],
+    "related": [
+      "decoder",
+      "causal-mask",
+      "decoding"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：文本生成",
+        "url": "https://huggingface.co/docs/transformers/main/en/llm_tutorial"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "decoding",
+    "term": "Decoding",
+    "zh": "解码策略",
+    "aliases": [],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "解码策略规定怎样把模型输出的 token 概率转成实际生成序列。",
+    "detail": [
+      "可以每次选择最高概率 token，也可以按概率采样或保留多个候选路径；策略会影响多样性、质量和计算量。"
+    ],
+    "related": [
+      "temperature",
+      "top-k",
+      "beam-search"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：生成策略",
+        "url": "https://huggingface.co/docs/transformers/main/en/generation_strategies"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "temperature",
+    "term": "Temperature",
+    "zh": "采样温度",
+    "aliases": [],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "采样温度通过缩放 logits 调整 token 概率分布的尖锐程度。",
+    "detail": [
+      "较低温度通常更偏向高概率候选，较高温度通常增加多样性；具体接口对零温度的处理需要看其实现。"
+    ],
+    "related": [
+      "logit",
+      "top-p",
+      "decoding"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：GenerationConfig",
+        "url": "https://huggingface.co/docs/transformers/main/en/main_classes/text_generation"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "top-k",
+    "term": "Top-k Sampling",
+    "zh": "前 k 项采样",
+    "aliases": [
+      "top_k"
+    ],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "Top-k 采样只在当前概率最高的 k 个 token 中进行抽样。",
+    "detail": [
+      "若 k=20，每一步先保留概率前 20 的 token，再重新归一化并采样；这里的 k 是单步候选数，与 pass@k 的多次完整回答不同。"
+    ],
+    "related": [
+      "top-p",
+      "temperature",
+      "decoding"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：GenerationConfig",
+        "url": "https://huggingface.co/docs/transformers/main/en/main_classes/text_generation"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "top-p",
+    "term": "Top-p Sampling",
+    "zh": "核采样",
+    "aliases": [
+      "nucleus sampling",
+      "top_p"
+    ],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "Top-p 采样从累计概率达到阈值 p 的高概率 token 集合中抽样。",
+    "detail": [
+      "候选数量会随分布变化：模型很确定时集合较小，不确定时集合较大；它常与温度共同控制生成随机性。"
+    ],
+    "related": [
+      "top-k",
+      "temperature",
+      "decoding"
+    ],
+    "sources": [
+      {
+        "title": "The Curious Case of Neural Text Degeneration",
+        "url": "https://arxiv.org/abs/1904.09751"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "beam-search",
+    "term": "Beam Search",
+    "zh": "束搜索",
+    "aliases": [],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "束搜索在每个生成步骤保留若干条得分较高的候选序列继续扩展。",
+    "detail": [
+      "束宽为 4 时会保留 4 条候选路径；实际得分可能包含长度惩罚，最终选择也取决于结束条件。"
+    ],
+    "related": [
+      "decoding",
+      "autoregressive",
+      "stop-sequence"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：生成策略",
+        "url": "https://huggingface.co/docs/transformers/main/en/generation_strategies"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "stop-sequence",
+    "term": "Stop Sequence",
+    "zh": "停止序列",
+    "aliases": [
+      "stop",
+      "EOS"
+    ],
+    "category": "llm",
+    "group": "生成与采样",
+    "kind": "term",
+    "summary": "停止序列是生成过程中触发结束的一段指定内容或特殊标记。",
+    "detail": [
+      "应用可以设置遇到某个分隔符就停止，模型也可能生成 EOS 结束 token；达到最大生成长度则是另一种停止条件。"
+    ],
+    "related": [
+      "token",
+      "decoding",
+      "chat-template"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：GenerationConfig",
+        "url": "https://huggingface.co/docs/transformers/main/en/main_classes/text_generation"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "in-context-learning",
+    "term": "ICL",
+    "zh": "上下文学习",
+    "aliases": [
+      "In-Context Learning"
+    ],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "上下文学习是模型根据当前输入中的说明和例子适应任务的现象。",
+    "detail": [
+      "在提示里给出几组“句子→情感标签”，模型就可能按相同格式处理新句子；这一过程通常不更新模型权重。"
+    ],
+    "related": [
+      "few-shot",
+      "zero-shot",
+      "prompt"
+    ],
+    "sources": [
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "zero-shot",
+    "term": "Zero-shot",
+    "zh": "零样本提示",
+    "aliases": [
+      "zero-shot prompting"
+    ],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "零样本提示只说明当前任务，不提供该任务的示例输入输出对。",
+    "detail": [
+      "例如直接要求“把这句话翻译成法语”；这里的零样本指当前提示中的示例数，模型预训练时仍可能接触过相关任务。"
+    ],
+    "related": [
+      "few-shot",
+      "in-context-learning",
+      "instruction-tuning"
+    ],
+    "sources": [
+      {
+        "title": "Finetuned Language Models Are Zero-Shot Learners",
+        "url": "https://arxiv.org/abs/2109.01652"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "few-shot",
+    "term": "Few-shot",
+    "zh": "少样本提示",
+    "aliases": [
+      "few-shot prompting"
+    ],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "少样本提示在输入中放入少量示例，让模型参照完成新任务。",
+    "detail": [
+      "先展示两三个产品评论及其分类结果，再要求分类下一条评论；示例的格式、代表性和顺序都可能影响输出。"
+    ],
+    "related": [
+      "zero-shot",
+      "in-context-learning",
+      "prompt"
+    ],
+    "sources": [
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "chain-of-thought",
+    "term": "CoT",
+    "zh": "思维链",
+    "aliases": [
+      "Chain of Thought"
+    ],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "思维链是在得出最终答案前生成或使用一串中间推理步骤的方法。",
+    "detail": [
+      "解一道应用题时，模型可以先列出已知条件，算出中间量，再给出结论。这些中间推理步骤串在一起，就是一条思维链。"
+    ],
+    "related": [
+      "reasoning",
+      "self-consistency",
+      "process-reward-model"
+    ],
+    "sources": [
+      {
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+        "url": "https://arxiv.org/abs/2201.11903"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "reasoning",
+    "term": "Reasoning",
+    "zh": "推理能力",
+    "aliases": [],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "推理能力是根据条件、规则或证据进行多步分析并得到结论的能力。",
+    "detail": [
+      "数学证明、程序调试和计划制定都可能需要推理；评估时要查看最终结果及必要过程，区别于仅复述已有事实。"
+    ],
+    "related": [
+      "chain-of-thought",
+      "reasoning-model",
+      "verifier"
+    ],
+    "sources": [
+      {
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+        "url": "https://arxiv.org/abs/2201.11903"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "test-time-compute",
+    "term": "Test-time Compute",
+    "zh": "测试时计算",
+    "aliases": [
+      "inference-time compute",
+      "test-time scaling"
+    ],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "测试时计算是模型在回答阶段用于生成、搜索、检查和选择答案的计算开销。",
+    "detail": [
+      "可以让模型思考更久，也可以生成多条候选后由验证器筛选；test-time scaling 研究增加这类预算时，效果如何变化。"
+    ],
+    "related": [
+      "self-consistency",
+      "verifier",
+      "reasoning-model"
+    ],
+    "sources": [
+      {
+        "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+        "url": "https://arxiv.org/abs/2408.03314"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "self-consistency",
+    "term": "Self-Consistency",
+    "zh": "自一致性",
+    "aliases": [],
+    "category": "llm",
+    "group": "提示与推理方法",
+    "kind": "term",
+    "summary": "自一致性通过采样多条推理路径并汇总最终答案来提高结果稳定性。",
+    "detail": [
+      "同一道数学题生成多次解题过程后，可对归一化后的最终答案投票；这会增加推理成本，也依赖候选之间具有足够差异。"
+    ],
+    "related": [
+      "chain-of-thought",
+      "test-time-compute",
+      "temperature"
+    ],
+    "sources": [
+      {
+        "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "url": "https://arxiv.org/abs/2203.11171"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "hallucination",
+    "term": "Hallucination",
+    "zh": "幻觉",
+    "aliases": [],
+    "category": "llm",
+    "group": "事实性与长文本",
+    "kind": "term",
+    "summary": "幻觉是模型生成了错误、无依据或与给定材料不符的内容。",
+    "detail": [
+      "例如编造一篇不存在的论文，或把文档中的日期说错；可以用来源核查、检索和程序验证分别检查不同类型的错误。"
+    ],
+    "related": [
+      "grounding",
+      "rag",
+      "verifier"
+    ],
+    "sources": [
+      {
+        "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+        "url": "https://arxiv.org/abs/2109.07958"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "grounding",
+    "term": "Grounding",
+    "zh": "依据绑定",
+    "aliases": [
+      "有据生成"
+    ],
+    "category": "llm",
+    "group": "事实性与长文本",
+    "kind": "term",
+    "summary": "依据绑定让模型的回答与可检查的文档、工具结果或环境信息建立对应。",
+    "detail": [
+      "文档问答可以把相关段落提供给模型，并要求答案中的事实能够在段落中定位；来源存在和来源真正支持结论是两项不同检查。"
+    ],
+    "related": [
+      "rag",
+      "hallucination",
+      "retrieval"
+    ],
+    "sources": [
+      {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "url": "https://arxiv.org/abs/2005.11401"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "long-context",
+    "term": "Long Context",
+    "zh": "长上下文",
+    "aliases": [],
+    "category": "llm",
+    "group": "事实性与长文本",
+    "kind": "term",
+    "summary": "长上下文能力指模型处理较长输入并有效利用其中信息的能力。",
+    "detail": [
+      "长上下文让模型一次接收整份长文档、多个文件或较长的对话历史。使用这些信息时，模型需要检索远处的细节，并把分散在不同位置的内容联系起来。"
+    ],
+    "related": [
+      "context-window",
+      "rope",
+      "context-engineering"
+    ],
+    "sources": [
+      {
+        "title": "Lost in the Middle: How Language Models Use Long Contexts",
+        "url": "https://arxiv.org/abs/2307.03172"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "base-model",
+    "term": "Base Model",
+    "zh": "基础预训练模型",
+    "aliases": [
+      "base"
+    ],
+    "category": "llm",
+    "group": "模型类型",
+    "kind": "term",
+    "summary": "基础预训练模型通常指完成预训练、尚未经过指令或对话适配的模型版本。",
+    "detail": [
+      "输入一句问题时，它可能继续补写类似文本；用于聊天前通常还需要指令微调或其他后训练。"
+    ],
+    "related": [
+      "pre-training",
+      "instruct-model",
+      "foundation-model"
+    ],
+    "sources": [
+      {
+        "title": "Language Models are Unsupervised Multitask Learners",
+        "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "instruct-model",
+    "term": "Instruct Model",
+    "zh": "指令模型",
+    "aliases": [
+      "chat model",
+      "对话模型"
+    ],
+    "category": "llm",
+    "group": "模型类型",
+    "kind": "term",
+    "summary": "指令模型经过训练，能够较直接地理解并执行自然语言任务要求。",
+    "detail": [
+      "这类模型经过指令数据等训练，学习按要求回答问题、写作或完成任务。模型名称中的 Instruct 或 Chat 常表示做过这类适配。聊天模板规定了用户、助手等角色和消息的排列方式，输入会按该格式交给模型。"
+    ],
+    "related": [
+      "instruction-tuning",
+      "base-model",
+      "chat-template"
+    ],
+    "sources": [
+      {
+        "title": "Finetuned Language Models Are Zero-Shot Learners",
+        "url": "https://arxiv.org/abs/2109.01652"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "reasoning-model",
+    "term": "Reasoning Model",
+    "zh": "推理模型",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型类型",
+    "kind": "term",
+    "summary": "推理模型经过专门训练，倾向于在作答前分配更多步骤处理复杂问题。",
+    "detail": [
+      "训练可能结合可验证奖励或推理过程数据；模型可以在数学、代码等任务中使用额外计算，但具体优势要看对应评测。"
+    ],
+    "related": [
+      "rlvr",
+      "test-time-compute",
+      "chain-of-thought"
+    ],
+    "sources": [
+      {
+        "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2501.12948"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "foundation-model",
+    "term": "Foundation Model",
+    "zh": "基础模型",
+    "aliases": [],
+    "category": "llm",
+    "group": "模型类型",
+    "kind": "term",
+    "summary": "基础模型是在广泛数据上训练、能够进一步适配多种下游任务的模型。",
+    "detail": [
+      "同一个基础模型可以用于分类、问答、生成或其他应用；这个名称强调通用适配角色，与某个模型是否完成对话后训练属于不同维度。"
+    ],
+    "related": [
+      "pre-training",
+      "transfer-learning",
+      "base-model"
+    ],
+    "sources": [
+      {
+        "title": "On the Opportunities and Risks of Foundation Models",
+        "url": "https://arxiv.org/abs/2108.07258"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "open-weight-model",
+    "term": "Open-weight Model",
+    "zh": "开放权重模型",
+    "aliases": [
+      "open weights"
+    ],
+    "category": "llm",
+    "group": "模型类型",
+    "kind": "term",
+    "summary": "开放权重模型向用户提供可下载的模型参数文件。",
+    "detail": [
+      "下载权重后可在合适的设备和软件上运行；商业使用、再分发与修改条件仍由具体许可证决定，训练数据也未必同时公开。"
+    ],
+    "related": [
+      "weight",
+      "open-source-model",
+      "checkpoint"
+    ],
+    "sources": [
+      {
+        "title": "The Llama 3 Herd of Models",
+        "url": "https://arxiv.org/abs/2407.21783"
+      },
+      {
+        "title": "Open Source AI Definition 1.0",
+        "url": "https://opensource.org/ai/open-source-ai-definition"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  },
+  {
+    "id": "open-source-model",
+    "term": "Open-source AI Model",
+    "zh": "开源 AI 模型",
+    "aliases": [
+      "open source model"
+    ],
+    "category": "llm",
+    "group": "模型类型",
+    "kind": "term",
+    "summary": "开源 AI 模型按所采用的开源定义提供使用、研究、修改和分享模型所需的材料与权限。",
+    "detail": [
+      "以 OSI 的定义为例，除了参数，还涉及代码和用于理解、重建系统的数据说明；判断具体模型时应查看实际发布材料及许可证。"
+    ],
+    "related": [
+      "open-weight-model",
+      "foundation-model",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "Open Source AI Definition 1.0",
+        "url": "https://opensource.org/ai/open-source-ai-definition"
+      }
+    ],
+    "categories": [
+      "llm"
+    ]
+  }
+]

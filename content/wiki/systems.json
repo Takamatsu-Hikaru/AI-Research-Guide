@@ -1,0 +1,802 @@
+[
+  {
+    "id": "cuda",
+    "term": "CUDA",
+    "zh": "CUDA 并行计算平台",
+    "aliases": [],
+    "category": "systems",
+    "group": "GPU 与计算",
+    "kind": "term",
+    "summary": "CUDA 是 NVIDIA 提供的 GPU 并行计算平台和编程模型。",
+    "detail": [
+      "深度学习框架可以通过 CUDA 库把矩阵计算交给 NVIDIA GPU；运行时需要硬件、驱动和软件版本相互兼容。"
+    ],
+    "related": [
+      "kernel",
+      "vram",
+      "mixed-precision"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA：CUDA Programming Guide",
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/index.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "kernel",
+    "term": "Kernel",
+    "zh": "GPU 核函数",
+    "aliases": [
+      "GPU kernel",
+      "CUDA kernel"
+    ],
+    "category": "systems",
+    "group": "GPU 与计算",
+    "kind": "term",
+    "summary": "GPU 核函数是在 GPU 上由大量线程并行执行的一段计算程序。",
+    "detail": [
+      "矩阵乘法、归一化或注意力计算可以由一个或多个核函数完成；把相邻操作融合进同一个核函数，可能减少数据搬运和启动开销。"
+    ],
+    "related": [
+      "cuda",
+      "flash-attention",
+      "flops"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA：CUDA Programming Guide",
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/index.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "flops",
+    "term": "FLOPs / FLOPS",
+    "zh": "浮点运算量",
+    "aliases": [
+      "FLOP",
+      "FLOPS"
+    ],
+    "category": "systems",
+    "group": "GPU 与计算",
+    "kind": "term",
+    "summary": "FLOPs 表示浮点运算次数；FLOPS 或 FLOP/s 表示每秒浮点运算次数。",
+    "detail": [
+      "估算一次模型前向传播要做多少计算，用的是运算次数 FLOPs。介绍 GPU 每秒能完成多少计算，用的是运算速率 FLOPS，例如每秒一万亿次浮点运算写作 1 TFLOPS。",
+      "讨论计算时，要同时看数值精度和计算方式；FP32、FP16 等不同精度下，硬件的运算速率会不同。"
+    ],
+    "related": [
+      "kernel",
+      "throughput",
+      "latency"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA：GPU Performance Background",
+        "url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "vram",
+    "term": "VRAM",
+    "zh": "显存",
+    "aliases": [
+      "GPU memory"
+    ],
+    "category": "systems",
+    "group": "GPU 与计算",
+    "kind": "term",
+    "summary": "显存是 GPU 用来保存模型参数、中间结果和其他计算数据的内存。",
+    "detail": [
+      "训练时除权重外，还要存梯度、优化器状态和激活值；推理时，长上下文和较多并发请求会增加 KV 缓存占用。"
+    ],
+    "related": [
+      "oom",
+      "kv-cache",
+      "mixed-precision"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：CUDA memory management",
+        "url": "https://docs.pytorch.org/docs/stable/notes/cuda.html#cuda-memory-management"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "oom",
+    "term": "OOM",
+    "zh": "内存不足",
+    "aliases": [
+      "Out of Memory",
+      "CUDA out of memory"
+    ],
+    "category": "systems",
+    "group": "GPU 与计算",
+    "kind": "term",
+    "summary": "OOM 表示程序申请的内存超过当前可用容量。",
+    "detail": [
+      "GPU 训练报 OOM 时，可以查看批量大小、序列长度及模型状态占用；推理时也需要检查并发请求和 KV 缓存。"
+    ],
+    "related": [
+      "vram",
+      "batch",
+      "kv-cache"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：CUDA memory management",
+        "url": "https://docs.pytorch.org/docs/stable/notes/cuda.html#cuda-memory-management"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "mixed-precision",
+    "term": "Mixed Precision",
+    "zh": "混合精度",
+    "aliases": [],
+    "category": "systems",
+    "group": "精度与压缩",
+    "kind": "term",
+    "summary": "混合精度在一次训练或推理中组合使用不同精度的数值格式。",
+    "detail": [
+      "部分矩阵运算可使用 FP16 或 BF16，某些累加和敏感计算仍使用 FP32；这样可以在数值稳定性与计算资源之间取得平衡。"
+    ],
+    "related": [
+      "fp16",
+      "bf16",
+      "fp8"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Automatic Mixed Precision",
+        "url": "https://docs.pytorch.org/docs/stable/amp.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "fp16",
+    "term": "FP16",
+    "zh": "16 位浮点数",
+    "aliases": [
+      "float16",
+      "half precision"
+    ],
+    "category": "systems",
+    "group": "精度与压缩",
+    "kind": "term",
+    "summary": "FP16 是使用 16 位存储一个数值的浮点格式。",
+    "detail": [
+      "它比 FP32 节省存储，但可表示的数值范围更小；训练中常配合损失缩放，减少很小的梯度变成零的情况。"
+    ],
+    "related": [
+      "mixed-precision",
+      "bf16",
+      "vram"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Automatic Mixed Precision",
+        "url": "https://docs.pytorch.org/docs/stable/amp.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "bf16",
+    "term": "BF16",
+    "zh": "Brain 浮点数",
+    "aliases": [
+      "bfloat16"
+    ],
+    "category": "systems",
+    "group": "精度与压缩",
+    "kind": "term",
+    "summary": "BF16 是指数范围接近 FP32、尾数精度较低的 16 位浮点格式。",
+    "detail": [
+      "它与 FP16 都占 16 位，但数值范围不同；支持 BF16 的硬件常用它进行深度学习训练。"
+    ],
+    "related": [
+      "fp16",
+      "mixed-precision",
+      "fp8"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Automatic Mixed Precision",
+        "url": "https://docs.pytorch.org/docs/stable/amp.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "fp8",
+    "term": "FP8",
+    "zh": "8 位浮点数",
+    "aliases": [
+      "float8"
+    ],
+    "category": "systems",
+    "group": "精度与压缩",
+    "kind": "term",
+    "summary": "FP8 是使用 8 位表示数值的一组浮点格式。",
+    "detail": [
+      "常见格式会在指数范围与尾数精度之间做不同取舍；实际使用需要配合缩放、合适的算子与硬件支持。"
+    ],
+    "related": [
+      "mixed-precision",
+      "quantization",
+      "bf16"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA Transformer Engine：Using FP8 and FP4",
+        "url": "https://nvidia.github.io/TransformerEngine/examples/fp8_primer.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "quantization",
+    "term": "Quantization",
+    "zh": "量化",
+    "aliases": [],
+    "category": "systems",
+    "group": "精度与压缩",
+    "kind": "term",
+    "summary": "量化把权重或激活值映射到较低位宽的数值表示。",
+    "detail": [
+      "把部分权重从 16 位压到 4 位可以明显减少存储；实际速度和精度还取决于量化方法、是否量化激活以及底层计算支持。"
+    ],
+    "related": [
+      "qlora",
+      "fp8",
+      "vram"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Quantization",
+        "url": "https://huggingface.co/docs/transformers/main/en/quantization/overview"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "lora",
+    "term": "LoRA",
+    "zh": "低秩适配",
+    "aliases": [
+      "Low-Rank Adaptation"
+    ],
+    "category": "systems",
+    "group": "高效微调",
+    "kind": "term",
+    "summary": "LoRA 通过训练少量低秩矩阵来表示权重更新，同时冻结原始权重。",
+    "detail": [
+      "可把新增矩阵作为适配器单独保存；微调不同任务时，各自保存一份小适配器即可共享同一个基础模型。"
+    ],
+    "related": [
+      "peft",
+      "qlora",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+        "url": "https://arxiv.org/abs/2106.09685"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "qlora",
+    "term": "QLoRA",
+    "zh": "量化低秩适配",
+    "aliases": [],
+    "category": "systems",
+    "group": "高效微调",
+    "kind": "term",
+    "summary": "QLoRA 在量化保存的基础模型上训练 LoRA 适配器，以降低微调所需显存。",
+    "detail": [
+      "原始方法把基础权重量化为 4 位，并让梯度穿过计算过程更新适配器；基础权重保持冻结。"
+    ],
+    "related": [
+      "lora",
+      "quantization",
+      "peft"
+    ],
+    "sources": [
+      {
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+        "url": "https://arxiv.org/abs/2305.14314"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "peft",
+    "term": "PEFT",
+    "zh": "参数高效微调",
+    "aliases": [
+      "Parameter-Efficient Fine-Tuning"
+    ],
+    "category": "systems",
+    "group": "高效微调",
+    "kind": "term",
+    "summary": "参数高效微调只训练模型的一小部分参数或新增参数来适配任务。",
+    "detail": [
+      "LoRA、前缀调优等方法都属于这一范围；它们可以减少需要保存的任务参数，以及部分训练状态的显存占用。"
+    ],
+    "related": [
+      "lora",
+      "qlora",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：PEFT",
+        "url": "https://huggingface.co/docs/peft/index"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "pruning",
+    "term": "Pruning",
+    "zh": "剪枝",
+    "aliases": [],
+    "category": "systems",
+    "group": "精度与压缩",
+    "kind": "term",
+    "summary": "剪枝通过移除或屏蔽部分权重、通道或模块来压缩模型。",
+    "detail": [
+      "非结构化剪枝可以让很多单个权重变成零，结构化剪枝则移除整组通道；能否加速取决于剩余结构与运行工具是否匹配。"
+    ],
+    "related": [
+      "quantization",
+      "parameter",
+      "flops"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Pruning Tutorial",
+        "url": "https://docs.pytorch.org/tutorials/intermediate/pruning_tutorial.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "ddp",
+    "term": "DDP",
+    "zh": "分布式数据并行",
+    "aliases": [
+      "Distributed Data Parallel"
+    ],
+    "category": "systems",
+    "group": "分布式计算",
+    "kind": "term",
+    "summary": "DDP 在多个设备上保存模型副本，让各副本处理不同数据并同步梯度。",
+    "detail": [
+      "每张卡计算本地批次的梯度后，通过通信合并结果，再让各副本执行一致的更新。"
+    ],
+    "related": [
+      "data-parallelism",
+      "gradient",
+      "fsdp"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：DistributedDataParallel",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "fsdp",
+    "term": "FSDP",
+    "zh": "完全分片数据并行",
+    "aliases": [
+      "Fully Sharded Data Parallel"
+    ],
+    "category": "systems",
+    "group": "分布式计算",
+    "kind": "term",
+    "summary": "FSDP 把模型参数、梯度和优化器状态分片放到多个设备上。",
+    "detail": [
+      "执行某层计算前临时收集所需参数，计算后再释放或重新分片；节省单卡显存的同时会引入通信。"
+    ],
+    "related": [
+      "ddp",
+      "zero",
+      "vram"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Fully Sharded Data Parallel",
+        "url": "https://docs.pytorch.org/docs/stable/fsdp.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "zero",
+    "term": "ZeRO",
+    "zh": "零冗余优化器",
+    "aliases": [
+      "Zero Redundancy Optimizer"
+    ],
+    "category": "systems",
+    "group": "分布式计算",
+    "kind": "term",
+    "summary": "ZeRO 通过在数据并行设备间切分训练状态来减少重复存储。",
+    "detail": [
+      "三个常见阶段逐步切分优化器状态、梯度和参数；阶段越高，通常能节省更多单卡显存，也需要配套通信。"
+    ],
+    "related": [
+      "fsdp",
+      "data-parallelism",
+      "optimizer"
+    ],
+    "sources": [
+      {
+        "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+        "url": "https://arxiv.org/abs/1910.02054"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "data-parallelism",
+    "term": "Data Parallelism",
+    "zh": "数据并行",
+    "aliases": [
+      "DP"
+    ],
+    "category": "systems",
+    "group": "分布式计算",
+    "kind": "term",
+    "summary": "数据并行让多个设备使用模型副本同时处理不同数据。",
+    "detail": [
+      "各副本完成局部计算后交换梯度等信息，以保持训练一致；扩大设备数量时，还需要考虑全局批量大小的变化。"
+    ],
+    "related": [
+      "ddp",
+      "tensor-parallelism",
+      "pipeline-parallelism"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Distributed Overview",
+        "url": "https://docs.pytorch.org/tutorials/beginner/dist_overview.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "tensor-parallelism",
+    "term": "Tensor Parallelism",
+    "zh": "张量并行",
+    "aliases": [
+      "TP"
+    ],
+    "category": "systems",
+    "group": "分布式计算",
+    "kind": "term",
+    "summary": "张量并行把单层中的张量或矩阵运算切分到多个设备执行。",
+    "detail": [
+      "一个过大的线性层可以按矩阵的行或列分片，让不同设备各算一部分，再通过通信组合结果。"
+    ],
+    "related": [
+      "pipeline-parallelism",
+      "data-parallelism",
+      "vram"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Tensor Parallelism",
+        "url": "https://docs.pytorch.org/docs/stable/distributed.tensor.parallel.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "pipeline-parallelism",
+    "term": "Pipeline Parallelism",
+    "zh": "流水线并行",
+    "aliases": [
+      "PP"
+    ],
+    "category": "systems",
+    "group": "分布式计算",
+    "kind": "term",
+    "summary": "流水线并行把模型的不同层放到不同设备，并让小批次沿各阶段流动。",
+    "detail": [
+      "第一张卡计算前几层后把结果交给下一张卡，同时开始处理后续小批次；阶段工作量不均衡会造成等待。"
+    ],
+    "related": [
+      "tensor-parallelism",
+      "data-parallelism",
+      "batch"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Pipeline Parallelism",
+        "url": "https://docs.pytorch.org/docs/stable/distributed.pipelining.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "kv-cache",
+    "term": "KV Cache",
+    "zh": "键值缓存",
+    "aliases": [
+      "KV-cache"
+    ],
+    "category": "systems",
+    "group": "推理加速",
+    "kind": "term",
+    "summary": "键值缓存保存已经处理过的 token 对应的注意力键和值，供后续生成复用。",
+    "detail": [
+      "生成新 token 时可以读取已有缓存，减少重复计算；上下文越长、并发请求越多，缓存通常占用越多显存。"
+    ],
+    "related": [
+      "qkv",
+      "prefill",
+      "decode"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Cache strategies",
+        "url": "https://huggingface.co/docs/transformers/main/en/kv_cache"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "prefill",
+    "term": "Prefill",
+    "zh": "提示预填充阶段",
+    "aliases": [],
+    "category": "systems",
+    "group": "推理加速",
+    "kind": "term",
+    "summary": "预填充阶段处理输入提示中的 token，并建立后续生成需要的缓存。",
+    "detail": [
+      "长文档输入会增加这一阶段的工作量，因此可能让用户等待首个输出的时间变长。"
+    ],
+    "related": [
+      "decode",
+      "kv-cache",
+      "latency"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Optimizing LLMs for Speed and Memory",
+        "url": "https://huggingface.co/docs/transformers/main/en/llm_tutorial_optimization"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "decode",
+    "term": "Decode Phase",
+    "zh": "逐词解码阶段",
+    "aliases": [
+      "decode stage"
+    ],
+    "category": "systems",
+    "group": "推理加速",
+    "kind": "term",
+    "summary": "逐词解码阶段在已有上下文和缓存基础上，反复生成后续 token。",
+    "detail": [
+      "每生成一个新 token，就更新缓存并进入下一步；系统优化时常把首个 token 的等待时间与后续 token 的生成速度分开观察。"
+    ],
+    "related": [
+      "prefill",
+      "autoregressive",
+      "kv-cache"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Optimizing LLMs for Speed and Memory",
+        "url": "https://huggingface.co/docs/transformers/main/en/llm_tutorial_optimization"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "inference-batching",
+    "term": "Batching",
+    "zh": "推理批处理",
+    "aliases": [
+      "continuous batching",
+      "动态批处理"
+    ],
+    "category": "systems",
+    "group": "推理加速",
+    "kind": "term",
+    "summary": "推理批处理把多个请求组合起来执行，以提高设备利用率。",
+    "detail": [
+      "连续批处理可以在一个请求结束后，让新请求加入后续生成步骤；批处理规模也会影响排队时间和显存占用。"
+    ],
+    "related": [
+      "throughput",
+      "latency",
+      "kv-cache"
+    ],
+    "sources": [
+      {
+        "title": "vLLM：vLLM documentation",
+        "url": "https://docs.vllm.ai/en/latest/"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "speculative-decoding",
+    "term": "Speculative Decoding",
+    "zh": "推测解码",
+    "aliases": [
+      "speculative sampling"
+    ],
+    "category": "systems",
+    "group": "推理加速",
+    "kind": "term",
+    "summary": "推测解码先用较便宜的方法生成多个草稿 token，再由目标模型一起验证。",
+    "detail": [
+      "被接受的草稿可以一次推进多个位置，被拒绝的位置再按算法修正；加速幅度取决于草稿接受率和验证开销。"
+    ],
+    "related": [
+      "decode",
+      "autoregressive",
+      "latency"
+    ],
+    "sources": [
+      {
+        "title": "Fast Inference from Transformers via Speculative Decoding",
+        "url": "https://arxiv.org/abs/2211.17192"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "flash-attention",
+    "term": "FlashAttention",
+    "zh": "快速注意力实现",
+    "aliases": [],
+    "category": "systems",
+    "group": "推理加速",
+    "kind": "term",
+    "summary": "FlashAttention 通过分块与融合计算减少显存读写，加速精确注意力计算。",
+    "detail": [
+      "它避免把完整的注意力分数矩阵反复写入显存；效果取决于序列长度、硬件和具体实现版本。"
+    ],
+    "related": [
+      "attention",
+      "kernel",
+      "vram"
+    ],
+    "sources": [
+      {
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "url": "https://arxiv.org/abs/2205.14135"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "latency",
+    "term": "Latency",
+    "zh": "延迟",
+    "aliases": [],
+    "category": "systems",
+    "group": "系统指标",
+    "kind": "term",
+    "summary": "延迟是一次请求或操作从开始到完成所需的时间。",
+    "detail": [
+      "语言模型服务常分别报告首 token 延迟、每 token 延迟和完整响应时间；比较时需要对齐输入长度、输出长度及并发负载。"
+    ],
+    "related": [
+      "throughput",
+      "prefill",
+      "decode"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA Triton：GenAI-Perf",
+        "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/archives/triton-inference-server-2510/user-guide/docs/perf_analyzer/genai-perf/README.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  },
+  {
+    "id": "throughput",
+    "term": "Throughput",
+    "zh": "吞吐量",
+    "aliases": [],
+    "category": "systems",
+    "group": "系统指标",
+    "kind": "term",
+    "summary": "吞吐量是系统单位时间内完成的请求或处理的数据量。",
+    "detail": [
+      "语言模型服务常用每秒请求数或每秒输出 token 数表示；吞吐量测量需要同时说明批次、并发数和延迟要求。"
+    ],
+    "related": [
+      "latency",
+      "inference-batching",
+      "flops"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA Triton：GenAI-Perf",
+        "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/archives/triton-inference-server-2510/user-guide/docs/perf_analyzer/genai-perf/README.html"
+      }
+    ],
+    "categories": [
+      "systems"
+    ]
+  }
+]

@@ -37,6 +37,9 @@ Language models, agents, vision, multimodal learning, generation, RL, world mode
 **[Which foundations do you need, and how much?](basics.md)**  
 Python, mathematics, ML/DL, computing, and architectures. Learn the concept blocking you, then return to see how it works in your project.
 
+**[AI terminology and conferences · 中文](../wiki/index.html)**<br>
+Look up unfamiliar terms, browse research topics, and follow related concepts.
+
 ## Questions that come up during research
 
 [Finding and reading papers](reading.md) · [Understanding experiments](experiments.md) · [Writing, figures, and talks](writing.md)

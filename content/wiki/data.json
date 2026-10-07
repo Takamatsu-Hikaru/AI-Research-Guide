@@ -1,0 +1,1048 @@
+[
+  {
+    "id": "dataset",
+    "term": "Dataset",
+    "zh": "数据集",
+    "aliases": [],
+    "category": "data",
+    "group": "数据材料",
+    "kind": "term",
+    "summary": "数据集是为了训练、验证或评估而组织起来的一批样本。",
+    "detail": [
+      "图片、文本、表格和交互记录都可以成为样本；常把数据划分成训练集、验证集和测试集，让模型选择与最终评估各用不同的数据。"
+    ],
+    "related": [
+      "corpus",
+      "data-leakage",
+      "benchmark"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face Datasets：数据处理",
+        "url": "https://huggingface.co/docs/datasets/process"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "corpus",
+    "term": "Corpus",
+    "zh": "语料库",
+    "aliases": [
+      "corpora"
+    ],
+    "category": "data",
+    "group": "数据材料",
+    "kind": "term",
+    "summary": "语料库是收集并组织起来、供语言研究或模型训练使用的文本集合。",
+    "detail": [
+      "书籍、网页、对话和代码都可以构成语料；阅读模型报告时，需要同时看语料来源、数量、语言分布与筛选方式。"
+    ],
+    "related": [
+      "dataset",
+      "data-mixture",
+      "pre-training"
+    ],
+    "sources": [
+      {
+        "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+        "url": "https://arxiv.org/abs/2101.00027"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "annotation",
+    "term": "Annotation",
+    "zh": "数据标注",
+    "aliases": [
+      "labeling",
+      "标签"
+    ],
+    "category": "data",
+    "group": "数据材料",
+    "kind": "term",
+    "summary": "数据标注是为原始样本添加类别、答案、边界框或其他目标信息的过程。",
+    "detail": [
+      "给评论标注正面或负面情感、给图片画出行人框，都属于标注；明确的标注规范能减少不同标注者之间的分歧。"
+    ],
+    "related": [
+      "supervised-learning",
+      "dataset",
+      "data-curation"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "data-curation",
+    "term": "Data Curation",
+    "zh": "数据整理与策划",
+    "aliases": [
+      "curation"
+    ],
+    "category": "data",
+    "group": "数据处理",
+    "kind": "term",
+    "summary": "数据整理与策划是围绕训练目标选择、清理、组织和维护数据的工作。",
+    "detail": [
+      "一套网页训练数据可能先限定来源，再移除低质量页面和重复内容，最后检查语言与主题比例。"
+    ],
+    "related": [
+      "data-filtering",
+      "deduplication",
+      "data-mixture"
+    ],
+    "sources": [
+      {
+        "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+        "url": "https://arxiv.org/abs/2406.17557"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "data-filtering",
+    "term": "Data Filtering",
+    "zh": "数据过滤",
+    "aliases": [
+      "filtering"
+    ],
+    "category": "data",
+    "group": "数据处理",
+    "kind": "term",
+    "summary": "数据过滤按照规则或模型评分保留和剔除样本。",
+    "detail": [
+      "例如移除正文过短、乱码比例过高或广告重复严重的页面；过滤后还应查看样例，确认没有大量误删需要的内容。"
+    ],
+    "related": [
+      "data-curation",
+      "deduplication",
+      "dataset"
+    ],
+    "sources": [
+      {
+        "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+        "url": "https://arxiv.org/abs/2406.17557"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "deduplication",
+    "term": "Deduplication",
+    "zh": "去重",
+    "aliases": [
+      "dedup"
+    ],
+    "category": "data",
+    "group": "数据处理",
+    "kind": "term",
+    "summary": "去重是识别并处理完全相同或高度相似样本的过程。",
+    "detail": [
+      "同一篇文章被多个网站转载时，完全匹配的哈希可能抓不全；近似去重可以根据片段重合度识别这些副本。"
+    ],
+    "related": [
+      "data-filtering",
+      "data-contamination",
+      "corpus"
+    ],
+    "sources": [
+      {
+        "title": "Deduplicating Training Data Makes Language Models Better",
+        "url": "https://arxiv.org/abs/2107.06499"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "data-mixture",
+    "term": "Data Mixture",
+    "zh": "数据混合配比",
+    "aliases": [
+      "mixture"
+    ],
+    "category": "data",
+    "group": "数据处理",
+    "kind": "term",
+    "summary": "数据混合配比规定训练时不同来源或任务的数据各占多少。",
+    "detail": [
+      "代码占 20%、百科占 30% 可以指实际采样比例；一个小数据源经过重复采样后，在训练中的占比会高于它的原始体积占比。"
+    ],
+    "related": [
+      "corpus",
+      "multitask-learning",
+      "curriculum-learning"
+    ],
+    "sources": [
+      {
+        "title": "DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining",
+        "url": "https://arxiv.org/abs/2305.10429"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "synthetic-data",
+    "term": "Synthetic Data",
+    "zh": "合成数据",
+    "aliases": [],
+    "category": "data",
+    "group": "数据材料",
+    "kind": "term",
+    "summary": "合成数据是由模型、程序或模拟器生成的数据。",
+    "detail": [
+      "可以让语言模型生成题目与解答，再通过规则、测试或人工筛选后用于训练；生成数量与正确率要分别检查。"
+    ],
+    "related": [
+      "data-curation",
+      "annotation",
+      "knowledge-distillation"
+    ],
+    "sources": [
+      {
+        "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+        "url": "https://arxiv.org/abs/2212.10560"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "data-augmentation",
+    "term": "Data Augmentation",
+    "zh": "数据增强",
+    "aliases": [
+      "augmentation"
+    ],
+    "category": "data",
+    "group": "数据处理",
+    "kind": "term",
+    "summary": "数据增强通过保持任务语义的变换，为已有样本生成训练变体。",
+    "detail": [
+      "图片分类可使用随机裁剪和颜色变化；文字任务则要确认改写后标签依然成立，例如否定词的改变可能直接改变情感标签。"
+    ],
+    "related": [
+      "dataset",
+      "regularization",
+      "synthetic-data"
+    ],
+    "sources": [
+      {
+        "title": "torchvision：数据变换与增强",
+        "url": "https://docs.pytorch.org/vision/stable/transforms.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "knowledge-distillation",
+    "term": "Knowledge Distillation",
+    "zh": "知识蒸馏",
+    "aliases": [
+      "distillation",
+      "KD"
+    ],
+    "category": "data",
+    "group": "数据与训练",
+    "kind": "term",
+    "summary": "知识蒸馏用教师模型的输出或内部表示来训练学生模型。",
+    "detail": [
+      "学生可以学习教师给出的软概率，也可以学习教师生成的答案；常见目标是用更小的模型保留尽可能多的能力。"
+    ],
+    "related": [
+      "synthetic-data",
+      "fine-tuning",
+      "logit"
+    ],
+    "sources": [
+      {
+        "title": "Distilling the Knowledge in a Neural Network",
+        "url": "https://arxiv.org/abs/1503.02531"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "overfitting",
+    "term": "Overfitting",
+    "zh": "过拟合",
+    "aliases": [],
+    "category": "data",
+    "group": "泛化与误差",
+    "kind": "term",
+    "summary": "过拟合是模型学得过于贴合训练数据，导致在新数据上的表现变差。",
+    "detail": [
+      "训练损失继续下降而验证损失开始上升是常见信号；可尝试增加有效数据、加强正则化或提前停止训练。"
+    ],
+    "related": [
+      "underfitting",
+      "regularization",
+      "data-leakage"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：欠拟合与过拟合",
+        "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "underfitting",
+    "term": "Underfitting",
+    "zh": "欠拟合",
+    "aliases": [],
+    "category": "data",
+    "group": "泛化与误差",
+    "kind": "term",
+    "summary": "欠拟合是模型尚未充分学到数据中的规律，连训练集也表现较差。",
+    "detail": [
+      "模型过于简单、训练时间不够或正则过强都可能造成欠拟合；先同时查看训练集和验证集误差，才能决定如何调整。"
+    ],
+    "related": [
+      "overfitting",
+      "convergence",
+      "hyperparameter"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：欠拟合与过拟合",
+        "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "regularization",
+    "term": "Regularization",
+    "zh": "正则化",
+    "aliases": [],
+    "category": "data",
+    "group": "泛化与误差",
+    "kind": "term",
+    "summary": "正则化通过约束或扰动训练过程，帮助模型在新数据上保持效果。",
+    "detail": [
+      "权重衰减会抑制过大的参数，dropout 会在训练时随机关闭部分激活；正则强度过大也可能导致欠拟合。"
+    ],
+    "related": [
+      "overfitting",
+      "underfitting",
+      "objective"
+    ],
+    "sources": [
+      {
+        "title": "Deep Learning：正则化",
+        "url": "https://www.deeplearningbook.org/contents/regularization.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "distribution-shift",
+    "term": "Distribution Shift",
+    "zh": "分布偏移",
+    "aliases": [
+      "data shift"
+    ],
+    "category": "data",
+    "group": "泛化与误差",
+    "kind": "term",
+    "summary": "分布偏移是部署或测试数据与训练数据的统计规律发生变化。",
+    "detail": [
+      "用晴天白天的道路图片训练后，夜间雨天的图片可能导致性能下降；可以按天气、地区或时间切片评估偏移的影响。"
+    ],
+    "related": [
+      "ood",
+      "error-analysis",
+      "benchmark"
+    ],
+    "sources": [
+      {
+        "title": "WILDS: A Benchmark of in-the-Wild Distribution Shifts",
+        "url": "https://arxiv.org/abs/2012.07421"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "ood",
+    "term": "OOD",
+    "zh": "分布外",
+    "aliases": [
+      "Out-of-Distribution"
+    ],
+    "category": "data",
+    "group": "泛化与误差",
+    "kind": "term",
+    "summary": "分布外指样本来自模型训练或任务设定所覆盖范围之外的分布。",
+    "detail": [
+      "一个只学猫狗分类的模型遇到卡车图片时，仍可能自信地输出猫或狗；OOD 检测的目标是识别这种范围外输入。"
+    ],
+    "related": [
+      "distribution-shift",
+      "dataset",
+      "metric"
+    ],
+    "sources": [
+      {
+        "title": "A Baseline for Detecting Misclassified and Out-of-Distribution Examples",
+        "url": "https://arxiv.org/abs/1610.02136"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "data-leakage",
+    "term": "Data Leakage",
+    "zh": "数据泄漏",
+    "aliases": [
+      "leakage"
+    ],
+    "category": "data",
+    "group": "评估可信度",
+    "kind": "term",
+    "summary": "数据泄漏是训练或模型选择使用了在真实预测时本不应获得的信息。",
+    "detail": [
+      "在划分数据前用全部样本计算标准化参数，或把同一个人的记录分散到训练集与测试集，都可能让评估结果虚高。"
+    ],
+    "related": [
+      "dataset",
+      "data-contamination",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：常见陷阱与数据泄漏",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "data-contamination",
+    "term": "Data Contamination",
+    "zh": "评测数据污染",
+    "aliases": [
+      "benchmark contamination"
+    ],
+    "category": "data",
+    "group": "评估可信度",
+    "kind": "term",
+    "summary": "评测数据污染是测试题目、答案或高度相似内容进入了模型训练数据。",
+    "detail": [
+      "某套公开题库被网页语料收录后，模型可能记住题目；检查时应考虑近似改写、答案解析和多轮训练使用的数据。"
+    ],
+    "related": [
+      "data-leakage",
+      "deduplication",
+      "benchmark"
+    ],
+    "sources": [
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "baseline",
+    "term": "Baseline",
+    "zh": "基线",
+    "aliases": [],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "基线是实验中用来衡量新方法是否有改进的参照方法或结果。",
+    "detail": [
+      "基线可以是简单规则、已有开源模型或去掉新模块的版本；比较时应尽量对齐数据、评估设置和计算预算。"
+    ],
+    "related": [
+      "ablation",
+      "benchmark",
+      "sota"
+    ],
+    "sources": [
+      {
+        "title": "HELM: Holistic Evaluation of Language Models",
+        "url": "https://arxiv.org/abs/2211.09110"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "sota",
+    "term": "SOTA",
+    "zh": "当前最佳水平",
+    "aliases": [
+      "State of the Art"
+    ],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "SOTA 指在明确任务、数据集和评估设置下公开报告的领先结果。",
+    "detail": [
+      "“刷新 SOTA”需要说明是哪项指标以及比较范围；准确率最高的方法可能同时需要更多推理时间或更大的模型。"
+    ],
+    "related": [
+      "baseline",
+      "benchmark",
+      "metric"
+    ],
+    "sources": [
+      {
+        "title": "HELM: Holistic Evaluation of Language Models",
+        "url": "https://arxiv.org/abs/2211.09110"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "benchmark",
+    "term": "Benchmark",
+    "zh": "评测基准",
+    "aliases": [],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "评测基准是一套用于比较模型能力的数据、任务规则和评价方法。",
+    "detail": [
+      "一个编程基准除了题目，还可能包含单元测试、运行环境和时间限制；复现实验时需要对齐这些条件。"
+    ],
+    "related": [
+      "metric",
+      "baseline",
+      "data-contamination"
+    ],
+    "sources": [
+      {
+        "title": "HELM: Holistic Evaluation of Language Models",
+        "url": "https://arxiv.org/abs/2211.09110"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "metric",
+    "term": "Metric",
+    "zh": "评价指标",
+    "aliases": [],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "评价指标是把模型某方面表现转成可比较数值的计算规则。",
+    "detail": [
+      "分类可看准确率，检索可看召回率，代码生成可看测试通过率；同一系统通常需要多个指标才能看清优缺点。"
+    ],
+    "related": [
+      "accuracy",
+      "recall",
+      "pass-at-k"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：模型评估指标",
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "ablation",
+    "term": "Ablation Study",
+    "zh": "消融实验",
+    "aliases": [
+      "ablation"
+    ],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "消融实验通过移除或替换某个组件，测量它对整体结果的贡献。",
+    "detail": [
+      "例如比较有检索与无检索的同一问答系统；应尽量保持模型、测试集和其他设置一致，避免把多个改动混在一起解释。"
+    ],
+    "related": [
+      "baseline",
+      "metric",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "HELM: Holistic Evaluation of Language Models",
+        "url": "https://arxiv.org/abs/2211.09110"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "reproducibility",
+    "term": "Reproducibility",
+    "zh": "可复现性",
+    "aliases": [],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "可复现性描述他人或后续运行能否依据记录重现方法和主要结果。",
+    "detail": [
+      "保存数据版本、依赖版本、配置、代码和随机种子有助于复现；不同硬件或底层实现仍可能产生数值差异。"
+    ],
+    "related": [
+      "random-seed",
+      "variance",
+      "checkpoint"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：可复现性",
+        "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "random-seed",
+    "term": "Random Seed",
+    "zh": "随机种子",
+    "aliases": [
+      "seed"
+    ],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "随机种子是用于初始化伪随机数生成器的值。",
+    "detail": [
+      "固定种子可以让初始化、数据打乱或采样更容易重复；需要同时控制相关库和设备的随机源。"
+    ],
+    "related": [
+      "reproducibility",
+      "variance",
+      "checkpoint"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：可复现性",
+        "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "variance",
+    "term": "Variance",
+    "zh": "结果方差",
+    "aliases": [],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "结果方差描述不同样本或重复实验的结果围绕平均值波动的程度。",
+    "detail": [
+      "同一训练配置换几个随机种子后，准确率可能在 81% 到 84% 间变化；报告均值及标准差能帮助判断小幅提升是否稳定。"
+    ],
+    "related": [
+      "random-seed",
+      "reproducibility",
+      "metric"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：模型评估指标",
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "error-analysis",
+    "term": "Error Analysis",
+    "zh": "错误分析",
+    "aliases": [],
+    "category": "data",
+    "group": "实验比较",
+    "kind": "term",
+    "summary": "错误分析通过检查失败样本和错误类型，寻找模型性能瓶颈。",
+    "detail": [
+      "可把问答错误分为检索不到、读错证据和生成错误三类，统计各类数量后再决定优先改进哪一步。"
+    ],
+    "related": [
+      "distribution-shift",
+      "ablation",
+      "metric"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "scaling-law",
+    "term": "Scaling Law",
+    "zh": "规模定律",
+    "aliases": [],
+    "category": "data",
+    "group": "规模与效果",
+    "kind": "term",
+    "summary": "规模定律描述模型效果与参数量、训练数据量或计算量之间观察到的规律。",
+    "detail": [
+      "研究者常用一系列不同规模实验拟合损失曲线，再估计扩大训练预算能带来多少收益；关系会受数据和训练设置影响。"
+    ],
+    "related": [
+      "scaling-ladder",
+      "parameter",
+      "pre-training"
+    ],
+    "sources": [
+      {
+        "title": "Scaling Laws for Neural Language Models",
+        "url": "https://arxiv.org/abs/2001.08361"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "scaling-ladder",
+    "term": "Scaling Ladder",
+    "zh": "规模阶梯实验",
+    "aliases": [],
+    "category": "data",
+    "group": "规模与效果",
+    "kind": "term",
+    "summary": "规模阶梯实验是在多个逐级增大的规模上运行相近配置，用来观察趋势并支持外推。",
+    "detail": [
+      "例如依次训练 100M、300M 和 1B 参数的模型，同时记录数据量与计算量；报告中的具体阶梯设计需要逐项查看。"
+    ],
+    "related": [
+      "scaling-law",
+      "baseline",
+      "data-mixture"
+    ],
+    "sources": [
+      {
+        "title": "Training Compute-Optimal Large Language Models",
+        "url": "https://arxiv.org/abs/2203.15556"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "accuracy",
+    "term": "Accuracy",
+    "zh": "准确率",
+    "aliases": [],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "准确率是全部预测中预测正确的比例。",
+    "detail": [
+      "100 张图片答对 90 张，准确率就是 90%；类别极不平衡时，还要结合各类别的召回率和精确率看结果。"
+    ],
+    "related": [
+      "precision",
+      "recall",
+      "f1-score"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：模型评估指标",
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "precision",
+    "term": "Precision",
+    "zh": "精确率",
+    "aliases": [
+      "查准率"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "精确率衡量被模型判为正例的样本中有多少确实是正例。",
+    "detail": [
+      "模型标记 20 封垃圾邮件，其中 18 封真是垃圾邮件，精确率就是 90%；它反映误报带来的影响。"
+    ],
+    "related": [
+      "recall",
+      "f1-score",
+      "accuracy"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：Precision",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "recall",
+    "term": "Recall",
+    "zh": "召回率",
+    "aliases": [
+      "查全率"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "召回率衡量全部真实正例中有多少被模型找出。",
+    "detail": [
+      "共有 30 封垃圾邮件，模型找到 18 封，召回率就是 60%；提高阈值往往减少误报，同时也可能漏掉更多正例。"
+    ],
+    "related": [
+      "precision",
+      "f1-score",
+      "metric"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：Recall",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "f1-score",
+    "term": "F1 Score",
+    "zh": "F1 分数",
+    "aliases": [
+      "F1"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "F1 分数是精确率和召回率的调和平均。",
+    "detail": [
+      "公式为 2PR/(P+R)，其中 P 是精确率、R 是召回率；多分类报告还需说明使用 macro、micro 还是 weighted 平均。"
+    ],
+    "related": [
+      "precision",
+      "recall",
+      "accuracy"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：F1 score",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "roc-auc",
+    "term": "ROC AUC",
+    "zh": "ROC 曲线下面积",
+    "aliases": [
+      "AUC",
+      "AUROC"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "ROC AUC 汇总分类器在不同阈值下区分正负例的能力。",
+    "detail": [
+      "ROC 曲线比较真正率与假正率；随机排序的 AUC 通常约为 0.5，完美排序为 1。“AUC”也可用于其他曲线，读报告时需看全称。"
+    ],
+    "related": [
+      "precision",
+      "recall",
+      "metric"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：ROC AUC",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "map",
+    "term": "mAP",
+    "zh": "平均精度均值",
+    "aliases": [
+      "mean Average Precision"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "mAP 是把多个类别或查询的平均精度 AP 进一步取平均得到的指标。",
+    "detail": [
+      "目标检测中，先为各个类别计算 AP，再取平均得到 mAP。COCO 评测还会在 0.50 到 0.95 的多个 IoU 阈值上取平均：高阈值要求预测框与真实框重合得更精确。"
+    ],
+    "related": [
+      "iou",
+      "precision",
+      "recall"
+    ],
+    "sources": [
+      {
+        "title": "COCO：目标检测评测",
+        "url": "https://cocodataset.org/#detection-eval"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "iou",
+    "term": "IoU",
+    "zh": "交并比",
+    "aliases": [
+      "Intersection over Union"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "交并比是两个区域交集面积与并集面积的比值。",
+    "detail": [
+      "预测框与真实框完全重合时 IoU 为 1，互不重叠时为 0；它常用于目标检测的匹配和图像分割的评估。"
+    ],
+    "related": [
+      "map",
+      "metric",
+      "annotation"
+    ],
+    "sources": [
+      {
+        "title": "torchvision：box_iou",
+        "url": "https://docs.pytorch.org/vision/stable/generated/torchvision.ops.box_iou.html"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "perplexity",
+    "term": "Perplexity",
+    "zh": "困惑度",
+    "aliases": [
+      "PPL"
+    ],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "困惑度是语言模型平均负对数概率的指数形式，用于衡量其预测文本的难易程度。",
+    "detail": [
+      "在相同测试文本和分词方式下，困惑度越低通常表示对文本赋予的概率越高；比较时还要对齐上下文长度与计算方式。"
+    ],
+    "related": [
+      "loss",
+      "tokenizer",
+      "pre-training"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Perplexity",
+        "url": "https://huggingface.co/docs/transformers/perplexity"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  },
+  {
+    "id": "pass-at-k",
+    "term": "pass@k",
+    "zh": "k 次候选中至少一次通过的概率",
+    "aliases": [],
+    "category": "data",
+    "group": "评价指标",
+    "kind": "term",
+    "summary": "pass@k 衡量为一道题生成 k 个候选时，至少一个通过验证的概率。",
+    "detail": [
+      "编程评测常用单元测试判定通过；pass@1 对应单个候选的成功率，k 增大则增加可尝试机会。报告通常从更多采样结果估计该值。"
+    ],
+    "related": [
+      "benchmark",
+      "metric",
+      "verifier"
+    ],
+    "sources": [
+      {
+        "title": "Evaluating Large Language Models Trained on Code",
+        "url": "https://arxiv.org/abs/2107.03374"
+      }
+    ],
+    "categories": [
+      "data"
+    ]
+  }
+]

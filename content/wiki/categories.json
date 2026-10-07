@@ -1,0 +1,130 @@
+[
+  {
+    "id": "venues",
+    "name": "会议与期刊",
+    "short": "会议期刊",
+    "section": "学术与基础",
+    "guide": "../zh/publishing.html",
+    "guideTitle": "投稿与发表"
+  },
+  {
+    "id": "publishing",
+    "name": "论文与学术交流",
+    "short": "学术交流",
+    "section": "学术与基础",
+    "guide": "../zh/publishing.html",
+    "guideTitle": "投稿与发表"
+  },
+  {
+    "id": "training",
+    "name": "模型与训练基础",
+    "short": "模型训练",
+    "section": "学术与基础",
+    "guide": "../zh/basics.html",
+    "guideTitle": "基础怎么学"
+  },
+  {
+    "id": "data",
+    "name": "数据、实验与评测",
+    "short": "数据评测",
+    "section": "学术与基础",
+    "guide": "../zh/experiments.html",
+    "guideTitle": "把实验做明白"
+  },
+  {
+    "id": "llm",
+    "name": "大语言模型",
+    "short": "大语言模型",
+    "section": "研究方向",
+    "guide": "../zh/llm.html",
+    "guideTitle": "大语言模型：理解、生成、推理"
+  },
+  {
+    "id": "agents",
+    "name": "Agent 与多智能体",
+    "short": "Agent",
+    "section": "研究方向",
+    "guide": "../zh/agent.html",
+    "guideTitle": "Agent：让模型去做事"
+  },
+  {
+    "id": "rl",
+    "name": "强化学习",
+    "short": "强化学习",
+    "section": "研究方向",
+    "guide": "../zh/rl.html",
+    "guideTitle": "强化学习：行动之后还有后果"
+  },
+  {
+    "id": "vision",
+    "name": "计算机视觉",
+    "short": "计算机视觉",
+    "section": "研究方向",
+    "guide": "../zh/vision.html",
+    "guideTitle": "计算机视觉：让模型读懂图像"
+  },
+  {
+    "id": "multimodal",
+    "name": "多模态与语音",
+    "short": "多模态",
+    "section": "研究方向",
+    "guide": "../zh/multimodal.html",
+    "guideTitle": "多模态：把图像和语言接起来"
+  },
+  {
+    "id": "generation",
+    "name": "生成模型",
+    "short": "生成模型",
+    "section": "研究方向",
+    "guide": "../zh/generation.html",
+    "guideTitle": "生成模型：图像是怎样一步步得到的"
+  },
+  {
+    "id": "robotics",
+    "name": "具身与机器人",
+    "short": "具身机器人",
+    "section": "研究方向",
+    "guide": "../zh/embodied.html",
+    "guideTitle": "具身智能：从看见到行动"
+  },
+  {
+    "id": "world-model",
+    "name": "世界模型与规划",
+    "short": "世界模型",
+    "section": "研究方向",
+    "guide": "../zh/world-model.html",
+    "guideTitle": "World Model：先预测，再行动"
+  },
+  {
+    "id": "graph-finance",
+    "name": "图学习、推荐与金融",
+    "short": "图学习与金融",
+    "section": "研究方向",
+    "guide": "../zh/ai4x.html",
+    "guideTitle": "AI 交叉学科"
+  },
+  {
+    "id": "science",
+    "name": "AI4Science 与自动研究",
+    "short": "AI4Science",
+    "section": "研究方向",
+    "guide": "../zh/ai4x.html",
+    "guideTitle": "AI 交叉学科"
+  },
+  {
+    "id": "systems",
+    "name": "效率与计算系统",
+    "short": "效率与系统",
+    "section": "工具与系统",
+    "guide": "../zh/systems.html",
+    "guideTitle": "效率与系统：让模型真的跑得动"
+  },
+  {
+    "id": "development",
+    "name": "开发环境与 GitHub",
+    "short": "开发与协作",
+    "section": "工具与系统",
+    "guide": "../zh/start.html",
+    "guideTitle": "第一个 AI 项目，从哪里开始"
+  }
+]

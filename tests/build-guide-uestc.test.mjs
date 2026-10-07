@@ -121,7 +121,7 @@ test('every direct <a> child of #nav is a nav link', () => {
     const links = directChildren(inner).filter(el => el.tag === 'a');
     assert.ok(links.length > 10, `${lang}: expected the nav links as direct children, found ${links.length}`);
     for (const { attrs } of links)
-      assert.match(attrs, /href="[a-z0-9-]+\.html"/, `${lang}: a non-page link is a direct child of #nav: <a${attrs}>`);
+      assert.match(attrs, /href="(?:[a-z0-9-]+\.html|\.\.\/\.\.\/wiki\/index\.html)"/, `${lang}: a non-page link is a direct child of #nav: <a${attrs}>`);
   }
 });
 

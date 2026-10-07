@@ -29,8 +29,8 @@ export const groupName=(g,l)=>l==='zh'?g:EN_GROUPS[GROUPS.indexOf(g)];
 // build's output byte-identical.
 const markdownAssets=(html,assets)=>{
  const guideRoot='../../../public/blog/guide/';
- if(!html.includes(guideRoot)&&!html.includes('../chronicle/'))return html;
- return html.replaceAll(guideRoot,assets).replaceAll('../chronicle/',assets+'chronicle/');
+ if(!html.includes(guideRoot)&&!html.includes('../chronicle/')&&!html.includes('../wiki/'))return html;
+ return html.replaceAll(guideRoot,assets).replaceAll('../chronicle/',assets+'chronicle/').replaceAll('../wiki/',assets+'wiki/');
 };
 
 export function loadGuide(root,assets='../'){
@@ -76,7 +76,7 @@ export function validateGuide(all,manifest){
  for(const lang of ['zh','en']){
   const pages=all[lang];const idsByPage=new Map(pages.map(p=>[filename(p.id),new Set([...p.html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]))]));
   for(const p of pages)for(const m of p.html.matchAll(/href="([^"#:]+\.html)(?:#([^"]+))?"/g)){
-   if(m[1].includes('://'))continue;
+   if(m[1].includes('://')||/^(?:\.\.\/){1,2}wiki\/index\.html$/.test(m[1]))continue;
    if(!idsByPage.has(m[1])||(m[2]&&!idsByPage.get(m[1]).has(m[2])))throw Error(`Broken link ${lang}/${p.id}: ${m[0]}`);
   }
   report.resourceEntries[lang]=pages.filter(p=>p.id.startsWith('catalog-')).reduce((a,p)=>a+(p.html.match(/id="resource-/g)||[]).length,0);

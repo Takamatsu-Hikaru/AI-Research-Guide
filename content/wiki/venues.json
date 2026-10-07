@@ -1,0 +1,2410 @@
+[
+  {
+    "id": "aaai",
+    "term": "AAAI",
+    "zh": "人工智能大会",
+    "aliases": [
+      "AAAI Conference on Artificial Intelligence"
+    ],
+    "category": "venues",
+    "group": "人工智能",
+    "kind": "conference",
+    "summary": "覆盖人工智能多个分支的综合性学术会议。",
+    "detail": [
+      "全称 AAAI Conference on Artificial Intelligence。论文主题包括机器学习、知识表示、搜索与规划、自然语言、视觉和智能体，适合观察不同 AI 分支如何解决问题。"
+    ],
+    "related": [
+      "ijcai",
+      "aamas",
+      "aij",
+      "jair"
+    ],
+    "sources": [
+      {
+        "title": "AAAI 官方会议与论文信息",
+        "url": "https://aaai.org/conference/aaai/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "ijcai",
+    "term": "IJCAI",
+    "zh": "国际人工智能联合会议",
+    "aliases": [
+      "International Joint Conference on Artificial Intelligence"
+    ],
+    "category": "venues",
+    "group": "人工智能",
+    "kind": "conference",
+    "summary": "交流人工智能基础方法与应用研究的综合性国际会议。",
+    "detail": [
+      "全称 International Joint Conference on Artificial Intelligence。它汇集学习、推理、规划、多智能体等方向；阅读论文时可先按主题筛选，再比较研究问题和评估方式。"
+    ],
+    "related": [
+      "aaai",
+      "aamas",
+      "aij",
+      "jair"
+    ],
+    "sources": [
+      {
+        "title": "IJCAI 官方会议与论文信息",
+        "url": "https://www.ijcai.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "neurips",
+    "term": "NeurIPS",
+    "zh": "神经信息处理系统大会",
+    "aliases": [
+      "NIPS"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "关注机器学习及其与统计、神经科学等领域交叉的学术会议。",
+    "detail": [
+      "全称 Conference on Neural Information Processing Systems，早期简称 NIPS。学习算法、优化、生成模型和强化学习等工作都可在其中找到，官网与论文集可按主题查阅。"
+    ],
+    "related": [
+      "icml",
+      "iclr",
+      "aistats",
+      "jmlr"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS 官方会议与论文信息",
+        "url": "https://neurips.cc/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "icml",
+    "term": "ICML",
+    "zh": "国际机器学习会议",
+    "aliases": [
+      "International Conference on Machine Learning"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "研究机器学习理论、算法与应用的国际会议。",
+    "detail": [
+      "全称 International Conference on Machine Learning。常见主题包括如何从数据学习、模型为什么能够泛化，以及如何更有效地训练和评估模型。"
+    ],
+    "related": [
+      "neurips",
+      "iclr",
+      "aistats",
+      "jmlr"
+    ],
+    "sources": [
+      {
+        "title": "ICML 官方会议与论文信息",
+        "url": "https://icml.cc/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "iclr",
+    "term": "ICLR",
+    "zh": "国际学习表征会议",
+    "aliases": [
+      "International Conference on Learning Representations"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "以学习数据表征为核心并覆盖广泛深度学习研究的会议。",
+    "detail": [
+      "全称 International Conference on Learning Representations。表征指模型把原始数据转成的内部特征；会议论文涉及网络结构、训练方法、生成模型及模型理解等。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "aistats",
+      "jmlr"
+    ],
+    "sources": [
+      {
+        "title": "ICLR 官方会议与论文信息",
+        "url": "https://iclr.cc/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "aistats",
+    "term": "AISTATS",
+    "zh": "人工智能与统计会议",
+    "aliases": [
+      "Artificial Intelligence and Statistics"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "连接统计学与机器学习的国际学术会议。",
+    "detail": [
+      "全称 International Conference on Artificial Intelligence and Statistics。概率建模、统计推断、学习理论和优化是常见主题，许多论文关注算法效果背后的数学条件。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "jmlr"
+    ],
+    "sources": [
+      {
+        "title": "AISTATS 官方会议与论文信息",
+        "url": "https://aistats.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "uai",
+    "term": "UAI",
+    "zh": "人工智能中的不确定性会议",
+    "aliases": [
+      "Uncertainty in Artificial Intelligence"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "研究人工智能如何表示、推断和处理不确定性的会议。",
+    "detail": [
+      "全称 Conference on Uncertainty in Artificial Intelligence。相关工作常涉及概率模型、因果推断、贝叶斯方法与决策，核心问题是信息不完整时怎样作出合理判断。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "UAI 官方会议与论文信息",
+        "url": "https://www.auai.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "colt",
+    "term": "COLT",
+    "zh": "计算学习理论会议",
+    "aliases": [
+      "Conference on Learning Theory"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "以数学方式研究机器学习能力与限制的学术会议。",
+    "detail": [
+      "全称 Conference on Learning Theory。论文常分析需要多少样本、训练算法能否收敛，以及预测误差能达到什么界限，阅读时通常需要概率与数学基础。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "COLT 官方会议与论文信息",
+        "url": "https://www.learningtheory.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "rlc",
+    "term": "RLC",
+    "zh": "强化学习会议",
+    "aliases": [
+      "Reinforcement Learning Conference"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "conference",
+    "summary": "集中讨论强化学习理论、算法、实证与应用的会议。",
+    "detail": [
+      "全称 Reinforcement Learning Conference。强化学习研究智能体怎样通过行动和反馈学习决策；RLC 与 Reinforcement Learning Journal 的发表和交流安排相联系。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "RLC 官方会议与论文信息",
+        "url": "https://rl-conference.cc/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "cvpr",
+    "term": "CVPR",
+    "zh": "计算机视觉与模式识别会议",
+    "aliases": [
+      "Computer Vision and Pattern Recognition"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "覆盖图像、视频和三维视觉研究的学术会议。",
+    "detail": [
+      "全称 Conference on Computer Vision and Pattern Recognition。识别、检测、分割、三维重建和视觉生成是常见主题；CVF 开放论文库可用于阅读论文和补充材料。"
+    ],
+    "related": [
+      "iccv",
+      "eccv",
+      "tpami",
+      "ijcv"
+    ],
+    "sources": [
+      {
+        "title": "CVPR 官方会议与论文信息",
+        "url": "https://www.thecvf.com/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "iccv",
+    "term": "ICCV",
+    "zh": "国际计算机视觉会议",
+    "aliases": [
+      "International Conference on Computer Vision"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "研究计算机如何理解与处理视觉信息的国际会议。",
+    "detail": [
+      "全称 International Conference on Computer Vision。内容包含视觉感知、几何、多模态理解和生成等方向，与 CVPR、ECCV 的研究范围有较多交集。"
+    ],
+    "related": [
+      "cvpr",
+      "eccv",
+      "tpami",
+      "ijcv"
+    ],
+    "sources": [
+      {
+        "title": "ICCV 官方会议与论文信息",
+        "url": "https://www.thecvf.com/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "eccv",
+    "term": "ECCV",
+    "zh": "欧洲计算机视觉会议",
+    "aliases": [
+      "European Conference on Computer Vision"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "由欧洲计算机视觉协会组织的计算机视觉研究会议。",
+    "detail": [
+      "全称 European Conference on Computer Vision。虽然名称含欧洲，参与者和论文来自世界各地；主题覆盖视觉学习、图像理解和三维场景等。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "tpami",
+      "ijcv"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 官方会议与论文信息",
+        "url": "https://eccv.ecva.net/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "wacv",
+    "term": "WACV",
+    "zh": "计算机视觉应用冬季会议",
+    "aliases": [
+      "Winter Conference on Applications of Computer Vision"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "重视计算机视觉方法及其实际应用的学术会议。",
+    "detail": [
+      "全称 Winter Conference on Applications of Computer Vision。可以在这里查找面向真实数据和实际场景的视觉算法、系统与评估研究。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "WACV 官方会议与论文信息",
+        "url": "https://www.thecvf.com/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "bmvc",
+    "term": "BMVC",
+    "zh": "英国机器视觉会议",
+    "aliases": [
+      "British Machine Vision Conference"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "由英国机器视觉协会组织的视觉与模式识别会议。",
+    "detail": [
+      "全称 British Machine Vision Conference。研究包括视觉表示、图像与视频分析、几何和识别，论文集由 BMVA 提供在线访问。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "BMVC 官方会议与论文信息",
+        "url": "https://www.bmva.org/bmvc"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "accv",
+    "term": "ACCV",
+    "zh": "亚洲计算机视觉会议",
+    "aliases": [
+      "Asian Conference on Computer Vision"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "交流计算机视觉与相关机器学习成果的国际会议。",
+    "detail": [
+      "全称 Asian Conference on Computer Vision。会议覆盖图像理解、视觉几何、视频分析等主题，其历届论文集可在 Springer 的会议系列页面查阅。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "ACCV 官方会议与论文信息",
+        "url": "https://link.springer.com/conference/accv"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "icpr",
+    "term": "ICPR",
+    "zh": "国际模式识别大会",
+    "aliases": [
+      "International Conference on Pattern Recognition"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "conference",
+    "summary": "围绕模式识别理论、方法和应用开展交流的国际大会。",
+    "detail": [
+      "全称 International Conference on Pattern Recognition。模式识别关注从数据中识别类别、结构和规律，因此议题既涉及视觉，也涉及文档、信号与其他类型的数据。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "ICPR 官方会议与论文信息",
+        "url": "https://iapr.org/conferences/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "acl",
+    "term": "ACL",
+    "zh": "计算语言学协会年会",
+    "aliases": [
+      "Association for Computational Linguistics"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "覆盖自然语言处理与计算语言学研究的学术会议。",
+    "detail": [
+      "作为会议名，ACL 指 Annual Meeting of the Association for Computational Linguistics；ACL 也可指主办学会本身。论文涵盖语言理解、生成、翻译、语言模型和语言分析。"
+    ],
+    "related": [
+      "emnlp",
+      "naacl",
+      "tacl",
+      "computational-linguistics"
+    ],
+    "sources": [
+      {
+        "title": "ACL 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/acl/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "emnlp",
+    "term": "EMNLP",
+    "zh": "自然语言处理实证方法会议",
+    "aliases": [
+      "Empirical Methods in Natural Language Processing"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "侧重以数据与实验研究自然语言处理方法的会议。",
+    "detail": [
+      "全称 Conference on Empirical Methods in Natural Language Processing。常见研究通过数据集、模型对比和误差分析检验方法，也讨论评估、语言资源和社会影响。"
+    ],
+    "related": [
+      "acl",
+      "naacl",
+      "tacl",
+      "computational-linguistics"
+    ],
+    "sources": [
+      {
+        "title": "EMNLP 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/emnlp/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "naacl",
+    "term": "NAACL",
+    "zh": "计算语言学协会美洲分会会议",
+    "aliases": [
+      "North American Chapter of the ACL",
+      "Nations of the Americas Chapter of the ACL",
+      "北美计算语言学会议"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "由 ACL 美洲分会举办的计算语言学与自然语言处理会议。",
+    "detail": [
+      "分会现名为 Nations of the Americas Chapter of the Association for Computational Linguistics，原名中的 North American 仍常见于历史论文。会议涵盖广泛的语言技术研究，参与者来自世界各地。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "tacl",
+      "computational-linguistics"
+    ],
+    "sources": [
+      {
+        "title": "NAACL 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/naacl/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "eacl",
+    "term": "EACL",
+    "zh": "计算语言学协会欧洲分会会议",
+    "aliases": [
+      "European Chapter of the ACL"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "由 ACL 欧洲分会举办的自然语言处理学术会议。",
+    "detail": [
+      "全称 Conference of the European Chapter of the Association for Computational Linguistics。它覆盖语言技术的多种方向，包含不同语言、语言资源和计算语言学方法。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "tacl"
+    ],
+    "sources": [
+      {
+        "title": "EACL 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/eacl/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "aacl",
+    "term": "AACL",
+    "zh": "计算语言学协会亚洲分会会议",
+    "aliases": [
+      "Asian Chapter of the ACL"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "由 ACL 亚洲分会举办的计算语言学会议。",
+    "detail": [
+      "全称 Conference of the Asian Chapter of the Association for Computational Linguistics。它有与 IJCNLP 联合举办的会议，阅读论文时可从出版记录确认该届会议的完整名称。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "tacl"
+    ],
+    "sources": [
+      {
+        "title": "AACL 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/aacl/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "coling",
+    "term": "COLING",
+    "zh": "国际计算语言学会议",
+    "aliases": [
+      "International Conference on Computational Linguistics"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "交流语言的计算研究与自然语言处理技术的国际会议。",
+    "detail": [
+      "全称 International Conference on Computational Linguistics。议题连接语言学问题和计算方法，包括语义、语法、文本处理、多语种技术和语言模型。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "tacl"
+    ],
+    "sources": [
+      {
+        "title": "COLING 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/coling/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "lrec",
+    "term": "LREC",
+    "zh": "语言资源与评估会议",
+    "aliases": [
+      "Language Resources and Evaluation Conference"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "关注语言数据、资源建设与语言技术评估的会议系列。",
+    "detail": [
+      "全称 Language Resources and Evaluation Conference。语料库、标注规范、词典、多语种数据和评测方法是重要主题；LREC-COLING 等联合会议可从同一资源体系继续检索。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "tacl"
+    ],
+    "sources": [
+      {
+        "title": "LREC 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/lrec/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "conll",
+    "term": "CoNLL",
+    "zh": "计算自然语言学习会议",
+    "aliases": [
+      "Computational Natural Language Learning"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "conference",
+    "summary": "关注自然语言学习方法与语言学习机制的会议。",
+    "detail": [
+      "全称 Conference on Computational Natural Language Learning。研究涵盖机器学习与语言之间的关系，历届共享任务也为语言分析提供过数据和评测设置。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "tacl"
+    ],
+    "sources": [
+      {
+        "title": "CoNLL 官方会议与论文信息",
+        "url": "https://aclanthology.org/venues/conll/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "corl",
+    "term": "CoRL",
+    "zh": "机器人学习会议",
+    "aliases": [
+      "Conference on Robot Learning"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "conference",
+    "summary": "研究机器人如何通过数据与交互学习能力的会议。",
+    "detail": [
+      "全称 Conference on Robot Learning。模仿学习、强化学习、感知与控制结合、真实机器人实验等是常见主题，重点是学习方法怎样支持机器人的实际行为。"
+    ],
+    "related": [
+      "rss",
+      "icra",
+      "iros",
+      "tro"
+    ],
+    "sources": [
+      {
+        "title": "CoRL 官方会议与论文信息",
+        "url": "https://www.corl.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "rss",
+    "term": "RSS",
+    "zh": "机器人科学与系统会议",
+    "aliases": [
+      "Robotics Science and Systems"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "conference",
+    "summary": "聚焦机器人科学问题、算法和完整系统的学术会议。",
+    "detail": [
+      "全称 Robotics: Science and Systems。论文覆盖机器人感知、规划、控制、操作和学习，常把理论方法与系统验证联系起来。"
+    ],
+    "related": [
+      "corl",
+      "icra",
+      "iros",
+      "tro"
+    ],
+    "sources": [
+      {
+        "title": "RSS 官方会议与论文信息",
+        "url": "https://roboticsconference.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "icra",
+    "term": "ICRA",
+    "zh": "国际机器人与自动化会议",
+    "aliases": [
+      "International Conference on Robotics and Automation"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "conference",
+    "summary": "覆盖机器人与自动化广泛方向的 IEEE 国际会议。",
+    "detail": [
+      "全称 IEEE International Conference on Robotics and Automation。研究包含机械设计、感知、运动规划、控制、操作和人机交互，可用于了解机器人领域的整体版图。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "iros",
+      "tro"
+    ],
+    "sources": [
+      {
+        "title": "ICRA 官方会议与论文信息",
+        "url": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "iros",
+    "term": "IROS",
+    "zh": "智能机器人与系统国际会议",
+    "aliases": [
+      "Intelligent Robots and Systems"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "conference",
+    "summary": "研究智能机器人及其系统实现的国际会议。",
+    "detail": [
+      "全称 IEEE/RSJ International Conference on Intelligent Robots and Systems。主题覆盖机器人硬件、感知、学习、控制与应用，许多论文展示机器人完成具体任务的实验。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "icra",
+      "tro"
+    ],
+    "sources": [
+      {
+        "title": "IROS 官方会议与论文信息",
+        "url": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "humanoids",
+    "term": "Humanoids",
+    "zh": "国际人形机器人会议",
+    "aliases": [
+      "International Conference on Humanoid Robots"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "conference",
+    "summary": "集中讨论人形机器人设计、运动和智能能力的会议。",
+    "detail": [
+      "全称 IEEE-RAS International Conference on Humanoid Robots。双足行走、平衡、全身控制、灵巧操作与人形平台实验都是典型主题。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "icra",
+      "iros"
+    ],
+    "sources": [
+      {
+        "title": "Humanoids 官方会议与论文信息",
+        "url": "https://www.ieee-ras.org/humanoid-robotics/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "acm-mm",
+    "term": "ACM MM",
+    "zh": "ACM 多媒体会议",
+    "aliases": [
+      "ACM Multimedia",
+      "MM"
+    ],
+    "category": "venues",
+    "group": "多媒体与语音",
+    "kind": "conference",
+    "summary": "研究图像、视频、音频、文本等多媒体信息及其组合的会议。",
+    "detail": [
+      "全称 ACM International Conference on Multimedia。论文涉及多模态理解与生成、媒体检索、内容分析和多媒体系统，常同时处理多种信息形式。"
+    ],
+    "related": [
+      "icassp",
+      "interspeech",
+      "tmm",
+      "tip"
+    ],
+    "sources": [
+      {
+        "title": "ACM MM 官方会议与论文信息",
+        "url": "https://www.acmmm.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "icassp",
+    "term": "ICASSP",
+    "zh": "声学语音与信号处理国际会议",
+    "aliases": [
+      "International Conference on Acoustics Speech and Signal Processing"
+    ],
+    "category": "venues",
+    "group": "多媒体与语音",
+    "kind": "conference",
+    "summary": "覆盖声学、语音与广泛信号处理研究的 IEEE 会议。",
+    "detail": [
+      "全称 International Conference on Acoustics, Speech, and Signal Processing。除了语音识别和音频处理，也涉及图像、通信、机器学习与其他信号分析问题。"
+    ],
+    "related": [
+      "acm-mm",
+      "interspeech",
+      "tmm",
+      "tip"
+    ],
+    "sources": [
+      {
+        "title": "ICASSP 官方会议与论文信息",
+        "url": "https://signalprocessingsociety.org/events/conferences"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "interspeech",
+    "term": "INTERSPEECH",
+    "zh": "国际语音会议",
+    "aliases": [],
+    "category": "venues",
+    "group": "多媒体与语音",
+    "kind": "conference",
+    "summary": "研究语音科学与语音技术的国际会议。",
+    "detail": [
+      "由国际语音通信协会 ISCA 组织，议题包括语音识别、合成、说话人分析、语音感知与语言学相关问题。研究对象既包括语音系统，也包括人如何产生和理解语音。"
+    ],
+    "related": [
+      "acm-mm",
+      "icassp",
+      "tmm",
+      "tip"
+    ],
+    "sources": [
+      {
+        "title": "INTERSPEECH 官方会议与论文信息",
+        "url": "https://www.isca-speech.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "kdd",
+    "term": "KDD",
+    "zh": "知识发现与数据挖掘会议",
+    "aliases": [
+      "SIGKDD"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "研究如何从大规模数据中发现规律并产生实际价值的会议。",
+    "detail": [
+      "全称 ACM SIGKDD Conference on Knowledge Discovery and Data Mining。常见主题包括数据挖掘、图学习、推荐、异常检测和数据科学应用，方法与真实场景往往紧密结合。"
+    ],
+    "related": [
+      "sigir",
+      "wsdm",
+      "recsys",
+      "tkde"
+    ],
+    "sources": [
+      {
+        "title": "KDD 官方会议与论文信息",
+        "url": "https://kdd.org/conferences/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "www",
+    "term": "WWW",
+    "zh": "万维网会议",
+    "aliases": [
+      "The Web Conference",
+      "TheWebConf",
+      "ACM Web Conference"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "研究 Web 技术、网络数据及其社会与应用影响的会议。",
+    "detail": [
+      "现名 ACM Web Conference，也常写 The Web Conference 或 TheWebConf。搜索、推荐、社交网络、Web 挖掘与网络安全等方向都与它相关。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "wsdm",
+      "recsys"
+    ],
+    "sources": [
+      {
+        "title": "WWW 官方会议与论文信息",
+        "url": "https://www.iw3c2.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "sigir",
+    "term": "SIGIR",
+    "zh": "信息检索研究与发展会议",
+    "aliases": [
+      "Research and Development in Information Retrieval"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "研究信息搜索、排序和检索评估的学术会议。",
+    "detail": [
+      "作为会议名，SIGIR 指 ACM SIGIR Conference on Research and Development in Information Retrieval。搜索引擎、神经检索、推荐和问答中的信息获取是典型主题。"
+    ],
+    "related": [
+      "kdd",
+      "wsdm",
+      "recsys",
+      "tkde"
+    ],
+    "sources": [
+      {
+        "title": "SIGIR 官方会议与论文信息",
+        "url": "https://sigir.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "wsdm",
+    "term": "WSDM",
+    "zh": "Web 搜索与数据挖掘会议",
+    "aliases": [
+      "Web Search and Data Mining"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "连接网络搜索、数据挖掘与相关应用的学术会议。",
+    "detail": [
+      "全称 ACM International Conference on Web Search and Data Mining。论文常涉及搜索排序、推荐系统、图数据和用户行为分析，强调从网络规模的数据中学习。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "recsys",
+      "tkde"
+    ],
+    "sources": [
+      {
+        "title": "WSDM 官方会议与论文信息",
+        "url": "https://www.wsdm-conference.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "icdm",
+    "term": "ICDM",
+    "zh": "IEEE 国际数据挖掘会议",
+    "aliases": [
+      "International Conference on Data Mining"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "交流数据挖掘算法、系统与应用研究的 IEEE 会议。",
+    "detail": [
+      "全称 IEEE International Conference on Data Mining。分类、聚类、异常检测、流数据与图挖掘等都是相关主题，会议缩写应与完整名称一起识别。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "wsdm",
+      "recsys"
+    ],
+    "sources": [
+      {
+        "title": "ICDM 官方会议与论文信息",
+        "url": "https://www3.cs.stonybrook.edu/~icdm2025/index.html"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "cikm",
+    "term": "CIKM",
+    "zh": "信息与知识管理会议",
+    "aliases": [
+      "Information and Knowledge Management"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "围绕信息检索、数据库和知识管理开展研究交流的会议。",
+    "detail": [
+      "全称 ACM International Conference on Information and Knowledge Management。研究常涉及怎样组织、检索和利用数据与知识，例如知识图谱、搜索和推荐。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "wsdm",
+      "recsys"
+    ],
+    "sources": [
+      {
+        "title": "CIKM 官方会议与论文信息",
+        "url": "https://www.cikmconference.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "recsys",
+    "term": "RecSys",
+    "zh": "ACM 推荐系统会议",
+    "aliases": [
+      "Recommender Systems"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "conference",
+    "summary": "集中研究推荐算法、推荐系统与用户体验的会议。",
+    "detail": [
+      "全称 ACM Conference on Recommender Systems。论文既讨论预测用户兴趣，也讨论推荐的评估、交互、公平性和系统实践。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "wsdm",
+      "tkde"
+    ],
+    "sources": [
+      {
+        "title": "RecSys 官方会议与论文信息",
+        "url": "https://recsys.acm.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "aamas",
+    "term": "AAMAS",
+    "zh": "自主智能体与多智能体系统会议",
+    "aliases": [
+      "Autonomous Agents and Multiagent Systems"
+    ],
+    "category": "venues",
+    "group": "人工智能",
+    "kind": "conference",
+    "summary": "研究自主智能体以及多个智能体之间交互的会议。",
+    "detail": [
+      "全称 International Conference on Autonomous Agents and Multiagent Systems。合作、博弈、协调、机制设计和多智能体学习是常见主题，智能体可以是软件系统或机器人。"
+    ],
+    "related": [
+      "aaai",
+      "ijcai",
+      "aij",
+      "jair"
+    ],
+    "sources": [
+      {
+        "title": "AAMAS 官方会议与论文信息",
+        "url": "https://www.ifaamas.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "mlsys",
+    "term": "MLSys",
+    "zh": "机器学习与系统会议",
+    "aliases": [
+      "Machine Learning and Systems"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究机器学习与计算系统相互作用的会议。",
+    "detail": [
+      "全称 Conference on Machine Learning and Systems。训练和推理效率、分布式执行、编译器、硬件与资源管理是典型主题，也研究用机器学习改进系统。"
+    ],
+    "related": [
+      "osdi",
+      "sosp",
+      "asplos",
+      "isca"
+    ],
+    "sources": [
+      {
+        "title": "MLSys 官方会议与论文信息",
+        "url": "https://mlsys.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "osdi",
+    "term": "OSDI",
+    "zh": "操作系统设计与实现研讨会",
+    "aliases": [
+      "Operating Systems Design and Implementation"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究操作系统及大规模计算系统设计与实现的会议。",
+    "detail": [
+      "全称 USENIX Symposium on Operating Systems Design and Implementation。分布式系统、存储、网络服务和机器学习系统都可能出现，论文通常通过系统实现与实验评估设计选择。"
+    ],
+    "related": [
+      "mlsys",
+      "sosp",
+      "asplos",
+      "isca"
+    ],
+    "sources": [
+      {
+        "title": "OSDI 官方会议与论文信息",
+        "url": "https://www.usenix.org/conferences/byname/179"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "sosp",
+    "term": "SOSP",
+    "zh": "操作系统原理研讨会",
+    "aliases": [
+      "Symposium on Operating Systems Principles"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究操作系统及相关计算系统基本设计问题的会议。",
+    "detail": [
+      "全称 ACM Symposium on Operating Systems Principles。常见工作讨论系统的性能、可靠性、隔离与分布式协作，并通过实现或分析验证提出的机制。"
+    ],
+    "related": [
+      "mlsys",
+      "osdi",
+      "asplos",
+      "isca"
+    ],
+    "sources": [
+      {
+        "title": "SOSP 官方会议与论文信息",
+        "url": "https://sigops.org/s/conferences/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "asplos",
+    "term": "ASPLOS",
+    "zh": "程序语言与操作系统的体系结构支持会议",
+    "aliases": [
+      "Architectural Support for Programming Languages and Operating Systems"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究硬件、编程语言和操作系统之间协同设计的会议。",
+    "detail": [
+      "全称 International Conference on Architectural Support for Programming Languages and Operating Systems。AI 加速、编译优化和内存管理等问题往往需要同时考虑软硬件，因此适合在这里交流。"
+    ],
+    "related": [
+      "mlsys",
+      "osdi",
+      "sosp",
+      "isca"
+    ],
+    "sources": [
+      {
+        "title": "ASPLOS 官方会议与论文信息",
+        "url": "https://www.asplos-conference.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "isca",
+    "term": "ISCA",
+    "zh": "国际计算机体系结构研讨会",
+    "aliases": [
+      "International Symposium on Computer Architecture"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究计算机硬件组织方式与体系结构设计的会议。",
+    "detail": [
+      "全称 International Symposium on Computer Architecture。处理器、存储层次、互连和 AI 加速器是典型主题；此处 ISCA 指体系结构会议，与语音领域同缩写的学会区分。"
+    ],
+    "related": [
+      "mlsys",
+      "osdi",
+      "sosp",
+      "asplos"
+    ],
+    "sources": [
+      {
+        "title": "ISCA 官方会议与论文信息",
+        "url": "https://www.iscaconf.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "micro",
+    "term": "MICRO",
+    "zh": "国际微体系结构研讨会",
+    "aliases": [
+      "International Symposium on Microarchitecture"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究处理器内部结构与相关软硬件优化的会议。",
+    "detail": [
+      "全称 IEEE/ACM International Symposium on Microarchitecture。议题包括执行流水线、缓存、并行计算、加速器及编译技术，关注如何让硬件更高效地执行程序。"
+    ],
+    "related": [
+      "mlsys",
+      "osdi",
+      "sosp",
+      "asplos"
+    ],
+    "sources": [
+      {
+        "title": "MICRO 官方会议与论文信息",
+        "url": "https://microarch.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "sc",
+    "term": "SC",
+    "zh": "高性能计算国际会议",
+    "aliases": [
+      "Supercomputing"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "覆盖高性能计算、网络、存储与分析技术的会议。",
+    "detail": [
+      "完整名称为 International Conference for High Performance Computing, Networking, Storage, and Analysis。超级计算机、科学计算和大规模 AI 训练涉及的并行计算问题都与其相关。"
+    ],
+    "related": [
+      "mlsys",
+      "osdi",
+      "sosp",
+      "asplos"
+    ],
+    "sources": [
+      {
+        "title": "SC 官方会议与论文信息",
+        "url": "https://supercomputing.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "eurosys",
+    "term": "EuroSys",
+    "zh": "欧洲计算机系统会议",
+    "aliases": [
+      "European Conference on Computer Systems"
+    ],
+    "category": "venues",
+    "group": "计算机系统",
+    "kind": "conference",
+    "summary": "研究计算系统软件与系统实践的国际会议。",
+    "detail": [
+      "全称 European Conference on Computer Systems。主题覆盖操作系统、分布式计算、网络与存储，研究常关注系统在真实负载下的效率与可靠性。"
+    ],
+    "related": [
+      "mlsys",
+      "osdi",
+      "sosp",
+      "asplos"
+    ],
+    "sources": [
+      {
+        "title": "EuroSys 官方会议与论文信息",
+        "url": "https://www.eurosys.org/conferences"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "siggraph",
+    "term": "SIGGRAPH",
+    "zh": "计算机图形学与交互技术会议",
+    "aliases": [
+      "ACM SIGGRAPH"
+    ],
+    "category": "venues",
+    "group": "图形学与交互",
+    "kind": "conference",
+    "summary": "围绕计算机图形学和交互技术开展研究与展示的会议。",
+    "detail": [
+      "技术论文涉及渲染、几何建模、动画、物理仿真与视觉内容生成。SIGGRAPH 同时有艺术、制作与产业活动，查论文时可以直接进入 Technical Papers 项目。"
+    ],
+    "related": [
+      "siggraph-asia",
+      "tog",
+      "chi",
+      "uist"
+    ],
+    "sources": [
+      {
+        "title": "SIGGRAPH 官方会议与论文信息",
+        "url": "https://www.siggraph.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "siggraph-asia",
+    "term": "SIGGRAPH Asia",
+    "zh": "亚洲计算机图形学与交互技术会议",
+    "aliases": [
+      "SA"
+    ],
+    "category": "venues",
+    "group": "图形学与交互",
+    "kind": "conference",
+    "summary": "在亚洲举办的计算机图形学与交互技术会议及展览。",
+    "detail": [
+      "研究范围与 SIGGRAPH 紧密相关，涵盖渲染、动画、几何、仿真和交互。技术论文、技术交流与展览是不同的活动形式，论文的出版信息可从对应项目确认。"
+    ],
+    "related": [
+      "siggraph",
+      "tog",
+      "chi",
+      "uist"
+    ],
+    "sources": [
+      {
+        "title": "SIGGRAPH Asia 官方会议与论文信息",
+        "url": "https://www.siggraph.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "chi",
+    "term": "CHI",
+    "zh": "计算系统中的人因会议",
+    "aliases": [
+      "Human Factors in Computing Systems"
+    ],
+    "category": "venues",
+    "group": "图形学与交互",
+    "kind": "conference",
+    "summary": "研究人与计算技术如何交互的人机交互会议。",
+    "detail": [
+      "全称 ACM CHI Conference on Human Factors in Computing Systems。AI 助手的使用体验、可解释交互、无障碍设计与用户研究都属于相关问题，重视技术对人的实际影响。"
+    ],
+    "related": [
+      "siggraph",
+      "siggraph-asia",
+      "tog",
+      "uist"
+    ],
+    "sources": [
+      {
+        "title": "CHI 官方会议与论文信息",
+        "url": "https://sigchi.org/conferences/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "uist",
+    "term": "UIST",
+    "zh": "用户界面软件与技术研讨会",
+    "aliases": [
+      "User Interface Software and Technology"
+    ],
+    "category": "venues",
+    "group": "图形学与交互",
+    "kind": "conference",
+    "summary": "研究交互技术、用户界面与支撑系统的会议。",
+    "detail": [
+      "全称 ACM Symposium on User Interface Software and Technology。新输入设备、交互工具、智能界面和创作系统是常见工作，通常通过原型展示技术如何被使用。"
+    ],
+    "related": [
+      "siggraph",
+      "siggraph-asia",
+      "tog",
+      "chi"
+    ],
+    "sources": [
+      {
+        "title": "UIST 官方会议与论文信息",
+        "url": "https://uist.acm.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "miccai",
+    "term": "MICCAI",
+    "zh": "医学图像计算与计算机辅助干预会议",
+    "aliases": [
+      "Medical Image Computing and Computer Assisted Intervention"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "conference",
+    "summary": "研究医学图像计算和计算机辅助医疗干预方法的会议。",
+    "detail": [
+      "全称 International Conference on Medical Image Computing and Computer Assisted Intervention。医学图像分割、配准、重建和手术导航是常见主题，评估通常结合医学任务的具体要求。"
+    ],
+    "related": [
+      "ismb",
+      "recomb",
+      "tmi",
+      "media"
+    ],
+    "sources": [
+      {
+        "title": "MICCAI 官方会议与论文信息",
+        "url": "https://miccai.org/upcoming-conferences/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "ismb",
+    "term": "ISMB",
+    "zh": "分子生物学智能系统会议",
+    "aliases": [
+      "Intelligent Systems for Molecular Biology"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "conference",
+    "summary": "交流生物信息学与计算生物学研究的会议。",
+    "detail": [
+      "全称 Intelligent Systems for Molecular Biology。议题包括基因组、蛋白质、单细胞数据和生物网络的计算分析，机器学习是其中常用的一类方法。"
+    ],
+    "related": [
+      "miccai",
+      "recomb",
+      "tmi",
+      "media"
+    ],
+    "sources": [
+      {
+        "title": "ISMB 官方会议与论文信息",
+        "url": "https://www.iscb.org/conferences-events/about-ismb"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "recomb",
+    "term": "RECOMB",
+    "zh": "计算分子生物学研究会议",
+    "aliases": [
+      "Research in Computational Molecular Biology"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "conference",
+    "summary": "研究解决分子生物学问题所需计算方法的会议。",
+    "detail": [
+      "全称 Research in Computational Molecular Biology。工作常从序列、基因组或生物网络问题出发，提出算法、统计模型与计算分析方法。"
+    ],
+    "related": [
+      "miccai",
+      "ismb",
+      "tmi",
+      "media"
+    ],
+    "sources": [
+      {
+        "title": "RECOMB 官方会议与论文信息",
+        "url": "https://recomb.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "jmlr",
+    "term": "JMLR",
+    "zh": "机器学习研究期刊",
+    "aliases": [
+      "Journal of Machine Learning Research"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "journal",
+    "summary": "发表机器学习各方向完整研究成果的开放获取期刊。",
+    "detail": [
+      "全称 Journal of Machine Learning Research。论文可覆盖理论、算法、实证和软件，篇幅通常允许作者展开推导、实验和方法细节；官网提供论文全文。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "JMLR 期刊与出版信息",
+        "url": "https://jmlr.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tmlr",
+    "term": "TMLR",
+    "zh": "机器学习研究汇刊",
+    "aliases": [
+      "Transactions on Machine Learning Research"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "journal",
+    "summary": "以持续投稿和公开审稿交流发表机器学习研究的期刊。",
+    "detail": [
+      "全称 Transactions on Machine Learning Research。投稿与审稿在 OpenReview 上进行，读者可以结合论文、审稿意见和作者回复理解研究得到支持的范围。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "TMLR 期刊与出版信息",
+        "url": "https://jmlr.org/tmlr/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "aij",
+    "term": "AIJ",
+    "zh": "人工智能期刊",
+    "aliases": [
+      "Artificial Intelligence Journal"
+    ],
+    "category": "venues",
+    "group": "人工智能",
+    "kind": "journal",
+    "summary": "覆盖人工智能基础与广泛研究方向的学术期刊。",
+    "detail": [
+      "正式刊名为 Artificial Intelligence，常用 AIJ 来区别于人工智能这一学科名称。知识表示、推理、规划、学习与智能体都是其相关研究方向。"
+    ],
+    "related": [
+      "aaai",
+      "ijcai",
+      "aamas",
+      "jair"
+    ],
+    "sources": [
+      {
+        "title": "AIJ 期刊与出版信息",
+        "url": "https://shop.elsevier.com/journals/artificial-intelligence/0004-3702"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "jair",
+    "term": "JAIR",
+    "zh": "人工智能研究期刊",
+    "aliases": [
+      "Journal of Artificial Intelligence Research"
+    ],
+    "category": "venues",
+    "group": "人工智能",
+    "kind": "journal",
+    "summary": "开放发表人工智能各分支研究成果的学术期刊。",
+    "detail": [
+      "全称 Journal of Artificial Intelligence Research。论文涵盖搜索、推理、学习、规划、语言及多智能体等方向，全文可通过期刊网站获取。"
+    ],
+    "related": [
+      "aaai",
+      "ijcai",
+      "aamas",
+      "aij"
+    ],
+    "sources": [
+      {
+        "title": "JAIR 期刊与出版信息",
+        "url": "https://www.jair.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tnnls",
+    "term": "TNNLS",
+    "zh": "神经网络与学习系统汇刊",
+    "aliases": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "journal",
+    "summary": "研究神经网络及相关学习系统的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Neural Networks and Learning Systems。论文涉及学习理论、网络结构、训练方法和应用，既包含算法研究，也包含系统行为的分析。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "TNNLS 期刊与出版信息",
+        "url": "https://cis.ieee.org/publications/t-neural-networks-and-learning-systems"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tpami",
+    "term": "TPAMI",
+    "zh": "模式分析与机器智能汇刊",
+    "aliases": [
+      "PAMI",
+      "tpmai"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "journal",
+    "summary": "覆盖模式分析、计算机视觉与相关机器智能研究的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Pattern Analysis and Machine Intelligence，也常简称 PAMI。论文常深入讨论视觉方法、模式识别理论与实验验证；"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "ijcv"
+    ],
+    "sources": [
+      {
+        "title": "TPAMI 期刊与出版信息",
+        "url": "https://www.computer.org/digital-library/journals/tp/cfp-ieee-pattern-analysis-machine-intelligence"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "ijcv",
+    "term": "IJCV",
+    "zh": "国际计算机视觉期刊",
+    "aliases": [
+      "International Journal of Computer Vision"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "journal",
+    "summary": "发表计算机视觉理论、算法与系统研究的期刊。",
+    "detail": [
+      "全称 International Journal of Computer Vision。图像理解、几何重建、视觉学习与视频分析等工作可在其中找到，期刊文章通常对问题与方法作较完整的论述。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "IJCV 期刊与出版信息",
+        "url": "https://link.springer.com/journal/11263"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tip",
+    "term": "TIP",
+    "zh": "图像处理汇刊",
+    "aliases": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "journal",
+    "summary": "研究图像处理理论、算法与应用的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Image Processing。图像恢复、压缩、增强、表示和分析等都是相关主题，重点涉及图像信息的获取、处理与利用。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "TIP 期刊与出版信息",
+        "url": "https://signalprocessingsociety.org/publications-resources/ieee-transactions-image-processing"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tmm",
+    "term": "TMM",
+    "zh": "多媒体汇刊",
+    "aliases": [
+      "IEEE Transactions on Multimedia"
+    ],
+    "category": "venues",
+    "group": "多媒体与语音",
+    "kind": "journal",
+    "summary": "研究多媒体内容、系统及应用的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Multimedia。研究可结合图像、声音、视频和文本，讨论内容理解、编码传输、检索、生成及用户交互。"
+    ],
+    "related": [
+      "acm-mm",
+      "icassp",
+      "interspeech",
+      "tip"
+    ],
+    "sources": [
+      {
+        "title": "TMM 期刊与出版信息",
+        "url": "https://signalprocessingsociety.org/publications-resources/ieee-transactions-multimedia"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "pattern-recognition",
+    "term": "PR",
+    "zh": "模式识别期刊",
+    "aliases": [
+      "Pattern Recognition"
+    ],
+    "category": "venues",
+    "group": "计算机视觉",
+    "kind": "journal",
+    "summary": "发表模式识别方法及其应用研究的学术期刊。",
+    "detail": [
+      "正式刊名为 Pattern Recognition。分类、聚类、特征学习与图像或文档分析都是相关问题；在参考文献中 PR 可作为刊名简称。"
+    ],
+    "related": [
+      "cvpr",
+      "iccv",
+      "eccv",
+      "tpami"
+    ],
+    "sources": [
+      {
+        "title": "PR 期刊与出版信息",
+        "url": "https://shop.elsevier.com/journals/pattern-recognition/0031-3203"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tacl",
+    "term": "TACL",
+    "zh": "计算语言学协会汇刊",
+    "aliases": [
+      "Transactions of the Association for Computational Linguistics"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "journal",
+    "summary": "发表计算语言学与自然语言处理研究的期刊。",
+    "detail": [
+      "全称 Transactions of the Association for Computational Linguistics。它采用期刊审稿流程，并有与 ACL 系列会议关联的论文报告安排，论文正文可在 ACL Anthology 查阅。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "computational-linguistics"
+    ],
+    "sources": [
+      {
+        "title": "TACL 期刊与出版信息",
+        "url": "https://aclanthology.org/venues/tacl/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "computational-linguistics",
+    "term": "CL",
+    "zh": "计算语言学期刊",
+    "aliases": [
+      "Computational Linguistics"
+    ],
+    "category": "venues",
+    "group": "自然语言处理",
+    "kind": "journal",
+    "summary": "研究语言的计算建模、分析与处理的学术期刊。",
+    "detail": [
+      "正式刊名为 Computational Linguistics。论文可以同时涉及语言理论与计算方法，例如语义、句法、语言学习和自然语言处理系统。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "naacl",
+      "tacl"
+    ],
+    "sources": [
+      {
+        "title": "CL 期刊与出版信息",
+        "url": "https://aclanthology.org/venues/cl/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tro",
+    "term": "T-RO",
+    "zh": "机器人学汇刊",
+    "aliases": [
+      "TRO",
+      "IEEE Transactions on Robotics"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "journal",
+    "summary": "发表机器人学基础、方法与系统研究的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Robotics，常写 TRO。主题包括运动、感知、控制、操作与机器人系统，文章通常深入解释方法原理和实验结果。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "icra",
+      "iros"
+    ],
+    "sources": [
+      {
+        "title": "T-RO 期刊与出版信息",
+        "url": "https://www.ieee-ras.org/publications/t-ro/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "ijrr",
+    "term": "IJRR",
+    "zh": "国际机器人研究期刊",
+    "aliases": [
+      "International Journal of Robotics Research"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "journal",
+    "summary": "覆盖机器人科学、技术与系统研究的期刊。",
+    "detail": [
+      "全称 The International Journal of Robotics Research。机器人机构、感知、规划、控制与学习均在其研究范围内，常呈现完整的理论和实验论证。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "icra",
+      "iros"
+    ],
+    "sources": [
+      {
+        "title": "IJRR 期刊与出版信息",
+        "url": "https://journals.sagepub.com/home/ijr"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "ral",
+    "term": "RA-L",
+    "zh": "机器人与自动化快报",
+    "aliases": [
+      "RAL",
+      "Robotics and Automation Letters"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "journal",
+    "summary": "以较精炼篇幅发表机器人与自动化研究的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Robotics and Automation Letters，常写 RAL。它属于期刊，部分论文还可通过关联安排在机器人会议上报告，阅读出版记录可区分发表载体与报告场合。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "icra",
+      "iros"
+    ],
+    "sources": [
+      {
+        "title": "RA-L 期刊与出版信息",
+        "url": "https://www.ieee-ras.org/publications/ra-l/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "science-robotics",
+    "term": "Science Robotics",
+    "zh": "科学机器人学",
+    "aliases": [
+      "Sci Robot"
+    ],
+    "category": "venues",
+    "group": "机器人",
+    "kind": "journal",
+    "summary": "发表跨学科机器人研究与技术进展的期刊。",
+    "detail": [
+      "它属于 Science 期刊系列，覆盖机器人设计、材料、控制、智能与应用等方向。研究常把新的机器人能力与科学问题或现实任务联系起来。"
+    ],
+    "related": [
+      "corl",
+      "rss",
+      "icra",
+      "iros"
+    ],
+    "sources": [
+      {
+        "title": "Science Robotics 期刊与出版信息",
+        "url": "https://www.science.org/journal/scirobotics"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tkde",
+    "term": "TKDE",
+    "zh": "知识与数据工程汇刊",
+    "aliases": [
+      "IEEE Transactions on Knowledge and Data Engineering"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "journal",
+    "summary": "研究数据与知识的管理、处理和利用的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Knowledge and Data Engineering。数据库、数据挖掘、知识发现与信息系统都是相关方向，论文常同时考虑算法质量和数据规模。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "wsdm",
+      "recsys"
+    ],
+    "sources": [
+      {
+        "title": "TKDE 期刊与出版信息",
+        "url": "https://www.computer.org/csdl/journal/tk"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tois",
+    "term": "TOIS",
+    "zh": "信息系统汇刊",
+    "aliases": [
+      "ACM Transactions on Information Systems"
+    ],
+    "category": "venues",
+    "group": "检索与数据挖掘",
+    "kind": "journal",
+    "summary": "以信息检索及相关信息系统研究为重要内容的 ACM 期刊。",
+    "detail": [
+      "全称 ACM Transactions on Information Systems。搜索、排序、推荐、信息组织和用户的信息获取行为是常见主题，可与 SIGIR 等会议的研究一起阅读。"
+    ],
+    "related": [
+      "kdd",
+      "sigir",
+      "wsdm",
+      "recsys"
+    ],
+    "sources": [
+      {
+        "title": "TOIS 期刊与出版信息",
+        "url": "https://dl.acm.org/journal/tois"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tog",
+    "term": "TOG",
+    "zh": "图形学汇刊",
+    "aliases": [
+      "ACM Transactions on Graphics"
+    ],
+    "category": "venues",
+    "group": "图形学与交互",
+    "kind": "journal",
+    "summary": "发表计算机图形学研究的 ACM 期刊。",
+    "detail": [
+      "全称 ACM Transactions on Graphics。渲染、几何、动画、仿真与视觉内容创作是重要主题，部分论文与 SIGGRAPH 或 SIGGRAPH Asia 的技术论文项目相联系。"
+    ],
+    "related": [
+      "siggraph",
+      "siggraph-asia",
+      "chi",
+      "uist"
+    ],
+    "sources": [
+      {
+        "title": "TOG 期刊与出版信息",
+        "url": "https://dl.acm.org/journal/tog"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "nature-machine-intelligence",
+    "term": "Nature Machine Intelligence",
+    "zh": "自然机器智能",
+    "aliases": [
+      "Nature MI",
+      "NMI",
+      "Nat Mach Intell"
+    ],
+    "category": "venues",
+    "group": "机器学习",
+    "kind": "journal",
+    "summary": "发表人工智能、机器学习与机器人等方向研究的跨学科期刊。",
+    "detail": [
+      "研究范围连接智能算法、应用和与其他学科的交叉问题。阅读时可以关注方法带来的新能力，以及实验怎样支持论文的科学结论。"
+    ],
+    "related": [
+      "neurips",
+      "icml",
+      "iclr",
+      "aistats"
+    ],
+    "sources": [
+      {
+        "title": "Nature Machine Intelligence 期刊与出版信息",
+        "url": "https://www.nature.com/natmachintell/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "nature-methods",
+    "term": "Nature Methods",
+    "zh": "自然方法",
+    "aliases": [
+      "Nat Methods"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "journal",
+    "summary": "发表生命科学研究方法、技术与工具的期刊。",
+    "detail": [
+      "其中会出现机器学习辅助的成像、单细胞分析、结构研究等工作。论文的核心通常是方法如何帮助开展生命科学实验或分析数据。"
+    ],
+    "related": [
+      "miccai",
+      "ismb",
+      "recomb",
+      "tmi"
+    ],
+    "sources": [
+      {
+        "title": "Nature Methods 期刊与出版信息",
+        "url": "https://www.nature.com/nmeth/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "nature-computational-science",
+    "term": "Nature Computational Science",
+    "zh": "自然计算科学",
+    "aliases": [
+      "Nat Comput Sci"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "journal",
+    "summary": "发表跨学科计算方法与数学模型研究的期刊。",
+    "detail": [
+      "研究涵盖计算生物、化学、材料、气候等领域，关注计算技术怎样解决科学问题。AI 方法可以是其中的工具，也可以是论文重点发展的计算方法。"
+    ],
+    "related": [
+      "miccai",
+      "ismb",
+      "recomb",
+      "tmi"
+    ],
+    "sources": [
+      {
+        "title": "Nature Computational Science 期刊与出版信息",
+        "url": "https://www.nature.com/natcomputsci/about/aims"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "npj-artificial-intelligence",
+    "term": "npj Artificial Intelligence",
+    "zh": "npj 人工智能",
+    "aliases": [
+      "npj AI"
+    ],
+    "category": "venues",
+    "group": "人工智能",
+    "kind": "journal",
+    "summary": "发表人工智能及其跨学科应用研究的开放获取期刊。",
+    "detail": [
+      "它属于 Nature Portfolio 的 npj 系列，关注 AI 理论、方法与应用。检索时可同时使用完整刊名和简称 npj AI，以避免与其他人工智能刊物混淆。"
+    ],
+    "related": [
+      "aaai",
+      "ijcai",
+      "aamas",
+      "aij"
+    ],
+    "sources": [
+      {
+        "title": "npj Artificial Intelligence 期刊与出版信息",
+        "url": "https://www.nature.com/npjai/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "tmi",
+    "term": "TMI",
+    "zh": "医学影像汇刊",
+    "aliases": [
+      "IEEE Transactions on Medical Imaging"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "journal",
+    "summary": "研究医学影像获取、重建、处理与分析的 IEEE 期刊。",
+    "detail": [
+      "全称 IEEE Transactions on Medical Imaging。医学图像重建、分割、配准与计算分析是相关方向，工作通常结合成像过程或医学任务来设计方法。"
+    ],
+    "related": [
+      "miccai",
+      "ismb",
+      "recomb",
+      "media"
+    ],
+    "sources": [
+      {
+        "title": "TMI 期刊与出版信息",
+        "url": "https://ieeetmi.org/"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  },
+  {
+    "id": "media",
+    "term": "MedIA",
+    "zh": "医学图像分析期刊",
+    "aliases": [
+      "Medical Image Analysis"
+    ],
+    "category": "venues",
+    "group": "交叉科学",
+    "kind": "journal",
+    "summary": "发表医学与生物图像计算分析研究的期刊。",
+    "detail": [
+      "正式刊名为 Medical Image Analysis，是 MICCAI 学会的官方期刊之一。研究涉及不同尺度的医学和生物图像，常见方法包括分割、配准、建模与辅助分析。"
+    ],
+    "related": [
+      "miccai",
+      "ismb",
+      "recomb",
+      "tmi"
+    ],
+    "sources": [
+      {
+        "title": "MedIA 期刊与出版信息",
+        "url": "https://shop.elsevier.com/journals/medical-image-analysis/1361-8415"
+      }
+    ],
+    "categories": [
+      "venues"
+    ]
+  }
+]

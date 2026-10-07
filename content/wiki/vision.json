@@ -1,0 +1,650 @@
+[
+  {
+    "id": "image-classification",
+    "term": "Image Classification",
+    "zh": "图像分类",
+    "aliases": [
+      "Classification"
+    ],
+    "category": "vision",
+    "group": "视觉任务",
+    "kind": "term",
+    "summary": "图像分类为整张图片预测一个或多个类别标签。",
+    "detail": [
+      "给一张水果照片，分类模型可以判断它属于苹果还是香蕉。输出通常是各类别的分数或概率，适合回答图片整体是什么。"
+    ],
+    "related": [
+      "object-detection",
+      "semantic-segmentation",
+      "cnn"
+    ],
+    "sources": [
+      {
+        "title": "Torchvision：Models and Pre-trained Weights",
+        "url": "https://docs.pytorch.org/vision/stable/models.html"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "object-detection",
+    "term": "Object Detection",
+    "zh": "目标检测",
+    "aliases": [
+      "Detection"
+    ],
+    "category": "vision",
+    "group": "视觉任务",
+    "kind": "term",
+    "summary": "目标检测同时找出图中的物体位置及其类别。",
+    "detail": [
+      "一张街景照片里，检测器可以分别框出三辆车和两位行人。每个结果通常带有边界框、类别与置信分数，可供计数和后续跟踪使用。"
+    ],
+    "related": [
+      "bounding-box",
+      "nms",
+      "instance-segmentation"
+    ],
+    "sources": [
+      {
+        "title": "Faster R-CNN",
+        "url": "https://arxiv.org/abs/1506.01497"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "semantic-segmentation",
+    "term": "Semantic Segmentation",
+    "zh": "语义分割",
+    "aliases": [
+      "语义切分"
+    ],
+    "category": "vision",
+    "group": "视觉任务",
+    "kind": "term",
+    "summary": "语义分割为图像中的每个像素分配语义类别。",
+    "detail": [
+      "道路场景中，模型把像素分别标成道路、车辆、天空等。相邻的两辆车可以拥有相同类别标签，输出重点是每片区域属于什么。"
+    ],
+    "related": [
+      "instance-segmentation",
+      "segmentation-mask",
+      "object-detection"
+    ],
+    "sources": [
+      {
+        "title": "Torchvision：Models and Pre-trained Weights",
+        "url": "https://docs.pytorch.org/vision/stable/models.html"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "instance-segmentation",
+    "term": "Instance Segmentation",
+    "zh": "实例分割",
+    "aliases": [
+      "实例切分"
+    ],
+    "category": "vision",
+    "group": "视觉任务",
+    "kind": "term",
+    "summary": "实例分割同时识别每个独立物体，并给出它各自占据的像素区域。",
+    "detail": [
+      "桌上有三个杯子时，模型为三个杯子分别生成掩码。这样既知道杯子的轮廓，也能区分哪个像素属于哪一只杯子。"
+    ],
+    "related": [
+      "semantic-segmentation",
+      "segmentation-mask",
+      "bounding-box"
+    ],
+    "sources": [
+      {
+        "title": "Mask R-CNN",
+        "url": "https://arxiv.org/abs/1703.06870"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "object-tracking",
+    "term": "Object Tracking",
+    "zh": "目标跟踪",
+    "aliases": [
+      "Tracking",
+      "MOT"
+    ],
+    "category": "vision",
+    "group": "视觉任务",
+    "kind": "term",
+    "summary": "目标跟踪在连续视频帧中定位物体，并维持同一物体的身份关联。",
+    "detail": [
+      "行人从画面左边走到右边，跟踪系统持续给他保留同一个编号。常见做法结合逐帧检测、运动预测与外观特征，处理短暂遮挡和重新出现。"
+    ],
+    "related": [
+      "object-detection",
+      "optical-flow",
+      "bounding-box"
+    ],
+    "sources": [
+      {
+        "title": "ByteTrack",
+        "url": "https://arxiv.org/abs/2110.06864"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "bounding-box",
+    "term": "Bounding Box",
+    "zh": "边界框",
+    "aliases": [
+      "BBox",
+      "Box"
+    ],
+    "category": "vision",
+    "group": "视觉表示",
+    "kind": "term",
+    "summary": "边界框是用矩形或其他约定框体表示目标位置与范围的标注。",
+    "detail": [
+      "二维检测常用左上角、右下角坐标，或中心点加宽高描述框。框便于定位与计数；如果要精确贴合杯柄等不规则轮廓，则需要像素级掩码。"
+    ],
+    "related": [
+      "object-detection",
+      "segmentation-mask",
+      "nms"
+    ],
+    "sources": [
+      {
+        "title": "Faster R-CNN",
+        "url": "https://arxiv.org/abs/1506.01497"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "segmentation-mask",
+    "term": "Segmentation Mask",
+    "zh": "分割掩码",
+    "aliases": [
+      "Mask",
+      "掩码"
+    ],
+    "category": "vision",
+    "group": "视觉表示",
+    "kind": "term",
+    "summary": "分割掩码用逐像素的标记表示目标或区域覆盖的位置。",
+    "detail": [
+      "把人物所在像素标为 1、背景标为 0，就得到人物的二值掩码。掩码可用于抠图，也能告诉图像编辑模型哪些区域需要修改。"
+    ],
+    "related": [
+      "instance-segmentation",
+      "semantic-segmentation",
+      "inpainting"
+    ],
+    "sources": [
+      {
+        "title": "Segment Anything",
+        "url": "https://arxiv.org/abs/2304.02643"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "vision-backbone",
+    "term": "Backbone",
+    "zh": "视觉骨干网络",
+    "aliases": [
+      "骨干网络"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "视觉骨干网络把原始图像转换为后续任务可使用的特征表示。",
+    "detail": [
+      "一套检测器可以先用 ResNet 或 ViT 提取边缘、纹理与物体结构等信息，再由任务模块输出边界框和类别。骨干网络承担共用的视觉特征提取工作。"
+    ],
+    "related": [
+      "vision-neck",
+      "vision-head",
+      "cnn",
+      "vit"
+    ],
+    "sources": [
+      {
+        "title": "Feature Pyramid Networks for Object Detection",
+        "url": "https://arxiv.org/abs/1612.03144"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "vision-neck",
+    "term": "Neck",
+    "zh": "特征融合层",
+    "aliases": [
+      "颈部网络",
+      "Neck Network"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "特征融合层连接骨干网络与任务头，整理或融合不同尺度的视觉特征。",
+    "detail": [
+      "小物体需要较细的位置信息，大物体需要较大范围的语义信息。FPN 一类结构把不同层特征组合起来，使检测头能够利用多个尺度的信息。"
+    ],
+    "related": [
+      "vision-backbone",
+      "vision-head",
+      "receptive-field"
+    ],
+    "sources": [
+      {
+        "title": "Feature Pyramid Networks for Object Detection",
+        "url": "https://arxiv.org/abs/1612.03144"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "vision-head",
+    "term": "Head",
+    "zh": "视觉任务头",
+    "aliases": [
+      "任务头",
+      "Prediction Head"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "视觉任务头把特征表示转换为具体任务所需的预测结果。",
+    "detail": [
+      "同一个骨干网络上可以接分类头、边界框回归头或掩码头。头部的输出形式和训练目标由任务决定，例如类别分数或每个像素的前景概率。"
+    ],
+    "related": [
+      "vision-backbone",
+      "vision-neck",
+      "object-detection"
+    ],
+    "sources": [
+      {
+        "title": "Mask R-CNN",
+        "url": "https://arxiv.org/abs/1703.06870"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "cnn",
+    "term": "CNN",
+    "zh": "卷积神经网络",
+    "aliases": [
+      "Convolutional Neural Network"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "卷积神经网络通过重复应用局部卷积等运算，逐层提取图像特征。",
+    "detail": [
+      "浅层可以响应边缘和简单纹理，后续层把局部信息组合成更复杂的结构。同一卷积核在不同位置复用参数，使网络能在画面各处寻找类似图案。"
+    ],
+    "related": [
+      "convolution",
+      "pooling",
+      "receptive-field"
+    ],
+    "sources": [
+      {
+        "title": "Stanford CS231n：Convolutional Networks",
+        "url": "https://cs231n.github.io/convolutional-networks/"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "convolution",
+    "term": "Convolution",
+    "zh": "卷积",
+    "aliases": [
+      "卷积核",
+      "Kernel"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "卷积用一组共享权重扫描局部区域，生成反映某类局部模式的特征。",
+    "detail": [
+      "可以把一个小窗口想成一枚可学习的图案探测器：它在图上移动，对某种边缘或纹理给出较强响应。多个卷积核产生多个特征通道。"
+    ],
+    "related": [
+      "cnn",
+      "receptive-field",
+      "pooling"
+    ],
+    "sources": [
+      {
+        "title": "Stanford CS231n：Convolutional Networks",
+        "url": "https://cs231n.github.io/convolutional-networks/"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "pooling",
+    "term": "Pooling",
+    "zh": "池化",
+    "aliases": [
+      "Max Pooling",
+      "Average Pooling"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "池化把局部特征汇总为更少的数值，常用于减小特征图尺寸。",
+    "detail": [
+      "最大池化在小区域内保留最大的响应，平均池化取区域均值。缩小空间尺寸后，后续计算量会下降，同时一部分细节位置也会被压缩。"
+    ],
+    "related": [
+      "cnn",
+      "convolution",
+      "receptive-field"
+    ],
+    "sources": [
+      {
+        "title": "Stanford CS231n：Convolutional Networks",
+        "url": "https://cs231n.github.io/convolutional-networks/"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "vit",
+    "term": "ViT",
+    "zh": "视觉Transformer",
+    "aliases": [
+      "Vision Transformer"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "ViT 将图像切成图块并转成序列，再用 Transformer 学习图块之间的关系。",
+    "detail": [
+      "每个图块先映射成一个向量，并加入位置信息。注意力机制让相隔很远的图块交换信息，例如把车轮、车窗和车身联系成完整车辆。"
+    ],
+    "related": [
+      "image-patch",
+      "vision-encoder",
+      "vision-backbone"
+    ],
+    "sources": [
+      {
+        "title": "An Image is Worth 16x16 Words",
+        "url": "https://arxiv.org/abs/2010.11929"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "image-patch",
+    "term": "Image Patch",
+    "zh": "图像块",
+    "aliases": [
+      "Patch"
+    ],
+    "category": "vision",
+    "group": "视觉表示",
+    "kind": "term",
+    "summary": "图像块是从图片中切出的局部小区域，常作为视觉模型的基本输入单元。",
+    "detail": [
+      "一张图可以按固定大小切成网格，再把每块转换成一个视觉 token。块越小，保留的位置细节通常越多，但序列也会更长。"
+    ],
+    "related": [
+      "vit",
+      "vision-encoder",
+      "receptive-field"
+    ],
+    "sources": [
+      {
+        "title": "An Image is Worth 16x16 Words",
+        "url": "https://arxiv.org/abs/2010.11929"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "receptive-field",
+    "term": "Receptive Field",
+    "zh": "感受野",
+    "aliases": [
+      "RF"
+    ],
+    "category": "vision",
+    "group": "视觉结构",
+    "kind": "term",
+    "summary": "感受野是某个特征位置能够受到输入图像哪些区域影响的范围。",
+    "detail": [
+      "识别细线可能只需看很小的窗口，判断整辆车则需要结合更大的区域。卷积层数、卷积核大小和下采样方式都会影响感受野。"
+    ],
+    "related": [
+      "convolution",
+      "pooling",
+      "vision-neck"
+    ],
+    "sources": [
+      {
+        "title": "Stanford CS231n：Convolutional Networks",
+        "url": "https://cs231n.github.io/convolutional-networks/"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "nms",
+    "term": "NMS",
+    "zh": "非极大值抑制",
+    "aliases": [
+      "Non-Maximum Suppression"
+    ],
+    "category": "vision",
+    "group": "检测后处理",
+    "kind": "term",
+    "summary": "非极大值抑制通过保留高分候选并移除过度重叠的候选，减少重复检测框。",
+    "detail": [
+      "检测器可能给同一个杯子画出五个相似框。NMS 通常先保留分数最高的框，再按重叠阈值筛掉重复候选，并对剩余框继续处理。"
+    ],
+    "related": [
+      "object-detection",
+      "bounding-box",
+      "iou"
+    ],
+    "sources": [
+      {
+        "title": "Faster R-CNN",
+        "url": "https://arxiv.org/abs/1506.01497"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "optical-flow",
+    "term": "Optical Flow",
+    "zh": "光流",
+    "aliases": [
+      "Flow"
+    ],
+    "category": "vision",
+    "group": "空间与运动",
+    "kind": "term",
+    "summary": "光流描述连续图像之间像素或图像特征的表观移动方向与距离。",
+    "detail": [
+      "相机拍到球向右移动时，球附近的光流向量会指向右侧。相机自身运动也会产生光流，因此光流同时包含场景运动和视角变化的影响。"
+    ],
+    "related": [
+      "object-tracking",
+      "depth-estimation",
+      "pose-estimation"
+    ],
+    "sources": [
+      {
+        "title": "OpenCV：Optical Flow",
+        "url": "https://docs.opencv.org/4.13.0/d4/dee/tutorial_optical_flow.html"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "depth-estimation",
+    "term": "Depth Estimation",
+    "zh": "深度估计",
+    "aliases": [
+      "Depth Map",
+      "深度图"
+    ],
+    "category": "vision",
+    "group": "空间与运动",
+    "kind": "term",
+    "summary": "深度估计预测图像中各位置对应的场景距离或相对远近。",
+    "detail": [
+      "深度图可用颜色显示桌面、杯子和墙壁离相机有多远。单张图像模型常依靠学到的视觉线索推断远近；双目或深度传感器则能提供额外几何信息。"
+    ],
+    "related": [
+      "optical-flow",
+      "pose-estimation",
+      "world-model"
+    ],
+    "sources": [
+      {
+        "title": "Vision Transformers for Dense Prediction",
+        "url": "https://arxiv.org/abs/2103.13413"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "pose-estimation",
+    "term": "Pose Estimation",
+    "zh": "姿态估计",
+    "aliases": [
+      "Pose"
+    ],
+    "category": "vision",
+    "group": "空间与运动",
+    "kind": "term",
+    "summary": "姿态估计推断人体、物体或相机的位置、方向或关键结构点。",
+    "detail": [
+      "人体姿态可以表示成肩、肘、腕等关键点构成的骨架；机器人抓杯子时，则可能需要杯子的三维位置与朝向。不同任务的“姿态”具有不同输出形式。"
+    ],
+    "related": [
+      "keypoint",
+      "depth-estimation",
+      "robot-kinematics"
+    ],
+    "sources": [
+      {
+        "title": "Torchvision：Models and Pre-trained Weights",
+        "url": "https://docs.pytorch.org/vision/stable/models.html"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "keypoint",
+    "term": "Keypoint",
+    "zh": "关键点",
+    "aliases": [
+      "Landmark",
+      "特征点"
+    ],
+    "category": "vision",
+    "group": "视觉表示",
+    "kind": "term",
+    "summary": "关键点是用于描述物体结构或进行图像匹配的少量有代表性的位置。",
+    "detail": [
+      "人体的手腕和膝盖、面部的眼角和鼻尖都可以作为语义关键点。记录这些点的位置后，可以估计动作、对齐人脸或追踪局部运动。"
+    ],
+    "related": [
+      "pose-estimation",
+      "object-tracking",
+      "bounding-box"
+    ],
+    "sources": [
+      {
+        "title": "Mask R-CNN",
+        "url": "https://arxiv.org/abs/1703.06870"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  },
+  {
+    "id": "panoptic-segmentation",
+    "term": "Panoptic Segmentation",
+    "zh": "全景分割",
+    "aliases": [
+      "Panoptic"
+    ],
+    "category": "vision",
+    "group": "视觉任务",
+    "kind": "term",
+    "summary": "全景分割为所有像素标注类别，并为需要区分个体的物体分配实例身份。",
+    "detail": [
+      "一张街景图既要完整标出道路和天空，也要分别区分每位行人和每辆车。全景分割把这两类输出放到统一的像素标注里。"
+    ],
+    "related": [
+      "semantic-segmentation",
+      "instance-segmentation",
+      "segmentation-mask"
+    ],
+    "sources": [
+      {
+        "title": "Panoptic Segmentation",
+        "url": "https://arxiv.org/abs/1801.00868"
+      }
+    ],
+    "categories": [
+      "vision"
+    ]
+  }
+]

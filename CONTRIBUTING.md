@@ -15,6 +15,8 @@
 | --- | --- |
 | 中文文章、首页、学习路线、课程与资源链接 | [content/guide/zh](content/guide/zh) |
 | 英文文章 | [content/guide/en](content/guide/en)，文件名与中文对应 |
+| Wiki 术语解释、别名、相关概念与原文链接 | [content/wiki](content/wiki)，每个分类一个 JSON；修改后随指南自动构建。`categories.json` 管理分类与方向页入口 |
+| Wiki 搜索和排版 | [public/blog/guide/wiki](public/blog/guide/wiki)，`search.js` 为检索逻辑，`wiki.js` 为页面交互，`wiki.css` 为样式；`data.js` 由源词库生成 |
 | 科研 60 问 | [中文](content/guide/zh/research.md) · [英文](content/guide/en/research.md) |
 | 方向简介、发展路线、术语、论文卡片、入门练习 | [content/guide/fieldnotes](content/guide/fieldnotes)，每个方向一个 JSON，含 `zh`、`en` 文案；例如 [agent.json](content/guide/fieldnotes/agent.json) |
 | AI 与机器人公司、模型技术报告 | [scripts/guide-directory.mjs](scripts/guide-directory.mjs) 中的 `companies`、`roboticsCompanies`、`reports` |

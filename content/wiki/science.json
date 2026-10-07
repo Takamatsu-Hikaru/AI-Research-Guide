@@ -1,0 +1,546 @@
+[
+  {
+    "id": "ai-for-science",
+    "term": "AI for Science",
+    "zh": "科学智能",
+    "aliases": [
+      "AI4Science",
+      "AI4S"
+    ],
+    "category": "science",
+    "group": "科学建模",
+    "kind": "term",
+    "summary": "科学智能是把 AI 用于科学数据分析、建模、实验设计和发现的研究方向。",
+    "detail": [
+      "例如预测分子性质、加速流体模拟或挑选下一批实验条件；模型结果通常要与物理约束、数值计算或实验测量相互验证。"
+    ],
+    "related": [
+      "surrogate-model",
+      "inverse-design",
+      "ai-scientist"
+    ],
+    "sources": [
+      {
+        "title": "Scientific discovery in the age of artificial intelligence",
+        "url": "https://www.nature.com/articles/s41586-023-06221-2"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "surrogate-model",
+    "term": "Surrogate Model",
+    "zh": "代理模型",
+    "aliases": [
+      "surrogate"
+    ],
+    "category": "science",
+    "group": "科学建模",
+    "kind": "term",
+    "summary": "代理模型学习输入到结果的近似映射，用较低成本替代部分昂贵计算或实验。",
+    "detail": [
+      "用少量流体模拟结果训练网络后，可以快速估计新翼型的阻力；需要检查代理在新参数范围内的误差。"
+    ],
+    "related": [
+      "neural-operator",
+      "uncertainty",
+      "bayesian-optimization"
+    ],
+    "sources": [
+      {
+        "title": "Fourier Neural Operator for Parametric Partial Differential Equations",
+        "url": "https://arxiv.org/abs/2010.08895"
+      },
+      {
+        "title": "Scientific discovery in the age of artificial intelligence",
+        "url": "https://www.nature.com/articles/s41586-023-06221-2"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "neural-operator",
+    "term": "Neural Operator",
+    "zh": "神经算子",
+    "aliases": [],
+    "category": "science",
+    "group": "科学建模",
+    "kind": "term",
+    "summary": "神经算子学习从一个函数或场到另一个函数或场的映射。",
+    "detail": [
+      "给出材料系数场和边界条件，模型可预测对应的解场；傅里叶神经算子使用频域计算来建模空间上的关系。"
+    ],
+    "related": [
+      "surrogate-model",
+      "pinn",
+      "ai-for-science"
+    ],
+    "sources": [
+      {
+        "title": "Fourier Neural Operator for Parametric Partial Differential Equations",
+        "url": "https://arxiv.org/abs/2010.08895"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "pinn",
+    "term": "PINN",
+    "zh": "物理信息神经网络",
+    "aliases": [
+      "Physics-Informed Neural Network"
+    ],
+    "category": "science",
+    "group": "科学建模",
+    "kind": "term",
+    "summary": "物理信息神经网络在训练目标中加入物理方程、边界条件等约束。",
+    "detail": [
+      "求解热传导问题时，网络输出温度场，损失同时衡量观测误差与热方程残差；各项损失的权重会影响求解结果。"
+    ],
+    "related": [
+      "loss",
+      "neural-operator",
+      "ai-for-science"
+    ],
+    "sources": [
+      {
+        "title": "Physics Informed Deep Learning",
+        "url": "https://maziarraissi.github.io/PINNs/"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "inverse-design",
+    "term": "Inverse Design",
+    "zh": "逆向设计",
+    "aliases": [],
+    "category": "science",
+    "group": "科学建模",
+    "kind": "term",
+    "summary": "逆向设计从期望性能出发，寻找能够实现该性能的结构、材料或参数。",
+    "detail": [
+      "例如先指定光学器件需要怎样透光，再用优化或生成模型搜索结构；候选设计还要通过模拟或实验检验。"
+    ],
+    "related": [
+      "surrogate-model",
+      "bayesian-optimization",
+      "ai-for-science"
+    ],
+    "sources": [
+      {
+        "title": "Inverse design in nanophotonics",
+        "url": "https://www.nature.com/articles/s41566-018-0246-9"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "smiles",
+    "term": "SMILES",
+    "zh": "分子线性表示",
+    "aliases": [
+      "Simplified Molecular Input Line Entry System"
+    ],
+    "category": "science",
+    "group": "分子与蛋白质",
+    "kind": "term",
+    "summary": "SMILES 用字符串描述分子的原子、化学键和部分结构信息。",
+    "detail": [
+      "例如 CCO 可以表示乙醇；括号用于分支，数字可标记环闭合，同一个分子可能有多种合法写法。"
+    ],
+    "related": [
+      "graph",
+      "tokenizer",
+      "molecular-docking"
+    ],
+    "sources": [
+      {
+        "title": "Daylight Theory：SMILES",
+        "url": "https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "protein-folding",
+    "term": "Protein Folding",
+    "zh": "蛋白质折叠与结构预测",
+    "aliases": [],
+    "category": "science",
+    "group": "分子与蛋白质",
+    "kind": "term",
+    "summary": "蛋白质折叠描述氨基酸链形成空间结构的过程，结构预测则计算其可能的三维形态。",
+    "detail": [
+      "AlphaFold 等模型可以根据序列及相关信息预测结构；读预测结果时还要查看各区域的置信度及结构适用条件。"
+    ],
+    "related": [
+      "uncertainty",
+      "molecular-docking",
+      "ai-for-science"
+    ],
+    "sources": [
+      {
+        "title": "AlphaFold Protein Structure Database：FAQ",
+        "url": "https://alphafold.ebi.ac.uk/faq"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "molecular-docking",
+    "term": "Molecular Docking",
+    "zh": "分子对接",
+    "aliases": [
+      "docking"
+    ],
+    "category": "science",
+    "group": "分子与蛋白质",
+    "kind": "term",
+    "summary": "分子对接搜索两个分子相互结合时可能的空间姿态，并对候选姿态评分。",
+    "detail": [
+      "常见任务是把小分子放入蛋白质结合口袋，调整位置和构象后打分；对接分数可帮助从大量候选中筛出优先开展实验测试的分子。"
+    ],
+    "related": [
+      "protein-folding",
+      "smiles",
+      "surrogate-model"
+    ],
+    "sources": [
+      {
+        "title": "AutoDock Vina：Basic docking",
+        "url": "https://autodock-vina.readthedocs.io/en/latest/docking_basic.html"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "dft",
+    "term": "DFT",
+    "zh": "密度泛函理论",
+    "aliases": [
+      "Density Functional Theory"
+    ],
+    "category": "science",
+    "group": "科学建模",
+    "kind": "term",
+    "summary": "密度泛函理论以电子密度为核心变量，计算多电子体系的结构与性质。",
+    "detail": [
+      "材料研究常用 DFT 估计能量、受力和电子性质，再用这些结果训练机器学习势；计算结果与所选近似和参数有关。"
+    ],
+    "related": [
+      "ai-for-science",
+      "surrogate-model",
+      "dataset"
+    ],
+    "sources": [
+      {
+        "title": "Self-Consistent Equations Including Exchange and Correlation Effects",
+        "url": "https://doi.org/10.1103/PhysRev.140.A1133"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "active-learning",
+    "term": "Active Learning",
+    "zh": "主动学习",
+    "aliases": [],
+    "category": "science",
+    "group": "实验与搜索",
+    "kind": "term",
+    "summary": "主动学习让模型根据当前状态挑选最值得获得标签或实验结果的样本。",
+    "detail": [
+      "材料搜索中可以先预测一批候选，再挑选不确定性高或潜在性能好的样品做实验，把结果加入训练集继续更新模型。"
+    ],
+    "related": [
+      "uncertainty",
+      "annotation",
+      "bayesian-optimization"
+    ],
+    "sources": [
+      {
+        "title": "Burr Settles：Active Learning Literature Survey",
+        "url": "https://burrsettles.com/pub/settles.activelearning.pdf"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "uncertainty",
+    "term": "Uncertainty",
+    "zh": "不确定性",
+    "aliases": [
+      "uncertainty estimation"
+    ],
+    "category": "science",
+    "group": "实验与搜索",
+    "kind": "term",
+    "summary": "不确定性描述模型对预测结果或未知因素缺乏把握的程度。",
+    "detail": [
+      "来源可以是数据本身的噪声，也可以是模型缺少相关训练信息；预测区间、模型集成和概率模型可用于表达不同形式的不确定性。"
+    ],
+    "related": [
+      "active-learning",
+      "surrogate-model",
+      "ood"
+    ],
+    "sources": [
+      {
+        "title": "What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?",
+        "url": "https://arxiv.org/abs/1703.04977"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "hpo",
+    "term": "HPO",
+    "zh": "超参数优化",
+    "aliases": [
+      "Hyperparameter Optimization"
+    ],
+    "category": "science",
+    "group": "实验与搜索",
+    "kind": "term",
+    "summary": "超参数优化通过比较多组配置，寻找在指定评估指标下效果较好的训练设置。",
+    "detail": [
+      "可以搜索学习率、批量大小和正则强度，并用验证集评价；记录每次试验的配置和结果，有助于分析搜索是否有效。"
+    ],
+    "related": [
+      "hyperparameter",
+      "bayesian-optimization",
+      "automl"
+    ],
+    "sources": [
+      {
+        "title": "Optuna：A hyperparameter optimization framework",
+        "url": "https://optuna.readthedocs.io/en/stable/"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "nas",
+    "term": "NAS",
+    "zh": "神经架构搜索",
+    "aliases": [
+      "Neural Architecture Search"
+    ],
+    "category": "science",
+    "group": "实验与搜索",
+    "kind": "term",
+    "summary": "神经架构搜索在预先定义的结构空间中寻找合适的神经网络。",
+    "detail": [
+      "搜索变量可以包括层数、通道数、连接方式或算子类型；目标也可同时考虑准确率、推理延迟与模型大小。"
+    ],
+    "related": [
+      "hpo",
+      "automl",
+      "latency"
+    ],
+    "sources": [
+      {
+        "title": "Neural Architecture Search with Reinforcement Learning",
+        "url": "https://arxiv.org/abs/1611.01578"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "bayesian-optimization",
+    "term": "Bayesian Optimization",
+    "zh": "贝叶斯优化",
+    "aliases": [
+      "BO"
+    ],
+    "category": "science",
+    "group": "实验与搜索",
+    "kind": "term",
+    "summary": "贝叶斯优化用已观察结果建立代理模型，再根据收益潜力和不确定性选择下一次试验。",
+    "detail": [
+      "调超参数时，每次完整训练都很贵，因此先用已有试验拟合性能，再挑一个值得尝试的新配置。"
+    ],
+    "related": [
+      "surrogate-model",
+      "hpo",
+      "uncertainty"
+    ],
+    "sources": [
+      {
+        "title": "Practical Bayesian Optimization of Machine Learning Algorithms",
+        "url": "https://arxiv.org/abs/1206.2944"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "automl",
+    "term": "AutoML",
+    "zh": "自动化机器学习",
+    "aliases": [
+      "Automated Machine Learning"
+    ],
+    "category": "science",
+    "group": "实验与搜索",
+    "kind": "term",
+    "summary": "自动化机器学习把数据处理、模型选择和参数搜索等步骤交给程序组织执行。",
+    "detail": [
+      "给定表格数据和目标列后，系统可以比较多种模型及处理方式，并按验证集表现选出候选流程。"
+    ],
+    "related": [
+      "hpo",
+      "nas",
+      "baseline"
+    ],
+    "sources": [
+      {
+        "title": "Automated Machine Learning：Methods, Systems, Challenges",
+        "url": "https://www.automl.org/book/"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "theorem-proving",
+    "term": "Theorem Proving",
+    "zh": "定理证明",
+    "aliases": [
+      "automated theorem proving"
+    ],
+    "category": "science",
+    "group": "形式化与科研智能体",
+    "kind": "term",
+    "summary": "定理证明从明确的公理、定义和已有结论出发，构造满足逻辑规则的证明。",
+    "detail": [
+      "在形式化证明系统里，模型可以提出证明步骤，证明检查器逐步验证；只有通过检查的完整证明才满足系统内的目标。"
+    ],
+    "related": [
+      "lean",
+      "verifier",
+      "reasoning"
+    ],
+    "sources": [
+      {
+        "title": "Theorem Proving in Lean 4",
+        "url": "https://lean-lang.org/theorem_proving_in_lean4/"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "lean",
+    "term": "Lean",
+    "zh": "Lean 证明助手",
+    "aliases": [],
+    "category": "science",
+    "group": "形式化与科研智能体",
+    "kind": "term",
+    "summary": "Lean 是支持形式化数学证明与程序开发的语言和交互式证明系统。",
+    "detail": [
+      "用户或模型把命题和证明写成 Lean 代码，内核检查推导是否符合规则；常用数学结论可从库中引用。"
+    ],
+    "related": [
+      "theorem-proving",
+      "verifier",
+      "coding-agent"
+    ],
+    "sources": [
+      {
+        "title": "Theorem Proving in Lean 4",
+        "url": "https://lean-lang.org/theorem_proving_in_lean4/"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "ai-scientist",
+    "term": "AI Scientist",
+    "zh": "科研智能体",
+    "aliases": [],
+    "category": "science",
+    "group": "形式化与科研智能体",
+    "kind": "term",
+    "summary": "科研智能体把提出研究想法、编写实验、分析结果和整理报告等步骤连接成自动化研究流程。",
+    "detail": [
+      "一个系统可以生成假设、运行代码、读取指标并提出下一轮实验；"
+    ],
+    "related": [
+      "agent",
+      "ai-for-science",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+        "url": "https://arxiv.org/abs/2408.06292"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "id": "recursive-self-improvement",
+    "term": "RSI",
+    "zh": "递归自我改进",
+    "aliases": [
+      "Recursive Self-Improvement"
+    ],
+    "category": "science",
+    "group": "形式化与科研智能体",
+    "kind": "term",
+    "summary": "递归自我改进是系统修改自身能力或改进方法，并继续利用改进后的系统开展下一轮改进。",
+    "detail": [
+      "一种实验做法是让编程智能体修改自己的工具与运行代码，再用固定基准评估候选版本；关键在于后续改进确实使用了更新后的能力。"
+    ],
+    "related": [
+      "ai-scientist",
+      "coding-agent",
+      "benchmark"
+    ],
+    "sources": [
+      {
+        "title": "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents",
+        "url": "https://arxiv.org/abs/2505.22954"
+      }
+    ],
+    "categories": [
+      "science"
+    ]
+  }
+]

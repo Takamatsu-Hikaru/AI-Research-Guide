@@ -1,0 +1,1110 @@
+[
+  {
+    "id": "review",
+    "term": "Review",
+    "zh": "审稿意见",
+    "aliases": [
+      "审稿",
+      "Reviewer comments"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "审稿人对论文问题、方法、证据与写作作出的书面评价。",
+    "detail": [
+      "一份审稿意见通常会概括贡献、指出优点和不足，并提出问题或修改建议。有些投稿系统还要求审稿人打分和填写对判断的信心程度。",
+      "Review 用作文章类型时也指综述，这类文章整理一个领域已有的研究。"
+    ],
+    "related": [
+      "peer-review",
+      "rebuttal",
+      "survey"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS 审稿指南",
+        "url": "https://neurips.cc/Conferences/2025/ReviewerGuidelines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "survey",
+    "term": "Survey",
+    "zh": "综述论文",
+    "aliases": [
+      "Review article",
+      "Literature review"
+    ],
+    "category": "publishing",
+    "group": "论文类型",
+    "kind": "term",
+    "summary": "围绕某一研究主题整理、比较并总结已有文献的论文。",
+    "detail": [
+      "好的综述会解释研究问题如何划分、代表方法如何比较，以及还有哪些未解决的问题。它适合用来建立领域地图，再沿参考文献阅读原始研究。"
+    ],
+    "related": [
+      "review",
+      "preprint",
+      "journal"
+    ],
+    "sources": [
+      {
+        "title": "ACM Computing Surveys 介绍",
+        "url": "https://books.acm.org/images/ACM_DL_Booklet2015_V12.pdf"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "preprint",
+    "term": "Preprint",
+    "zh": "预印本",
+    "aliases": [
+      "预发表论文"
+    ],
+    "category": "publishing",
+    "group": "论文类型",
+    "kind": "term",
+    "summary": "在正式同行评审出版之前公开传播的论文版本。",
+    "detail": [
+      "研究者常用预印本尽早分享成果和接收反馈，之后可能更新并补充正式出版链接。读者可以查看版本日期、修订记录和对应的会议或期刊信息。"
+    ],
+    "related": [
+      "arxiv",
+      "peer-review",
+      "camera-ready"
+    ],
+    "sources": [
+      {
+        "title": "arXiv 平台说明",
+        "url": "https://info.arxiv.org/about/index.html"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "technical-report",
+    "term": "Technical report",
+    "zh": "技术报告",
+    "aliases": [
+      "Tech report",
+      "techreport"
+    ],
+    "category": "publishing",
+    "group": "论文类型",
+    "kind": "term",
+    "summary": "详细记录技术方法、系统设计或实验结果的研究文档。",
+    "detail": [
+      "实验室或机构可通过报告系列发布技术报告，内容常包含实现细节、实验设置和工程经验。报告的审查方式由发布机构或项目安排决定。"
+    ],
+    "related": [
+      "preprint",
+      "supplementary-material",
+      "arxiv"
+    ],
+    "sources": [
+      {
+        "title": "NASA 技术报告检索平台",
+        "url": "https://ntrs.nasa.gov/search"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "arxiv",
+    "term": "arXiv",
+    "zh": "开放论文预印本平台",
+    "aliases": [
+      "arXiv.org"
+    ],
+    "category": "publishing",
+    "group": "论文传播",
+    "kind": "term",
+    "summary": "支持研究者公开提交、更新和阅读学术论文的平台。",
+    "detail": [
+      "AI 研究者经常在 arXiv 分享论文及新版本。平台会进行内容与分类审核，同行评审状态和正式发表信息需要从论文记录中分别查看。"
+    ],
+    "related": [
+      "preprint",
+      "technical-report",
+      "openreview"
+    ],
+    "sources": [
+      {
+        "title": "arXiv 平台说明",
+        "url": "https://info.arxiv.org/about/index.html"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "openreview",
+    "term": "OpenReview",
+    "zh": "开放学术审稿平台",
+    "aliases": [
+      "Open Review"
+    ],
+    "category": "publishing",
+    "group": "论文传播",
+    "kind": "term",
+    "summary": "供会议和期刊管理投稿、审稿、讨论与论文展示的平台。",
+    "detail": [
+      "组织者可以配置论文、审稿意见和评论的可见范围。阅读公开页面时，可以沿着评审与回复了解争议和修改过程，具体公开程度取决于对应会议或期刊。"
+    ],
+    "related": [
+      "review",
+      "peer-review",
+      "rebuttal",
+      "tmlr"
+    ],
+    "sources": [
+      {
+        "title": "OpenReview 平台说明",
+        "url": "https://openreview.net/about"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "peer-review",
+    "term": "Peer review",
+    "zh": "同行评审",
+    "aliases": [
+      "同行审议"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "由相关领域研究者评估论文研究质量与发表适合性的过程。",
+    "detail": [
+      "评审通常会检查问题价值、方法是否成立、证据是否充分，以及论文是否讲清结论。编辑或会议负责人结合评审和作者回复作出决定。"
+    ],
+    "related": [
+      "review",
+      "area-chair",
+      "rebuttal"
+    ],
+    "sources": [
+      {
+        "title": "Nature Portfolio 同行评审说明",
+        "url": "https://www.nature.com/nature-portfolio/editorial-policies/peer-review"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "area-chair",
+    "term": "AC",
+    "zh": "领域主席",
+    "aliases": [
+      "Area Chair"
+    ],
+    "category": "publishing",
+    "group": "审稿角色",
+    "kind": "term",
+    "summary": "负责协调一组论文审稿并形成综合判断的会议角色。",
+    "detail": [
+      "全称 Area Chair。AC 通常检查审稿质量、推动讨论、处理争议并撰写综合评审，最后按会议流程提交录用建议或决定。"
+    ],
+    "related": [
+      "review",
+      "senior-area-chair",
+      "meta-review"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 领域主席指南",
+        "url": "https://eccv.ecva.net/Conferences/2026/ACGuideLines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "senior-area-chair",
+    "term": "SAC",
+    "zh": "高级领域主席",
+    "aliases": [
+      "Senior Area Chair"
+    ],
+    "category": "publishing",
+    "group": "审稿角色",
+    "kind": "term",
+    "summary": "协调多个领域主席并参与复杂评审问题处理的角色。",
+    "detail": [
+      "全称 Senior Area Chair。SAC 会帮助 AC 处理分歧、检查决策的一致性，并与程序主席沟通；具体责任划分由会议规定。"
+    ],
+    "related": [
+      "area-chair",
+      "program-committee",
+      "meta-review"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 高级领域主席指南",
+        "url": "https://eccv.ecva.net/Conferences/2026/SACGuide"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "program-committee",
+    "term": "PC",
+    "zh": "程序委员会",
+    "aliases": [
+      "Program Committee",
+      "Program Chair",
+      "程序主席"
+    ],
+    "category": "publishing",
+    "group": "审稿角色",
+    "kind": "term",
+    "summary": "参与会议论文评审与学术议程组织的委员会。",
+    "detail": [
+      "全称 Program Committee，其中成员常承担审稿等工作。在部分会议语境中 PCs 也指 Program Chairs，即程序主席，他们负责统筹审稿和录用流程。"
+    ],
+    "related": [
+      "area-chair",
+      "senior-area-chair",
+      "peer-review"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 领域主席指南",
+        "url": "https://eccv.ecva.net/Conferences/2026/ACGuideLines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "rebuttal",
+    "term": "Rebuttal",
+    "zh": "作者回复",
+    "aliases": [
+      "Author response",
+      "Response to reviewers"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "作者在审稿期间针对评审疑问提交的正式回应。",
+    "detail": [
+      "作者通常逐项澄清误解、补充证据并说明准备修改的内容。会议可能限制篇幅、实验补充与附件形式，回复应围绕影响判断的核心问题。"
+    ],
+    "related": [
+      "review",
+      "area-chair",
+      "meta-review"
+    ],
+    "sources": [
+      {
+        "title": "ACL Rolling Review 审稿指南",
+        "url": "https://aclrollingreview.org/reviewerguidelines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "meta-review",
+    "term": "Meta-review",
+    "zh": "综合评审",
+    "aliases": [
+      "Metareview",
+      "元评审"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "对多份审稿意见、作者回复和讨论进行归纳的评审结论。",
+    "detail": [
+      "它通常由 AC 或负责编辑撰写，解释哪些问题已经解决、哪些问题仍影响结论，以及最终建议的理由。阅读综合评审可以了解录用或拒稿的主要依据。"
+    ],
+    "related": [
+      "review",
+      "rebuttal",
+      "area-chair"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 领域主席指南",
+        "url": "https://eccv.ecva.net/Conferences/2026/ACGuideLines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "findings",
+    "term": "Findings",
+    "zh": "ACL Findings 论文集",
+    "aliases": [
+      "Findings of ACL"
+    ],
+    "category": "publishing",
+    "group": "论文类型",
+    "kind": "term",
+    "summary": "ACL 体系中发表经过同行评审研究论文的出版系列。",
+    "detail": [
+      "全称 Findings of the Association for Computational Linguistics。论文记录会标注关联的会议与卷次，适合与主会论文一起按研究主题检索。"
+    ],
+    "related": [
+      "acl",
+      "emnlp",
+      "proceedings"
+    ],
+    "sources": [
+      {
+        "title": "ACL Anthology：Findings",
+        "url": "https://aclanthology.org/venues/findings/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "workshop",
+    "term": "Workshop",
+    "zh": "专题研讨会",
+    "aliases": [
+      "研讨会"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "围绕一个较具体或新兴主题组织的学术交流活动。",
+    "detail": [
+      "Workshop 常附设于大型会议，也可以独立举办，内容可能包括投稿报告、邀请讲座和讨论。是否正式出版论文以及采用怎样的审稿方式，由具体研讨会安排。"
+    ],
+    "related": [
+      "conference",
+      "proceedings",
+      "poster"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS 研讨会征集说明",
+        "url": "https://neurips.cc/Conferences/2025/CallForWorkshops"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "proceedings",
+    "term": "Proceedings",
+    "zh": "会议论文集",
+    "aliases": [
+      "Conference proceedings"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "集中收录某场会议或研讨会论文的出版物。",
+    "detail": [
+      "论文集通常具有明确的会议名称、卷次和出版信息，便于稳定检索与引用。PMLR、ACL Anthology 和出版社数字图书馆都提供相关论文集。"
+    ],
+    "related": [
+      "conference",
+      "workshop",
+      "camera-ready"
+    ],
+    "sources": [
+      {
+        "title": "PMLR 论文集说明",
+        "url": "https://proceedings.mlr.press/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "journal",
+    "term": "Journal",
+    "zh": "学术期刊",
+    "aliases": [
+      "期刊"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "按持续出版计划组织并发表学术研究文章的刊物。",
+    "detail": [
+      "投稿通常由编辑安排评审，作者可能经历一轮或多轮修改。文章最终以卷、期或文章编号等方式标识；JMLR、TPAMI 和 TACL 都是期刊。"
+    ],
+    "related": [
+      "conference",
+      "peer-review",
+      "jmlr"
+    ],
+    "sources": [
+      {
+        "title": "TMLR 编辑政策",
+        "url": "https://jmlr.org/tmlr/editorial-policies.html"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "conference",
+    "term": "Conference",
+    "zh": "学术会议",
+    "aliases": [
+      "会议"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "研究者集中报告成果和开展学术交流的活动。",
+    "detail": [
+      "计算机科学中的许多会议会组织论文投稿、评审和论文集出版。活动还可包含邀请报告、海报、教程和研讨会，阅读论文时可核对所属项目。"
+    ],
+    "related": [
+      "journal",
+      "proceedings",
+      "workshop",
+      "oral"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS 征稿说明",
+        "url": "https://neurips.cc/Conferences/2025/CallForPapers"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "oral",
+    "term": "Oral",
+    "zh": "口头报告",
+    "aliases": [
+      "Oral presentation"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "作者在会场或线上按安排向听众讲解论文的报告形式。",
+    "detail": [
+      "口头报告通常有专门时段和提问环节，作者需要压缩内容并讲清研究问题、方法和结果。具体时长及论文选择机制取决于会议安排。"
+    ],
+    "related": [
+      "spotlight",
+      "poster",
+      "conference"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 会议与报告项目",
+        "url": "https://eccv.ecva.net/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "spotlight",
+    "term": "Spotlight",
+    "zh": "重点展示",
+    "aliases": [
+      "Spotlight presentation"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "Spotlight 是会议用于突出展示部分录用论文的标签，可采用精选海报或短报告等形式。",
+    "detail": [
+      "浏览会议议程和论文列表时，Spotlight 标记可以帮助你找到会议重点展示的工作。例如 NeurIPS 2025 将 Spotlight 论文安排在海报场展示。"
+    ],
+    "related": [
+      "oral",
+      "poster",
+      "conference"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS：论文与海报展示安排",
+        "url": "https://neurips.cc/Conferences/2025/PosterInstructions"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "poster",
+    "term": "Poster",
+    "zh": "海报展示",
+    "aliases": [
+      "Poster presentation"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "以可视化海报呈现论文并与读者直接交流的形式。",
+    "detail": [
+      "海报一般把问题、方法和关键结果放在有限版面中，便于作者围绕读者的问题展开讨论。海报报告是许多会议正式论文的常见展示方式。"
+    ],
+    "related": [
+      "oral",
+      "spotlight",
+      "conference"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 海报与视频提交说明",
+        "url": "https://eccv.ecva.net/Conferences/2026/YouTubeVideoPosterUpload"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "camera-ready",
+    "term": "Camera-ready",
+    "zh": "出版终稿",
+    "aliases": [
+      "Final version",
+      "终稿"
+    ],
+    "category": "publishing",
+    "group": "发表与展示",
+    "kind": "term",
+    "summary": "论文录用后按出版要求整理并提交的最终版本。",
+    "detail": [
+      "作者会合并获准的修改，检查作者信息、排版、参考文献和出版材料。该版本通常用于正式论文集或出版流程，因此需要与投稿草稿区分。"
+    ],
+    "related": [
+      "proceedings",
+      "rebuttal",
+      "supplementary-material"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 会议与报告项目",
+        "url": "https://eccv.ecva.net/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "supplementary-material",
+    "term": "Supplementary material",
+    "zh": "补充材料",
+    "aliases": [
+      "Supplement",
+      "Supplementary",
+      "补充附件"
+    ],
+    "category": "publishing",
+    "group": "论文结构",
+    "kind": "term",
+    "summary": "随论文提供的额外说明、实验、数据或演示材料。",
+    "detail": [
+      "补充材料可以包括证明、实验设置、更多结果、代码和视频，帮助读者检查正文结论。提交时通常有单独的文件类型与大小要求。"
+    ],
+    "related": [
+      "appendix",
+      "camera-ready",
+      "technical-report"
+    ],
+    "sources": [
+      {
+        "title": "ECCV 投稿与出版政策",
+        "url": "https://eccv.ecva.net/Conferences/2026/SubmissionPolicies"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "appendix",
+    "term": "Appendix",
+    "zh": "附录",
+    "aliases": [
+      "Appendices"
+    ],
+    "category": "publishing",
+    "group": "论文结构",
+    "kind": "term",
+    "summary": "在论文主体之后展开证明、细节或额外分析的部分。",
+    "detail": [
+      "例如正文给出定理与主要实验，附录补全推导、超参数和更多结果。附录可以在同一个文件中，也可能随补充材料提供，具体格式依发表场合而定。"
+    ],
+    "related": [
+      "supplementary-material",
+      "proceedings",
+      "camera-ready"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS 征稿说明",
+        "url": "https://neurips.cc/Conferences/2025/CallForPapers"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "desk-reject",
+    "term": "Desk reject",
+    "zh": "初审拒稿",
+    "aliases": [
+      "Desk rejection",
+      "直接拒稿"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "编辑或会议负责人在常规评审前或因规则问题直接退稿的决定。",
+    "detail": [
+      "常见原因包括主题不符、明显缺少必要材料或违反提交规则。决定信通常会说明原因，作者据此判断是补齐材料、修改研究表达还是另选发表场合。"
+    ],
+    "related": [
+      "peer-review",
+      "review",
+      "conference"
+    ],
+    "sources": [
+      {
+        "title": "Nature Portfolio 同行评审说明",
+        "url": "https://www.nature.com/nature-portfolio/editorial-policies/peer-review"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "authorship",
+    "term": "Authorship",
+    "zh": "作者署名",
+    "aliases": [
+      "Author attribution",
+      "作者归属"
+    ],
+    "category": "publishing",
+    "group": "作者与引用",
+    "kind": "term",
+    "summary": "以作者名单确认研究贡献、责任与成果归属的安排。",
+    "detail": [
+      "论文署名列出参与研究的作者。作者列表可以标注共同第一作者、通讯作者；贡献声明则说明每个人参与了哪些工作，例如提出问题、设计实验、开发代码或撰写文章。"
+    ],
+    "related": [
+      "credit",
+      "corresponding-author",
+      "first-author"
+    ],
+    "sources": [
+      {
+        "title": "Nature Portfolio 作者署名规范",
+        "url": "https://www.nature.com/nature-portfolio/editorial-policies/authorship"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "first-author",
+    "term": "First author",
+    "zh": "第一作者",
+    "aliases": [
+      "Co-first author",
+      "共同一作",
+      "一作"
+    ],
+    "category": "publishing",
+    "group": "作者与引用",
+    "kind": "term",
+    "summary": "论文作者名单中排在第一位的作者。",
+    "detail": [
+      "许多领域用第一作者表示主要贡献者，但也有按字母排序等惯例。若有共同第一作者，论文通常会通过脚注标明 equal contribution，即同等贡献。"
+    ],
+    "related": [
+      "authorship",
+      "corresponding-author",
+      "credit"
+    ],
+    "sources": [
+      {
+        "title": "Nature Portfolio 作者署名规范",
+        "url": "https://www.nature.com/nature-portfolio/editorial-policies/authorship"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "corresponding-author",
+    "term": "Corresponding author",
+    "zh": "通讯作者",
+    "aliases": [
+      "通讯"
+    ],
+    "category": "publishing",
+    "group": "作者与引用",
+    "kind": "term",
+    "summary": "负责论文投稿及出版沟通等联系事务的作者。",
+    "detail": [
+      "通讯作者通常负责与编辑和读者沟通，并协调作者确认、材料和声明。论文中常用邮箱或符号标注，具体职责由期刊政策和作者约定共同确定。"
+    ],
+    "related": [
+      "authorship",
+      "first-author",
+      "credit"
+    ],
+    "sources": [
+      {
+        "title": "Nature Portfolio 作者署名规范",
+        "url": "https://www.nature.com/nature-portfolio/editorial-policies/authorship"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "credit",
+    "term": "CRediT",
+    "zh": "贡献角色分类",
+    "aliases": [
+      "Contributor Roles Taxonomy",
+      "贡献声明"
+    ],
+    "category": "publishing",
+    "group": "作者与引用",
+    "kind": "term",
+    "summary": "用标准化角色描述研究参与者具体贡献的分类体系。",
+    "detail": [
+      "CRediT 可记录概念构思、方法、软件、数据整理、分析和写作等角色。同一个人可以承担多个角色，贡献声明能让合作分工更清楚。"
+    ],
+    "related": [
+      "authorship",
+      "first-author",
+      "corresponding-author"
+    ],
+    "sources": [
+      {
+        "title": "NISO CRediT 贡献角色分类",
+        "url": "https://credit.niso.org/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "ccf",
+    "term": "CCF",
+    "zh": "中国计算机学会及推荐目录",
+    "aliases": [
+      "China Computer Federation",
+      "CCF目录",
+      "CCF A",
+      "CCF B",
+      "CCF C"
+    ],
+    "category": "publishing",
+    "group": "评价与检索",
+    "kind": "term",
+    "summary": "中国计算机学会的简称，也常用于指其会议和期刊推荐目录。",
+    "detail": [
+      "该目录按计算机研究方向组织会议和期刊，并使用 A、B、C 等推荐类别。使用时需核对目录版本、具体刊会和论文类别；条目反映发表场合的推荐信息。"
+    ],
+    "related": [
+      "conference",
+      "journal",
+      "jcr"
+    ],
+    "sources": [
+      {
+        "title": "CCF 推荐国际学术会议和期刊目录",
+        "url": "https://www.ccf.org.cn/Academic_Evaluation/By_category/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "scie",
+    "term": "SCI / SCIE",
+    "zh": "科学引文索引及扩展版",
+    "aliases": [
+      "SCI",
+      "SCIE",
+      "Science Citation Index Expanded"
+    ],
+    "category": "publishing",
+    "group": "评价与检索",
+    "kind": "term",
+    "summary": "Web of Science 体系中用于收录和检索科学期刊文献的引文索引名称。",
+    "detail": [
+      "SCI 是 Science Citation Index，SCIE 是 Science Citation Index Expanded。实际查期刊时可核对其具体收录数据库，借助引文链接继续查找引用与被引用文献。"
+    ],
+    "related": [
+      "journal",
+      "jcr",
+      "impact-factor"
+    ],
+    "sources": [
+      {
+        "title": "Clarivate：Science Citation Index Expanded",
+        "url": "https://clarivate.com/academia-government/scientific-and-academic-research/research-discovery-and-referencing/web-of-science/web-of-science-core-collection/science-citation-index-expanded/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "jcr",
+    "term": "JCR",
+    "zh": "期刊引证报告",
+    "aliases": [
+      "Journal Citation Reports"
+    ],
+    "category": "publishing",
+    "group": "评价与检索",
+    "kind": "term",
+    "summary": "由 Clarivate 提供的期刊引文数据与分析产品。",
+    "detail": [
+      "全称 Journal Citation Reports。它提供影响因子、学科类别和期刊排名等指标，查询结果需要连同指标年份和学科类别一起阅读。"
+    ],
+    "related": [
+      "impact-factor",
+      "jcr-quartile",
+      "scie"
+    ],
+    "sources": [
+      {
+        "title": "Clarivate：影响因子与 JCR",
+        "url": "https://clarivate.com/academia-government/essays/impact-factor/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "jcr-quartile",
+    "term": "JCR quartile",
+    "zh": "JCR 四分位分区",
+    "aliases": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "JCR分区"
+    ],
+    "category": "publishing",
+    "group": "评价与检索",
+    "kind": "term",
+    "summary": "按期刊在某一学科类别中的指标排名划分的四分位组别。",
+    "detail": [
+      "常见标记为 Q1、Q2、Q3、Q4，表示从排名前部到后部的四组。同一期刊可能属于多个学科类别，使用时应同时写明类别、指标和年份。"
+    ],
+    "related": [
+      "jcr",
+      "cas-partition",
+      "impact-factor"
+    ],
+    "sources": [
+      {
+        "title": "Clarivate：JCR 排名与四分位分区",
+        "url": "https://clarivate.com/academia-government/blog/a-primer-on-ties-in-the-jcr/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "cas-partition",
+    "term": "CAS journal partition",
+    "zh": "中科院期刊分区",
+    "aliases": [
+      "中科院分区",
+      "CAS分区",
+      "一区",
+      "二区"
+    ],
+    "category": "publishing",
+    "group": "评价与检索",
+    "kind": "term",
+    "summary": "由中国科学院文献情报中心曾发布的期刊分区体系。",
+    "detail": [
+      "该体系按大类和小类学科提供分区，用于描述期刊在相应分类中的位置。文献情报中心已声明自 2026 年起不再更新和发布期刊分区表，阅读历史分区时需保留版本与来源。"
+    ],
+    "related": [
+      "jcr-quartile",
+      "jcr",
+      "journal"
+    ],
+    "sources": [
+      {
+        "title": "中国科学院文献情报中心关于期刊分区表的声明",
+        "url": "https://las.cas.cn/news/tzgg/202603/t20260327_8178738.html"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "impact-factor",
+    "term": "JIF / IF",
+    "zh": "期刊影响因子",
+    "aliases": [
+      "Journal Impact Factor",
+      "IF",
+      "JIF",
+      "影响因子"
+    ],
+    "category": "publishing",
+    "group": "评价与检索",
+    "kind": "term",
+    "summary": "依据期刊近期论文在指定年份获得的引用计算的期刊层面指标。",
+    "detail": [
+      "常用两年影响因子，把某年对该刊前两年内容的引用数，除以前两年符合计数规则的学术条目数。比较时需关注年份、学科与统计口径，单篇论文仍要阅读其自身内容。"
+    ],
+    "related": [
+      "jcr",
+      "jcr-quartile",
+      "scie"
+    ],
+    "sources": [
+      {
+        "title": "Clarivate：影响因子分子的计算",
+        "url": "https://clarivate.com/academia-government/blog/closer-look-journal-impact-factor-numerator/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "doi",
+    "term": "DOI",
+    "zh": "数字对象标识符",
+    "aliases": [
+      "Digital Object Identifier"
+    ],
+    "category": "publishing",
+    "group": "作者与引用",
+    "kind": "term",
+    "summary": "为论文等数字对象提供持久标识与链接解析的编号。",
+    "detail": [
+      "论文的 DOI 通常写成以 10. 开头的字符串，可通过 doi.org 解析到相应页面。引用时加入 DOI 能帮助读者找到稳定的出版记录。"
+    ],
+    "related": [
+      "proceedings",
+      "journal",
+      "arxiv"
+    ],
+    "sources": [
+      {
+        "title": "DOI Foundation：什么是 DOI",
+        "url": "https://www.doi.org/the-identifier/what-is-a-doi/"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "double-blind",
+    "term": "Double-blind review",
+    "zh": "双匿名评审",
+    "aliases": [
+      "Double-anonymous review",
+      "双盲审稿"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "在评审安排中让作者与审稿人的身份相互隐藏的制度。",
+    "detail": [
+      "投稿文件通常需要移除可识别作者的信息，审稿人也以匿名身份给出意见。这样安排旨在减少身份信息对判断的影响，具体匿名规则由发表场合制定。"
+    ],
+    "related": [
+      "peer-review",
+      "review",
+      "conflict-of-interest"
+    ],
+    "sources": [
+      {
+        "title": "ACL Rolling Review 审稿指南",
+        "url": "https://aclrollingreview.org/reviewerguidelines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  },
+  {
+    "id": "conflict-of-interest",
+    "term": "COI",
+    "zh": "利益冲突",
+    "aliases": [
+      "Conflict of Interest"
+    ],
+    "category": "publishing",
+    "group": "审稿流程",
+    "kind": "term",
+    "summary": "可能影响独立评审判断的合作、竞争或个人关系。",
+    "detail": [
+      "例如近期合作者、同一机构成员或指导关系，通常需要在系统中申报，便于重新安排审稿。判断时间范围与关系类型时应查看对应会议或期刊的规则。"
+    ],
+    "related": [
+      "peer-review",
+      "double-blind",
+      "area-chair"
+    ],
+    "sources": [
+      {
+        "title": "NeurIPS 审稿指南",
+        "url": "https://neurips.cc/Conferences/2025/ReviewerGuidelines"
+      }
+    ],
+    "categories": [
+      "publishing"
+    ]
+  }
+]

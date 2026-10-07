@@ -1,0 +1,1061 @@
+[
+  {
+    "id": "policy",
+    "term": "Policy",
+    "zh": "策略",
+    "aliases": [
+      "π"
+    ],
+    "category": "rl",
+    "group": "决策基础",
+    "kind": "term",
+    "summary": "策略是根据当前观测或历史信息选择动作的规则。",
+    "detail": [
+      "玩迷宫时，策略决定在路口向左还是向右。它可以直接选定一个动作，也可以给各个动作分配概率再抽取。训练策略，就是调整这套选择规则，让长期回报提高。"
+    ],
+    "related": [
+      "reward",
+      "action",
+      "value-function"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "reward",
+    "term": "Reward",
+    "zh": "奖励",
+    "aliases": [
+      "奖励信号"
+    ],
+    "category": "rl",
+    "group": "决策基础",
+    "kind": "term",
+    "summary": "奖励是环境对一次交互给出的数值反馈。",
+    "detail": [
+      "机器人把杯子放到指定位置可以获得一次正奖励，碰倒杯子可以得到负奖励。奖励设计告诉学习系统哪些结果值得追求，反馈可以出现在每一步，也可以只在任务结束时出现。"
+    ],
+    "related": [
+      "return",
+      "policy",
+      "reward-shaping"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "return",
+    "term": "Return",
+    "zh": "回报",
+    "aliases": [
+      "累计奖励"
+    ],
+    "category": "rl",
+    "group": "决策基础",
+    "kind": "term",
+    "summary": "回报是从某一时刻起，将后续奖励按约定方式累加得到的总收益。",
+    "detail": [
+      "走迷宫时，眼前多走一步可能扣分，却能帮助最终抵达出口。回报把这些前后相连的结果放到一起计算，使策略能够权衡眼前收益和后续结果。"
+    ],
+    "related": [
+      "reward",
+      "discount-factor",
+      "value-function"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "discount-factor",
+    "term": "Discount Factor",
+    "zh": "折扣因子",
+    "aliases": [
+      "Gamma",
+      "γ"
+    ],
+    "category": "rl",
+    "group": "决策基础",
+    "kind": "term",
+    "summary": "折扣因子决定计算回报时，较远未来的奖励占多大权重。",
+    "detail": [
+      "常用符号 γ 表示折扣因子：一步后的奖励乘 γ，两步后的奖励乘 γ²。γ 接近 1 时远期奖励保留得更多；γ 较小时，目标更偏向近期收益。"
+    ],
+    "related": [
+      "return",
+      "bellman-equation",
+      "value-function"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "value-function",
+    "term": "Value Function",
+    "zh": "状态价值函数",
+    "aliases": [
+      "V函数",
+      "State Value"
+    ],
+    "category": "rl",
+    "group": "价值与学习",
+    "kind": "term",
+    "summary": "状态价值函数估计从某个状态出发并按指定策略行动，平均能够得到多少后续回报。",
+    "detail": [
+      "同在迷宫里，靠近出口的位置通常比死胡同更有价值。V(s) 给状态估计一个长期分数，常被用作评价动作好坏的参照。"
+    ],
+    "related": [
+      "q-function",
+      "advantage",
+      "return"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "q-function",
+    "term": "Q-function",
+    "zh": "动作价值函数",
+    "aliases": [
+      "Q值",
+      "Action Value"
+    ],
+    "category": "rl",
+    "group": "价值与学习",
+    "kind": "term",
+    "summary": "动作价值函数估计在某状态先采取某个动作，再按指定策略继续行动的预期回报。",
+    "detail": [
+      "在一个路口，Q(路口,向左) 和 Q(路口,向右) 可以分别评分。比较动作的 Q 值，便能判断从当前位置先走哪一步更有前景。"
+    ],
+    "related": [
+      "value-function",
+      "dqn",
+      "bellman-equation"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "advantage",
+    "term": "Advantage",
+    "zh": "优势函数",
+    "aliases": [
+      "优势值",
+      "A函数"
+    ],
+    "category": "rl",
+    "group": "价值与学习",
+    "kind": "term",
+    "summary": "优势函数衡量某个动作的预期回报比当前状态下的平均水平高多少。",
+    "detail": [
+      "常见定义是 A(s,a)=Q(s,a)−V(s)。如果向左比这个路口通常能取得的结果更好，优势就为正，策略更新时便可以提高向左的概率。"
+    ],
+    "related": [
+      "q-function",
+      "value-function",
+      "policy-gradient"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：策略优化",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "bellman-equation",
+    "term": "Bellman Equation",
+    "zh": "贝尔曼方程",
+    "aliases": [
+      "Bellman"
+    ],
+    "category": "rl",
+    "group": "价值与学习",
+    "kind": "term",
+    "summary": "贝尔曼方程把当前价值写成即时奖励与后续价值的组合。",
+    "detail": [
+      "估计现在的位置值多少分，可以先看下一步得到的奖励，再加上折扣后的下一状态价值。通过反复应用这种关系，远处的奖励能够逐渐影响前面各状态的估计。"
+    ],
+    "related": [
+      "value-function",
+      "q-function",
+      "discount-factor"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "exploration",
+    "term": "Exploration",
+    "zh": "探索",
+    "aliases": [
+      "探索策略"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "探索是尝试尚不熟悉的动作，以获得更多关于环境的信息。",
+    "detail": [
+      "一条路线目前看起来最好，另一条还没有走过。偶尔试走第二条，可能发现更短的路；探索因此会牺牲部分即时收益，换取改善以后决策的信息。"
+    ],
+    "related": [
+      "exploitation",
+      "policy",
+      "sample-efficiency"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：算法分类",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "exploitation",
+    "term": "Exploitation",
+    "zh": "利用",
+    "aliases": [
+      "开发",
+      "Exploit"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "利用是根据已有经验，选择当前估计最有收益的动作。",
+    "detail": [
+      "已经发现一条可靠路线后，再次走它就是利用。训练中的决策通常需要在尝试新路和使用已知好路线之间分配机会。"
+    ],
+    "related": [
+      "exploration",
+      "q-function",
+      "policy"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：算法分类",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "policy-gradient",
+    "term": "Policy Gradient",
+    "zh": "策略梯度",
+    "aliases": [
+      "PG"
+    ],
+    "category": "rl",
+    "group": "算法",
+    "kind": "term",
+    "summary": "策略梯度利用交互结果估计调整策略参数的方向，使高回报动作更容易被选中。",
+    "detail": [
+      "策略先实际采取动作，再用获得的回报或优势给这些动作加权。取得较好结果的动作概率会上升，较差动作的概率会下降，多个样本共同提供一次更新方向。"
+    ],
+    "related": [
+      "policy",
+      "advantage",
+      "actor-critic"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：策略优化",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "actor-critic",
+    "term": "Actor-Critic",
+    "zh": "演员—评论家方法",
+    "aliases": [
+      "AC",
+      "Actor Critic"
+    ],
+    "category": "rl",
+    "group": "算法",
+    "kind": "term",
+    "summary": "演员—评论家方法让策略模块负责选动作，让价值模块负责评价并帮助更新策略。",
+    "detail": [
+      "Actor 输出动作或动作概率，Critic 估计状态或动作的长期价值。例如机械臂尝试一次抓取后，价值估计帮助策略判断哪些调整更有希望。"
+    ],
+    "related": [
+      "policy-gradient",
+      "value-function",
+      "sac",
+      "ppo"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：SAC",
+        "url": "https://spinningup.openai.com/en/latest/algorithms/sac.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "dqn",
+    "term": "DQN",
+    "zh": "深度Q网络",
+    "aliases": [
+      "Deep Q-Network"
+    ],
+    "category": "rl",
+    "group": "算法",
+    "kind": "term",
+    "summary": "DQN 用神经网络估计离散动作的 Q 值，并据此学习动作选择。",
+    "detail": [
+      "输入游戏画面后，网络分别给向左、向右、开火等动作评分。经典 DQN 通过经验回放重复使用交互数据，并借助更新较慢的目标网络稳定学习。"
+    ],
+    "related": [
+      "q-function",
+      "replay-buffer",
+      "off-policy",
+      "model-free-rl"
+    ],
+    "sources": [
+      {
+        "title": "Human-level Control through Deep Reinforcement Learning",
+        "url": "https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "ppo",
+    "term": "PPO",
+    "zh": "近端策略优化",
+    "aliases": [
+      "Proximal Policy Optimization"
+    ],
+    "category": "rl",
+    "group": "算法",
+    "kind": "term",
+    "summary": "PPO 通过限制策略更新的激进程度，让新策略逐步提高获得高回报动作的概率。",
+    "detail": [
+      "常见的 PPO-Clip 比较新旧策略给同一动作的概率，使用裁剪目标抑制过大的更新激励。它通常先用当前策略采集一批轨迹，在这批数据上更新若干次，再重新采集。"
+    ],
+    "related": [
+      "policy-gradient",
+      "advantage",
+      "on-policy",
+      "actor-critic"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：PPO",
+        "url": "https://spinningup.openai.com/en/latest/algorithms/ppo.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "sac",
+    "term": "SAC",
+    "zh": "软演员—评论家",
+    "aliases": [
+      "Soft Actor-Critic"
+    ],
+    "category": "rl",
+    "group": "算法",
+    "kind": "term",
+    "summary": "SAC 同时优化预期回报和策略熵，以学习既能取得收益又保留适度随机性的策略。",
+    "detail": [
+      "机械臂控制常需要输出连续的关节动作。SAC 一边学习动作的 Q 值，一边训练随机策略，并使用经验回放重复利用旧数据。熵项鼓励策略继续尝试多种动作。"
+    ],
+    "related": [
+      "actor-critic",
+      "off-policy",
+      "replay-buffer",
+      "exploration"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：SAC",
+        "url": "https://spinningup.openai.com/en/latest/algorithms/sac.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "grpo",
+    "term": "GRPO",
+    "zh": "组相对策略优化",
+    "aliases": [
+      "Group Relative Policy Optimization"
+    ],
+    "category": "rl",
+    "group": "算法",
+    "kind": "term",
+    "summary": "GRPO 用同一输入的一组候选输出之间的奖励差异，构造策略更新所需的相对优势。",
+    "detail": [
+      "例如同一道数学题生成多份解答，评分后用组内相对表现提高较好解答的概率。原始 GRPO 用组内奖励基线替代单独训练的价值模型，降低了相关训练开销。"
+    ],
+    "related": [
+      "advantage",
+      "ppo",
+      "reward",
+      "policy-gradient"
+    ],
+    "sources": [
+      {
+        "title": "DeepSeekMath",
+        "url": "https://arxiv.org/abs/2402.03300"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "replay-buffer",
+    "term": "Replay Buffer",
+    "zh": "经验回放池",
+    "aliases": [
+      "Experience Replay",
+      "经验池"
+    ],
+    "category": "rl",
+    "group": "训练机制",
+    "kind": "term",
+    "summary": "经验回放池存储过去的交互记录，供训练时再次抽样使用。",
+    "detail": [
+      "一条记录通常包括观测、动作、奖励和下一观测。把不同时刻的记录混合成训练批次，既能重复利用采集成本较高的数据，也能减弱相邻样本过于相似的问题。"
+    ],
+    "related": [
+      "dqn",
+      "sac",
+      "off-policy",
+      "sample-efficiency"
+    ],
+    "sources": [
+      {
+        "title": "Playing Atari with Deep Reinforcement Learning",
+        "url": "https://arxiv.org/abs/1312.5602"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "reward-shaping",
+    "term": "Reward Shaping",
+    "zh": "奖励塑形",
+    "aliases": [
+      "奖励整形"
+    ],
+    "category": "rl",
+    "group": "训练机制",
+    "kind": "term",
+    "summary": "奖励塑形通过加入中间反馈，让学习过程更容易发现通向任务目标的行为。",
+    "detail": [
+      "抓取任务如果只有成功时才给分，随机尝试很难获得反馈。可以为接近目标等进展加入奖励；具体塑形形式会影响策略偏好的行为，需要与最终任务目标一致。"
+    ],
+    "related": [
+      "reward",
+      "sparse-reward",
+      "credit-assignment"
+    ],
+    "sources": [
+      {
+        "title": "Policy Invariance Under Reward Transformations",
+        "url": "https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "sparse-reward",
+    "term": "Sparse Reward",
+    "zh": "稀疏奖励",
+    "aliases": [
+      "稀疏反馈"
+    ],
+    "category": "rl",
+    "group": "训练机制",
+    "kind": "term",
+    "summary": "稀疏奖励指有用的奖励反馈只在少数状态或事件出现。",
+    "detail": [
+      "机器人只有把钥匙插入锁孔才得到奖励，其他步骤都为零。训练必须从很少的成功信号中推断哪些尝试有帮助，因此探索和信用分配会变得更困难。"
+    ],
+    "related": [
+      "reward-shaping",
+      "exploration",
+      "credit-assignment"
+    ],
+    "sources": [
+      {
+        "title": "Learning Latent Dynamics for Planning from Pixels",
+        "url": "https://proceedings.mlr.press/v97/hafner19a"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "sample-efficiency",
+    "term": "Sample Efficiency",
+    "zh": "样本效率",
+    "aliases": [
+      "数据效率"
+    ],
+    "category": "rl",
+    "group": "训练机制",
+    "kind": "term",
+    "summary": "样本效率衡量一种学习方法用多少交互数据就能达到给定表现。",
+    "detail": [
+      "如果两个方法都能稳定完成抓取，一个需要一万次尝试，另一个需要十万次，前者的交互样本效率更高。比较时还应保持任务难度与目标成绩一致。"
+    ],
+    "related": [
+      "replay-buffer",
+      "model-based-rl",
+      "offline-rl"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：算法分类",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "offline-rl",
+    "term": "Offline RL",
+    "zh": "离线强化学习",
+    "aliases": [
+      "Batch RL",
+      "离线RL"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "离线强化学习从预先收集且训练期间固定的数据中学习策略，无需边训练边采集新交互。",
+    "detail": [
+      "可以用已有机器人的操作日志训练新策略。数据覆盖决定模型看过哪些行为；对日志中很少出现的动作，价值估计可能不可靠，因此算法通常需要限制过度乐观的选择。"
+    ],
+    "related": [
+      "online-rl",
+      "off-policy",
+      "replay-buffer"
+    ],
+    "sources": [
+      {
+        "title": "Offline Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2005.01643"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "online-rl",
+    "term": "Online RL",
+    "zh": "在线强化学习",
+    "aliases": [
+      "在线RL"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "在线强化学习允许策略在训练过程中继续与环境交互并获取新数据。",
+    "detail": [
+      "系统先尝试一批动作，更新策略，再用改进后的策略继续尝试。这里的在线描述数据是否持续采集；在线训练既可以采用同策略方法，也可以采用异策略方法。"
+    ],
+    "related": [
+      "offline-rl",
+      "on-policy",
+      "off-policy"
+    ],
+    "sources": [
+      {
+        "title": "Offline Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2005.01643"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "model-based-rl",
+    "term": "Model-based RL",
+    "zh": "基于模型的强化学习",
+    "aliases": [
+      "MBRL",
+      "有模型强化学习",
+      "model-based",
+      "model based"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "基于模型的强化学习使用环境变化模型，辅助规划或策略学习。",
+    "detail": [
+      "机器人可以先预测推箱子后箱子会到哪里，再比较不同动作的结果。环境模型可以由规则提供，也可以从数据学习，并可用于生成模拟经验。"
+    ],
+    "related": [
+      "model-free-rl",
+      "dynamics-model",
+      "world-planning"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：算法分类",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "model-free-rl",
+    "term": "Model-free RL",
+    "zh": "无模型强化学习",
+    "aliases": [
+      "无模型RL",
+      "model-free",
+      "model free"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "无模型强化学习直接学习策略或价值，不依赖环境转移模型来规划或生成训练经验。",
+    "detail": [
+      "DQN 用神经网络估计 Q 值，PPO 用神经网络表示策略，都属于常见的无模型方法。“无模型”专指这里没有用于决策学习的环境模型，策略和价值仍可由大型神经网络实现。"
+    ],
+    "related": [
+      "model-based-rl",
+      "dqn",
+      "ppo"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：算法分类",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "on-policy",
+    "term": "On-policy",
+    "zh": "同策略学习",
+    "aliases": [
+      "On Policy"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "同策略学习用目标策略自身产生的数据来学习该策略的价值或改进它。",
+    "detail": [
+      "PPO 通常用当前策略采集新数据再更新，旧策略下积累很久的数据不直接反复混用。同策略关注行为策略与学习目标的关系，和是否使用环境模型是不同分类维度。"
+    ],
+    "related": [
+      "off-policy",
+      "ppo",
+      "online-rl"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：PPO",
+        "url": "https://spinningup.openai.com/en/latest/algorithms/ppo.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "off-policy",
+    "term": "Off-policy",
+    "zh": "异策略学习",
+    "aliases": [
+      "Off Policy"
+    ],
+    "category": "rl",
+    "group": "学习设置",
+    "kind": "term",
+    "summary": "异策略学习允许使用其他策略产生的数据，学习当前目标策略。",
+    "detail": [
+      "DQN 可以从过去多个版本策略留下的经验中抽样训练。异策略方法既可在持续交互时使用，也可在固定数据条件下使用；是否离线取决于训练能否继续获取新数据。"
+    ],
+    "related": [
+      "on-policy",
+      "offline-rl",
+      "replay-buffer",
+      "dqn"
+    ],
+    "sources": [
+      {
+        "title": "Offline Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2005.01643"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "mdp",
+    "term": "MDP",
+    "zh": "马尔可夫决策过程",
+    "aliases": [
+      "Markov Decision Process"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "马尔可夫决策过程用状态、动作、状态转移和奖励描述逐步决策问题。",
+    "detail": [
+      "给定当前状态和动作，下一状态的分布不再需要依赖更早的历史，这就是马尔可夫性质。它让规划和价值计算可以围绕当前状态展开。"
+    ],
+    "related": [
+      "state",
+      "action",
+      "pomdp",
+      "bellman-equation"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "pomdp",
+    "term": "POMDP",
+    "zh": "部分可观测马尔可夫决策过程",
+    "aliases": [
+      "Partially Observable Markov Decision Process"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "部分可观测马尔可夫决策过程描述智能体只能获得环境状态的部分信息的决策问题。",
+    "detail": [
+      "机器人摄像头看不到柜门后面的物体，需要结合过去观察和行动形成判断。策略可以利用历史、记忆或状态信念，补足单次观测缺失的信息。"
+    ],
+    "related": [
+      "mdp",
+      "observation",
+      "state",
+      "policy"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "observation",
+    "term": "Observation",
+    "zh": "观测",
+    "aliases": [
+      "Obs"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "观测是智能体在某一时刻实际接收到的环境信息。",
+    "detail": [
+      "摄像头画面、关节传感器读数都可以作为观测。单张画面可能告诉模型球在哪里，却难以确定球的运动速度，连续帧能够提供额外信息。"
+    ],
+    "related": [
+      "state",
+      "action",
+      "pomdp"
+    ],
+    "sources": [
+      {
+        "title": "Gymnasium：Basic Usage",
+        "url": "https://gymnasium.farama.org/introduction/basic_usage/"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "action",
+    "term": "Action",
+    "zh": "动作",
+    "aliases": [
+      "Action Space",
+      "动作空间"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "动作是智能体向环境发出的、能够影响后续变化的控制选择。",
+    "detail": [
+      "动作可以是游戏中的跳跃按钮，也可以是机械臂各关节的目标速度。前者属于离散选择，后者属于连续数值，动作形式会影响算法和输出层的设计。"
+    ],
+    "related": [
+      "policy",
+      "observation",
+      "state"
+    ],
+    "sources": [
+      {
+        "title": "Gymnasium：Basic Usage",
+        "url": "https://gymnasium.farama.org/introduction/basic_usage/"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "state",
+    "term": "State",
+    "zh": "状态",
+    "aliases": [
+      "环境状态"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "状态是描述环境当前情况并足以决定后续变化分布的信息。",
+    "detail": [
+      "在小球运动任务中，位置和速度共同影响下一刻的位置。只给位置可能缺少关键信息；模拟器内部状态往往比智能体通过摄像头得到的观测更完整。"
+    ],
+    "related": [
+      "observation",
+      "mdp",
+      "dynamics-model"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "episode",
+    "term": "Episode",
+    "zh": "回合",
+    "aliases": [
+      "情节"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "回合是从环境初始化到任务终止或预设截断的一段完整交互。",
+    "detail": [
+      "一局游戏或一次从起点到终点的导航都可以作为一个回合。到达目标或失败会让任务终止；达到采集时长上限则会截断这一段交互，环境可以分别记录这两种结束原因。"
+    ],
+    "related": [
+      "trajectory",
+      "rollout",
+      "return"
+    ],
+    "sources": [
+      {
+        "title": "Gymnasium：Basic Usage",
+        "url": "https://gymnasium.farama.org/introduction/basic_usage/"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "rollout",
+    "term": "Rollout",
+    "zh": "轨迹采样",
+    "aliases": [
+      "展开采样",
+      "滚动采样"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "轨迹采样是让策略在真实环境、模拟器或模型中连续运行，以收集一段交互序列。",
+    "detail": [
+      "训练程序可以让一百个模拟机器人同时尝试抓取，并收集它们的观测、动作与奖励。一次 rollout 可以覆盖完整回合，也可以只收集固定数量的步骤。"
+    ],
+    "related": [
+      "trajectory",
+      "episode",
+      "policy"
+    ],
+    "sources": [
+      {
+        "title": "Gymnasium：Basic Usage",
+        "url": "https://gymnasium.farama.org/introduction/basic_usage/"
+      }
+    ],
+    "categories": [
+      "rl"
+    ]
+  },
+  {
+    "id": "trajectory",
+    "term": "Trajectory",
+    "zh": "轨迹",
+    "aliases": [
+      "交互轨迹",
+      "Trajectory Data",
+      "轨迹数据"
+    ],
+    "category": "rl",
+    "group": "环境与交互",
+    "kind": "term",
+    "summary": "轨迹是按时间顺序排列的状态或观测、动作及相应结果。",
+    "detail": [
+      "一次开门过程可以记录为看见把手、伸手、接触、转动、拉开。算法通过这串记录学习早期动作和后续结果的关系，也可以逐步检查失败发生在哪里。",
+      "在网页 Agent 中，一条轨迹可以记录它依次查看的页面、点击的按钮、调用的工具，以及每一步收到的结果。这样的记录可以作为训练和分析的数据。"
+    ],
+    "related": [
+      "rollout",
+      "episode",
+      "credit-assignment"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：强化学习基础",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html"
+      },
+      {
+        "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2508.03680"
+      }
+    ],
+    "also": [
+      "agents"
+    ],
+    "categories": [
+      "rl",
+      "agents"
+    ]
+  },
+  {
+    "id": "credit-assignment",
+    "term": "Credit Assignment",
+    "zh": "信用分配",
+    "aliases": [
+      "贡献分配",
+      "贡献归因"
+    ],
+    "category": "rl",
+    "group": "训练机制",
+    "kind": "term",
+    "summary": "信用分配研究如何把最终结果的好坏归因到此前的具体动作。",
+    "detail": [
+      "机器人最后成功开门，贡献可能来自很早以前选对抓握位置。算法需要把成功信号沿时间向前传递，帮助策略发现真正改善结果的步骤。"
+    ],
+    "related": [
+      "return",
+      "advantage",
+      "sparse-reward"
+    ],
+    "sources": [
+      {
+        "title": "Spinning Up：策略优化",
+        "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html"
+      },
+      {
+        "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2508.03680"
+      }
+    ],
+    "also": [
+      "agents"
+    ],
+    "categories": [
+      "rl",
+      "agents"
+    ]
+  }
+]

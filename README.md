@@ -16,6 +16,8 @@
 
 ## 内容导航
 
+[术语与会议速查](https://takamatsu-hikaru.github.io/AI-Research-Guide/wiki/index.html)：查询中文、英文或缩写，按方向浏览术语、会议与期刊。
+
 | 板块 | 内容 |
 | --- | --- |
 | 基础与学习 | [基础怎么学，需要学到哪里？](content/guide/zh/basics.md) · [挑一篇论文读](content/guide/zh/papers.md) |

@@ -54,6 +54,45 @@ Agent 的训练样本可以包含观察、动作、工具返回和最终结果�
 - [SWE-agent](https://arxiv.org/abs/2405.15793)：看面向 Agent 的文件查看、编辑与执行接口，理解接口设计为什么会影响模型完成代码任务的过程。
 - [OpenHands](https://arxiv.org/abs/2407.16741)：看代码执行、命令行、浏览器与沙箱如何接成一个平台，理解运行环境和评测如何支持 Agent 实验。
 
+
+<a id="agent-projects"></a>
+
+## 从编程到日常生活，Agent 已经在做什么
+
+一个实际的 Agent 往往会同时用到工具、记忆、规划和反馈。编程助手、个人助理和科研工具，已经把这些能力用在了不同的任务里。
+
+### 编程 Agent：在代码仓库里完成任务
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://openai.com/codex/">Codex ↗</a></h4><p>Codex 可以读取项目、修改代码、运行测试和审查改动，也支持并行处理任务与持续的后台工作。可以从一次修复报错的过程，看它怎样找到相关文件、验证修改，再根据测试结果继续处理。</p></article>
+<article class="agent-project"><h4><a href="https://code.claude.com/docs/en/overview">Claude Code ↗</a></h4><p>Claude Code 在终端中读取仓库、编辑文件和执行命令，能把理解项目、实现功能与测试接在一起。它的工具、Skills 和项目指令，也适合用来观察一个编程 Agent 怎样适应团队的工作方式。</p></article>
+<article class="agent-project"><h4><a href="https://www.kimi.com/code/en">Kimi Code ↗</a></h4><p>Kimi Code 提供终端和编辑器入口，可以搜索代码、修改项目、运行命令并根据反馈调整后续步骤。用它完成一次小功能，再翻执行记录，可以看到代码理解、工具调用和验证怎样配合。</p></article>
+<article class="agent-project"><h4><a href="https://www.zcode.network/en/">ZCode ↗</a></h4><p>ZCode 是面向 GLM 的编程 Agent 工作环境，把项目、对话和任务执行放在一起。它支持通过 AGENTS.md 提供项目约定，可以关注这些上下文怎样影响模型的修改与检查。</p></article>
+<article class="agent-project"><h4><a href="https://pi.dev/">Pi ↗</a></h4><p>Pi 是一个可以自行扩展的轻量 Agent harness，核心围绕文件读写和命令执行。扩展、Skills 和提示模板都可以按自己的工作流组合，适合顺着代码理解 Agent 循环和工具接口。</p></article>
+</div>
+
+### 个人 Agent：记住你的事情，持续跟进
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">Muse ↗</a></h4><p>Meta 的 Muse 在云端有自己的计算机和浏览器，可以连接日常应用，处理邮件、行程和长期目标。它把个人偏好与持续任务放进同一个产品，能接着看记忆、跨应用操作和任务状态怎样协同。</p></article>
+<article class="agent-project"><h4><a href="https://openai.com/index/introducing-dots/">Dots ↗</a></h4><p>OpenAI 的 Dots 是持续在线的个人 Agent，使用云端计算机和连接的应用推进任务，并从交流与反馈中积累对用户的了解。它把一次对话延伸到持续协作，对应长期上下文、后台执行和反馈学习等问题。</p></article>
+<article class="agent-project"><h4><a href="https://github.com/NousResearch/hermes-agent">Hermes ↗</a></h4><p>Hermes 是 Nous Research 开源的个人 Agent，可以从终端和聊天软件接收任务。它保留跨会话记忆，并把执行中积累的方法整理成可复用技能；对记忆和技能积累感兴趣，可以继续读它的实现。</p></article>
+</div>
+
+### 科研 Agent：把调研和实验连起来
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep">ARIS ↗</a></h4><p>ARIS 用 Skills 组织机器学习研究流程，包括文献调研、想法讨论、实验、结果分析和论文修改。执行模型推进工作，另一个模型参与审阅，再把反馈带回下一轮；可以从中看多 Agent 协作怎样进入科研工作流。</p></article>
+</div>
+
+### 健康 Agent：围绕日常健康需求提供服务
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://www.antgroup.com/en/news-media/press-releases/1765779300000">蚂蚁阿福 / Ant A-Fu ↗</a></h4><p>蚂蚁阿福围绕健康问答、报告解读、健康记录与医疗健康服务展开。这个场景把长期个人信息、专业知识和服务连接放到一起，也让 Agent 的研究问题延伸到具体行业中的信息组织与任务流程。</p></article>
+</div>
+
+[接着看：和 AI 一起做事](ai.md) · [搭建自己的科研工作流](irene-workflow.md)
+
 ## 用检索任务检查 Agent 的表现
 
 给系统一组同类型任务，例如从几份公开资料中找出指定事实并附出处。记录成功、错误出处、漏掉信息和工具调用失败各有多少次。每次改动都保留原来的题目与运行条件，再看失败是否减少。

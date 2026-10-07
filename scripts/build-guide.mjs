@@ -1,3 +1,4 @@
+import './build-wiki.mjs';
 // Default guide build: warm paper palette, fixed header, right-hand TOC.
 // Content comes from guide-model.mjs; this file owns only the page shell and
 // the writes. The uestc-skinned edition is scripts/build-guide-uestc.mjs.
@@ -15,7 +16,7 @@ for(const lang of ['zh','en']){
  fs.mkdirSync(path.join(out,lang),{recursive:true});
  for(const [index,p] of pages.entries()){
   const t=STRINGS[lang],other=lang==='zh'?'en':'zh';let group='';
-  const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`}).join('');
+  const nav=pages.map(x=>{let h='';if(x.group!==group){group=x.group;h=`<div class="navgroup">${escape(groupName(group,lang))}</div>`;}return h+`<a href="${filename(x.id)}"${x.id===p.id?' aria-current="page"':''}>${escape(x.id==='home'?t.home:x.title)}</a>`+(x.id==='basics'?`<a href="../wiki/index.html">${lang==='zh'?'术语与会议速查':'Terminology & conferences · 中文'}</a>`:'')}).join('');
   const neighbors=[pages[index-1],pages[index+1]].map((x,i)=>x?`<a href="${filename(x.id)}"><small>${i?t.next:t.prev} ${i?'→':'←'}</small><span>${escape(x.id==='home'?t.home:x.title)}</span></a>`:'<span></span>').join('');
   const html=`<!doctype html>
 <html lang="${lang==='zh'?'zh-CN':'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${p.id==='ai4x'?'<link rel="stylesheet" href="../ai4x/expanded.css">':''}<meta name="color-scheme" content="light dark"><title>${escape(p.title)} · UESTC AI</title><meta name="description" content="${escape(p.plain.slice(p.title.length,190).trim())}"><link rel="icon" href="../favicon.png"><link rel="alternate" hreflang="zh-CN" href="../zh/${filename(p.id)}"><link rel="alternate" hreflang="en" href="../en/${filename(p.id)}"><link rel="stylesheet" href="../guide.css"><link rel="stylesheet" href="../fieldnotes.css"><link rel="stylesheet" href="../guide-motion.css?v=20261006d"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch{}</script></head>

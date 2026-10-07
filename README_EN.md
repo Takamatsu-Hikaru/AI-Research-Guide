@@ -16,6 +16,8 @@ This guide is for students starting university who want to explore AI and resear
 
 ## Explore the guide
 
+[AI terminology and conferences · 中文](https://takamatsu-hikaru.github.io/AI-Research-Guide/wiki/index.html): search names and abbreviations, browse by field, and follow related concepts.
+
 | Section | Topics |
 | --- | --- |
 | Foundations and learning | [Which foundations do you need, and how much?](content/guide/en/basics.md) · [Pick a paper](content/guide/en/papers.md) |

@@ -1,0 +1,481 @@
+[
+  {
+    "id": "repository",
+    "term": "Repository",
+    "zh": "代码仓库",
+    "aliases": [
+      "repo"
+    ],
+    "category": "development",
+    "group": "代码与版本",
+    "kind": "term",
+    "summary": "代码仓库保存项目文件及其版本历史。",
+    "detail": [
+      "一个 AI 项目仓库通常包含训练代码、配置、说明和测试；Git 仓库的历史还能说明某个改动由哪个提交引入。"
+    ],
+    "related": [
+      "commit",
+      "clone",
+      "branch"
+    ],
+    "sources": [
+      {
+        "title": "GitHub：About repositories",
+        "url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "fork",
+    "term": "Fork",
+    "zh": "派生仓库",
+    "aliases": [],
+    "category": "development",
+    "group": "代码与版本",
+    "kind": "term",
+    "summary": "Fork 在代码托管平台上从现有仓库派生出一个关联的仓库。",
+    "detail": [
+      "你可以在自己的派生仓库中修改代码，再向原仓库提出 Pull Request；后续也可以把原仓库的新改动同步过来。"
+    ],
+    "related": [
+      "repository",
+      "clone",
+      "pull-request"
+    ],
+    "sources": [
+      {
+        "title": "GitHub：About forks",
+        "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "clone",
+    "term": "Clone",
+    "zh": "克隆仓库",
+    "aliases": [],
+    "category": "development",
+    "group": "代码与版本",
+    "kind": "term",
+    "summary": "克隆把远程或本地 Git 仓库复制成一份可工作的仓库。",
+    "detail": [
+      "正常克隆会带上提交历史和远程地址，之后可以在本地浏览、修改并提交文件；也可通过浅克隆只获取部分历史。"
+    ],
+    "related": [
+      "repository",
+      "fork",
+      "commit"
+    ],
+    "sources": [
+      {
+        "title": "Git：git-clone",
+        "url": "https://git-scm.com/docs/git-clone"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "commit",
+    "term": "Commit",
+    "zh": "提交",
+    "aliases": [],
+    "category": "development",
+    "group": "代码与版本",
+    "kind": "term",
+    "summary": "提交记录 Git 仓库中一次确定的文件状态及其相关信息。",
+    "detail": [
+      "一条提交有标识、作者、时间、说明和父提交；提交到本地仓库后，还需要另行推送，远程协作者才能获取它。"
+    ],
+    "related": [
+      "repository",
+      "branch",
+      "merge"
+    ],
+    "sources": [
+      {
+        "title": "Git：git-commit",
+        "url": "https://git-scm.com/docs/git-commit"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "branch",
+    "term": "Branch",
+    "zh": "分支",
+    "aliases": [],
+    "category": "development",
+    "group": "代码与版本",
+    "kind": "term",
+    "summary": "分支是指向某条提交历史末端的可移动引用，用于组织不同方向的改动。",
+    "detail": [
+      "可以在功能分支里实现新模块，再把通过检查的改动合并回主分支；提交新改动时，当前分支的指向会继续前移。"
+    ],
+    "related": [
+      "commit",
+      "merge",
+      "pull-request"
+    ],
+    "sources": [
+      {
+        "title": "Git：git-branch",
+        "url": "https://git-scm.com/docs/git-branch"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "pull-request",
+    "term": "Pull Request",
+    "zh": "拉取请求",
+    "aliases": [
+      "PR"
+    ],
+    "category": "development",
+    "group": "协作与发布",
+    "kind": "term",
+    "summary": "Pull Request 在代码托管平台上提出一组待审查、待合并的分支改动。",
+    "detail": [
+      "审查者可以查看差异、讨论实现并运行自动检查；完成审查后，再按项目规则合并到目标分支。"
+    ],
+    "related": [
+      "branch",
+      "merge",
+      "issue"
+    ],
+    "sources": [
+      {
+        "title": "GitHub：About pull requests",
+        "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "merge",
+    "term": "Merge",
+    "zh": "合并",
+    "aliases": [],
+    "category": "development",
+    "group": "代码与版本",
+    "kind": "term",
+    "summary": "合并把另一条提交历史中的改动整合到当前分支。",
+    "detail": [
+      "两个分支修改了同一位置时，Git 可能需要人工解决冲突；合并完成后应检查组合后的代码是否按预期运行。"
+    ],
+    "related": [
+      "branch",
+      "commit",
+      "pull-request"
+    ],
+    "sources": [
+      {
+        "title": "Git：git-merge",
+        "url": "https://git-scm.com/docs/git-merge"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "issue",
+    "term": "Issue",
+    "zh": "问题记录",
+    "aliases": [
+      "ticket"
+    ],
+    "category": "development",
+    "group": "协作与发布",
+    "kind": "term",
+    "summary": "Issue 是项目中用于跟踪缺陷、功能需求或其他工作的记录。",
+    "detail": [
+      "一条清楚的缺陷记录可以包含复现步骤、预期结果和实际结果；标签、负责人和关联 PR 帮助团队跟踪处理进度。"
+    ],
+    "related": [
+      "repository",
+      "pull-request",
+      "release"
+    ],
+    "sources": [
+      {
+        "title": "GitHub：About issues",
+        "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "release",
+    "term": "Release",
+    "zh": "发布版本",
+    "aliases": [],
+    "category": "development",
+    "group": "协作与发布",
+    "kind": "term",
+    "summary": "发布版本是面向使用者整理的一次软件交付，通常关联明确的版本标记。",
+    "detail": [
+      "发布页可以提供版本说明、安装包和升级信息；固定发布版本有助于记录实验使用了哪一版工具。"
+    ],
+    "related": [
+      "repository",
+      "dependency",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "GitHub：About releases",
+        "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "dependency",
+    "term": "Dependency",
+    "zh": "依赖",
+    "aliases": [],
+    "category": "development",
+    "group": "运行与安装",
+    "kind": "term",
+    "summary": "依赖是一个程序正常构建或运行时需要的其他软件包或组件。",
+    "detail": [
+      "训练代码可能依赖 PyTorch、数据处理库和图像库；依赖文件和锁定版本帮助不同机器安装一致的组合。"
+    ],
+    "related": [
+      "python-env",
+      "release",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "pip：User Guide",
+        "url": "https://pip.pypa.io/en/stable/user_guide/"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "python-env",
+    "term": "Python Environment",
+    "zh": "Python 环境",
+    "aliases": [
+      "virtual environment",
+      "venv",
+      "conda env",
+      "Python env",
+      "env"
+    ],
+    "category": "development",
+    "group": "运行与安装",
+    "kind": "term",
+    "summary": "Python 环境是一组供项目使用的 Python 解释器、已安装包和相关配置。",
+    "detail": [
+      "虚拟环境可以把两个项目所需的库版本分开；运行脚本前选择正确解释器，才能使用该环境内安装的包。这里的 env 指软件运行环境。"
+    ],
+    "related": [
+      "dependency",
+      "docker",
+      "environment"
+    ],
+    "sources": [
+      {
+        "title": "Python：venv",
+        "url": "https://docs.python.org/3/library/venv.html"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "docker",
+    "term": "Docker",
+    "zh": "Docker 容器工具",
+    "aliases": [],
+    "category": "development",
+    "group": "运行与安装",
+    "kind": "term",
+    "summary": "Docker 提供构建、分发和运行容器镜像的工具。",
+    "detail": [
+      "项目可以用 Dockerfile 描述基础系统、依赖和启动方式，再构建成镜像；其他机器获取该镜像后可创建容器运行项目。"
+    ],
+    "related": [
+      "container",
+      "dependency",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "Docker：Overview",
+        "url": "https://docs.docker.com/get-started/docker-overview/"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "container",
+    "term": "Container",
+    "zh": "容器",
+    "aliases": [],
+    "category": "development",
+    "group": "运行与安装",
+    "kind": "term",
+    "summary": "容器是在隔离条件下运行应用及其所需文件和依赖的进程环境。",
+    "detail": [
+      "同一个镜像可以启动多个容器实例；需要长期保存的实验结果通常写到挂载目录或持久卷中。"
+    ],
+    "related": [
+      "docker",
+      "sandbox",
+      "dependency"
+    ],
+    "sources": [
+      {
+        "title": "Docker：What is a container?",
+        "url": "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "ssh",
+    "term": "SSH",
+    "zh": "安全远程连接",
+    "aliases": [
+      "Secure Shell"
+    ],
+    "category": "development",
+    "group": "接口与远程操作",
+    "kind": "term",
+    "summary": "SSH 是用于通过加密连接登录和操作远程系统的协议。",
+    "detail": [
+      "研究者可以连接 GPU 服务器查看日志、运行命令或传输文件；连接目标由地址、端口、用户身份和认证方式确定。"
+    ],
+    "related": [
+      "cli",
+      "python-env",
+      "repository"
+    ],
+    "sources": [
+      {
+        "title": "OpenSSH：Manual Pages",
+        "url": "https://www.openssh.org/manual.html"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "cli",
+    "term": "CLI",
+    "zh": "命令行界面",
+    "aliases": [
+      "Command-Line Interface"
+    ],
+    "category": "development",
+    "group": "接口与远程操作",
+    "kind": "term",
+    "summary": "命令行界面通过输入命令、参数和选项来调用程序功能。",
+    "detail": [
+      "例如训练程序可以接收模型名、数据路径和批量大小等选项；保存完整命令有助于以后重复同一操作。"
+    ],
+    "related": [
+      "ssh",
+      "api",
+      "reproducibility"
+    ],
+    "sources": [
+      {
+        "title": "Click：Command Line Interface Creation Kit",
+        "url": "https://click.palletsprojects.com/en/stable/"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "api",
+    "term": "API",
+    "zh": "应用程序接口",
+    "aliases": [
+      "Application Programming Interface"
+    ],
+    "category": "development",
+    "group": "接口与远程操作",
+    "kind": "term",
+    "summary": "API 规定不同程序如何请求功能、传递参数并接收结果。",
+    "detail": [
+      "模型服务可以提供一个接受提示文本并返回生成结果的接口；调用方需要遵循接口规定的字段、认证方式和错误格式。"
+    ],
+    "related": [
+      "sdk",
+      "tool-calling",
+      "cli"
+    ],
+    "sources": [
+      {
+        "title": "MDN：API",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/API"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  },
+  {
+    "id": "sdk",
+    "term": "SDK",
+    "zh": "软件开发工具包",
+    "aliases": [
+      "Software Development Kit"
+    ],
+    "category": "development",
+    "group": "接口与远程操作",
+    "kind": "term",
+    "summary": "SDK 是帮助开发者使用某个平台或服务的一组代码库、工具和文档。",
+    "detail": [
+      "模型服务的 SDK 可以把发送请求、处理响应和常见错误封装成函数，让应用代码更容易调用底层 API。"
+    ],
+    "related": [
+      "api",
+      "dependency",
+      "tool"
+    ],
+    "sources": [
+      {
+        "title": "Azure SDK Design Guidelines：Introduction",
+        "url": "https://azure.github.io/azure-sdk/general_introduction.html"
+      }
+    ],
+    "categories": [
+      "development"
+    ]
+  }
+]

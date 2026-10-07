@@ -1,0 +1,848 @@
+[
+  {
+    "id": "parameter",
+    "term": "Parameter",
+    "zh": "参数",
+    "aliases": [],
+    "category": "training",
+    "group": "模型里的数值",
+    "kind": "term",
+    "summary": "参数是模型在训练中学习和调整的数值。",
+    "detail": [
+      "线性模型的斜率、神经网络的权重和偏置都属于参数；“7B 模型”通常表示大约有 70 亿个参数。"
+    ],
+    "related": [
+      "weight",
+      "hyperparameter",
+      "optimizer"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：神经网络模块",
+        "url": "https://docs.pytorch.org/docs/stable/nn.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "weight",
+    "term": "Weight",
+    "zh": "权重",
+    "aliases": [],
+    "category": "training",
+    "group": "模型里的数值",
+    "kind": "term",
+    "summary": "权重是控制输入信息如何组合和传递的一类模型参数。",
+    "detail": [
+      "把两个特征分别乘以 0.8 和 0.2 再相加，这两个系数就是权重；下载“模型权重”时，文件通常还包含偏置等其他参数。"
+    ],
+    "related": [
+      "parameter",
+      "checkpoint",
+      "feature"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：神经网络模块",
+        "url": "https://docs.pytorch.org/docs/stable/nn.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "checkpoint",
+    "term": "Checkpoint",
+    "zh": "检查点",
+    "aliases": [
+      "ckpt",
+      "检查点文件"
+    ],
+    "category": "training",
+    "group": "保存与恢复",
+    "kind": "term",
+    "summary": "训练过程中保存的模型状态，可以用来加载模型或继续训练。",
+    "detail": [
+      "训练一个模型可能要跑几天，中间会定期保存 checkpoint。任务中断后，可以加载保存的状态，接着往下训练。",
+      "做推理需要加载模型权重；恢复训练的 checkpoint 通常还保存优化器状态、学习率调度器状态和训练步数。ckpt 是 checkpoint 的常见缩写。"
+    ],
+    "related": [
+      "weight",
+      "optimizer",
+      "training-step",
+      "random-seed"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：保存和加载模型",
+        "url": "https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "feature",
+    "term": "Feature",
+    "zh": "特征",
+    "aliases": [],
+    "category": "training",
+    "group": "表示与中间结果",
+    "kind": "term",
+    "summary": "特征是模型用来做预测的输入属性或从数据中提取出的表示。",
+    "detail": [
+      "房价预测可使用面积和楼层作为特征；视觉网络也会自己提取边缘、纹理等特征，后面的层再把它们组合起来。"
+    ],
+    "related": [
+      "embedding",
+      "latent-representation",
+      "parameter"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "embedding",
+    "term": "Embedding",
+    "zh": "嵌入",
+    "aliases": [
+      "向量表示"
+    ],
+    "category": "training",
+    "group": "表示与中间结果",
+    "kind": "term",
+    "summary": "嵌入是用一组数值表示词、图片或其他对象的方式。",
+    "detail": [
+      "例如把每个词映射成 768 个数，再交给后续网络处理；用于检索的嵌入通常经过专门训练，让语义接近的文本在向量空间里更接近。"
+    ],
+    "related": [
+      "feature",
+      "token",
+      "vector-database"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：Embedding",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Embedding.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "latent-representation",
+    "term": "Latent Representation",
+    "zh": "潜在表示",
+    "aliases": [
+      "latent",
+      "隐表示"
+    ],
+    "category": "training",
+    "group": "表示与中间结果",
+    "kind": "term",
+    "summary": "潜在表示是模型内部用来编码输入信息、通常无法直接观察其含义的表示。",
+    "detail": [
+      "自编码器会把图片压缩成一组内部数值，再尝试重建图片；这组数值构成潜在表示，其中一个维度未必对应一个人能命名的属性。"
+    ],
+    "related": [
+      "embedding",
+      "feature",
+      "activation",
+      "latent-space"
+    ],
+    "sources": [
+      {
+        "title": "Auto-Encoding Variational Bayes",
+        "url": "https://arxiv.org/abs/1312.6114"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "logit",
+    "term": "Logit",
+    "zh": "未归一化分数",
+    "aliases": [
+      "logits"
+    ],
+    "category": "training",
+    "group": "表示与中间结果",
+    "kind": "term",
+    "summary": "Logit 是模型在转成概率之前给候选结果打出的原始分数。",
+    "detail": [
+      "语言模型为词表中每个 token 输出一个分数，再通过 softmax 得到概率；采样温度通常作用于这些分数。"
+    ],
+    "related": [
+      "token",
+      "temperature",
+      "loss"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：神经网络模块",
+        "url": "https://docs.pytorch.org/docs/stable/nn.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "activation",
+    "term": "Activation",
+    "zh": "激活值与激活函数",
+    "aliases": [
+      "激活函数",
+      "激活值"
+    ],
+    "category": "training",
+    "group": "表示与中间结果",
+    "kind": "term",
+    "summary": "Activation 可指神经网络某层的输出数值，也可指产生非线性变换的激活函数。",
+    "detail": [
+      "ReLU 会把负数变成零并保留正数；说“保存激活值”时，通常指为反向传播保留各层计算产生的中间张量。"
+    ],
+    "related": [
+      "feature",
+      "backpropagation",
+      "ffn"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：神经网络模块",
+        "url": "https://docs.pytorch.org/docs/stable/nn.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "loss",
+    "term": "Loss",
+    "zh": "损失",
+    "aliases": [
+      "损失函数"
+    ],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "损失是衡量模型预测与训练目标差距的数值。",
+    "detail": [
+      "分类模型常用交叉熵：给正确类别的概率越低，损失通常越大；训练时通过降低损失来调整参数。"
+    ],
+    "related": [
+      "objective",
+      "gradient",
+      "optimizer"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：优化模型参数",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "objective",
+    "term": "Objective",
+    "zh": "优化目标",
+    "aliases": [
+      "目标函数"
+    ],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "优化目标是训练算法试图最小化或最大化的量。",
+    "detail": [
+      "目标可以是平均预测损失加上参数正则项，也可以是要最大化的奖励；因此读训练公式时要看清优化方向和各项系数。"
+    ],
+    "related": [
+      "loss",
+      "regularization",
+      "optimizer"
+    ],
+    "sources": [
+      {
+        "title": "Deep Learning：正则化",
+        "url": "https://www.deeplearningbook.org/contents/regularization.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "gradient",
+    "term": "Gradient",
+    "zh": "梯度",
+    "aliases": [],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "梯度描述目标函数对各个参数的局部变化率。",
+    "detail": [
+      "某个参数的梯度为正，表示在当前位置稍微增大它会使目标上升；梯度下降会沿相反方向更新参数。"
+    ],
+    "related": [
+      "backpropagation",
+      "optimizer",
+      "learning-rate"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：自动微分",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "backpropagation",
+    "term": "Backpropagation",
+    "zh": "反向传播",
+    "aliases": [
+      "backprop"
+    ],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "反向传播利用链式法则，从输出向前逐层计算参数梯度。",
+    "detail": [
+      "前向计算先得到预测和损失，反向传播再求出梯度；优化器随后根据这些梯度修改权重。"
+    ],
+    "related": [
+      "gradient",
+      "activation",
+      "optimizer"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：自动微分",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "optimizer",
+    "term": "Optimizer",
+    "zh": "优化器",
+    "aliases": [],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "优化器根据梯度和内部状态决定如何更新模型参数。",
+    "detail": [
+      "SGD 主要根据当前梯度更新，Adam 还维护历史梯度统计；恢复训练时丢失这些状态，后续更新就可能偏离原来的轨迹。"
+    ],
+    "related": [
+      "gradient",
+      "adam",
+      "checkpoint"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：优化模型参数",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "learning-rate",
+    "term": "Learning Rate",
+    "zh": "学习率",
+    "aliases": [
+      "LR"
+    ],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "学习率是控制一次参数更新幅度的超参数。",
+    "detail": [
+      "学习率过大可能使损失剧烈波动，过小则进展缓慢；它与批量大小、优化器及调度策略一起影响训练。"
+    ],
+    "related": [
+      "optimizer",
+      "lr-scheduler",
+      "hyperparameter"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：优化模型参数",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "lr-scheduler",
+    "term": "Learning Rate Scheduler",
+    "zh": "学习率调度器",
+    "aliases": [
+      "scheduler"
+    ],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "学习率调度器按照训练进度或评估结果改变学习率。",
+    "detail": [
+      "余弦调度会让学习率按平滑曲线逐渐降低；有些调度器在验证集指标停滞后才降低学习率。"
+    ],
+    "related": [
+      "learning-rate",
+      "warmup",
+      "training-step"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：学习率调度",
+        "url": "https://docs.pytorch.org/docs/stable/optim.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "warmup",
+    "term": "Warmup",
+    "zh": "学习率预热",
+    "aliases": [],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "学习率预热在训练开始的一段时间里逐步提高学习率。",
+    "detail": [
+      "例如前 1,000 次更新从很小的学习率升到目标值，再进入衰减阶段。预热步数直接规定升温持续多少次更新；预热比例则按总训练步数来计算这段长度。"
+    ],
+    "related": [
+      "lr-scheduler",
+      "learning-rate",
+      "training-step"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：学习率调度",
+        "url": "https://docs.pytorch.org/docs/stable/optim.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "batch",
+    "term": "Batch",
+    "zh": "批次",
+    "aliases": [
+      "mini-batch",
+      "batch size"
+    ],
+    "category": "training",
+    "group": "训练进度与配置",
+    "kind": "term",
+    "summary": "批次是一次送进模型进行处理的一组样本。",
+    "detail": [
+      "批量大小为 32 表示一次处理 32 条样本；使用梯度累积时，多个小批次可以合起来产生一次参数更新。"
+    ],
+    "related": [
+      "epoch",
+      "training-step",
+      "learning-rate"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：优化模型参数",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "epoch",
+    "term": "Epoch",
+    "zh": "训练轮次",
+    "aliases": [],
+    "category": "training",
+    "group": "训练进度与配置",
+    "kind": "term",
+    "summary": "一个 epoch 表示按设定的数据遍历方式把训练集处理一轮。",
+    "detail": [
+      "训练集有 1,000 条数据、批量大小为 100 时，一轮约有 10 个批次；流式或持续采样训练通常直接按步数计进度。"
+    ],
+    "related": [
+      "batch",
+      "training-step",
+      "dataset"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：优化模型参数",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "training-step",
+    "term": "Training Step",
+    "zh": "训练步",
+    "aliases": [
+      "step",
+      "global step"
+    ],
+    "category": "training",
+    "group": "训练进度与配置",
+    "kind": "term",
+    "summary": "训练步通常指完成一次优化器更新，但具体计数方式由训练框架规定。",
+    "detail": [
+      "若每 4 个小批次累积一次梯度，那么处理 40 个小批次只更新 10 次参数；对齐日志和调度设置时应确认 step 的定义。"
+    ],
+    "related": [
+      "batch",
+      "epoch",
+      "optimizer"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：优化模型参数",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "convergence",
+    "term": "Convergence",
+    "zh": "收敛",
+    "aliases": [],
+    "category": "training",
+    "group": "训练进度与配置",
+    "kind": "term",
+    "summary": "收敛是训练中的参数、损失或相关指标逐渐趋于稳定的现象。",
+    "detail": [
+      "观察训练曲线时，如果损失和参数更新逐渐趋于稳定，就说明优化过程正在接近一个稳定点。学习率、数据和优化器都会影响收敛的速度与最终位置。"
+    ],
+    "related": [
+      "loss",
+      "overfitting",
+      "learning-rate"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "supervised-learning",
+    "term": "Supervised Learning",
+    "zh": "监督学习",
+    "aliases": [],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "监督学习使用输入与目标答案成对的数据来训练模型。",
+    "detail": [
+      "例如用标好“猫”或“狗”的图片训练分类器，或用问题及参考答案训练问答模型；标签可以由人工、规则或其他系统生成。"
+    ],
+    "related": [
+      "dataset",
+      "annotation",
+      "self-supervised-learning"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "unsupervised-learning",
+    "term": "Unsupervised Learning",
+    "zh": "无监督学习",
+    "aliases": [],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "无监督学习从没有指定目标标签的数据中寻找结构或规律。",
+    "detail": [
+      "把顾客按购买行为聚成几组就是一个例子；模型得到的是分组结构，分组的业务含义还需要进一步解释。"
+    ],
+    "related": [
+      "self-supervised-learning",
+      "feature",
+      "dataset"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "self-supervised-learning",
+    "term": "Self-Supervised Learning",
+    "zh": "自监督学习",
+    "aliases": [
+      "SSL"
+    ],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "自监督学习从数据本身构造预测目标来训练模型。",
+    "detail": [
+      "把句子中的某个词遮住再要求模型补全，或让语言模型预测下一个 token，都能直接从原始文本生成训练信号。"
+    ],
+    "related": [
+      "pre-training",
+      "supervised-learning",
+      "token"
+    ],
+    "sources": [
+      {
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers",
+        "url": "https://arxiv.org/abs/1810.04805"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "semi-supervised-learning",
+    "term": "Semi-Supervised Learning",
+    "zh": "半监督学习",
+    "aliases": [],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "半监督学习结合少量有标签数据和较多无标签数据进行训练。",
+    "detail": [
+      "可以先用少量标注图片训练分类器，再为部分未标注图片生成伪标签；伪标签的质量会影响后续训练。"
+    ],
+    "related": [
+      "supervised-learning",
+      "annotation",
+      "dataset"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn：半监督学习",
+        "url": "https://scikit-learn.org/stable/modules/semi_supervised.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "transfer-learning",
+    "term": "Transfer Learning",
+    "zh": "迁移学习",
+    "aliases": [],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "迁移学习把已有任务或数据上学到的模型能力用于新的任务。",
+    "detail": [
+      "可从在大规模图片上训练好的网络开始，只训练新的分类头，或进一步调整整个网络，以识别工厂中的零件缺陷。"
+    ],
+    "related": [
+      "fine-tuning",
+      "pre-training",
+      "feature"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：迁移学习教程",
+        "url": "https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "multitask-learning",
+    "term": "Multi-Task Learning",
+    "zh": "多任务学习",
+    "aliases": [],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "多任务学习让一个模型共同学习多个有关联的任务。",
+    "detail": [
+      "一个文本模型可以同时学习情感分类与主题分类，并共享部分网络；需要通过采样比例或损失权重平衡不同任务。"
+    ],
+    "related": [
+      "data-mixture",
+      "loss",
+      "transfer-learning"
+    ],
+    "sources": [
+      {
+        "title": "An Overview of Multi-Task Learning in Deep Neural Networks",
+        "url": "https://arxiv.org/abs/1706.05098"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "curriculum-learning",
+    "term": "Curriculum Learning",
+    "zh": "课程学习",
+    "aliases": [],
+    "category": "training",
+    "group": "学习方式",
+    "kind": "term",
+    "summary": "课程学习按设计好的顺序或难度安排训练样本和任务。",
+    "detail": [
+      "可以先训练短算式，再逐渐加入更长的算式；顺序是否有帮助需要与随机混合数据的基线比较。"
+    ],
+    "related": [
+      "data-mixture",
+      "baseline",
+      "training-step"
+    ],
+    "sources": [
+      {
+        "title": "Curriculum Learning",
+        "url": "https://dl.acm.org/doi/10.1145/1553374.1553380"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "hyperparameter",
+    "term": "Hyperparameter",
+    "zh": "超参数",
+    "aliases": [],
+    "category": "training",
+    "group": "训练进度与配置",
+    "kind": "term",
+    "summary": "超参数是训练开始前或训练过程中由外部配置的设置。",
+    "detail": [
+      "学习率、批量大小、网络层数和正则强度都属于超参数；它们通常根据验证集表现调整。"
+    ],
+    "related": [
+      "parameter",
+      "learning-rate",
+      "batch"
+    ],
+    "sources": [
+      {
+        "title": "Google：机器学习术语表",
+        "url": "https://developers.google.com/machine-learning/glossary"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "sgd",
+    "term": "SGD",
+    "zh": "随机梯度下降",
+    "aliases": [
+      "Stochastic Gradient Descent"
+    ],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "SGD 使用随机抽取的样本或小批次估计梯度并更新参数。",
+    "detail": [
+      "每次只处理部分数据会让更新方向带有噪声，但可以频繁更新；实际实现常加入动量来平滑历史梯度。"
+    ],
+    "related": [
+      "optimizer",
+      "gradient",
+      "batch"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch：学习率调度",
+        "url": "https://docs.pytorch.org/docs/stable/optim.html"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "id": "adam",
+    "term": "Adam",
+    "zh": "自适应矩估计优化器",
+    "aliases": [],
+    "category": "training",
+    "group": "训练目标与更新",
+    "kind": "term",
+    "summary": "Adam 利用梯度的一阶与二阶统计，为不同参数调整更新幅度。",
+    "detail": [
+      "它为每个参数维护历史梯度的滑动平均和平方梯度的滑动平均；这些额外状态也会占用显存并写入可恢复训练的检查点。"
+    ],
+    "related": [
+      "optimizer",
+      "learning-rate",
+      "checkpoint"
+    ],
+    "sources": [
+      {
+        "title": "Adam: A Method for Stochastic Optimization",
+        "url": "https://arxiv.org/abs/1412.6980"
+      }
+    ],
+    "categories": [
+      "training"
+    ]
+  }
+]

@@ -38,10 +38,75 @@
       },
       {
         "year": "2024",
-        "title": "SWE-bench：把演示变成可以比较的任务",
-        "text": "给定真实仓库和 issue，检查提交的修改是否解决问题。方法之外，还需要可信的任务和评价。",
+        "title": "从 SWE-bench 到 SWE-agent：在真实仓库里完成任务",
+        "text": "SWE-bench 用真实 issue 与测试评价修改；2024 年的 SWE-agent 和 OpenHands 进一步探索文件编辑、命令执行、浏览器和沙箱怎样支撑完整任务。",
         "papers": [
           "swebench-2024"
+        ],
+        "links": [
+          {
+            "title": "SWE-agent",
+            "url": "https://arxiv.org/abs/2405.15793"
+          },
+          {
+            "title": "OpenHands",
+            "url": "https://arxiv.org/abs/2407.16741"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "把工具使用放进训练",
+        "label": "Agent RL",
+        "text": "Search-R1 把搜索接入多轮强化学习，Agent Lightning 把执行记录与训练连接起来。模型在任务反馈中学习动作选择，研究也随之深入到轨迹数据、奖励和信用分配。",
+        "papers": [],
+        "links": [
+          {
+            "title": "Search-R1",
+            "url": "https://arxiv.org/abs/2503.09516"
+          },
+          {
+            "title": "Agent Lightning",
+            "url": "https://arxiv.org/abs/2508.03680"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "编程 Agent 进入日常开发",
+        "label": "Coding agents",
+        "text": "Claude Code、Codex 等工具把读仓库、改文件和运行测试接成持续执行的过程。模型能力与执行框架一起改进，上下文组织、工具接口和任务验证成为实际开发中的关键环节。",
+        "papers": [],
+        "links": [
+          {
+            "title": "Codex",
+            "url": "https://openai.com/index/codex-now-generally-available/"
+          },
+          {
+            "title": "Claude Code",
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "title": "持续协作、个人记忆与科研工作流",
+        "label": "Personal & research agents",
+        "text": "Muse、Dots 等个人 Agent 将任务延伸到云端计算机和日常应用，Hermes 探索跨会话记忆与技能积累，ARIS 则将执行和复审接入科研流程。长任务怎样接着做、过去的经验怎样继续使用，成为这些项目共同面对的问题。",
+        "papers": [],
+        "links": [
+          {
+            "title": "Muse",
+            "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+          },
+          {
+            "title": "Dots",
+            "url": "https://openai.com/index/introducing-dots/"
+          },
+          {
+            "title": "项目介绍",
+            "url": "#agent-projects"
+          }
         ]
       }
     ],
@@ -117,10 +182,75 @@
       },
       {
         "year": "2024",
-        "title": "SWE-bench: turn demonstrations into comparable tasks",
-        "text": "Given a real repository and issue, test whether an edit solves the problem. Methods need credible tasks and evaluation.",
+        "title": "From SWE-bench to SWE-agent: working in real repositories",
+        "text": "SWE-bench evaluates changes against real issues and tests. In 2024, SWE-agent and OpenHands explored how editing interfaces, command execution, browsers, and sandboxes support complete tasks.",
         "papers": [
           "swebench-2024"
+        ],
+        "links": [
+          {
+            "title": "SWE-agent",
+            "url": "https://arxiv.org/abs/2405.15793"
+          },
+          {
+            "title": "OpenHands",
+            "url": "https://arxiv.org/abs/2407.16741"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "Training models to use tools",
+        "label": "Agent RL",
+        "text": "Search-R1 brings search into multi-turn reinforcement learning; Agent Lightning connects execution traces to training. Learning actions from task feedback brings trajectory data, rewards, and credit assignment into focus.",
+        "papers": [],
+        "links": [
+          {
+            "title": "Search-R1",
+            "url": "https://arxiv.org/abs/2503.09516"
+          },
+          {
+            "title": "Agent Lightning",
+            "url": "https://arxiv.org/abs/2508.03680"
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "title": "Coding agents enter everyday development",
+        "label": "Coding agents",
+        "text": "Tools such as Claude Code and Codex connect reading repositories, editing files, and running tests into an ongoing process. Models and harnesses improve together, bringing context management, tool interfaces, and verification into everyday development.",
+        "papers": [],
+        "links": [
+          {
+            "title": "Codex",
+            "url": "https://openai.com/index/codex-now-generally-available/"
+          },
+          {
+            "title": "Claude Code",
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "title": "Ongoing collaboration, personal memory, and research workflows",
+        "label": "Personal & research agents",
+        "text": "Muse and Dots extend tasks to cloud computers and everyday apps. Hermes develops cross-session memory and reusable skills, while ARIS connects execution and review in research. These projects explore how to sustain long tasks and reuse past experience.",
+        "papers": [],
+        "links": [
+          {
+            "title": "Muse",
+            "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+          },
+          {
+            "title": "Dots",
+            "url": "https://openai.com/index/introducing-dots/"
+          },
+          {
+            "title": "Explore the projects",
+            "url": "#agent-projects"
+          }
         ]
       }
     ],

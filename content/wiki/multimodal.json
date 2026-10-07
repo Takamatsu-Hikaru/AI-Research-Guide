@@ -1,0 +1,477 @@
+[
+  {
+    "id": "modality",
+    "term": "Modality",
+    "zh": "模态",
+    "aliases": [
+      "信息模态"
+    ],
+    "category": "multimodal",
+    "group": "多模态基础",
+    "kind": "term",
+    "summary": "模态是信息被表达或感知的形式，例如文字、图像、声音和触觉。",
+    "detail": [
+      "同一次敲门可以留下声音录音、视频画面和振动读数。不同模态包含互补线索，模型需要把它们转换为可计算的表示再联合使用。"
+    ],
+    "related": [
+      "vlm",
+      "multimodal-fusion",
+      "asr"
+    ],
+    "sources": [
+      {
+        "title": "Visual Instruction Tuning",
+        "url": "https://arxiv.org/abs/2304.08485"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "vlm",
+    "term": "VLM",
+    "zh": "视觉语言模型",
+    "aliases": [
+      "Vision-Language Model"
+    ],
+    "category": "multimodal",
+    "group": "多模态基础",
+    "kind": "term",
+    "summary": "视觉语言模型联合处理图像与语言，学习两者之间的语义关系。",
+    "detail": [
+      "有的模型给图片和文字分别编码，用于相似度检索；有的模型根据图片生成说明或回答问题。VLM 描述视觉与语言的结合，具体输入输出随模型设计变化。"
+    ],
+    "related": [
+      "mllm",
+      "vision-encoder",
+      "contrastive-learning"
+    ],
+    "sources": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "url": "https://arxiv.org/abs/2103.00020"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "mllm",
+    "term": "MLLM",
+    "zh": "多模态大语言模型",
+    "aliases": [
+      "Multimodal Large Language Model"
+    ],
+    "category": "multimodal",
+    "group": "多模态基础",
+    "kind": "term",
+    "summary": "多模态大语言模型把图像、音频等信息接入大语言模型，使其能够结合多种输入理解或生成内容。",
+    "detail": [
+      "上传一张表格截图并询问哪项增长最多，模型需要先读取视觉信息，再结合问题生成回答。常见视觉方案由视觉编码器、连接模块和语言模型组成。"
+    ],
+    "related": [
+      "vlm",
+      "vision-encoder",
+      "multimodal-projector",
+      "vqa"
+    ],
+    "sources": [
+      {
+        "title": "Visual Instruction Tuning",
+        "url": "https://arxiv.org/abs/2304.08485"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "vision-encoder",
+    "term": "Vision Encoder",
+    "zh": "视觉编码器",
+    "aliases": [
+      "Image Encoder",
+      "图像编码器"
+    ],
+    "category": "multimodal",
+    "group": "模型连接",
+    "kind": "term",
+    "summary": "视觉编码器将图片转换为能够保留视觉内容的数值特征。",
+    "detail": [
+      "一张照片经过编码后，可以变成一个整体向量或一组图块向量。这些特征可以用于检索，也可以交给语言模型进一步回答问题。"
+    ],
+    "related": [
+      "vit",
+      "image-patch",
+      "multimodal-projector"
+    ],
+    "sources": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "url": "https://arxiv.org/abs/2103.00020"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "multimodal-projector",
+    "term": "Projector",
+    "zh": "多模态投影器",
+    "aliases": [
+      "Projection Layer",
+      "连接器"
+    ],
+    "category": "multimodal",
+    "group": "模型连接",
+    "kind": "term",
+    "summary": "多模态投影器把一种模态的特征映射到另一模块能够接收的表示空间。",
+    "detail": [
+      "视觉编码器输出的向量维度和分布可能与语言模型输入不同。线性层或小型网络可以把视觉特征变成语言模型能使用的视觉 token。"
+    ],
+    "related": [
+      "vision-encoder",
+      "mllm",
+      "multimodal-alignment"
+    ],
+    "sources": [
+      {
+        "title": "Visual Instruction Tuning",
+        "url": "https://arxiv.org/abs/2304.08485"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "multimodal-alignment",
+    "term": "Multimodal Alignment",
+    "zh": "多模态对齐",
+    "aliases": [
+      "Cross-modal Alignment",
+      "跨模态对齐"
+    ],
+    "category": "multimodal",
+    "group": "模型连接",
+    "kind": "term",
+    "summary": "多模态对齐让来自不同模态、但表达相同内容的信息建立对应关系。",
+    "detail": [
+      "一张小狗照片和“小狗在草地上奔跑”这句话应该在语义上相关。训练可以拉近配对图文的表示，或让文字中的对象对应到画面区域。"
+    ],
+    "related": [
+      "contrastive-learning",
+      "cross-modal-retrieval",
+      "multimodal-grounding"
+    ],
+    "sources": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "url": "https://arxiv.org/abs/2103.00020"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "multimodal-fusion",
+    "term": "Multimodal Fusion",
+    "zh": "多模态融合",
+    "aliases": [
+      "Fusion"
+    ],
+    "category": "multimodal",
+    "group": "模型连接",
+    "kind": "term",
+    "summary": "多模态融合把来自不同模态的线索组合起来，形成联合判断所需的表示或结果。",
+    "detail": [
+      "判断说话内容时，声音提供发音，嘴唇画面帮助区分相近音节。融合可以发生在特征输入后，也可以通过交叉注意力或多个模型输出的组合实现。"
+    ],
+    "related": [
+      "modality",
+      "mllm",
+      "multimodal-alignment"
+    ],
+    "sources": [
+      {
+        "title": "Visual Instruction Tuning",
+        "url": "https://arxiv.org/abs/2304.08485"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "contrastive-learning",
+    "term": "Contrastive Learning",
+    "zh": "对比学习",
+    "aliases": [
+      "对比式学习"
+    ],
+    "category": "multimodal",
+    "group": "表示与检索",
+    "kind": "term",
+    "summary": "对比学习通过比较匹配与不匹配的样本，学习能体现语义关系的表示。",
+    "detail": [
+      "图文训练中，一张猫的照片应比同批次的汽车描述更接近对应的猫描述。把正例拉近、把对照样本区分开，可得到适合检索的向量空间。"
+    ],
+    "related": [
+      "multimodal-alignment",
+      "cross-modal-retrieval",
+      "vlm"
+    ],
+    "sources": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "url": "https://arxiv.org/abs/2103.00020"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "cross-modal-retrieval",
+    "term": "Cross-modal Retrieval",
+    "zh": "跨模态检索",
+    "aliases": [
+      "Text-to-Image Retrieval",
+      "图文检索"
+    ],
+    "category": "multimodal",
+    "group": "表示与检索",
+    "kind": "term",
+    "summary": "跨模态检索用一种模态的查询寻找另一种模态中语义相符的内容。",
+    "detail": [
+      "输入“雪地里奔跑的狗”，系统在图片库中寻找匹配照片。常见方法把查询文字和候选图片编码成向量，再按相似度排序。"
+    ],
+    "related": [
+      "contrastive-learning",
+      "multimodal-alignment",
+      "vision-encoder"
+    ],
+    "sources": [
+      {
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "url": "https://arxiv.org/abs/2103.00020"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "vqa",
+    "term": "VQA",
+    "zh": "视觉问答",
+    "aliases": [
+      "Visual Question Answering"
+    ],
+    "category": "multimodal",
+    "group": "多模态任务",
+    "kind": "term",
+    "summary": "视觉问答根据图片内容和自然语言问题生成答案。",
+    "detail": [
+      "对一张餐桌照片提问“盘子旁边有几个杯子”，模型需要识别物体、理解空间关系并计数。问题决定它应从图中提取哪些信息。"
+    ],
+    "related": [
+      "mllm",
+      "ocr",
+      "multimodal-grounding"
+    ],
+    "sources": [
+      {
+        "title": "VQA: Visual Question Answering",
+        "url": "https://arxiv.org/abs/1505.00468"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "ocr",
+    "term": "OCR",
+    "zh": "光学字符识别",
+    "aliases": [
+      "Optical Character Recognition"
+    ],
+    "category": "multimodal",
+    "group": "多模态任务",
+    "kind": "term",
+    "summary": "光学字符识别把图片或扫描件中的文字转换为可编辑和检索的字符。",
+    "detail": [
+      "拍下收据后，OCR 可以识别商家名称、日期和金额。常见流程先定位文字区域，再识别字符；文档结构理解还会进一步处理表格、段落和阅读顺序。"
+    ],
+    "related": [
+      "vqa",
+      "object-detection",
+      "mllm"
+    ],
+    "sources": [
+      {
+        "title": "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models",
+        "url": "https://arxiv.org/abs/2109.10282"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "multimodal-grounding",
+    "term": "Visual Grounding",
+    "zh": "视觉定位与对应",
+    "aliases": [
+      "Phrase Grounding",
+      "Referring Expression Comprehension"
+    ],
+    "category": "multimodal",
+    "group": "多模态任务",
+    "kind": "term",
+    "summary": "视觉定位把语言提到的对象或区域对应到图像中的具体位置。",
+    "detail": [
+      "指令“框出左边那只红杯子”同时包含颜色、位置和类别线索。模型将这些线索和画面结合，输出对应的框、点或掩码。"
+    ],
+    "related": [
+      "object-detection",
+      "bounding-box",
+      "multimodal-alignment"
+    ],
+    "sources": [
+      {
+        "title": "Grounding DINO",
+        "url": "https://arxiv.org/abs/2303.05499"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "asr",
+    "term": "ASR",
+    "zh": "自动语音识别",
+    "aliases": [
+      "Automatic Speech Recognition",
+      "Speech-to-Text",
+      "STT"
+    ],
+    "category": "multimodal",
+    "group": "语音与音频",
+    "kind": "term",
+    "summary": "自动语音识别将人说话的音频转换为文字。",
+    "detail": [
+      "一段会议录音可以被转写成逐句文本。模型需要从声音变化中识别语言内容，并处理口音、噪声和说话速度的变化。"
+    ],
+    "related": [
+      "tts",
+      "audio-token",
+      "modality"
+    ],
+    "sources": [
+      {
+        "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+        "url": "https://arxiv.org/abs/2212.04356"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "tts",
+    "term": "TTS",
+    "zh": "文本转语音",
+    "aliases": [
+      "Text-to-Speech",
+      "语音合成"
+    ],
+    "category": "multimodal",
+    "group": "语音与音频",
+    "kind": "term",
+    "summary": "文本转语音根据文字生成可播放的人声。",
+    "detail": [
+      "输入一段导航指令后，系统决定发音、停顿与语调，再合成声音。部分系统还能根据指定说话人或短音频提示控制音色。"
+    ],
+    "related": [
+      "asr",
+      "audio-token",
+      "conditioning"
+    ],
+    "sources": [
+      {
+        "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers",
+        "url": "https://arxiv.org/abs/2301.02111"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "audio-token",
+    "term": "Audio Token",
+    "zh": "音频令牌",
+    "aliases": [
+      "声学Token",
+      "Codec Token"
+    ],
+    "category": "multimodal",
+    "group": "语音与音频",
+    "kind": "term",
+    "summary": "音频令牌是把声音编码成离散序列后得到的基本符号单元。",
+    "detail": [
+      "神经音频编解码器可以把短时间的声音压缩为若干码本编号。模型预测这些编号，再由解码器恢复波形，使语音生成可以借用序列建模方法。"
+    ],
+    "related": [
+      "tts",
+      "asr",
+      "mllm"
+    ],
+    "sources": [
+      {
+        "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers",
+        "url": "https://arxiv.org/abs/2301.02111"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  },
+  {
+    "id": "image-captioning",
+    "term": "Image Captioning",
+    "zh": "图像描述",
+    "aliases": [
+      "Captioning",
+      "看图说话"
+    ],
+    "category": "multimodal",
+    "group": "多模态任务",
+    "kind": "term",
+    "summary": "图像描述根据画面生成概括其内容的自然语言句子。",
+    "detail": [
+      "对于狗追球的照片，模型可以输出“一只狗在草地上追逐皮球”。生成过程需要选择值得描述的对象、动作与关系，并把视觉信息组织成连贯语言。"
+    ],
+    "related": [
+      "vlm",
+      "vqa",
+      "vision-encoder"
+    ],
+    "sources": [
+      {
+        "title": "Visual Instruction Tuning",
+        "url": "https://arxiv.org/abs/2304.08485"
+      }
+    ],
+    "categories": [
+      "multimodal"
+    ]
+  }
+]

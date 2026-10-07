@@ -54,6 +54,45 @@ The program surrounding a model determines which tools it can use, how results r
 - [SWE-agent](https://arxiv.org/abs/2405.15793): inspect interfaces for viewing files, editing, and execution to understand how interface design affects the process of completing coding tasks.
 - [OpenHands](https://arxiv.org/abs/2407.16741): see how code execution, a command line, a browser, and sandboxes form a platform, and how the runtime and evaluation support agent experiments.
 
+
+<a id="agent-projects"></a>
+
+## What agents are doing: from code to everyday life
+
+Real agents combine tools, memory, planning, and feedback. Coding assistants, personal assistants, and research tools put these capabilities to work on different tasks.
+
+### Coding agents: working in a repository
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://openai.com/codex/">Codex ↗</a></h4><p>Codex reads projects, edits code, runs tests, and reviews changes, with support for parallel tasks and ongoing background work. Follow a bug fix to see how it locates files, checks an edit, and responds to test results.</p></article>
+<article class="agent-project"><h4><a href="https://code.claude.com/docs/en/overview">Claude Code ↗</a></h4><p>Claude Code reads repositories, edits files, and runs commands from the terminal, connecting code exploration, implementation, and testing. Its tools, Skills, and project instructions show how a coding agent can adapt to a team’s workflow.</p></article>
+<article class="agent-project"><h4><a href="https://www.kimi.com/code/en">Kimi Code ↗</a></h4><p>Kimi Code works through the terminal and editor to search code, change a project, run commands, and adjust its next steps from feedback. A small feature and its execution trace show how code understanding, tools, and verification work together.</p></article>
+<article class="agent-project"><h4><a href="https://www.zcode.network/en/">ZCode ↗</a></h4><p>ZCode is a coding-agent workspace for GLM that brings projects, conversations, and task execution together. It uses AGENTS.md for project conventions, making it useful for studying how that context shapes edits and checks.</p></article>
+<article class="agent-project"><h4><a href="https://pi.dev/">Pi ↗</a></h4><p>Pi is a lightweight, extensible agent harness built around reading and writing files and executing commands. Extensions, Skills, and prompt templates let you adapt its workflow; the code is a useful entry into agent loops and tool interfaces.</p></article>
+</div>
+
+### Personal agents: remembering and following through
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">Muse ↗</a></h4><p>Meta’s Muse has its own cloud computer and browser and connects to everyday apps for email, travel, and longer-term goals. It brings personal preferences and ongoing tasks together, linking memory, cross-app actions, and task state.</p></article>
+<article class="agent-project"><h4><a href="https://openai.com/index/introducing-dots/">Dots ↗</a></h4><p>OpenAI’s Dots are always-on agents that use cloud computers and connected apps to work on tasks and learn user preferences from conversations and feedback. They connect ongoing collaboration with long-term context, background execution, and learning from feedback.</p></article>
+<article class="agent-project"><h4><a href="https://github.com/NousResearch/hermes-agent">Hermes ↗</a></h4><p>Hermes is an open-source personal agent from Nous Research, accessible through the terminal and messaging apps. It keeps memory across sessions and turns methods developed during tasks into reusable skills; its implementation offers a concrete way to study both.</p></article>
+</div>
+
+### Research agents: connecting literature and experiments
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep">ARIS ↗</a></h4><p>ARIS uses Skills to organize machine-learning research, including literature review, idea development, experiments, analysis, and paper revision. An executor advances the work while another model reviews it, with feedback feeding the next round—a concrete multi-agent research workflow.</p></article>
+</div>
+
+### Health agents: supporting everyday health needs
+
+<div class="agent-project-grid">
+<article class="agent-project"><h4><a href="https://www.antgroup.com/en/news-media/press-releases/1765779300000">蚂蚁阿福 / Ant A-Fu ↗</a></h4><p>Ant A-Fu brings together health questions, report interpretation, health records, and access to healthcare services. The application connects longitudinal personal information, specialist knowledge, and services, making information organization and task workflows concrete in a specific domain.</p></article>
+</div>
+
+[Working with AI](ai.md) · [Building a research workflow](irene-workflow.md)
+
 ## Evaluate an agent on retrieval tasks
 
 Give the system a set of similar tasks, such as retrieving specified facts from public documents with sources. Count successes, incorrect citations, missing information, and tool failures. Keep tasks and conditions fixed across changes and check whether failures decrease.

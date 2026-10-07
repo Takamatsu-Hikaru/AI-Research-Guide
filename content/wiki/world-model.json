@@ -1,0 +1,361 @@
+[
+  {
+    "id": "world-model",
+    "term": "World Model",
+    "zh": "世界模型",
+    "aliases": [
+      "环境模型"
+    ],
+    "category": "world-model",
+    "group": "预测基础",
+    "kind": "term",
+    "summary": "世界模型学习环境的结构与变化规律，帮助系统预测接下来可能发生的情况。",
+    "detail": [
+      "给定当前画面和动作，模型可以预测物体如何移动，或预测更紧凑的内部状态。决策系统借助这些预测比较行为后果，也可以在模型中生成训练经验。"
+    ],
+    "related": [
+      "dynamics-model",
+      "latent-dynamics",
+      "imagination"
+    ],
+    "sources": [
+      {
+        "title": "World Models",
+        "url": "https://arxiv.org/abs/1803.10122"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "dynamics-model",
+    "term": "Dynamics Model",
+    "zh": "状态转移模型",
+    "aliases": [
+      "Transition Model",
+      "动力学模型"
+    ],
+    "category": "world-model",
+    "group": "预测基础",
+    "kind": "term",
+    "summary": "状态转移模型描述当前状态在动作作用下如何变化到下一状态。",
+    "detail": [
+      "推一下箱子后，它会往哪里移动、移动多远，都属于转移模型要预测的内容。模型可输出确定结果，也可表示多种可能结果及其概率。"
+    ],
+    "related": [
+      "forward-model",
+      "model-based-rl",
+      "world-model"
+    ],
+    "sources": [
+      {
+        "title": "Learning Latent Dynamics for Planning from Pixels",
+        "url": "https://proceedings.mlr.press/v97/hafner19a"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "forward-model",
+    "term": "Forward Model",
+    "zh": "前向模型",
+    "aliases": [
+      "正向模型"
+    ],
+    "category": "world-model",
+    "group": "预测基础",
+    "kind": "term",
+    "summary": "前向模型根据当前情况和动作预测其后果。",
+    "detail": [
+      "输入机械臂当前状态和施加的动作，模型预测下一时刻的状态或观测。它可以帮助检查某个候选动作会不会碰到桌面。"
+    ],
+    "related": [
+      "dynamics-model",
+      "inverse-model",
+      "action-conditioned"
+    ],
+    "sources": [
+      {
+        "title": "Curiosity-driven Exploration by Self-supervised Prediction",
+        "url": "https://arxiv.org/abs/1705.05363"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "inverse-model",
+    "term": "Inverse Model",
+    "zh": "逆向模型",
+    "aliases": [
+      "Inverse Dynamics Model"
+    ],
+    "category": "world-model",
+    "group": "预测基础",
+    "kind": "term",
+    "summary": "逆向模型根据动作前后的状态，估计可能造成这次变化的动作。",
+    "detail": [
+      "看到物体从左侧移到右侧，逆向模型推断中间可能使用了怎样的推动动作。多个动作可能产生类似变化，因此逆向问题可以具有多解。"
+    ],
+    "related": [
+      "forward-model",
+      "action",
+      "robot-kinematics"
+    ],
+    "sources": [
+      {
+        "title": "Curiosity-driven Exploration by Self-supervised Prediction",
+        "url": "https://arxiv.org/abs/1705.05363"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "latent-dynamics",
+    "term": "Latent Dynamics",
+    "zh": "潜在状态动力学",
+    "aliases": [
+      "Latent Transition"
+    ],
+    "category": "world-model",
+    "group": "预测基础",
+    "kind": "term",
+    "summary": "潜在状态动力学在压缩后的内部表示中预测环境变化。",
+    "detail": [
+      "模型先把画面编码成潜在状态，再预测采取动作后潜在状态如何演化。这样可以把计算集中在决策相关的信息上，并减少逐像素预测的负担。"
+    ],
+    "related": [
+      "latent-space",
+      "dynamics-model",
+      "imagination"
+    ],
+    "sources": [
+      {
+        "title": "Learning Latent Dynamics for Planning from Pixels",
+        "url": "https://proceedings.mlr.press/v97/hafner19a"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "imagination",
+    "term": "Imagination",
+    "zh": "模型内想象",
+    "aliases": [
+      "Imagined Rollout",
+      "想象轨迹"
+    ],
+    "category": "world-model",
+    "group": "预测与决策",
+    "kind": "term",
+    "summary": "模型内想象是在已学习的环境模型中展开未来状态和动作序列。",
+    "detail": [
+      "机器人可以在真正推箱子之前，先模拟几种推法的后果。算法还能用这些预测轨迹训练策略和价值函数，减少对真实交互的依赖。"
+    ],
+    "related": [
+      "world-model",
+      "rollout",
+      "model-based-rl",
+      "compounding-error"
+    ],
+    "sources": [
+      {
+        "title": "Dream to Control",
+        "url": "https://arxiv.org/abs/1912.01603"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "world-planning",
+    "term": "Planning with a World Model",
+    "zh": "基于世界模型的规划",
+    "aliases": [
+      "Model-based Planning"
+    ],
+    "category": "world-model",
+    "group": "预测与决策",
+    "kind": "term",
+    "summary": "基于世界模型的规划通过预测和比较候选动作的后果，选择更符合目标的行动。",
+    "detail": [
+      "导航系统可以预测直走和转弯后分别会遇到什么，再综合未来奖励选择路线。规划可以直接搜索动作序列，也可以结合策略与价值网络缩小搜索范围。"
+    ],
+    "related": [
+      "mpc",
+      "mcts",
+      "imagination",
+      "dynamics-model"
+    ],
+    "sources": [
+      {
+        "title": "Learning Latent Dynamics for Planning from Pixels",
+        "url": "https://proceedings.mlr.press/v97/hafner19a"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "mcts",
+    "term": "MCTS",
+    "zh": "蒙特卡洛树搜索",
+    "aliases": [
+      "Monte Carlo Tree Search"
+    ],
+    "category": "world-model",
+    "group": "预测与决策",
+    "kind": "term",
+    "summary": "蒙特卡洛树搜索通过反复选择、扩展、评估和回传结果，逐渐把计算集中到更有希望的决策分支。",
+    "detail": [
+      "下棋时，每个节点表示一个局面，每条边表示一步棋。系统多次评估候选后续，把结果回传到前面的分支；现代方法可用策略和价值网络辅助搜索。"
+    ],
+    "related": [
+      "world-planning",
+      "value-function",
+      "world-model"
+    ],
+    "sources": [
+      {
+        "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
+        "url": "https://arxiv.org/abs/1911.08265"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "action-conditioned",
+    "term": "Action-conditioned Prediction",
+    "zh": "动作条件预测",
+    "aliases": [
+      "Action Conditioning"
+    ],
+    "category": "world-model",
+    "group": "预测基础",
+    "kind": "term",
+    "summary": "动作条件预测把将要执行的动作作为输入，预测不同选择分别会带来什么变化。",
+    "detail": [
+      "同一幅机器人面前的画面，向左转和向右转会产生不同的下一画面。显式输入动作，使模型能够回答具体行动的后果问题。"
+    ],
+    "related": [
+      "forward-model",
+      "dynamics-model",
+      "conditioning"
+    ],
+    "sources": [
+      {
+        "title": "Learning Latent Dynamics for Planning from Pixels",
+        "url": "https://proceedings.mlr.press/v97/hafner19a"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "open-loop",
+    "term": "Open-loop",
+    "zh": "开环执行",
+    "aliases": [
+      "开环控制"
+    ],
+    "category": "world-model",
+    "group": "反馈与误差",
+    "kind": "term",
+    "summary": "开环执行按事先确定的动作运行，在执行期间不根据新的观测调整这些动作。",
+    "detail": [
+      "机械臂一次接收一整段动作后执行到底，期间杯子被挪动也不立即修正。开环预测常用于考察模型离开真实观测后，能连续推演多远。"
+    ],
+    "related": [
+      "closed-loop",
+      "action-chunking",
+      "compounding-error"
+    ],
+    "sources": [
+      {
+        "title": "Modern Robotics：Robot Control",
+        "url": "https://modernrobotics.northwestern.edu/chapters/chapter11/"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "closed-loop",
+    "term": "Closed-loop",
+    "zh": "闭环执行",
+    "aliases": [
+      "闭环控制",
+      "反馈控制"
+    ],
+    "category": "world-model",
+    "group": "反馈与误差",
+    "kind": "term",
+    "summary": "闭环执行在行动过程中持续获取反馈，并依据实际结果调整后续动作。",
+    "detail": [
+      "夹爪接近杯子时不断重新观察位置，发现偏移就修正运动。反馈把真实执行结果带回控制系统，有助于应对扰动和预测误差。"
+    ],
+    "related": [
+      "open-loop",
+      "mpc",
+      "pid",
+      "proprioception"
+    ],
+    "sources": [
+      {
+        "title": "Modern Robotics：Robot Control",
+        "url": "https://modernrobotics.northwestern.edu/chapters/chapter11/"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  },
+  {
+    "id": "compounding-error",
+    "term": "Compounding Error",
+    "zh": "误差累积",
+    "aliases": [
+      "累积误差"
+    ],
+    "category": "world-model",
+    "group": "反馈与误差",
+    "kind": "term",
+    "summary": "误差累积指连续预测或决策时，前一步的偏差进入后续步骤并可能逐渐放大。",
+    "detail": [
+      "世界模型预测箱子位置略有偏差，下一步又基于这个预测位置继续推演，越远的未来就可能越不准确。缩短预测范围、引入真实观测或改进模型都有助于控制这种影响。"
+    ],
+    "related": [
+      "latent-dynamics",
+      "open-loop",
+      "closed-loop",
+      "imagination"
+    ],
+    "sources": [
+      {
+        "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+        "url": "https://arxiv.org/abs/1011.0686"
+      },
+      {
+        "title": "Learning Latent Dynamics for Planning from Pixels",
+        "url": "https://proceedings.mlr.press/v97/hafner19a"
+      }
+    ],
+    "categories": [
+      "world-model"
+    ]
+  }
+]

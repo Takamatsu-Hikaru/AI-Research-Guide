@@ -1,0 +1,1168 @@
+[
+  {
+    "id": "agent",
+    "term": "Agent",
+    "zh": "智能体",
+    "aliases": [
+      "AI agent",
+      "LLM agent"
+    ],
+    "category": "agents",
+    "group": "智能体基础",
+    "kind": "term",
+    "summary": "智能体根据目标和环境反馈选择行动，并通过连续交互推进任务。",
+    "detail": [
+      "一个编程智能体可以先读代码、修改文件、运行测试，再根据报错继续修复；语言模型负责部分决策，工具和执行程序负责实际操作。"
+    ],
+    "related": [
+      "tool",
+      "agent-loop",
+      "agent-harness"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Building effective agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "agentic",
+    "term": "Agentic",
+    "zh": "具备自主行动特征的",
+    "aliases": [],
+    "category": "agents",
+    "group": "智能体基础",
+    "kind": "term",
+    "summary": "Agentic 用来描述系统能够围绕目标主动选择步骤、调用工具和利用反馈的特征。",
+    "detail": [
+      "“agentic workflow”可能包含固定流程与模型自主决策两部分；理解具体系统时，可查看哪些步骤由程序预设、哪些由模型现场决定。"
+    ],
+    "related": [
+      "agent",
+      "orchestration",
+      "planning"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Building effective agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "environment",
+    "term": "Environment",
+    "zh": "智能体交互环境",
+    "aliases": [
+      "env",
+      "Agent Environment",
+      "agent environment",
+      "智能体环境",
+      "交互环境"
+    ],
+    "category": "agents",
+    "group": "智能体基础",
+    "kind": "term",
+    "summary": "智能体交互环境是它能观察、操作并获得结果反馈的外部系统。",
+    "detail": [
+      "环境可以是购物网站、文件系统或模拟游戏；训练和评测需要明确可用操作、初始状态与成功判定。"
+    ],
+    "related": [
+      "tool",
+      "task-success",
+      "browser-use",
+      "python-env",
+      "mdp"
+    ],
+    "sources": [
+      {
+        "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+        "url": "https://arxiv.org/abs/2307.13854"
+      }
+    ],
+    "also": [
+      "rl",
+      "robotics"
+    ],
+    "categories": [
+      "agents",
+      "rl",
+      "robotics"
+    ]
+  },
+  {
+    "id": "agent-harness",
+    "term": "Agent Harness",
+    "zh": "智能体运行框架",
+    "aliases": [
+      "harness",
+      "scaffold",
+      "agent scaffold"
+    ],
+    "category": "agents",
+    "group": "智能体基础",
+    "kind": "term",
+    "summary": "Harness 是驱动模型调用工具、接收结果并继续执行任务的外围程序。",
+    "detail": [
+      "让 Agent 修改代码时，模型提出要读取哪个文件，harness 执行读取，把内容交回模型；模型决定修改后，harness 写入文件、运行测试，再把测试结果交回去。",
+      "可用工具、出错重试、上下文保存和任务停止条件，都可以在这一层实现。"
+    ],
+    "related": [
+      "agent-loop",
+      "context-engineering",
+      "termination"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Effective harnesses for long-running agents",
+        "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "tool",
+    "term": "Tool",
+    "zh": "工具",
+    "aliases": [],
+    "category": "agents",
+    "group": "工具与执行",
+    "kind": "term",
+    "summary": "工具是智能体可调用的外部能力，例如检索、读写文件或运行计算。",
+    "detail": [
+      "工具通常声明名称、用途、参数和返回值；设计清晰的参数与错误信息，可以让模型更容易选择正确操作。"
+    ],
+    "related": [
+      "tool-calling",
+      "mcp",
+      "permissions"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Tool use",
+        "url": "https://huggingface.co/docs/transformers/main/en/chat_extras"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "tool-calling",
+    "term": "Tool Calling",
+    "zh": "工具调用",
+    "aliases": [
+      "function calling",
+      "函数调用"
+    ],
+    "category": "agents",
+    "group": "工具与执行",
+    "kind": "term",
+    "summary": "工具调用是模型生成结构化请求，由程序执行指定工具并返回结果的过程。",
+    "detail": [
+      "模型可以请求 search(query=...)，运行框架再执行搜索并把结果加入上下文；函数调用是常见的工具接口形式。"
+    ],
+    "related": [
+      "tool",
+      "agent-loop",
+      "mcp"
+    ],
+    "sources": [
+      {
+        "title": "Hugging Face：Tool use",
+        "url": "https://huggingface.co/docs/transformers/main/en/chat_extras"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "agent-loop",
+    "term": "Agent Loop",
+    "zh": "智能体反馈循环",
+    "aliases": [
+      "feedback loop",
+      "反馈循环"
+    ],
+    "category": "agents",
+    "group": "工具与执行",
+    "kind": "term",
+    "summary": "智能体反馈循环反复进行读取信息、选择行动、执行工具和检查结果。",
+    "detail": [
+      "修改文件后运行测试，失败就读报错再修改，成功后检查任务是否完成；每次循环都应有可追踪的输入和结果。"
+    ],
+    "related": [
+      "agent",
+      "react",
+      "termination"
+    ],
+    "sources": [
+      {
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "url": "https://arxiv.org/abs/2210.03629"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "react",
+    "term": "ReAct",
+    "zh": "推理与行动交替",
+    "aliases": [],
+    "category": "agents",
+    "group": "工具与执行",
+    "kind": "term",
+    "summary": "ReAct 让语言模型交替进行推理和外部行动，并利用观察结果更新后续步骤。",
+    "detail": [
+      "回答需要查询的问题时，模型可以先判断缺少什么信息，搜索并读结果，然后决定继续查询还是组织答案。"
+    ],
+    "related": [
+      "agent-loop",
+      "tool-calling",
+      "planning"
+    ],
+    "sources": [
+      {
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "url": "https://arxiv.org/abs/2210.03629"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "planning",
+    "term": "Planning",
+    "zh": "任务规划",
+    "aliases": [],
+    "category": "agents",
+    "group": "规划与控制",
+    "kind": "term",
+    "summary": "任务规划是根据目标和限制安排要执行的步骤及依赖关系。",
+    "detail": [
+      "修复程序前可以先确定复现错误、定位原因、修改代码和验证结果四步；发现新信息后，计划需要相应调整。"
+    ],
+    "related": [
+      "task-decomposition",
+      "agent-loop",
+      "long-horizon"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Building effective agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "task-decomposition",
+    "term": "Task Decomposition",
+    "zh": "任务分解",
+    "aliases": [],
+    "category": "agents",
+    "group": "规划与控制",
+    "kind": "term",
+    "summary": "任务分解把一个复杂目标拆成更小、可执行或可验证的子任务。",
+    "detail": [
+      "制作市场报告可拆成收集数据、核对来源、分析趋势和写作；可以并行的子任务与必须等待前置结果的子任务要区分。"
+    ],
+    "related": [
+      "planning",
+      "delegation",
+      "coordination"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：How we built our multi-agent research system",
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "termination",
+    "term": "Termination",
+    "zh": "终止条件",
+    "aliases": [
+      "stop condition"
+    ],
+    "category": "agents",
+    "group": "规划与控制",
+    "kind": "term",
+    "summary": "终止条件规定智能体在什么情况下结束当前执行循环。",
+    "detail": [
+      "条件可以包括完成任务、达到最大轮次、耗尽预算或等待人工输入；任务完成最好由可检查的结果来判断。"
+    ],
+    "related": [
+      "agent-loop",
+      "task-success",
+      "retry"
+    ],
+    "sources": [
+      {
+        "title": "AutoGen：Termination",
+        "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/termination.html"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "retry",
+    "term": "Retry",
+    "zh": "重试",
+    "aliases": [],
+    "category": "agents",
+    "group": "工具与执行",
+    "kind": "term",
+    "summary": "重试是在一次操作失败后，再次尝试该操作或修正后的操作。",
+    "detail": [
+      "网络超时可以稍后再试，参数错误则需要先改参数；对付款或写入等操作，重试机制需要避免重复产生相同效果。"
+    ],
+    "related": [
+      "tool-calling",
+      "agent-loop",
+      "termination"
+    ],
+    "sources": [
+      {
+        "title": "AWS Builders' Library：Timeouts, retries and backoff with jitter",
+        "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "context-engineering",
+    "term": "Context Engineering",
+    "zh": "上下文工程",
+    "aliases": [],
+    "category": "agents",
+    "group": "上下文与记忆",
+    "kind": "term",
+    "summary": "上下文工程设计模型每次决策时能看到哪些信息，以及这些信息如何组织和更新。",
+    "detail": [
+      "它包括系统指令、历史消息、工具说明、检索片段和任务状态；过长或过时的信息可以筛选、压缩或按需重新读取。"
+    ],
+    "related": [
+      "context-window",
+      "compaction",
+      "memory"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Effective context engineering for AI agents",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "memory",
+    "term": "Memory",
+    "zh": "智能体记忆",
+    "aliases": [],
+    "category": "agents",
+    "group": "上下文与记忆",
+    "kind": "term",
+    "summary": "智能体记忆是为后续决策保存并重新使用过去信息的机制。",
+    "detail": [
+      "当前任务的进度可以放在会话状态里，跨任务偏好可以存进外部数据库；每次使用时需要把相关信息重新提供给模型。"
+    ],
+    "related": [
+      "working-memory",
+      "long-term-memory",
+      "retrieval"
+    ],
+    "sources": [
+      {
+        "title": "LangChain：Memory overview",
+        "url": "https://docs.langchain.com/oss/python/concepts/memory"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "working-memory",
+    "term": "Working Memory",
+    "zh": "工作记忆",
+    "aliases": [
+      "short-term memory",
+      "短期记忆"
+    ],
+    "category": "agents",
+    "group": "上下文与记忆",
+    "kind": "term",
+    "summary": "工作记忆保存智能体处理当前任务时正在使用的临时信息。",
+    "detail": [
+      "它可以包括最近的对话、当前计划、已读文件摘要和待验证假设；随着任务推进，内容会不断更新或被压缩。"
+    ],
+    "related": [
+      "memory",
+      "context-window",
+      "compaction"
+    ],
+    "sources": [
+      {
+        "title": "LangChain：Memory overview",
+        "url": "https://docs.langchain.com/oss/python/concepts/memory"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "long-term-memory",
+    "term": "Long-term Memory",
+    "zh": "长期记忆",
+    "aliases": [],
+    "category": "agents",
+    "group": "上下文与记忆",
+    "kind": "term",
+    "summary": "长期记忆把需要跨会话保留的信息保存到持久存储中。",
+    "detail": [
+      "例如保存用户明确指定的输出偏好、项目约定或历史经验；后续任务可按需检索相关记录，并在信息变化时更新。"
+    ],
+    "related": [
+      "memory",
+      "retrieval",
+      "vector-database"
+    ],
+    "sources": [
+      {
+        "title": "LangChain：Memory overview",
+        "url": "https://docs.langchain.com/oss/python/concepts/memory"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "compaction",
+    "term": "Compaction",
+    "zh": "上下文压缩",
+    "aliases": [
+      "context compaction"
+    ],
+    "category": "agents",
+    "group": "上下文与记忆",
+    "kind": "term",
+    "summary": "上下文压缩把较长的交互历史缩减成保留关键任务信息的表示。",
+    "detail": [
+      "一份压缩摘要可以记录目标、已完成步骤、重要文件位置和下一步；原始材料仍可通过工具按需重读。"
+    ],
+    "related": [
+      "context-engineering",
+      "working-memory",
+      "long-context"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Effective context engineering for AI agents",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "retrieval",
+    "term": "Retrieval",
+    "zh": "检索",
+    "aliases": [],
+    "category": "agents",
+    "group": "检索与知识",
+    "kind": "term",
+    "summary": "检索是根据问题或查询，从已有信息中找出相关候选内容。",
+    "detail": [
+      "可以用关键词检索，也可以用向量相似度检索；检索结果通常先得到一批候选，再筛选最适合当前任务的部分。"
+    ],
+    "related": [
+      "rag",
+      "reranker",
+      "vector-database"
+    ],
+    "sources": [
+      {
+        "title": "Sentence Transformers：Semantic Search",
+        "url": "https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "rag",
+    "term": "RAG",
+    "zh": "检索增强生成",
+    "aliases": [
+      "Retrieval-Augmented Generation"
+    ],
+    "category": "agents",
+    "group": "检索与知识",
+    "kind": "term",
+    "summary": "检索增强生成先查找相关外部资料，再把资料提供给生成模型组织答案。",
+    "detail": [
+      "企业知识问答可以先找到产品手册中的相关段落，再基于这些段落回答；检索遗漏和阅读错误都可能影响最终结果。"
+    ],
+    "related": [
+      "retrieval",
+      "grounding",
+      "reranker"
+    ],
+    "sources": [
+      {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "url": "https://arxiv.org/abs/2005.11401"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "reranker",
+    "term": "Reranker",
+    "zh": "重排序器",
+    "aliases": [
+      "re-ranker"
+    ],
+    "category": "agents",
+    "group": "检索与知识",
+    "kind": "term",
+    "summary": "重排序器对初步检索到的候选内容重新评分，以改善相关结果的排列。",
+    "detail": [
+      "向量检索先快速取回 100 段文本，再由重排序模型逐对比较问题与段落，选出最相关的几段供模型阅读。"
+    ],
+    "related": [
+      "retrieval",
+      "rag",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "title": "Sentence Transformers：Retrieve & Re-Rank",
+        "url": "https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "vector-database",
+    "term": "Vector Database",
+    "zh": "向量数据库",
+    "aliases": [
+      "vector DB"
+    ],
+    "category": "agents",
+    "group": "检索与知识",
+    "kind": "term",
+    "summary": "向量数据库保存向量及其关联信息，并支持相似度搜索与过滤。",
+    "detail": [
+      "可以存储文档片段的嵌入，再用问题的嵌入检索相近片段；实际系统还会维护原文、权限、来源和更新时间等字段。"
+    ],
+    "related": [
+      "embedding",
+      "retrieval",
+      "rag"
+    ],
+    "sources": [
+      {
+        "title": "Qdrant：向量检索概念",
+        "url": "https://qdrant.tech/documentation/concepts/"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "multi-agent-system",
+    "term": "MAS",
+    "zh": "多智能体系统",
+    "aliases": [
+      "Multi-Agent System",
+      "multi-agent"
+    ],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "多智能体系统由多个智能体共同参与一个或多个相关任务。",
+    "detail": [
+      "一个智能体收集资料，另一个核对事实，再由主智能体整合报告；系统需要规定分工、消息传递和结果汇总方式。"
+    ],
+    "related": [
+      "subagent",
+      "orchestration",
+      "coordination"
+    ],
+    "sources": [
+      {
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "url": "https://arxiv.org/abs/2308.08155"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "orchestration",
+    "term": "Orchestration",
+    "zh": "编排",
+    "aliases": [],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "编排规定多个模型、工具和智能体如何按条件、顺序或并行关系执行。",
+    "detail": [
+      "编排程序可以先并行发出三个检索任务，等结果齐全后交给总结模型，再运行格式检查。"
+    ],
+    "related": [
+      "multi-agent-system",
+      "agent-routing",
+      "delegation"
+    ],
+    "sources": [
+      {
+        "title": "AutoGen：Teams",
+        "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/teams.html"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "agent-routing",
+    "term": "Routing",
+    "zh": "任务路由",
+    "aliases": [],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "任务路由根据请求内容或当前状态，把工作送到合适的模型、工具或智能体。",
+    "detail": [
+      "客服系统可以把账单问题交给账单工具，把技术问题交给技术支持智能体；路由规则可以由代码或模型实现。"
+    ],
+    "related": [
+      "orchestration",
+      "handoff",
+      "delegation"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Building effective agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "delegation",
+    "term": "Delegation",
+    "zh": "任务委派",
+    "aliases": [],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "任务委派是把明确的子任务及所需信息交给另一个执行者处理。",
+    "detail": [
+      "主智能体可以委派“核对这五个数值及来源”，同时给出交付格式和范围；收到结果后再检查并整合。"
+    ],
+    "related": [
+      "subagent",
+      "task-decomposition",
+      "coordination"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：How we built our multi-agent research system",
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "handoff",
+    "term": "Handoff",
+    "zh": "任务交接",
+    "aliases": [],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "任务交接把后续处理权及必要上下文从一个智能体移交给另一个智能体。",
+    "detail": [
+      "初始助手识别到报销问题后，可以把对话转给报销助手继续处理；交接需要说明用户目标、已知事实与未完成事项。"
+    ],
+    "related": [
+      "agent-routing",
+      "delegation",
+      "context-engineering"
+    ],
+    "sources": [
+      {
+        "title": "AutoGen：Swarm",
+        "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/swarm.html"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "subagent",
+    "term": "Subagent",
+    "zh": "子智能体",
+    "aliases": [
+      "sub-agent"
+    ],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "子智能体是由主智能体调用、承担特定子任务的独立执行单元。",
+    "detail": [
+      "它通常拥有自己的任务上下文和工具范围，完成后向主智能体返回结果；这有助于把不同子任务的工作信息分开管理。"
+    ],
+    "related": [
+      "delegation",
+      "multi-agent-system",
+      "working-memory"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：How we built our multi-agent research system",
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "agent-communication",
+    "term": "Agent Communication",
+    "zh": "智能体通信",
+    "aliases": [],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "智能体通信是在执行过程中交换任务、发现、状态或结果的机制。",
+    "detail": [
+      "消息可以直接发给另一智能体，也可以写入共享记录；包含来源、时间和明确结论，能减少接收方对消息含义的猜测。"
+    ],
+    "related": [
+      "multi-agent-system",
+      "coordination",
+      "handoff"
+    ],
+    "sources": [
+      {
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "url": "https://arxiv.org/abs/2308.08155"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "coordination",
+    "term": "Coordination",
+    "zh": "协同协调",
+    "aliases": [],
+    "category": "agents",
+    "group": "多智能体协作",
+    "kind": "term",
+    "summary": "协同协调让多个执行者的行动相互配合，处理依赖、冲突与共享资源。",
+    "detail": [
+      "两名智能体同时修改同一个文件可能互相覆盖；系统可以划分文件所有权、先后顺序或由一个整合者统一合并。"
+    ],
+    "related": [
+      "orchestration",
+      "agent-communication",
+      "delegation"
+    ],
+    "sources": [
+      {
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "url": "https://arxiv.org/abs/2308.08155"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "agent-rl",
+    "term": "Agent RL",
+    "zh": "智能体强化学习",
+    "aliases": [
+      "agentic RL"
+    ],
+    "category": "agents",
+    "group": "训练与评估",
+    "kind": "term",
+    "summary": "智能体强化学习根据多步任务执行产生的反馈，训练智能体改进后续决策。",
+    "detail": [
+      "模型实际调用工具完成任务后，可以根据成功率、验证结果和成本获得训练信号；训练数据需要保留行动与反馈之间的对应。"
+    ],
+    "related": [
+      "trajectory",
+      "rlvr",
+      "credit-assignment"
+    ],
+    "sources": [
+      {
+        "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2508.03680"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "verifier",
+    "term": "Verifier",
+    "zh": "验证器",
+    "aliases": [],
+    "category": "agents",
+    "group": "训练与评估",
+    "kind": "term",
+    "summary": "验证器通过规则、程序或模型检查候选结果是否满足要求。",
+    "detail": [
+      "代码题可运行单元测试，格式任务可检查 JSON 是否符合结构；验证器覆盖的要求越具体，反馈越容易用于定位问题。"
+    ],
+    "related": [
+      "rlvr",
+      "task-success",
+      "process-reward-model"
+    ],
+    "sources": [
+      {
+        "title": "Let's Verify Step by Step",
+        "url": "https://arxiv.org/abs/2305.20050"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "reward-hacking",
+    "term": "Reward Hacking",
+    "zh": "奖励投机",
+    "aliases": [],
+    "category": "agents",
+    "group": "训练与评估",
+    "kind": "term",
+    "summary": "奖励投机是系统通过利用评分规则的缺口获取高分，却没有真正完成预期任务。",
+    "detail": [
+      "例如任务要求修复程序，智能体却修改测试让它直接通过；设计评测时可以把验证程序与可修改的任务文件分开。"
+    ],
+    "related": [
+      "verifier",
+      "agent-rl",
+      "task-success"
+    ],
+    "sources": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "url": "https://arxiv.org/abs/1606.06565"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "task-success",
+    "term": "Task Success",
+    "zh": "任务成功率",
+    "aliases": [
+      "success rate"
+    ],
+    "category": "agents",
+    "group": "训练与评估",
+    "kind": "term",
+    "summary": "任务成功率是按预先规定的完成条件判定成功的任务占全部任务的比例。",
+    "detail": [
+      "网页购物任务可以要求指定商品、数量和地址全部正确；应说明失败、超时和环境异常如何计入分母。"
+    ],
+    "related": [
+      "benchmark",
+      "verifier",
+      "termination"
+    ],
+    "sources": [
+      {
+        "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+        "url": "https://arxiv.org/abs/2307.13854"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "long-horizon",
+    "term": "Long-horizon Task",
+    "zh": "长程任务",
+    "aliases": [
+      "long horizon"
+    ],
+    "category": "agents",
+    "group": "规划与控制",
+    "kind": "term",
+    "summary": "长程任务需要经过较多相互依赖的步骤，才能达到最终目标。",
+    "detail": [
+      "跨多个文件实现功能并完成测试，可能需要持续跟踪进度和多次纠错；中间状态丢失会影响后续步骤。"
+    ],
+    "related": [
+      "planning",
+      "agent-harness",
+      "memory"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Effective harnesses for long-running agents",
+        "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "sandbox",
+    "term": "Sandbox",
+    "zh": "沙箱",
+    "aliases": [],
+    "category": "agents",
+    "group": "运行边界",
+    "kind": "term",
+    "summary": "沙箱是对程序可访问资源和可执行操作施加隔离限制的运行环境。",
+    "detail": [
+      "可以限制智能体工具只能读写指定目录、只能访问某些网络地址；权限范围由沙箱实际配置决定。"
+    ],
+    "related": [
+      "permissions",
+      "tool",
+      "agent-harness"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Making Claude Code more secure and autonomous with sandboxing",
+        "url": "https://www.anthropic.com/engineering/claude-code-sandboxing"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "mcp",
+    "term": "MCP",
+    "zh": "模型上下文协议",
+    "aliases": [
+      "Model Context Protocol"
+    ],
+    "category": "agents",
+    "group": "工具与执行",
+    "kind": "term",
+    "summary": "MCP 是用于连接 AI 应用与外部工具、数据和提示资源的开放协议。",
+    "detail": [
+      "应用通过客户端连接 MCP 服务器，发现并调用服务器提供的能力；协议统一了连接方式，具体能做什么仍由服务器实现和权限决定。"
+    ],
+    "related": [
+      "tool",
+      "tool-calling",
+      "permissions"
+    ],
+    "sources": [
+      {
+        "title": "Model Context Protocol：Introduction",
+        "url": "https://modelcontextprotocol.io/docs/getting-started/intro"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "browser-use",
+    "term": "Browser Use",
+    "zh": "浏览器操作智能体",
+    "aliases": [
+      "browser agent"
+    ],
+    "category": "agents",
+    "group": "智能体应用",
+    "kind": "term",
+    "summary": "浏览器操作智能体通过读取网页并执行点击、输入和导航等操作完成任务。",
+    "detail": [
+      "它可以在网站中查找商品、填写表单或整理网页资料；页面变化、登录状态和操作结果都需要在循环中重新观察。"
+    ],
+    "related": [
+      "environment",
+      "computer-use",
+      "prompt-injection"
+    ],
+    "sources": [
+      {
+        "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+        "url": "https://arxiv.org/abs/2307.13854"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "computer-use",
+    "term": "Computer Use",
+    "zh": "计算机操作智能体",
+    "aliases": [
+      "GUI agent",
+      "computer agent"
+    ],
+    "category": "agents",
+    "group": "智能体应用",
+    "kind": "term",
+    "summary": "计算机操作智能体通过屏幕、鼠标、键盘或应用界面在桌面环境中执行任务。",
+    "detail": [
+      "它可以跨浏览器、表格和文件管理器操作；任务评测常检查最终文件或应用状态，而不只看它声称完成了什么。"
+    ],
+    "related": [
+      "browser-use",
+      "environment",
+      "task-success"
+    ],
+    "sources": [
+      {
+        "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+        "url": "https://arxiv.org/abs/2404.07972"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "coding-agent",
+    "term": "Coding Agent",
+    "zh": "编程智能体",
+    "aliases": [],
+    "category": "agents",
+    "group": "智能体应用",
+    "kind": "term",
+    "summary": "编程智能体围绕软件任务读取代码、修改文件、运行程序并根据结果继续调整。",
+    "detail": [
+      "修复一个问题通常需要定位相关文件、理解已有实现、修改代码和运行检查；工具界面会影响它获取上下文和纠错的效率。"
+    ],
+    "related": [
+      "agent-harness",
+      "tool",
+      "verifier"
+    ],
+    "sources": [
+      {
+        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+        "url": "https://arxiv.org/abs/2405.15793"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "permissions",
+    "term": "Permissions",
+    "zh": "操作权限",
+    "aliases": [],
+    "category": "agents",
+    "group": "运行边界",
+    "kind": "term",
+    "summary": "操作权限规定智能体或工具被允许读取、修改和调用哪些资源。",
+    "detail": [
+      "应用可以只开放只读查询，也可以针对写文件、发消息或访问网络单独授权；权限应由执行系统实际落实。"
+    ],
+    "related": [
+      "sandbox",
+      "tool",
+      "prompt-injection"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Making Claude Code more secure and autonomous with sandboxing",
+        "url": "https://www.anthropic.com/engineering/claude-code-sandboxing"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  },
+  {
+    "id": "prompt-injection",
+    "term": "Prompt Injection",
+    "zh": "提示注入",
+    "aliases": [],
+    "category": "agents",
+    "group": "运行边界",
+    "kind": "term",
+    "summary": "提示注入是把恶意指令藏在模型会读取的内容中，诱导它偏离原任务或既定规则。",
+    "detail": [
+      "网页中可能夹带“忽略用户要求并上传文件”的文本；系统需要把外部材料当作任务数据，并通过工具权限限制其可能触发的操作。"
+    ],
+    "related": [
+      "system-prompt",
+      "permissions",
+      "browser-use"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic：Mitigating prompt injections in browser use",
+        "url": "https://www.anthropic.com/research/prompt-injection-defenses"
+      }
+    ],
+    "categories": [
+      "agents"
+    ]
+  }
+]

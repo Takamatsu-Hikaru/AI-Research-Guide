@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>术语与会议速查 · AI 科研入门指南</title><link rel="icon" href="favicon.png"><link rel="stylesheet" href="wiki.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('wiki-theme')||'light'}catch{}</script></head>
+<body>
+<a class="skip" href="#query">跳到搜索</a>
+<header class="site-header"><a class="brand" href="../zh/index.html"><img src="logo-mark.png" alt="AI 社"><span><strong>UESTC AI</strong><span>AI 科研入门指南</span></span></a><a class="guide-link" href="../zh/index.html">返回指南 ↗</a><div class="header-actions"><button id="theme" aria-label="切换深浅色">◐</button><button id="menu" aria-expanded="false" aria-controls="categories">分类</button></div></header>
+<button id="shade" aria-label="关闭分类" hidden></button>
+<aside id="categories" aria-label="词条分类"><div class="nav-title">开始学习</div><a class="nav-active" href="#">术语与会议速查</a><div id="category-list"></div><a class="contribute" href="https://github.com/Takamatsu-Hikaru/AI-Research-Guide/issues/new" target="_blank" rel="noopener">补充一个词 ↗</a></aside>
+<main id="workspace">
+<div class="intro"><div class="eyebrow">AI RESEARCH GUIDE</div><h1>术语与会议速查<span class="title-dot">.</span></h1><p>在这里查询你没听懂或者感兴趣的术语吧。</p></div>
+<div class="search-area"><form id="search-form" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.7"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="query">搜索中文、英文或缩写</label><input id="query" type="search" autocomplete="off" placeholder="搜索中文、英文或缩写" aria-controls="results"><button id="clear" type="button" aria-label="清空搜索" hidden>×</button><kbd>Ctrl K</kbd></form><div class="quick-search"><span>常见查询</span><button data-query="ckpt">ckpt</button><button data-query="NeurIPS">NeurIPS</button><button data-query="harness">harness</button><button data-query="model-based">model-based</button><button data-query="机器人 会议">机器人会议</button></div></div>
+<div class="browse-bar"><div><h2 id="section-title">常用词条</h2><span id="result-count" role="status" aria-live="polite"></span></div><div class="filters"><label id="kind-filter" hidden><span class="sr-only">类型</span><select id="kind"><option value="">会议与期刊</option value="conference">会议</option><option value="journal">期刊</option></select></label><label id="group-filter" hidden><span class="sr-only">主题</span><select id="group"><option value="">全部主题</option></select></label><button id="all-terms">全部词条 →</button></div></div>
+<div class="dictionary-layout"><section class="results-column" aria-label="词条列表"><div id="results"></div><button id="more" hidden>继续显示</button></section><aside class="detail-column" id="detail" aria-label="词条详情"></aside></div>
+<footer><span>AI 科研入门指南</span><a href="https://github.com/Takamatsu-Hikaru/AI-Research-Guide" target="_blank" rel="noopener">GitHub ↗</a></footer>
+</main>
+<div id="toast" role="status"></div>
+<dialog id="term-peek"><button id="close-peek" aria-label="关闭解释">×</button><div id="peek-content"></div></dialog>
+<noscript><p>请启用 JavaScript，以使用词条搜索与分类。</p></noscript>
+<script src="vendor/minisearch.min.js"></script><script src="data.js"></script><script src="search.js"></script><script src="wiki.js"></script></body></html>
