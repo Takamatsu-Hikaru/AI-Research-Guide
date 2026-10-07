@@ -32,7 +32,7 @@ export function pageShell({p,pages,index,lang,assets=ASSETS,skin=SKIN}){
  const band=head?head[1]+head[2]:'';
  const body=head?head[3]:p.html;
  return `<!doctype html>
-<html lang="${lang==='zh'?'zh-CN':'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${escape(p.title)} · UESTC AI</title><meta name="description" content="${escape(p.plain.slice(p.title.length,190).trim())}"><link rel="icon" href="${assets}favicon.png"><link rel="alternate" hreflang="zh-CN" href="../zh/${filename(p.id)}"><link rel="alternate" hreflang="en" href="../en/${filename(p.id)}"><link rel="stylesheet" href="${assets}guide.css"><link rel="stylesheet" href="${assets}fieldnotes.css"><link rel="stylesheet" href="${assets}guide-motion.css?v=20261006d"><link rel="stylesheet" href="${skin}"></head>
+<html lang="${lang==='zh'?'zh-CN':'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${p.id==='ai4x'?`<link rel="stylesheet" href="${assets}ai4x/expanded.css">`:''}<meta name="color-scheme" content="light"><title>${escape(p.title)} · UESTC AI</title><meta name="description" content="${escape(p.plain.slice(p.title.length,190).trim())}"><link rel="icon" href="${assets}favicon.png"><link rel="alternate" hreflang="zh-CN" href="../zh/${filename(p.id)}"><link rel="alternate" hreflang="en" href="../en/${filename(p.id)}"><link rel="stylesheet" href="${assets}guide.css"><link rel="stylesheet" href="${assets}fieldnotes.css"><link rel="stylesheet" href="${assets}guide-motion.css?v=20261006d"><link rel="stylesheet" href="${skin}"></head>
 <body data-lang="${lang}" data-page="${p.id}"${p.id==='home'?' class="home"':''}>
 <a class="skip" href="#content">${t.skip}</a>
 <div class="app-shell">
@@ -49,7 +49,7 @@ export function pageShell({p,pages,index,lang,assets=ASSETS,skin=SKIN}){
 </div>
 </div>
 <dialog id="searchdialog" aria-label="${t.label}"><div class="searchhead"><input id="searchinput" type="search" placeholder="${t.placeholder}" aria-label="${t.label}"><button id="closesearch">${t.close}</button></div><div id="results" aria-live="polite"></div></dialog>
-<script>window.guideUI=${JSON.stringify(t)};</script><script src="../search-data.js"></script><script src="${assets}guide.js"></script><script src="${assets}fieldnotes.js"></script><script src="${assets}guide-motion.js?v=20261006d"></script><script src="${assets}ama.js"></script></body></html>`;
+<script>window.guideUI=${JSON.stringify(t)};</script><script src="../search-data.js"></script><script src="${assets}guide.js"></script><script src="${assets}fieldnotes.js"></script><script src="${assets}guide-motion.js?v=20261006d"></script><script src="${assets}ama.js"></script>${p.id==='ai4x'?['motion-core','motion-physical','motion-bio','motion-research','motion-en','motion-player'].map(s=>`<script src="${assets}ai4x/${s}.js"></script>`).join(''):''}</body></html>`;
 }
 
 // Root landing page. On hosts that can issue an HTTP redirect this is never

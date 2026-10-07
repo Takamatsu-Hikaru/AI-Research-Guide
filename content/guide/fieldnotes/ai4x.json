@@ -215,6 +215,201 @@
         "read": "Start with the architecture, CASP14 evaluation, and confidence estimates.",
         "limit": ""
       }
+    },
+    {
+      "id": "alphageometry",
+      "title": "Solving olympiad geometry without human demonstrations",
+      "year": 2024,
+      "venue": "Nature",
+      "url": "https://www.nature.com/articles/s41586-023-06747-5",
+      "code": "https://github.com/google-deepmind/alphageometry",
+      "zh": {
+        "tag": "AlphaGeometry · 几何证明",
+        "question": "怎样把辅助构造与符号推理连接成证明过程？",
+        "idea": "符号引擎先推导已有条件，语言模型在需要时提出辅助构造，再继续搜索证明。",
+        "read": "沿一个简单几何题追踪新增构造及其带来的推导，再看训练数据如何合成。"
+      },
+      "en": {
+        "tag": "AlphaGeometry · Geometry proofs",
+        "question": "How can auxiliary constructions and symbolic reasoning form a proof process?",
+        "idea": "A symbolic engine first derives consequences from the given conditions. When needed, a language model proposes auxiliary constructions, and proof search continues.",
+        "read": "Trace the added constructions and the deductions they enable in a simple geometry problem, then examine how the training data are synthesized."
+      }
+    },
+    {
+      "id": "fno",
+      "title": "Fourier Neural Operator for Parametric Partial Differential Equations",
+      "year": 2021,
+      "venue": "ICLR",
+      "url": "https://arxiv.org/abs/2010.08895",
+      "zh": {
+        "tag": "FNO · 神经算子",
+        "question": "怎样从一组初始条件直接预测连续物理场？",
+        "idea": "在频域中参数化积分核，学习函数到函数的映射，用于一类偏微分方程问题。",
+        "read": "先看算子层与输入输出，再对照不同分辨率和方程设置下的误差。"
+      },
+      "en": {
+        "tag": "FNO · Neural operators",
+        "question": "How can a set of initial conditions directly predict continuous physical fields?",
+        "idea": "Parameterize integral kernels in the frequency domain to learn mappings from functions to functions for a family of partial differential equation problems.",
+        "read": "Start with the operator layer and the inputs and outputs, then compare errors across resolutions and equation settings."
+      }
+    },
+    {
+      "id": "qlib",
+      "title": "Qlib: An AI-oriented Quantitative Investment Platform",
+      "year": 2020,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2009.11189",
+      "code": "https://github.com/microsoft/qlib",
+      "zh": {
+        "tag": "Qlib · 量化流程",
+        "question": "数据、模型、组合与回测怎样组成一个研究流程？",
+        "idea": "把金融数据处理和机器学习流程连接到策略评价，使不同模型可以在统一流程中比较。",
+        "read": "沿框架图追踪数据流，再找一个例子的时间划分、标签和回测配置。"
+      },
+      "en": {
+        "tag": "Qlib · Quantitative workflow",
+        "question": "How do data, models, portfolios, and backtesting form a research workflow?",
+        "idea": "Connect financial data processing and machine learning pipelines to strategy evaluation so that different models can be compared within a common workflow.",
+        "read": "Trace the data flow through the framework diagram, then identify the time split, labels, and backtesting configuration in an example."
+      }
+    },
+    {
+      "id": "optuna",
+      "title": "Optuna: A Next-generation Hyperparameter Optimization Framework",
+      "year": 2019,
+      "venue": "KDD",
+      "url": "https://arxiv.org/abs/1907.10902",
+      "code": "https://github.com/optuna/optuna",
+      "zh": {
+        "tag": "Optuna · 超参数搜索",
+        "question": "怎样用有限的训练预算找到好的配置？",
+        "idea": "以程序定义搜索空间，结合采样和剪枝，在多次试验之间分配预算。",
+        "read": "先看搜索空间和试验循环，再看提前停止怎样节省计算。"
+      },
+      "en": {
+        "tag": "Optuna · Hyperparameter search",
+        "question": "How can a limited training budget find a good configuration?",
+        "idea": "Define the search space in code, then combine sampling and pruning to allocate the budget across trials.",
+        "read": "Start with the search space and trial loop, then examine how early stopping saves computation."
+      }
+    },
+    {
+      "id": "dgm",
+      "title": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents",
+      "year": 2025,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2505.22954",
+      "zh": {
+        "tag": "DGM · 自我改进",
+        "question": "编码 Agent 能否通过修改自身代码改善能力？",
+        "idea": "维护多个 Agent 版本，生成自我修改，再用编码任务筛选，形成持续扩展的版本树。",
+        "read": "从一处具体代码改动读起，再看版本选择、评价任务和计算预算。"
+      },
+      "en": {
+        "tag": "DGM · Self-improvement",
+        "question": "Can a coding agent improve its abilities by modifying its own code?",
+        "idea": "Maintain multiple agent versions, generate self-modifications, and select candidates using coding tasks, creating an expanding version tree.",
+        "read": "Start with one specific code change, then examine version selection, evaluation tasks, and the computation budget."
+      }
+    },
+    {
+      "id": "ai-scientist",
+      "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+      "year": 2025,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2504.08066",
+      "code": "https://github.com/SakanaAI/AI-Scientist-v2",
+      "zh": {
+        "tag": "AI Scientist-v2 · 自动研究",
+        "question": "怎样用实验结果引导下一轮研究？",
+        "idea": "用 Agent 驱动的树搜索组织实验，连接方案、执行、分析与论文撰写。",
+        "read": "先看一次完整实验分支，检查最终论述能否对应到实际结果。"
+      },
+      "en": {
+        "tag": "AI Scientist-v2 · Automated research",
+        "question": "How can experimental results guide the next round of research?",
+        "idea": "Use agentic tree search to organize experiments, connecting plans, execution, analysis, and paper writing.",
+        "read": "Start with one complete experimental branch and check whether the final claims correspond to actual results."
+      }
+    },
+    {
+      "id": "amix",
+      "title": "AMix-1: A Pathway to Test-Time Scalable Protein Foundation Model",
+      "year": 2025,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2507.08920",
+      "zh": {
+        "tag": "AMix-1 · 蛋白质生成",
+        "question": "怎样把家族信息与验证反馈用于蛋白质设计？",
+        "idea": "以贝叶斯流网络建模蛋白质，利用 MSA 上下文，并探索增加推理时搜索预算的设计流程。",
+        "read": "分别追踪生成条件、验证器与实验测量；比较它们在迭代中的作用。"
+      },
+      "en": {
+        "tag": "AMix-1 · Protein generation",
+        "question": "How can family information and verification feedback support protein design?",
+        "idea": "Model proteins with Bayesian flow networks, use MSA context, and explore design workflows with larger inference-time search budgets.",
+        "read": "Trace generation conditions, verifiers, and experimental measurements separately, comparing their roles in the iterative process."
+      }
+    },
+    {
+      "id": "flag",
+      "title": "FLAG: Foundation model representation with Latent diffusion Alignment via Graph for spatial gene expression prediction",
+      "year": 2026,
+      "venue": "ICML",
+      "url": "https://arxiv.org/abs/2605.18055",
+      "zh": {
+        "tag": "FLAG · 空间基因表达",
+        "question": "怎样从组织图像预测空间基因表达并保留结构关系？",
+        "idea": "结合空间图编码与基因基础模型表征，用扩散过程建模表达分布。",
+        "read": "先看输入图像、空间邻接和表达输出，再比较逐点误差与结构评价。"
+      },
+      "en": {
+        "tag": "FLAG · Spatial gene expression",
+        "question": "How can tissue images predict spatial gene expression while preserving structural relationships?",
+        "idea": "Combine spatial graph encoding with gene foundation model representations, and use a diffusion process to model expression distributions.",
+        "read": "Start with input images, spatial adjacency, and expression outputs, then compare errors at individual locations with structural evaluations."
+      }
+    },
+    {
+      "id": "dreamdiffusion",
+      "title": "DreamDiffusion: Generating High-Quality Images from Brain EEG Signals",
+      "year": 2023,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2306.16934",
+      "zh": {
+        "tag": "DreamDiffusion · 脑电解码",
+        "question": "脑电表征怎样连接到图像生成模型？",
+        "idea": "通过时间掩码信号建模学习 EEG 表征，结合 CLIP 视觉监督，将信号用于条件生成。",
+        "read": "沿训练阶段找每种数据与监督的作用，再看被试划分和对照。"
+      },
+      "en": {
+        "tag": "DreamDiffusion · EEG decoding",
+        "question": "How can EEG representations connect to an image generation model?",
+        "idea": "Learn EEG representations through temporally masked signal modeling, combine them with CLIP visual supervision, and use the signals for conditional generation.",
+        "read": "Trace the role of each data source and supervision signal through the training stages, then examine participant splits and controls."
+      }
+    },
+    {
+      "id": "cmrinet",
+      "title": "CMRINet: Joint Groupwise Registration and Segmentation for Cardiac Function Quantification from Cine-MRI",
+      "year": 2025,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2505.16452",
+      "zh": {
+        "tag": "CMRINet · 心脏影像",
+        "question": "怎样从动态心脏 MRI 同时获得结构和运动信息？",
+        "idea": "联合处理组间配准与分割，把时序图像分析连接到心脏功能量化。",
+        "read": "先看电影 MRI 的时间维度，再看两项任务怎样配合，以及功能指标怎样计算。"
+      },
+      "en": {
+        "tag": "CMRINet · Cardiac imaging",
+        "question": "How can dynamic cardiac MRI provide both structure and motion information?",
+        "idea": "Jointly handle groupwise registration and segmentation, connecting temporal image analysis to cardiac function quantification.",
+        "read": "Start with the temporal dimension of cine MRI, then examine how the two tasks work together and how functional measures are calculated."
+      }
     }
-  ]
+  ],
+  "expanded": true
 }

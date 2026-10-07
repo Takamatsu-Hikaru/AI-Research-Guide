@@ -47,7 +47,7 @@ if(STANDALONE){
  // Everything the pages link to, copied to the depth their markup expects.
  // logo.png is deliberately omitted: nothing references it any more, and it is
  // a 2048px / 3.1MB source that no page should be loading.
- for(const dir of ['figures','brands','chronicle','sources'])
+ for(const dir of ['figures','brands','chronicle','sources','ai4x'])
   fs.cpSync(path.join(guideRoot,dir),path.join(out,dir),{recursive:true});
  const files=['favicon.png','logo-mark.png','guide.css','fieldnotes.css','guide-motion.css','guide-uestc.css','guide.js','fieldnotes.js','guide-motion.js','ama.js'];
  for(const file of files)fs.copyFileSync(path.join(guideRoot,file),path.join(out,file));
