@@ -383,30 +383,35 @@ AI 可以帮助化学家筛选分子、帮助生物学家分析细胞，也可�
 
 <section class="ai4x-domain" data-topic="rsi" data-group="让研究过程自动化" data-short="RSI 与自我改进">
 <h2 id="rsi">RSI：系统能否改进自身的改进能力</h2>
-<p>递归自我改进（Recursive Self-Improvement）关注一个更进一步的问题：系统修改自己之后，能否变得更擅长做下一轮改进？研究对象可以是 Agent 的代码、工具、搜索策略，也可以涉及学习算法。</p>
+<p>递归自我改进（Recursive Self-Improvement）关注的不只是一次任务分数有没有提高，而是这次修改是否被后续版本继承，并进一步改变系统产生、验证或选择下一次改进的方式。不同工作修改 Agent 代码、探索策略、研究 harness 或训练算法，阅读时需要分别判断闭环在哪里、哪些决策仍由外部规则控制。</p>
 <button type="button" class="see-process" data-scene="rsi">查看过程图 ↗</button>
 <div class="task-list">
-<div><h3>谁在被修改</h3><p>AutoML 通常搜索预设空间中的配置；自动研究系统推进外部课题；自我改进系统还把自身工作方式作为修改对象。阅读时先找到实际变化的代码、策略或参数。</p></div>
-<div><h3>怎样保存和选择版本</h3><p>Darwin Gödel Machine（DGM）让编码 Agent 修改自身代码，保存多个版本，并通过编码任务评估后继续探索。它的核心循环是版本生成、测试、保留与再次修改。</p></div>
-<div><h3>怎样观察持续改进</h3><p>除了单次任务分数，还要比较多轮改进曲线、总计算成本和新任务上的效果。下一轮究竟因为系统能力改变而更好，还是因为投入了更多搜索，需要设计对照。</p></div>
+<div><h3>改了什么，谁决定</h3><p>先标出目标、改进器和验证器：系统改的是任务答案、Agent 代码、探索策略，还是训练算法？修改方向由 Agent 选择，还是来自固定搜索空间与人工规则？</p></div>
+<div><h3>是否进入下一轮</h3><p>只有通过验证、被保留并实际支配下一轮的改动，才形成结构性递归。版本档案、继承关系和回滚机制比“生成了很多候选”更能说明闭环。</p></div>
+<div><h3>是否真的更会改进</h3><p>有效递归还要求在可比起点、匹配预算和独立评测下，改进后的机制产生更强的后继系统。留出任务、干净重跑和多随机种子用于排除过拟合、投机与额外搜索成本。</p></div>
 </div>
 <ol class="route">
-<li><span>提出修改</span><strong>自身代码与工具</strong><p>形成新版本</p></li>
-<li><span>执行测试</span><strong>固定任务与预算</strong><p>比较能力变化</p></li>
-<li><span>继续改进</span><strong>版本档案与选择</strong><p>追踪多轮效果</p></li>
+<li><span>积累经验</span><strong>失败、轨迹与评测</strong><p>定位改进对象</p></li>
+<li><span>提出候选</span><strong>代码、策略与算法</strong><p>形成可执行版本</p></li>
+<li><span>独立验证</span><strong>固定任务与预算</strong><p>决定是否接纳</p></li>
+<li><span>继承再运行</span><strong>后继版本进入下一轮</strong><p>检验持续改进</p></li>
 </ol>
-<div data-ai4x-papers="dgm"></div>
+<div data-ai4x-papers="rsi-survey,dgm,dream-rsi,aide2,ai4ai-bench"></div>
 <h3>论文与学习入口</h3>
 <ul class="resources">
-<li><a href="https://arxiv.org/abs/2505.22954">Darwin Gödel Machine ↗</a><span>2025 · 自我改进编码 Agent</span></li>
-<li><a href="https://sakana.ai/dgm/">DGM 项目介绍 ↗</a><span>方法、实验与代码入口</span></li>
-<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>对照：有评价器的代码搜索</span></li>
+<li><a href="https://arxiv.org/abs/2609.11873">The Last AI Built by Humans ↗</a><span>2026 · RSI 综述与五级自主性框架</span></li>
+<li><a href="https://github.com/zhengkid/Dream-RSI">Dream-RSI ↗</a><span>代码、任务与探索策略重放</span></li>
+<li><a href="https://www.weco.ai/blog/first-evidence-of-recursive-self-improvement">AIDE² 项目介绍 ↗</a><span>双层循环、七次连续改进与外部评测</span></li>
+<li><a href="https://lab.einsia.ai/ai4ai/">AI4AI-Bench ↗</a><span>十类训练算法设计任务与评测协议</span></li>
+<li><a href="https://sakana.ai/dgm/">DGM 项目介绍 ↗</a><span>开放式版本档案、实验与代码入口</span></li>
 </ul>
 <dl class="terms">
-<div><dt>自我修改</dt><dd>系统改变自身的代码、工具或策略。DGM 主要修改 Agent 代码。</dd></div>
-<div><dt>递归改进</dt><dd>一次改进还改变了继续改进的能力，从而形成后续迭代。</dd></div>
+<div><dt>结构性递归</dt><dd>被修改的改进机制得到保留，并实际控制后续一轮怎样产生、验证或选择改进。</dd></div>
+<div><dt>有效递归</dt><dd>在可比起点、预算和独立评价下，新的改进机制能够产生更强的后继系统。</dd></div>
+<div><dt>改进对象</dt><dd>当前轮直接修改的部分，例如 Agent harness、探索策略、验证器或训练算法。</dd></div>
+<div><dt>后继系统</dt><dd>继承已接受改动并进入下一轮交互与改进的系统版本。</dd></div>
 </dl>
-<div class="exercise"><h3>可以动手做什么</h3><p>先读 DGM 的版本树，挑一个具体代码改动，追踪它怎样被提出、怎样被测量、后续版本是否继承它。再为一个简单工具 Agent 设计固定预算的版本对照。</p></div>
+<div class="exercise"><h3>可以动手做什么</h3><p>从五张卡片中选两个系统，做一张证据表：写清改进对象、谁提出修改、谁验证、什么被继承、预算是否匹配、是否使用留出任务。最后分别判断它展示了结构性递归、有效递归，还是只展示了单轮优化能力。</p></div>
 </section>
 
 ## 把一个交叉问题做成小项目

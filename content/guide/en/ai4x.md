@@ -383,30 +383,35 @@ AI can help chemists screen molecules and biologists study cells. It is also use
 
 <section class="ai4x-domain" data-topic="rsi" data-group="Automating the research process" data-short="RSI and self-improvement">
 <h2 id="rsi">RSI: Can a system improve its own ability to improve?</h2>
-<p>Recursive Self-Improvement (RSI) asks a further question: after a system modifies itself, can it become better at making the next improvement? Research can target an agent&#x27;s code, tools, or search strategy, and can also involve learning algorithms.</p>
+<p>Recursive self-improvement (RSI) asks more than whether one task score increased. Did the change persist into a successor, and did it alter how the system generates, verifies, or selects its next improvement? Different systems modify agent code, exploration policies, research harnesses, or training algorithms. Read them by locating where the loop closes and which decisions remain externally fixed.</p>
 <button type="button" class="see-process" data-scene="rsi">Watch the process ↗</button>
 <div class="task-list">
-<div><h3>What is being modified?</h3><p>AutoML usually searches configurations within a predefined space; automated research systems advance external research questions; self-improving systems also modify how they themselves work. When reading, first identify the code, strategies, or parameters that actually change.</p></div>
-<div><h3>Storing and selecting versions</h3><p>Darwin Gödel Machine (DGM) lets a coding agent modify its own code, saves multiple versions, and uses coding tasks to evaluate them before exploring further. Its central loop creates, tests, retains, and modifies versions again.</p></div>
-<div><h3>Observing sustained improvement</h3><p>Alongside scores on individual tasks, compare improvement curves over multiple rounds, total computation cost, and performance on new tasks. Design controls to distinguish a better next round caused by changes in system capability from one caused by spending more on search.</p></div>
+<div><h3>What changed, and who decided?</h3><p>Identify the target, improver, and verifier. Is the system changing an answer, agent code, an exploration policy, or a training algorithm? Does the agent select the direction, or does a fixed search space or human rule determine it?</p></div>
+<div><h3>Did it enter the next round?</h3><p>A change forms structural recursion only when it passes validation, is retained, and actually governs a later round. Version archives, inheritance, and rollback say more about loop closure than the number of generated candidates.</p></div>
+<div><h3>Did it become better at improving?</h3><p>Effective recursion additionally requires the revised mechanism to produce stronger successors from comparable starts, matched budgets, and independent evaluation. Held-out tasks, clean replay, and multiple seeds help rule out overfitting, exploitation, and extra search.</p></div>
 </div>
 <ol class="route">
-<li><span>Propose changes</span><strong>Own code and tools</strong><p>Create a new version</p></li>
-<li><span>Run tests</span><strong>Fixed tasks and budget</strong><p>Compare changes in capability</p></li>
-<li><span>Continue improving</span><strong>Version archive and selection</strong><p>Track effects over multiple rounds</p></li>
+<li><span>Accumulate experience</span><strong>Failures, traces, evaluations</strong><p>Locate the improvement target</p></li>
+<li><span>Propose candidates</span><strong>Code, policies, algorithms</strong><p>Create executable versions</p></li>
+<li><span>Validate independently</span><strong>Fixed tasks and budgets</strong><p>Decide what to accept</p></li>
+<li><span>Inherit and rerun</span><strong>Successor enters the next round</strong><p>Test sustained improvement</p></li>
 </ol>
-<div data-ai4x-papers="dgm"></div>
+<div data-ai4x-papers="rsi-survey,dgm,dream-rsi,aide2,ai4ai-bench"></div>
 <h3>Papers and learning resources</h3>
 <ul class="resources">
-<li><a href="https://arxiv.org/abs/2505.22954">Darwin Gödel Machine ↗</a><span>2025 · A coding agent that improves itself</span></li>
-<li><a href="https://sakana.ai/dgm/">DGM project introduction ↗</a><span>Methods, experiments, and code</span></li>
-<li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve ↗</a><span>Comparison: code search with an evaluator</span></li>
+<li><a href="https://arxiv.org/abs/2609.11873">The Last AI Built by Humans ↗</a><span>2026 · RSI survey and five autonomy levels</span></li>
+<li><a href="https://github.com/zhengkid/Dream-RSI">Dream-RSI ↗</a><span>Code, tasks, and exploration-policy replay</span></li>
+<li><a href="https://www.weco.ai/blog/first-evidence-of-recursive-self-improvement">AIDE² project ↗</a><span>Two loops, seven successive improvements, and external evaluation</span></li>
+<li><a href="https://lab.einsia.ai/ai4ai/">AI4AI-Bench ↗</a><span>Ten training-algorithm tasks and their evaluation protocol</span></li>
+<li><a href="https://sakana.ai/dgm/">DGM project ↗</a><span>Open-ended version archive, experiments, and code</span></li>
 </ul>
 <dl class="terms">
-<div><dt>Self-modification</dt><dd>A system changes its own code, tools, or strategies. DGM mainly modifies agent code.</dd></div>
-<div><dt>Recursive improvement</dt><dd>An improvement also changes the ability to improve further, forming subsequent iterations.</dd></div>
+<div><dt>Structural recursion</dt><dd>A revised improvement mechanism is retained and actually governs how a later round generates, verifies, or selects changes.</dd></div>
+<div><dt>Effective recursion</dt><dd>Under comparable starts, budgets, and independent evaluation, the revised mechanism produces stronger successors.</dd></div>
+<div><dt>Improvement target</dt><dd>The component modified in the current round, such as an agent harness, exploration policy, verifier, or training algorithm.</dd></div>
+<div><dt>Successor</dt><dd>The system version that inherits an accepted change and enters the next interaction and improvement round.</dd></div>
 </dl>
-<div class="exercise"><h3>Try it yourself</h3><p>Read the DGM version tree and choose a specific code change. Trace how it was proposed, how it was measured, and whether later versions inherited it. Then design a comparison between versions of a simple tool-using agent under a fixed budget.</p></div>
+<div class="exercise"><h3>Try it yourself</h3><p>Choose two systems from the five cards and make an evidence table: target, proposer, verifier, inherited state, matched budget, and held-out evaluation. Then classify the evidence as structural recursion, effective recursion, or single-round optimization.</p></div>
 </section>
 
 ## Turn an interdisciplinary question into a small project
