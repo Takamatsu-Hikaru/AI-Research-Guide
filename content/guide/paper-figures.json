@@ -494,6 +494,49 @@
     "width": 657,
     "height": 357
   },
+  "rsi-survey": {
+    "file": "ai4x-rsi-survey.png",
+    "source": "https://arxiv.org/html/2609.11873v3/rsi-overview-v11.png",
+    "paper": "https://arxiv.org/abs/2609.11873v3",
+    "credit": "Figure 1",
+    "caption": "Overview of the five RSI autonomy levels and representative systems.",
+    "width": 1862,
+    "height": 879
+  },
+  "dream-rsi": {
+    "file": "ai4x-dream-rsi.png",
+    "source": "https://arxiv.org/html/2609.14858v2/Dream-RSI-latest.png",
+    "paper": "https://arxiv.org/abs/2609.14858v2",
+    "credit": "Figure 1",
+    "caption": "Dream-RSI connects online exploration, replay simulator construction, and dreaming-based policy improvement.",
+    "width": 2047,
+    "height": 999
+  },
+  "aide2": {
+    "file": "ai4x-aide2.png",
+    "source": "https://arxiv.org/html/2609.26457v1/fig_system_diagram_light.svg",
+    "paper": "https://arxiv.org/abs/2609.26457v1",
+    "credit": "Figure 1",
+    "caption": "One step of recursive self-improvement across the outer agent search, inner research tasks, and held-out evaluation.",
+    "width": 1428,
+    "height": 752
+  },
+  "ai4ai-bench": {
+    "file": "ai4x-ai4ai-bench.png",
+    "source": "https://arxiv.org/pdf/2608.20318v1",
+    "paper": "https://arxiv.org/abs/2608.20318v1",
+    "credit": "Figure 1",
+    "page": 2,
+    "crop": [
+      69,
+      61,
+      543,
+      382
+    ],
+    "caption": "AI4AI-Bench at a glance: frozen tasks, agent exploration, clean formal replay, independent evaluation, and ten training-algorithm families.",
+    "width": 1422,
+    "height": 963
+  },
   "dgm": {
     "file": "ai4x-dgm.png",
     "source": "https://arxiv.org/html/2505.22954v3/conceptual.png",

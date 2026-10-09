@@ -296,6 +296,102 @@
       }
     },
     {
+      "id": "rsi-survey",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.11873",
+      "code": "https://theseus-labs-rsi.github.io/",
+      "zh": {
+        "tag": "RSI 综述 · 五级自主性",
+        "question": "怎样判断一次自动优化是否真的进入了递归自我改进？",
+        "idea": "把完整改进循环按 L1–L5 分层，追踪谁触发、提出、验证和继承修改，并区分结构性递归与有效递归。",
+        "why": "它提供统一坐标系：后续论文修改的对象不同、闭环深度不同，不能只凭“分数更高”归为同一种自我改进。",
+        "read": "先看 Figure 1 与 Figure 2，再读 2.2 节的改进循环、1.7 节的两类递归证据。",
+        "limit": "分类框架能整理已有系统，但不能代替受控、多轮、独立评测的 RSI 实验证据。"
+      },
+      "en": {
+        "tag": "RSI survey · Five autonomy levels",
+        "question": "How can we tell whether an automated optimization loop actually reaches recursive self-improvement?",
+        "idea": "Organize the full improvement loop into levels L1–L5, track who triggers, proposes, verifies, and inherits each change, and separate structural from effective recursion.",
+        "why": "It supplies a common coordinate system: later papers modify different objects and close the loop at different depths, so a higher score alone does not make them equivalent.",
+        "read": "Start with Figures 1 and 2, then read the improvement-loop anatomy in Section 2.2 and the two forms of recursion evidence in Section 1.7.",
+        "limit": "A taxonomy can organize existing systems, but it cannot replace controlled, multi-round RSI experiments with independent evaluation."
+      }
+    },
+    {
+      "id": "dream-rsi",
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.14858",
+      "code": "https://github.com/zhengkid/Dream-RSI",
+      "zh": {
+        "tag": "Dream-RSI · 探索策略",
+        "question": "怎样利用已有的发现轨迹，低成本改进下一轮探索策略？",
+        "idea": "把在线探索形成的发现树蒸馏成重放模拟器，在其中“梦境式”评估候选策略，再把改进后的策略部署到下一轮真实探索。",
+        "why": "它直接修改并继承探索策略，把历史经验接回后续搜索，清楚展示了元探索闭环。",
+        "read": "先看 Figure 1 的三阶段闭环，再看模拟器构造、策略目标，以及九类任务上的分项结果。",
+        "limit": "重放模拟器只覆盖已观察到的轨迹；历史树缺少的分支不会凭空出现，而且收益在不同任务上并不均匀。"
+      },
+      "en": {
+        "tag": "Dream-RSI · Exploration policy",
+        "question": "How can prior discovery traces improve the next exploration policy at lower cost?",
+        "idea": "Distill online discovery trees into replay simulators, evaluate candidate policies through dreaming, and redeploy the improved policy for the next round of real exploration.",
+        "why": "It directly changes and inherits the exploration policy, reconnecting accumulated experience to later search in a clear meta-exploration loop.",
+        "read": "Start with the three-stage loop in Figure 1, then inspect simulator construction, the policy objective, and per-task results across the nine tasks.",
+        "limit": "Replay covers only observed trajectories; missing branches in the historical tree stay missing, and the gains are not uniform across tasks."
+      }
+    },
+    {
+      "id": "aide2",
+      "title": "Recursive self-improvement of AI research agents",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26457",
+      "code": "https://www.weco.ai/blog/first-evidence-of-recursive-self-improvement",
+      "zh": {
+        "tag": "AIDE² · 研究 Agent",
+        "question": "研究 Agent 能否连续改写自己的 harness，并把收益迁移到未见任务？",
+        "idea": "外层循环改写内层研究 Agent 的代码；每个候选在固定预算下执行研究任务，用私有留出分数决定是否成为下一轮继承的版本。",
+        "why": "一次八天运行连续接受七次改进，并检查外部基准迁移与奖励投机，为“持续继承的改进”提供了较强实证。",
+        "read": "先看 Figure 1 的双层搜索，再读 Algorithm 1、Figures 2–4，以及把改进版 Agent 放到外层循环的检验。",
+        "limit": "改进版 Agent 作为外层 improver 时尚未显示出可明确区分的优势；双层噪声、成本和代码复杂度仍限制更深递归。"
+      },
+      "en": {
+        "tag": "AIDE² · Research agents",
+        "question": "Can a research agent repeatedly rewrite its own harness and transfer the gains to unseen tasks?",
+        "idea": "An outer loop rewrites the inner research agent. Each candidate works under a fixed budget, and a private held-out grade decides whether it becomes the version inherited by the next round.",
+        "why": "An autonomous eight-day run accepted seven successive improvements and tested transfer and reward hacking, providing strong evidence for sustained inherited improvement.",
+        "read": "Start with the two-level search in Figure 1, then read Algorithm 1, Figures 2–4, and the test that places a discovered agent in the outer loop.",
+        "limit": "The improved agent was not decisively better as the outer-loop improver; compounded noise, cost, and growing code complexity still constrain deeper recursion."
+      }
+    },
+    {
+      "id": "ai4ai-bench",
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+      "year": 2026,
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2608.20318",
+      "code": "https://lab.einsia.ai/ai4ai/",
+      "zh": {
+        "tag": "AI4AI-Bench · 算法设计评测",
+        "question": "怎样区分真正改变学习算法，与调参、换数据或改工程流程？",
+        "idea": "冻结十个研究仓库，让 Agent 在四小时内提交训练算法代码补丁，再从干净环境完整重跑，并由隔离的固定评测器计分。",
+        "why": "它把“是否会改进产生下一代 AI 的学习过程”单独抽出，能检查提交到底触及了模型怎样学习。",
+        "read": "先看 Figure 1 的任务协议，再读任务边界、标准化计分和第 4 节对提交类型的分析。",
+        "limit": "这是单代算法设计能力的严谨评测；它本身没有证明改进后的系统会在多轮中继续继承并改善改进过程。"
+      },
+      "en": {
+        "tag": "AI4AI-Bench · Algorithm design",
+        "question": "How can we separate real changes to a learning algorithm from tuning, data swaps, or workflow engineering?",
+        "idea": "Freeze ten research repositories, give an agent four hours to submit a training-algorithm patch, replay it from a clean start, and score it with an isolated fixed evaluator.",
+        "why": "It isolates the ability to improve the process that produces a future AI system and audits whether a submission changes how the model learns.",
+        "read": "Start with the protocol in Figure 1, then read the task boundary, normalized scoring, and the submission taxonomy in Section 4.",
+        "limit": "This is a rigorous single-generation algorithm-design benchmark; by itself it does not show repeated inheritance or improvement of the improvement process."
+      }
+    },
+    {
       "id": "dgm",
       "title": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents",
       "year": 2025,
@@ -305,14 +401,19 @@
         "tag": "DGM · 自我改进",
         "question": "编码 Agent 能否通过修改自身代码改善能力？",
         "idea": "维护多个 Agent 版本，生成自我修改，再用编码任务筛选，形成持续扩展的版本树。",
-        "read": "从一处具体代码改动读起，再看版本选择、评价任务和计算预算。"
+        "read": "从一处具体代码改动读起，再看版本选择、评价任务和计算预算。",
+        "why": "它把 Agent 版本组织成开放式档案，不只保留单一路径，适合观察“自我修改—任务评测—再次修改”的基本结构。",
+        "limit": "外部设定的任务、评测与父代选择规则仍决定搜索方向；版本树扩展并不自动证明改进机制本身已经变强。"
       },
       "en": {
         "tag": "DGM · Self-improvement",
         "question": "Can a coding agent improve its abilities by modifying its own code?",
         "idea": "Maintain multiple agent versions, generate self-modifications, and select candidates using coding tasks, creating an expanding version tree.",
-        "read": "Start with one specific code change, then examine version selection, evaluation tasks, and the computation budget."
-      }
+        "read": "Start with one specific code change, then examine version selection, evaluation tasks, and the computation budget.",
+        "why": "It organizes agent versions as an open-ended archive rather than a single lineage, making the modify–evaluate–modify structure easy to inspect.",
+        "limit": "Externally fixed tasks, evaluation, and parent selection still shape the search; a growing version tree does not by itself show that the improvement mechanism became stronger."
+      },
+      "code": "https://sakana.ai/dgm/"
     },
     {
       "id": "ai-scientist",
