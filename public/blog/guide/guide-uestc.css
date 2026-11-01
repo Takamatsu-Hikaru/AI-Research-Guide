@@ -330,6 +330,36 @@ main.app-content { margin: 0 auto; max-width: 1280px; min-height: calc(100dvh - 
 body.home #toc { display: none; }
 body.home .article-layout { grid-template-columns: minmax(0, 900px); }
 
+/* A direct link to the guide repository, alongside the homepage invitation. */
+.guide-star-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin: 24px 0 30px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--sage);
+  background: var(--surface);
+}
+.markdown-body .guide-star-callout p { flex: 1 1 28rem; margin: 0; }
+.markdown-body .guide-star-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid var(--sage);
+  border-radius: 3px;
+  color: var(--link);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.markdown-body .guide-star-link:hover { background: var(--sage); color: var(--surface); }
+
 .neighbors { margin-top: 65px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding: 20px 0; }
 .neighbors a { display: flex; flex-direction: column; font-size: 14px; line-height: 1.6; color: var(--ink-2); }
 .neighbors a:hover { color: var(--link-hover); }

@@ -1,6 +1,11 @@
 # AI科研入门指南
 
-各位同学，欢迎来到 UESTC AI 社的入门指南。如果你对 **AI 和科研感兴趣**，却还不知道从哪里开始入门；或者已经开始参与项目或规划找课题组，却不知道怎么联系老师，对接工作；或者已经加入了自己的课题组，但是仍然对**想 idea、推进工作**感到迷茫。我们希望这份指南能够帮助到你。
+各位同学，欢迎来到 [UESTC AI 社](https://uestcai.top/)的入门指南。如果你对 **AI 和科研感兴趣**，却还不知道从哪里开始入门；或者已经开始参与项目或规划找课题组，却不知道怎么联系老师，对接工作；或者已经加入了自己的课题组，但是仍然对**想 idea、推进工作**感到迷茫。
+
+<div class="guide-star-callout">
+<p>如果这份指南有幸帮助到你，欢迎在 GitHub 上点一颗 Star，也欢迎分享给身边正在学习 AI 的同学。</p>
+<a class="guide-star-link" href="https://github.com/Takamatsu-Hikaru/AI-Research-Guide" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+</div>
 
 <figure class="resource-figure guide-overview"><a href="../../../public/blog/guide/figures/uestc/home/guide-overview.png?v=2" target="_blank" rel="noopener"><img src="../../../public/blog/guide/figures/uestc/home/guide-overview.webp?v=2" width="1600" height="904" alt="指南全览：开始学习、研究方向、科研实践、看看外面与资料索引；从初次接触、动手学习，到进入课题、形成判断和表达交流。" decoding="async" fetchpriority="high"></a></figure>
 
